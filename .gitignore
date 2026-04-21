@@ -1,0 +1,8 @@
+node_modules/
+pnpm-lock.yaml
+
+backend/node_modules
+.env
+build/
+coverage/
+dist/

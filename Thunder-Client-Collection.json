@@ -1,0 +1,521 @@
+{
+  "info": {
+    "name": "Linkprosoft Auth API - Phase 1 Testing",
+    "description": "Complete test suite for authentication endpoints",
+    "version": "1.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "baseURL": "http://localhost:5020",
+    "apiKey": ""
+  },
+  "item": [
+    {
+      "name": "1. SIGNUP - Professional User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 201', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test('Response has correct structure', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('success', true);",
+              "    pm.expect(jsonData).to.have.property('message');",
+              "    pm.expect(jsonData).to.have.property('data');",
+              "    pm.expect(jsonData).to.have.property('timestamp');",
+              "});",
+              "",
+              "pm.test('User data contains no password', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.data.user).not.to.have.property('password');",
+              "});",
+              "",
+              "pm.test('Token is set in cookie', function () {",
+              "    pm.expect(pm.cookies.has('token')).to.be.true;",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@test.com\",\n  \"password\": \"SecurePass123!\",\n  \"passwordConfirm\": \"SecurePass123!\",\n  \"userType\": \"professional\",\n  \"phone\": \"+1234567890\",\n  \"location\": \"New York\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. SIGNUP - Employer User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 201', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test('Response includes company name', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.data.user.compName).to.equal('Tech Company Inc.');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"Jane\",\n  \"lastName\": \"Smith\",\n  \"email\": \"jane.smith@company.com\",\n  \"password\": \"SecurePass456!\",\n  \"passwordConfirm\": \"SecurePass456!\",\n  \"userType\": \"employer\",\n  \"compName\": \"Tech Company Inc.\",\n  \"phone\": \"+1987654321\",\n  \"location\": \"San Francisco\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. SIGNUP - Validation Error (Missing Email)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 400', function () {",
+              "    pm.response.to.have.status(400);",
+              "});",
+              "",
+              "pm.test('Response indicates validation error', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(false);",
+              "    pm.expect(jsonData.error).to.exist;",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"password\": \"SecurePass123!\",\n  \"passwordConfirm\": \"SecurePass123!\",\n  \"userType\": \"professional\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. SIGNUP - Duplicate Email (409)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 409 Conflict', function () {",
+              "    pm.response.to.have.status(409);",
+              "});",
+              "",
+              "pm.test('Response indicates email exists', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.message.toLowerCase()).to.include('exist');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"Another\",\n  \"lastName\": \"User\",\n  \"email\": \"john.doe@test.com\",\n  \"password\": \"DifferentPass456!\",\n  \"passwordConfirm\": \"DifferentPass456!\",\n  \"userType\": \"professional\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. LOGIN - Valid Credentials",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response indicates success', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "    pm.expect(jsonData.message.toLowerCase()).to.include('successful');",
+              "});",
+              "",
+              "pm.test('User data contains email', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.data.user.email).to.equal('john.doe@test.com');",
+              "});",
+              "",
+              "pm.test('Token is set in cookie', function () {",
+              "    pm.expect(pm.cookies.has('token')).to.be.true;",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"john.doe@test.com\",\n  \"password\": \"SecurePass123!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. LOGIN - Invalid Password",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 401', function () {",
+              "    pm.response.to.have.status(401);",
+              "});",
+              "",
+              "pm.test('Response indicates authentication failure', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(false);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"john.doe@test.com\",\n  \"password\": \"WrongPassword123!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. LOGIN - User Not Found",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 401', function () {",
+              "    pm.response.to.have.status(401);",
+              "});",
+              "",
+              "pm.test('Response indicates user not found', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(false);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"nonexistent@test.com\",\n  \"password\": \"SomePassword123!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8. VERIFY - Valid Token (from Cookie)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response indicates session verified', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "    pm.expect(jsonData.message.toLowerCase()).to.include('verified');",
+              "});",
+              "",
+              "pm.test('User data is returned', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.data.user).to.have.property('id');",
+              "    pm.expect(jsonData.data.user).to.have.property('email');",
+              "    pm.expect(jsonData.data.user).not.to.have.property('password');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5020/api/auth/verify",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "verify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "9. VERIFY - Missing Token (401)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 401', function () {",
+              "    pm.response.to.have.status(401);",
+              "});",
+              "",
+              "pm.test('Response indicates authentication required', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(false);",
+              "    pm.expect(jsonData.message.toLowerCase()).to.include('login');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5020/api/auth/verify",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "verify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10. VERIFY - Using Authorization Header",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200 with Authorization header', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Token from header is recognized', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+            "description": "Replace with actual token from login/signup"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5020/api/auth/verify",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "verify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11. LOGOUT - Valid Session",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response indicates logout success', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(true);",
+              "    pm.expect(jsonData.message.toLowerCase()).to.include('logged out');",
+              "});",
+              "",
+              "pm.test('Cookie is cleared', function () {",
+              "    pm.expect(pm.response.headers.get('Set-Cookie')).to.exist;",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5020/api/auth/logout",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "logout"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12. LOGOUT - Without Token (401)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 401', function () {",
+              "    pm.response.to.have.status(401);",
+              "});",
+              "",
+              "pm.test('Response indicates authentication required', function () {",
+              "    let jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.equal(false);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5020/api/auth/logout",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["api", "auth", "logout"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "13. HEALTH CHECK",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5020/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5020",
+          "path": ["health"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
