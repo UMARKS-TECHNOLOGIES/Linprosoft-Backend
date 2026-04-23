@@ -7,3 +7,52 @@
 {"level":"warn","message":"POST /api/auth/signup - 409 - 216ms","service":"linkprosoft-backend","timestamp":"2026-04-21 02:35:36"}
 {"email":"john.doe@test.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-21 02:36:18","userId":1}
 {"level":"info","message":"POST /login - 200 - 560ms","service":"linkprosoft-backend","timestamp":"2026-04-21 02:36:18"}
+{"email":"john.doe@test.com","level":"warn","message":"Authentication Error Invalid email or password","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-21 14:25:16"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 6961ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:25:16"}
+{"email":"john.doe@tqest.com","level":"warn","message":"Authentication Error Invalid email or password","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-21 14:25:55"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 155ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:25:55"}
+{"level":"warn","message":"Authentication Error Token expired, please login again","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-21 14:26:27"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 105ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:26:27"}
+{"email":"john.doe@test.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-21 14:26:50","userId":1}
+{"level":"info","message":"POST /login - 200 - 454ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:26:50"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:27:56"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:28:32"}
+{"email":"john.doe@test.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-21 14:28:58","userId":1}
+{"level":"info","message":"POST /login - 200 - 424ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:28:58"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:13"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:17"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:23"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:29:26"}
+{"email":"john.doe@test.com","level":"info","message":"Session verified","service":"linkprosoft-backend","timestamp":"2026-04-21 14:30:13","userId":1}
+{"level":"info","message":"GET /verify - 200 - 153ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:30:13"}
+{"email":"john.doe@test.com","level":"info","message":"Session verified","service":"linkprosoft-backend","timestamp":"2026-04-21 14:31:38","userId":1}
+{"level":"info","message":"GET /verify - 200 - 79ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:31:38"}
+{"email":"john.doe@test.com","level":"info","message":"Session verified","service":"linkprosoft-backend","timestamp":"2026-04-21 14:31:43","userId":1}
+{"level":"info","message":"GET /verify - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:31:43"}
+{"level":"info","message":"User logged out","service":"linkprosoft-backend","timestamp":"2026-04-21 14:33:07","userId":1}
+{"level":"info","message":"POST /logout - 200 - 4ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:33:07"}
+{"email":"john.doe@test.com","level":"info","message":"Session verified","service":"linkprosoft-backend","timestamp":"2026-04-21 14:33:43","userId":1}
+{"level":"info","message":"GET /verify - 200 - 66ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:33:43"}
+{"email":"john.doe@test.com","level":"warn","message":"Authentication Error Please login to access this resource","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-21 14:34:01"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 2ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:34:01"}
+{"email":"john.doe@test.com","level":"info","message":"Session verified","service":"linkprosoft-backend","timestamp":"2026-04-21 14:34:08","userId":1}
+{"level":"info","message":"GET /verify - 200 - 79ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:34:08"}
+{"level":"info","message":"GET /health - 200 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-21 14:34:39"}
+{"email":"john.doe@test.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-22 12:07:24","userId":1}
+{"level":"info","message":"POST /login - 200 - 4800ms","service":"linkprosoft-backend","timestamp":"2026-04-22 12:07:24"}
+{"email":"jane.doe@test.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-22 12:08:18","userId":2,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 1021ms","service":"linkprosoft-backend","timestamp":"2026-04-22 12:08:18"}

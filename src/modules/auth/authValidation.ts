@@ -5,14 +5,30 @@
 
 import { z } from "zod";
 
+// Validation constraints
+const VALIDATION_CONSTRAINTS = {
+  PASSWORD_MIN: 8,
+  NAME_MIN: 1,
+  NAME_MAX: 50,
+  COMPANY_MIN: 2,
+  COMPANY_MAX: 100,
+  PHONE_MAX: 20,
+  LOCATION_MAX: 100,
+} as const;
+
+/**
+ * Reusable validators
+ */
+const trimmedString = () => z.string().trim();
+const nonEmptyString = (fieldName: string) =>
+  trimmedString().min(1, `${fieldName} cannot be empty or whitespace`);
+
 /**
  * Email validation - used across multiple schemas
  */
-const emailSchema = z
-  .string()
-  .email("Invalid email address")
-  .toLowerCase()
-  .trim();
+const emailSchema = nonEmptyString("Email")
+  .email()
+  .toLowerCase();
 
 /**
  * Password validation schema
@@ -22,9 +38,8 @@ const emailSchema = z
  * - At least one number
  * - At least one special character
  */
-const passwordSchema = z
-  .string()
-  .min(8, "Password must be at least 8 characters")
+const passwordSchema = nonEmptyString("Password")
+  .min(VALIDATION_CONSTRAINTS.PASSWORD_MIN, `Password must be at least ${VALIDATION_CONSTRAINTS.PASSWORD_MIN} characters`)
   .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
   .regex(/[0-9]/, "Password must contain at least one number")
   .regex(/[^a-zA-Z0-9]/, "Password must contain at least one special character");
@@ -32,28 +47,21 @@ const passwordSchema = z
 /**
  * First name validation
  */
-const firstNameSchema = z
-  .string()
-  .min(1, "First name is required")
-  .max(50, "First name must not exceed 50 characters")
-  .trim();
+const firstNameSchema = nonEmptyString("First name")
+  .max(VALIDATION_CONSTRAINTS.NAME_MAX, `First name must not exceed ${VALIDATION_CONSTRAINTS.NAME_MAX} characters`);
 
 /**
  * Last name validation
  */
-const lastNameSchema = z
-  .string()
-  .min(1, "Last name is required")
-  .max(50, "Last name must not exceed 50 characters")
-  .trim();
+const lastNameSchema = nonEmptyString("Last name")
+  .max(VALIDATION_CONSTRAINTS.NAME_MAX, `Last name must not exceed ${VALIDATION_CONSTRAINTS.NAME_MAX} characters`);
 
 /**
  * Company name validation (required for employers)
  */
-const compNameSchema = z
-  .string()
-  .min(2, "Company name must be at least 2 characters")
-  .max(100, "Company name must not exceed 100 characters")
+const compNameSchema = trimmedString()
+  .min(VALIDATION_CONSTRAINTS.COMPANY_MIN, `Company name must be at least ${VALIDATION_CONSTRAINTS.COMPANY_MIN} characters`)
+  .max(VALIDATION_CONSTRAINTS.COMPANY_MAX, `Company name must not exceed ${VALIDATION_CONSTRAINTS.COMPANY_MAX} characters`)
   .optional();
 
 /**
@@ -66,13 +74,11 @@ export const signupSchema = z
     lastName: lastNameSchema,
     email: emailSchema,
     password: passwordSchema,
-    passwordConfirm: z.string().min(1, "Password confirmation required"),
-    userType: z.enum(["professional", "employer"], {
-      errorMap: () => ({ message: "User type must be 'professional' or 'employer'" }),
-    }),
+    passwordConfirm: passwordSchema,
+    userType: z.enum(["professional", "employer"]).catch("professional"),
     compName: compNameSchema,
-    phone: z.string().optional(),
-    location: z.string().optional(),
+    phone: trimmedString().max(VALIDATION_CONSTRAINTS.PHONE_MAX, "Phone number is invalid").optional(),
+    location: trimmedString().max(VALIDATION_CONSTRAINTS.LOCATION_MAX, "Location is invalid").optional(),
   })
   // Validate passwords match
   .refine((data) => data.password === data.passwordConfirm, {
@@ -80,12 +86,7 @@ export const signupSchema = z
     path: ["passwordConfirm"],
   })
   // Validate employer has company name
-  .refine((data) => {
-    if (data.userType === "employer" && !data.compName) {
-      return false;
-    }
-    return true;
-  }, {
+  .refine((data) => data.userType !== "employer" || !!data.compName?.trim(), {
     message: "Company name is required for employers",
     path: ["compName"],
   });
@@ -96,7 +97,7 @@ export const signupSchema = z
  */
 export const loginSchema = z.object({
   email: emailSchema,
-  password: z.string().min(1, "Password required"),
+  password: nonEmptyString("Password"),
 });
 
 /**

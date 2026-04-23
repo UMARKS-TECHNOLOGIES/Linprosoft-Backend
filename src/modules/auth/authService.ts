@@ -9,7 +9,7 @@ import * as repo from "./authRepository";
 import { AppError } from "../../utils/appError";
 import { signToken } from "../../utils/jwt";
 import { SignupInput, LoginInput } from "./authValidation";
-import { UserResponseDTO } from "../../types/userTypes";
+import { toUserResponseDTO } from "../../types/userTypes";
 
 /**
  * Signup service
@@ -92,23 +92,12 @@ export const login = async (input: LoginInput) => {
 
   // Step 3: Generate JWT token
   // Convert user to DTO for token (exclude password)
-  const userDTO: UserResponseDTO = {
-    id: user.id,
-    email: user.email,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    userType: user.userType,
-    compName: user.compName,
-    location: user.location,
-    phone: user.phone,
-    isVerified: user.isVerified,
-    createdAt: user.createdAt,
-  };
+  const userDTO = toUserResponseDTO(user);
 
   const token = signToken({ 
     id: user.id, 
     email: user.email, 
-    userType: user.userType 
+    userType: user.user_type 
   });
 
   // Step 4: Return user DTO and token (NOT full user with password)

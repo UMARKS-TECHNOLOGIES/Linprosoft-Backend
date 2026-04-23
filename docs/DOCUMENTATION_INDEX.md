@@ -52,7 +52,7 @@ All files are in: `c:\Users\USER\UMARKS\Linkprosoft\linkprosoft_backend\`
 - Acceptance criteria for each day
 - Common mistakes to avoid
 - Code quality checklist
-
+  
 **Action:** This is your sprint plan, follow it day-by-day
 
 ---

@@ -5,7 +5,7 @@
  */
 
 import pool from "../../config/db";
-import { User, UserResponseDTO, toUserDTO } from "../../types/userTypes";
+import { UserRow, UserResponseDTO } from "../../types/userTypes";
 
 /**
  * Find user by email
@@ -14,7 +14,7 @@ import { User, UserResponseDTO, toUserDTO } from "../../types/userTypes";
  * @param email - User email address
  * @returns Full user object with password (for comparison) or null if not found
  */
-export const findbyEmail = async (email: string): Promise<User | null> => {
+export const findbyEmail = async (email: string): Promise<UserRow | null> => {
   try {
     const query = `
       SELECT id, email, password, first_name, last_name, user_type, 

@@ -27,6 +27,40 @@ export interface User {
 }
 
 /**
+ * Database User Row 
+ */
+
+export interface UserRow {
+  id: number;
+  email: string;
+  password: string;
+  first_name: string;
+  last_name: string;
+  user_type: UserType;
+  comp_name: string | null;
+  location: string | null;
+  phone: string | null;
+  is_verified: boolean;
+  created_at: Date;
+  updated_at: Date;
+  deleted_at: Date | null;
+}
+
+/** Mapper fuction from DB row to API DTO*/
+export const toUserResponseDTO = (user: UserRow): UserResponseDTO => ({
+  id: user.id,
+  email: user.email,
+  firstName: user.first_name,
+  lastName: user.last_name,
+  userType: user.user_type,
+  compName: user.comp_name ?? undefined,
+  location: user.location ?? undefined,
+  phone: user.phone ?? undefined,
+  isVerified: user.is_verified,
+  createdAt: user.created_at,
+});
+
+/**
  * User Response DTO - Safe user data for API responses
  * Excludes sensitive fields like password
  */

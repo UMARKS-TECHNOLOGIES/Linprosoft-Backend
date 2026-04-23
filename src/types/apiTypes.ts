@@ -24,7 +24,7 @@ export interface ApiErrorResponse {
   message: string;
   statusCode: number;
   timestamp: string;
-  ...(process.env.NODE_ENV === "development" && { stack?: string });
+//  ...(process.env.NODE_ENV === "development" && { stack?: string });
 }
 
 /**

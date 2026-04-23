@@ -28,7 +28,7 @@ declare global {
  * Usage: router.get('/protected', protect, controller.method)
  */
 export const protect = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, _res: Response, next: NextFunction) => {
     let token = "";
 
     // Step 1: Try to get token from cookies (primary method - most secure)
@@ -80,7 +80,7 @@ export const protect = catchAsync(
  * @param roles - Array of allowed user types (e.g., 'professional', 'employer')
  */
 export const authorize = (...roles: string[]) => {
-  return (req: Request, res: Response, next: NextFunction) => {
+  return (req: Request, _res: Response, next: NextFunction) => {
     // Check if user is authenticated (protect middleware runs first)
     if (!req.user) {
       throw new AppError("Not authenticated", 401);

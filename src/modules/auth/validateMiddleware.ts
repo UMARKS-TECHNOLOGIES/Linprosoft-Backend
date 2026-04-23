@@ -3,7 +3,7 @@ import { ZodSchema } from "zod";
 import { AppError } from "../../utils/appError";
 
 export const validate = (schema: ZodSchema) => {
-    return (req: Request, res: Response, next: NextFunction) => {
+    return (req: Request, _res: Response, next: NextFunction) => {
         const result = schema.safeParse(req.body);
         if (!result.success) {
             const errorMessage = result.error.issues.map(e => e.message).join(", ");
