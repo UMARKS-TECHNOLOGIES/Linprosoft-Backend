@@ -7,6 +7,11 @@ import express, { Request, Response } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRoutes from "./modules/auth/authRoutes";
+import profileRoutes from "./modules/profile/profileRoutes";
+import skillRoutes from "./modules/skill/skillRoutes";
+import certificationRoutes from "./modules/certification/certificationRoutes";
+import portfolioRoutes from "./modules/portfolio/portfolioRoutes";
+import searchRoutes from "./modules/search/searchRoutes";
 import { errorHandler } from "./middleware/errorMiddleware";
 import { requestLogger } from "./middleware/requestLogger";
 
@@ -42,6 +47,11 @@ app.use(requestLogger);
 
 // Auth routes
 app.use("/api/auth", authRoutes);
+app.use("/api/profiles", profileRoutes);
+app.use("/api/skills", skillRoutes);
+app.use("/api/profiles", certificationRoutes);
+app.use("/api/profiles", portfolioRoutes);
+app.use("/api/search", searchRoutes);
 
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {

@@ -27,7 +27,7 @@ const nonEmptyString = (fieldName: string) =>
  * Email validation - used across multiple schemas
  */
 const emailSchema = nonEmptyString("Email")
-  .email()
+  .email("Invalid email address")
   .toLowerCase();
 
 /**
@@ -75,7 +75,7 @@ export const signupSchema = z
     email: emailSchema,
     password: passwordSchema,
     passwordConfirm: passwordSchema,
-    userType: z.enum(["professional", "employer"]).catch("professional"),
+    userType: z.enum(["professional", "employer"], "User type must be 'professional' or 'employer'"),
     compName: compNameSchema,
     phone: trimmedString().max(VALIDATION_CONSTRAINTS.PHONE_MAX, "Phone number is invalid").optional(),
     location: trimmedString().max(VALIDATION_CONSTRAINTS.LOCATION_MAX, "Location is invalid").optional(),

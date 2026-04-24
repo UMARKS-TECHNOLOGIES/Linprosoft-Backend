@@ -1,0 +1,624 @@
+{
+  "info": {
+    "name": "Linkprosoft Professional API - Phase 2 Testing",
+    "description": "Complete test suite for Phase 2 professional profile, skills, certifications, portfolio, and search endpoints",
+    "version": "2.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "baseURL": "http://localhost:5020"
+  },
+  "item": [
+    {
+      "name": "🔍 SETUP",
+      "item": [
+        {
+          "name": "0. Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/health",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "health"]
+            }
+          }
+        },
+        {
+          "name": "1. Signup Professional User",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "pm.test('Has user data', function () {",
+                  "    let jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data.user).to.have.property('id');",
+                  "});",
+                  "let jsonData = pm.response.json();",
+                  "pm.environment.set('token', pm.cookies.get('access_token'));",
+                  "pm.environment.set('userId', jsonData.data.user.id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"John\",\"lastName\":\"Doe\",\"email\":\"john.doe@test.com\",\"password\":\"SecurePass123!\",\"passwordConfirm\":\"SecurePass123!\",\"userType\":\"professional\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/auth/signup",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "auth", "signup"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "👤 PROFILES",
+      "item": [
+        {
+          "name": "POST - Create Profile",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "pm.test('Has profile ID', function () {",
+                  "    let jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data.profile).to.have.property('id');",
+                  "});",
+                  "let jsonData = pm.response.json();",
+                  "pm.environment.set('profileId', jsonData.data.profile.id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"hourlyRate\":5000,\"bio\":\"Experienced Node.js and React developer with 5+ years experience\",\"availabilityStatus\":\"available\",\"responseTimeHours\":24}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/profiles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "profiles"]
+            }
+          }
+        },
+        {
+          "name": "GET - My Profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/profiles/me",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "profiles", "me"]
+            }
+          }
+        },
+        {
+          "name": "GET - Profile by User ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/profiles/{{userId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "profiles", "{{userId}}"]
+            }
+          }
+        },
+        {
+          "name": "GET - Detailed Profile with Relations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/profiles/{{userId}}/detailed",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "profiles", "{{userId}}", "detailed"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Update My Profile",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"hourlyRate\":6000,\"bio\":\"Senior full-stack developer\",\"availabilityStatus\":\"away\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/profiles/me",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "profiles", "me"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Delete My Profile",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/profiles/me",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "profiles", "me"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🛠️ SKILLS",
+      "item": [
+        {
+          "name": "GET - All Skills (Catalog)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test('Has skills array', function () {",
+                  "    let jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data.skills).to.be.an('array');",
+                  "});",
+                  "let jsonData = pm.response.json();",
+                  "if (jsonData.data.skills.length > 0) {",
+                  "    pm.environment.set('skillId', jsonData.data.skills[0].id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/skills?limit=20&offset=0",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "skills"],
+              "query": [
+                {"key": "limit", "value": "20"},
+                {"key": "offset", "value": "0"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST - Add Skill to Profile",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"skillId\":1,\"proficiencyLevel\":\"expert\",\"yearsOfExperience\":5,\"isPrimary\":true}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/skills/me/skills",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "skills", "me", "skills"]
+            }
+          }
+        },
+        {
+          "name": "GET - Profile Skills",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/skills/{{userId}}/skills",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "skills", "{{userId}}", "skills"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Update Profile Skill",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"proficiencyLevel\":\"expert\",\"yearsOfExperience\":6}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/skills/me/skills/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "skills", "me", "skills", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Remove Skill from Profile",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/skills/me/skills/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "skills", "me", "skills", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "📜 CERTIFICATIONS",
+      "item": [
+        {
+          "name": "POST - Create Certification",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "let jsonData = pm.response.json();",
+                  "pm.environment.set('certificationId', jsonData.data.certification.id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"AWS Solutions Architect Associate\",\"issuer\":\"Amazon Web Services\",\"issueDate\":\"2024-01-15\",\"expiryDate\":\"2026-01-15\",\"credentialUrl\":\"https://aws.amazon.com/verification\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/certifications/me/certifications",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "certifications", "me", "certifications"]
+            }
+          }
+        },
+        {
+          "name": "GET - List Certifications",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/certifications/{{userId}}/certifications",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "certifications", "{{userId}}", "certifications"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Update Certification",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"expiryDate\":\"2027-01-15\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/certifications/me/certifications/{{certificationId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "certifications", "me", "certifications", "{{certificationId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Delete Certification",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/certifications/me/certifications/{{certificationId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "certifications", "me", "certifications", "{{certificationId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🎯 PORTFOLIO",
+      "item": [
+        {
+          "name": "POST - Create Portfolio Item",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "let jsonData = pm.response.json();",
+                  "pm.environment.set('portfolioItemId', jsonData.data.portfolioItem.id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"E-commerce Platform\",\"description\":\"Full-stack e-commerce application built with Node.js and React. Features include user authentication, product catalog, shopping cart, and payment integration.\",\"imageUrl\":\"https://example.com/portfolio/ecommerce.jpg\",\"linkUrl\":\"https://github.com/user/ecommerce-platform\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/portfolio/me/portfolio",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "portfolio", "me", "portfolio"]
+            }
+          }
+        },
+        {
+          "name": "GET - List Portfolio Items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/portfolio/{{userId}}/portfolio",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "portfolio", "{{userId}}", "portfolio"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Update Portfolio Item",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"description\":\"Updated description for the project\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/portfolio/me/portfolio/{{portfolioItemId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "portfolio", "me", "portfolio", "{{portfolioItemId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Delete Portfolio Item",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/portfolio/me/portfolio/{{portfolioItemId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "portfolio", "me", "portfolio", "{{portfolioItemId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "🔎 SEARCH",
+      "item": [
+        {
+          "name": "GET - Available Filters",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/filters",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "filters"]
+            }
+          }
+        },
+        {
+          "name": "GET - Search Professionals (No Filter)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/professionals",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "professionals"]
+            }
+          }
+        },
+        {
+          "name": "GET - Search by Rating",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/professionals?minRating=4&maxRating=5&sortBy=rating_desc",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "professionals"],
+              "query": [
+                {"key": "minRating", "value": "4"},
+                {"key": "maxRating", "value": "5"},
+                {"key": "sortBy", "value": "rating_desc"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET - Search by Hourly Rate",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/professionals?minRate=5000&maxRate=10000",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "professionals"],
+              "query": [
+                {"key": "minRate", "value": "5000"},
+                {"key": "maxRate", "value": "10000"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET - Search by Skills",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/professionals?skills=1,2,3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "professionals"],
+              "query": [
+                {"key": "skills", "value": "1,2,3"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET - Search by Availability",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/professionals?availabilityStatus=available",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "professionals"],
+              "query": [
+                {"key": "availabilityStatus", "value": "available"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET - Search with Pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/professionals?page=1&limit=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "professionals"],
+              "query": [
+                {"key": "page", "value": "1"},
+                {"key": "limit", "value": "10"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET - Search with Sort by Rate",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/professionals?sortBy=rate_asc",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "professionals"],
+              "query": [
+                {"key": "sortBy", "value": "rate_asc"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET - Skills Autocomplete",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/search/skills?q=type&limit=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "search", "skills"],
+              "query": [
+                {"key": "q", "value": "type"},
+                {"key": "limit", "value": "10"}
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

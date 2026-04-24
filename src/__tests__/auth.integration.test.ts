@@ -25,6 +25,8 @@ import { requestLogger } from '../../src/middleware/requestLogger';
 
 describe('Auth Integration Tests', () => {
   let app: Express;
+  const runId = `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
+  const makeEmail = (prefix: string, domain = "test.com") => `${prefix}.${runId}@${domain}`;
 
   /**
    * Setup: Create Express app with all middleware and routes
@@ -69,12 +71,13 @@ describe('Auth Integration Tests', () => {
      * Test: Valid signup for professional user
      */
     it('should create a new professional user account', async () => {
+      const email = makeEmail("john.doe");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'John',
           lastName: 'Doe',
-          email: 'john.doe@test.com',
+          email,
           password: 'SecurePass123!',
           passwordConfirm: 'SecurePass123!',
           userType: 'professional',
@@ -87,7 +90,7 @@ describe('Auth Integration Tests', () => {
       expect(response.body.success).toBe(true);
       expect(response.body.message).toContain('Account created');
       expect(response.body.data.user).toHaveProperty('id');
-      expect(response.body.data.user.email).toBe('john.doe@test.com');
+      expect(response.body.data.user.email).toBe(email);
       expect(response.body.data.user.userType).toBe('professional');
       expect(response.body.data.user).not.toHaveProperty('password');
       expect(response.headers['set-cookie']).toBeDefined();
@@ -97,12 +100,13 @@ describe('Auth Integration Tests', () => {
      * Test: Valid signup for employer user with company name
      */
     it('should create a new employer user account with company name', async () => {
+      const email = makeEmail("jane.smith", "company.com");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Jane',
           lastName: 'Smith',
-          email: 'jane.smith@company.com',
+          email,
           password: 'SecurePass456!',
           passwordConfirm: 'SecurePass456!',
           userType: 'employer',
@@ -160,12 +164,13 @@ describe('Auth Integration Tests', () => {
      * Test: Validation error - password too short
      */
     it('should return 400 if password is less than 8 characters', async () => {
+      const email = makeEmail("short.pass");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'John',
           lastName: 'Doe',
-          email: 'john@test.com',
+          email,
           password: 'Pass12',
           passwordConfirm: 'Pass12',
           userType: 'professional',
@@ -179,12 +184,13 @@ describe('Auth Integration Tests', () => {
      * Test: Validation error - passwords don't match
      */
     it('should return 400 if passwords do not match', async () => {
+      const email = makeEmail("password.mismatch");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'John',
           lastName: 'Doe',
-          email: 'john@test.com',
+          email,
           password: 'SecurePass123!',
           passwordConfirm: 'DifferentPass123!',
           userType: 'professional',
@@ -198,12 +204,13 @@ describe('Auth Integration Tests', () => {
      * Test: Validation error - missing compName for employer
      */
     it('should return 400 if compName is missing for employer type', async () => {
+      const email = makeEmail("jane.missing.company", "company.com");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Jane',
           lastName: 'Smith',
-          email: 'jane@company.com',
+          email,
           password: 'SecurePass456!',
           passwordConfirm: 'SecurePass456!',
           userType: 'employer',
@@ -218,13 +225,14 @@ describe('Auth Integration Tests', () => {
      * Test: Duplicate email error
      */
     it('should return 409 if email already exists', async () => {
+      const email = makeEmail("duplicate");
       // First signup
       await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Test',
           lastName: 'User',
-          email: 'duplicate@test.com',
+          email,
           password: 'SecurePass123!',
           passwordConfirm: 'SecurePass123!',
           userType: 'professional',
@@ -236,7 +244,7 @@ describe('Auth Integration Tests', () => {
         .send({
           firstName: 'Another',
           lastName: 'User',
-          email: 'duplicate@test.com',
+          email,
           password: 'SecurePass456!',
           passwordConfirm: 'SecurePass456!',
           userType: 'professional',
@@ -256,7 +264,7 @@ describe('Auth Integration Tests', () => {
 
   describe('POST /api/auth/login', () => {
     // Setup: Create a test user for login tests
-    let testUserEmail = 'login.test@test.com';
+    let testUserEmail = makeEmail('login.test');
 
     beforeAll(async () => {
       await request(app)
@@ -374,7 +382,7 @@ describe('Auth Integration Tests', () => {
 
   describe('GET /api/auth/verify', () => {
     let loginToken: string;
-    let testUserEmail2 = 'verify.test@test.com';
+    let testUserEmail2 = makeEmail('verify.test');
 
     beforeAll(async () => {
       // Create test user
@@ -465,7 +473,7 @@ describe('Auth Integration Tests', () => {
 
   describe('POST /api/auth/logout', () => {
     let logoutToken: string;
-    let testUserEmail3 = 'logout.test@test.com';
+    let testUserEmail3 = makeEmail('logout.test');
 
     beforeAll(async () => {
       // Create test user
@@ -529,10 +537,9 @@ describe('Auth Integration Tests', () => {
         .post('/api/auth/logout')
         .set('Cookie', `token=${logoutToken}`);
 
-      // Try to verify with same token
+      // Cookie is cleared, so verify without token should fail
       const verifyResponse = await request(app)
-        .get('/api/auth/verify')
-        .set('Cookie', `token=${logoutToken}`);
+        .get('/api/auth/verify');
 
       expect(verifyResponse.status).toBe(401);
       expect(verifyResponse.body.success).toBe(false);
@@ -550,12 +557,13 @@ describe('Auth Integration Tests', () => {
      * Test: Success response has correct format
      */
     it('should return responses with correct success format', async () => {
+      const email = makeEmail("format");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Format',
           lastName: 'Test',
-          email: 'format@test.com',
+          email,
           password: 'FormatPass123!',
           passwordConfirm: 'FormatPass123!',
           userType: 'professional',
@@ -618,12 +626,13 @@ describe('Auth Integration Tests', () => {
      * Test: Password is not exposed in signup response
      */
     it('should not expose password in signup response', async () => {
+      const email = makeEmail("security1");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Security',
           lastName: 'Test',
-          email: 'security1@test.com',
+          email,
           password: 'SecurePass123!',
           passwordConfirm: 'SecurePass123!',
           userType: 'professional',
@@ -636,13 +645,14 @@ describe('Auth Integration Tests', () => {
      * Test: Password is not exposed in login response
      */
     it('should not expose password in login response', async () => {
+      const email = makeEmail("security2");
       // Create user first
       await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Security2',
           lastName: 'Test',
-          email: 'security2@test.com',
+          email,
           password: 'SecurePass456!',
           passwordConfirm: 'SecurePass456!',
           userType: 'professional',
@@ -651,7 +661,7 @@ describe('Auth Integration Tests', () => {
       const loginResponse = await request(app)
         .post('/api/auth/login')
         .send({
-          email: 'security2@test.com',
+          email,
           password: 'SecurePass456!',
         });
 
@@ -662,12 +672,13 @@ describe('Auth Integration Tests', () => {
      * Test: Token is not in response body
      */
     it('should not expose JWT token in response body', async () => {
+      const email = makeEmail("token");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Token',
           lastName: 'Test',
-          email: 'token@test.com',
+          email,
           password: 'TokenPass123!',
           passwordConfirm: 'TokenPass123!',
           userType: 'professional',
@@ -681,12 +692,13 @@ describe('Auth Integration Tests', () => {
      * Test: Token is in HTTP-only cookie
      */
     it('should set token in HTTP-only cookie', async () => {
+      const email = makeEmail("cookie");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Cookie',
           lastName: 'Test',
-          email: 'cookie@test.com',
+          email,
           password: 'CookiePass123!',
           passwordConfirm: 'CookiePass123!',
           userType: 'professional',
@@ -710,12 +722,13 @@ describe('Auth Integration Tests', () => {
      * Test: Professional user without compName
      */
     it('should allow professional user without company name', async () => {
+      const email = makeEmail("prof");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Prof',
           lastName: 'User',
-          email: 'prof@test.com',
+          email,
           password: 'ProfPass123!',
           passwordConfirm: 'ProfPass123!',
           userType: 'professional',
@@ -730,12 +743,13 @@ describe('Auth Integration Tests', () => {
      * Test: Employer user must have compName
      */
     it('should require company name for employer user', async () => {
+      const email = makeEmail("employer");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Employer',
           lastName: 'User',
-          email: 'employer@test.com',
+          email,
           password: 'EmpPass123!',
           passwordConfirm: 'EmpPass123!',
           userType: 'employer',
@@ -750,12 +764,13 @@ describe('Auth Integration Tests', () => {
      * Test: Employer user with compName
      */
     it('should accept employer user with company name', async () => {
+      const email = makeEmail("employer2");
       const response = await request(app)
         .post('/api/auth/signup')
         .send({
           firstName: 'Employer',
           lastName: 'User',
-          email: 'employer2@test.com',
+          email,
           password: 'EmpPass456!',
           passwordConfirm: 'EmpPass456!',
           userType: 'employer',

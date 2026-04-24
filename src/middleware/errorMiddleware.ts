@@ -1,5 +1,6 @@
 
 import { Request, Response, NextFunction } from "express";
+import { ZodError } from "zod";
 import logger from "../utils/logger";
 
 // Status code constants
@@ -112,17 +113,27 @@ export const errorHandler = (
   res: Response,
   _next: NextFunction
 ) => {
-  const statusCode = err.statusCode || STATUS_CODES.INTERNAL_ERROR;
+  const normalizedError: AppErrorObject = err instanceof ZodError
+    ? {
+        ...err,
+        message: err.issues.map((issue) => issue.message).join(", "),
+        statusCode: 400,
+        error: "validation_error",
+        isOperational: true,
+      }
+    : err;
+
+  const statusCode = normalizedError.statusCode || STATUS_CODES.INTERNAL_ERROR;
   const timestamp = new Date().toISOString();
 
   // Build error context
-  const errorLog = buildErrorLog({ ...err, statusCode }, req);
+  const errorLog = buildErrorLog({ ...normalizedError, statusCode }, req);
 
   // Log the error
-  logError({ ...err, statusCode }, errorLog);
+  logError({ ...normalizedError, statusCode }, errorLog);
 
   // Send response
-  const responseBody = buildErrorResponse(err, statusCode, timestamp);
+  const responseBody = buildErrorResponse(normalizedError, statusCode, timestamp);
   res.status(statusCode).json(responseBody);
 };
 
