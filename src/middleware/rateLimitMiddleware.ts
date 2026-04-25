@@ -7,6 +7,19 @@ import rateLimit from "express-rate-limit";
 import { Request } from "express";
 
 /**
+ * Helper function to get client IP from request
+ * Handles proxy scenarios (X-Forwarded-For) and direct connections
+ */
+function getClientIp(req: Request): string {
+  const forwardedFor = req.headers["x-forwarded-for"] as string;
+  if (forwardedFor) {
+    // If behind a proxy, get the first IP
+    return forwardedFor.split(",")[0].trim();
+  }
+  return req.ip || "127.0.0.1";
+}
+
+/**
  * General API rate limiter
  * Applied to all routes: 100 requests per 15 minutes per IP
  */
@@ -22,12 +35,7 @@ export const generalLimiter = rateLimit({
   },
   standardHeaders: true, // Return rate limit info in `RateLimit-*` headers
   legacyHeaders: false, // Disable `X-RateLimit-*` headers
-  keyGenerator: (req: Request) => {
-    // Use X-Forwarded-For if behind a proxy (like Nginx/CloudFlare), otherwise use IP
-    return (
-      (req.headers["x-forwarded-for"] as string)?.split(",")[0] || req.ip || ""
-    );
-  },
+  keyGenerator: (req: Request) => getClientIp(req),
   skip: (req: Request) => {
     // Skip rate limiting for health check endpoint
     return req.path === "/health";
@@ -51,11 +59,7 @@ export const authLimiter = rateLimit({
   },
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req: Request) => {
-    return (
-      (req.headers["x-forwarded-for"] as string)?.split(",")[0] || req.ip || ""
-    );
-  },
+  keyGenerator: (req: Request) => getClientIp(req),
   // Skip if user is already authenticated
   skip: (req: Request) => {
     return !!req.cookies?.token;
@@ -78,11 +82,7 @@ export const moderateLimiter = rateLimit({
   },
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req: Request) => {
-    return (
-      (req.headers["x-forwarded-for"] as string)?.split(",")[0] || req.ip || ""
-    );
-  },
+  keyGenerator: (req: Request) => getClientIp(req),
 });
 
 /**
@@ -102,11 +102,7 @@ export const searchLimiter = rateLimit({
   },
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req: Request) => {
-    return (
-      (req.headers["x-forwarded-for"] as string)?.split(",")[0] || req.ip || ""
-    );
-  },
+  keyGenerator: (req: Request) => getClientIp(req),
 });
 
 export default {
