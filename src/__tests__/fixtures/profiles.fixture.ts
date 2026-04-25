@@ -26,7 +26,7 @@ export const createProfileFixtures = {
     },
     bioTooLong: {
       hourlyRate: 5000,
-      bio: "x".repeat(1001),
+      bio: "x".repeat(2001),
     },
     invalidAvailability: {
       hourlyRate: 5000,
@@ -62,7 +62,7 @@ export const updateProfileFixtures = {
       hourlyRate: -5000,
     },
     bioTooLong: {
-      bio: "x".repeat(2000),
+      bio: "x".repeat(2001),
     },
   },
 };
@@ -93,3 +93,4 @@ export const testProfiles = {
     responseTimeHours: 72,
   },
 };
+

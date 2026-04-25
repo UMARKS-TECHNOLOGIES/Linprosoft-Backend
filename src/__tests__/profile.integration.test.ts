@@ -82,7 +82,7 @@ describe("Profile Integration Tests", () => {
         .send(createProfileFixtures.valid);
 
       expect(res.status).toBe(401);
-      expect(res.body.code).toBe("authentication_error");
+      expect(res.body.error).toBe("authentication_error");
     });
 
     it("should return 409 if profile already exists", async () => {
@@ -99,7 +99,7 @@ describe("Profile Integration Tests", () => {
         .send(createProfileFixtures.validAllFields);
 
       expect(res.status).toBe(409);
-      expect(res.body.code).toContain("409");
+      expect(res.body.statusCode).toBe(409);
       expect(res.body.message).toContain("already has");
     });
 
@@ -110,7 +110,7 @@ describe("Profile Integration Tests", () => {
         .send(createProfileFixtures.invalid.negativeRate);
 
       expect(res.status).toBe(400);
-      expect(res.body.code).toBe("VALIDATION_ERROR");
+      expect(res.body.error).toBe("validation_error");
     });
 
     it("should reject zero hourly rate", async () => {
@@ -481,3 +481,4 @@ describe("Profile Integration Tests", () => {
     });
   });
 });
+

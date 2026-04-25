@@ -4,11 +4,11 @@
  */
 
 import request from "supertest";
-import app from "../../app";
-import { testUsers } from "../fixtures/users.fixture";
-import { createProfileFixtures } from "../fixtures/profiles.fixture";
-import { addSkillFixtures, updateSkillFixtures, getAllSkillsFixture } from "../fixtures/skills.fixture";
-import { query } from "../setup";
+import app from "../app";
+import { testUsers } from "./fixtures/users.fixture";
+import { createProfileFixtures } from "./fixtures/profiles.fixture";
+import { addSkillFixtures, updateSkillFixtures } from "./fixtures/skills.fixture";
+import { query } from "./setup";
 
 describe("Skill Integration Tests", () => {
   let userId: number;
@@ -475,8 +475,7 @@ describe("Skill Integration Tests", () => {
       expect(res.status).toBe(200);
       // Primary should be first
       if (res.body.data.skills.length > 0) {
-        const firstSkill = res.body.data.skills[0];
-        // Verify skills are sorted by isPrimary DESC
+        expect(res.body.data.skills[0].isPrimary).toBe(true);
       }
     });
   });

@@ -3,31 +3,41 @@
  * Common test data for user creation and authentication
  */
 
+function buildUniqueEmail(prefix: string): string {
+  return `${prefix}.${Date.now()}.${Math.random().toString(36).slice(2, 8)}@example.com`;
+}
+
 export const testUsers = {
-  professional1: {
-    email: "pro1@example.com",
-    password: "TestPassword123",
-    passwordConfirm: "TestPassword123",
-    firstName: "John",
-    lastName: "Developer",
-    userType: "professional",
+  get professional1() {
+    return {
+      email: buildUniqueEmail("pro1"),
+      password: "TestPassword123$",
+      passwordConfirm: "TestPassword123$",
+      firstName: "John",
+      lastName: "Developer",
+      userType: "professional",
+    };
   },
-  professional2: {
-    email: "pro2@example.com",
-    password: "TestPassword123",
-    passwordConfirm: "TestPassword123",
-    firstName: "Jane",
-    lastName: "Architect",
-    userType: "professional",
+  get professional2() {
+    return {
+      email: buildUniqueEmail("pro2"),
+      password: "TestPassword123$",
+      passwordConfirm: "TestPassword123$",
+      firstName: "Jane",
+      lastName: "Architect",
+      userType: "professional",
+    };
   },
-  employer: {
-    email: "employer@example.com",
-    password: "TestPassword123",
-    passwordConfirm: "TestPassword123",
-    firstName: "Bob",
-    lastName: "Recruiter",
-    userType: "employer",
-    compName: "Acme Corp",
+  get employer() {
+    return {
+      email: buildUniqueEmail("employer"),
+      password: "TestPassword123$",
+      passwordConfirm: "TestPassword123$",
+      firstName: "Bob",
+      lastName: "Recruiter",
+      userType: "employer",
+      compName: "Acme Corp",
+    };
   },
 };
 

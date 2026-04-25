@@ -7,7 +7,7 @@ import request from "supertest";
 import app from "../app";
 import { testUsers } from "./fixtures/users.fixture";
 import { createProfileFixtures } from "./fixtures/profiles.fixture";
-import { createPortfolioFixtures, updatePortfolioFixtures, testPortfolioItems } from "./fixtures/portfolioItems.fixture";
+import { createPortfolioFixtures, updatePortfolioFixtures } from "./fixtures/portfolioItems.fixture";
 import { query } from "./setup";
 
 describe("Portfolio Integration Tests", () => {
@@ -43,10 +43,10 @@ describe("Portfolio Integration Tests", () => {
   // POST /portfolio/me - CREATE
   // ========================
 
-  describe("POST /api/portfolio/me - Create Portfolio Item", () => {
+  describe("POST /api/profiles/me/portfolio - Create Portfolio Item", () => {
     it("should create portfolio item with valid data - 201", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.valid);
 
@@ -62,7 +62,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should create portfolio item with minimal data", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.validMinimal);
 
@@ -75,7 +75,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should create portfolio item without image URL", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.validNoImage);
 
@@ -86,7 +86,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should create portfolio item without link URL", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.validNoLink);
 
@@ -97,7 +97,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should create portfolio item with all fields", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.validAllFields);
 
@@ -112,7 +112,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should return 401 if not authenticated", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .send(createPortfolioFixtures.valid);
 
       expect(res.status).toBe(401);
@@ -126,7 +126,7 @@ describe("Portfolio Integration Tests", () => {
       const newAuthToken = signupRes.headers["set-cookie"];
 
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", newAuthToken)
         .send(createPortfolioFixtures.valid);
 
@@ -135,7 +135,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should reject missing title", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.invalid.noTitle);
 
@@ -144,7 +144,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should reject title exceeding max length", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.invalid.titleTooLong);
 
@@ -153,7 +153,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should reject description exceeding max length", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.invalid.descriptionTooLong);
 
@@ -162,7 +162,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should reject invalid image URL format", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.invalid.invalidImageUrl);
 
@@ -171,7 +171,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should reject invalid link URL format", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.invalid.invalidLinkUrl);
 
@@ -186,13 +186,13 @@ describe("Portfolio Integration Tests", () => {
   describe("GET /api/portfolio/:userId - Retrieve Portfolio Items", () => {
     beforeEach(async () => {
       await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.valid);
     });
 
     it("should retrieve portfolio items for a user - 200", async () => {
-      const res = await request(app).get(`/api/portfolio/${userId}`);
+      const res = await request(app).get(`/api/profiles/${userId}/portfolio`);
 
       expect(res.status).toBe(200);
       expect(res.body.success).toBe(true);
@@ -214,20 +214,20 @@ describe("Portfolio Integration Tests", () => {
         .set("Cookie", newAuthToken)
         .send(createProfileFixtures.valid);
 
-      const res = await request(app).get(`/api/portfolio/${newUserId}`);
+      const res = await request(app).get(`/api/profiles/${newUserId}/portfolio`);
 
       expect(res.status).toBe(200);
       expect(res.body.data.portfolioItems).toEqual([]);
     });
 
     it("should return 404 for non-existent user", async () => {
-      const res = await request(app).get("/api/portfolio/999999");
+      const res = await request(app).get("/api/profiles/999999/portfolio");
 
       expect(res.status).toBe(404);
     });
 
     it("should include all portfolio item details", async () => {
-      const res = await request(app).get(`/api/portfolio/${userId}`);
+      const res = await request(app).get(`/api/profiles/${userId}/portfolio`);
 
       expect(res.status).toBe(200);
       if (res.body.data.portfolioItems.length > 0) {
@@ -242,7 +242,7 @@ describe("Portfolio Integration Tests", () => {
     });
 
     it("should sort portfolio items by creation date (newest first)", async () => {
-      const res = await request(app).get(`/api/portfolio/${userId}`);
+      const res = await request(app).get(`/api/profiles/${userId}/portfolio`);
 
       expect(res.status).toBe(200);
       const items = res.body.data.portfolioItems;
@@ -260,10 +260,10 @@ describe("Portfolio Integration Tests", () => {
   // PUT /portfolio/me/:itemId - UPDATE
   // ========================
 
-  describe("PUT /api/portfolio/me/:itemId - Update Portfolio Item", () => {
+  describe("PUT /api/profiles/me/portfolio/:itemId - Update Portfolio Item", () => {
     beforeEach(async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.valid);
 
@@ -272,7 +272,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should update portfolio item with valid data - 200", async () => {
       const res = await request(app)
-        .put(`/api/portfolio/me/${portfolioItemId}`)
+        .put(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .set("Cookie", authToken)
         .send(updatePortfolioFixtures.valid);
 
@@ -286,7 +286,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should support partial updates", async () => {
       const res = await request(app)
-        .put(`/api/portfolio/me/${portfolioItemId}`)
+        .put(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .set("Cookie", authToken)
         .send(updatePortfolioFixtures.partialUpdate);
 
@@ -298,7 +298,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should update only description", async () => {
       const res = await request(app)
-        .put(`/api/portfolio/me/${portfolioItemId}`)
+        .put(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .set("Cookie", authToken)
         .send(updatePortfolioFixtures.updateDescription);
 
@@ -309,7 +309,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should update image and link URLs", async () => {
       const res = await request(app)
-        .put(`/api/portfolio/me/${portfolioItemId}`)
+        .put(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .set("Cookie", authToken)
         .send(updatePortfolioFixtures.updateLinks);
 
@@ -320,7 +320,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should return 401 if not authenticated", async () => {
       const res = await request(app)
-        .put(`/api/portfolio/me/${portfolioItemId}`)
+        .put(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .send(updatePortfolioFixtures.valid);
 
       expect(res.status).toBe(401);
@@ -328,7 +328,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should return 404 if portfolio item not found", async () => {
       const res = await request(app)
-        .put("/api/portfolio/me/999999")
+        .put("/api/profiles/me/portfolio/999999")
         .set("Cookie", authToken)
         .send(updatePortfolioFixtures.valid);
 
@@ -337,7 +337,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should reject empty title in update", async () => {
       const res = await request(app)
-        .put(`/api/portfolio/me/${portfolioItemId}`)
+        .put(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .set("Cookie", authToken)
         .send(updatePortfolioFixtures.invalid.emptyTitle);
 
@@ -346,7 +346,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should reject invalid URL in update", async () => {
       const res = await request(app)
-        .put(`/api/portfolio/me/${portfolioItemId}`)
+        .put(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .set("Cookie", authToken)
         .send(updatePortfolioFixtures.invalid.invalidUrl);
 
@@ -358,10 +358,10 @@ describe("Portfolio Integration Tests", () => {
   // DELETE /portfolio/me/:itemId - DELETE
   // ========================
 
-  describe("DELETE /api/portfolio/me/:itemId - Delete Portfolio Item", () => {
+  describe("DELETE /api/profiles/me/portfolio/:itemId - Delete Portfolio Item", () => {
     beforeEach(async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send(createPortfolioFixtures.valid);
 
@@ -370,25 +370,25 @@ describe("Portfolio Integration Tests", () => {
 
     it("should delete portfolio item - 204", async () => {
       const res = await request(app)
-        .delete(`/api/portfolio/me/${portfolioItemId}`)
+        .delete(`/api/profiles/me/portfolio/${portfolioItemId}`)
         .set("Cookie", authToken);
 
       expect(res.status).toBe(204);
 
       // Verify deleted
-      const getRes = await request(app).get(`/api/portfolio/${userId}`);
+      const getRes = await request(app).get(`/api/profiles/${userId}/portfolio`);
       expect(getRes.body.data.portfolioItems.length).toBe(0);
     });
 
     it("should return 401 if not authenticated", async () => {
-      const res = await request(app).delete(`/api/portfolio/me/${portfolioItemId}`);
+      const res = await request(app).delete(`/api/profiles/me/portfolio/${portfolioItemId}`);
 
       expect(res.status).toBe(401);
     });
 
     it("should return 404 if portfolio item not found", async () => {
       const res = await request(app)
-        .delete("/api/portfolio/me/999999")
+        .delete("/api/profiles/me/portfolio/999999")
         .set("Cookie", authToken);
 
       expect(res.status).toBe(404);
@@ -403,7 +403,7 @@ describe("Portfolio Integration Tests", () => {
     it("should handle very long titles", async () => {
       const longTitle = "A".repeat(255);
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send({
           title: longTitle,
@@ -417,7 +417,7 @@ describe("Portfolio Integration Tests", () => {
     it("should handle very long descriptions", async () => {
       const longDescription = "Project description. ".repeat(100);
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send({
           title: "Project",
@@ -433,7 +433,7 @@ describe("Portfolio Integration Tests", () => {
       const specialDesc = "Built with React, TypeScript & Node.js—REST API & WebSockets";
 
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send({
           title: specialTitle,
@@ -447,7 +447,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should handle portfolio items without optional fields", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send({
           title: "Minimal Project",
@@ -461,7 +461,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should handle portfolio items with GitHub repository links", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send({
           title: "Open Source Project",
@@ -476,7 +476,7 @@ describe("Portfolio Integration Tests", () => {
 
     it("should handle portfolio items with video demo links", async () => {
       const res = await request(app)
-        .post("/api/portfolio/me")
+        .post("/api/profiles/me/portfolio")
         .set("Cookie", authToken)
         .send({
           title: "Video Demo Project",
@@ -488,3 +488,4 @@ describe("Portfolio Integration Tests", () => {
     });
   });
 });
+

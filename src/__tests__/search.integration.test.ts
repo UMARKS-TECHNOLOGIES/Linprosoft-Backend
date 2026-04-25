@@ -293,10 +293,10 @@ describe("Search Integration Tests", () => {
 
       expect(res.status).toBe(200);
       expect(res.body.data.professionals.length).toBeLessThanOrEqual(10);
-      expect(res.body.meta).toHaveProperty("page");
-      expect(res.body.meta).toHaveProperty("limit");
-      expect(res.body.meta).toHaveProperty("total");
-      expect(res.body.meta).toHaveProperty("pages");
+      expect(res.body.data.meta).toHaveProperty("page");
+      expect(res.body.data.meta).toHaveProperty("limit");
+      expect(res.body.data.meta).toHaveProperty("total");
+      expect(res.body.data.meta).toHaveProperty("pages");
     });
 
     it("should return correct page number", async () => {
@@ -305,8 +305,8 @@ describe("Search Integration Tests", () => {
         .query({ page: 1, limit: 5 });
 
       expect(res.status).toBe(200);
-      expect(res.body.meta.page).toBe(1);
-      expect(res.body.meta.limit).toBe(5);
+      expect(res.body.data.meta.page).toBe(1);
+      expect(res.body.data.meta.limit).toBe(5);
     });
 
     it("should support offset-based pagination", async () => {
@@ -321,7 +321,7 @@ describe("Search Integration Tests", () => {
       expect(page1.status).toBe(200);
       expect(page2.status).toBe(200);
 
-      if (page1.body.meta.total > 5) {
+      if (page1.body.data.meta.total > 5) {
         // Different pages should have different data
         expect(page1.body.data.professionals[0]?.id).not.toEqual(
           page2.body.data.professionals[0]?.id
@@ -351,7 +351,7 @@ describe("Search Integration Tests", () => {
         .query({ page: 1, limit: 10 });
 
       expect(res.status).toBe(200);
-      const { total, limit, pages } = res.body.meta;
+      const { total, limit, pages } = res.body.data.meta;
       const expectedPages = Math.ceil(total / limit);
       expect(pages).toBe(expectedPages);
     });
@@ -365,7 +365,7 @@ describe("Search Integration Tests", () => {
     it("should support sorting by rating", async () => {
       const res = await request(app)
         .get("/api/search/professionals")
-        .query({ sortBy: "rating" });
+        .query({ sortBy: "rating_desc" });
 
       expect(res.status).toBe(200);
       const professionals = res.body.data.professionals;
@@ -381,7 +381,7 @@ describe("Search Integration Tests", () => {
     it("should support sorting by hourly rate", async () => {
       const res = await request(app)
         .get("/api/search/professionals")
-        .query({ sortBy: "hourlyRate" });
+        .query({ sortBy: "rate_asc" });
 
       expect(res.status).toBe(200);
       const professionals = res.body.data.professionals;
@@ -397,7 +397,7 @@ describe("Search Integration Tests", () => {
     it("should support sorting by recently updated", async () => {
       const res = await request(app)
         .get("/api/search/professionals")
-        .query({ sortBy: "recent" });
+        .query({ sortBy: "recent_desc" });
 
       expect(res.status).toBe(200);
       const professionals = res.body.data.professionals;
@@ -452,15 +452,15 @@ describe("Search Integration Tests", () => {
         .query({
           skills: [3],
           minRate: 6000,
-          sortBy: "rating",
+          sortBy: "rating_desc",
           page: 1,
           limit: 5,
         });
 
       expect(res.status).toBe(200);
       expect(Array.isArray(res.body.data.professionals)).toBe(true);
-      expect(res.body.meta.page).toBe(1);
-      expect(res.body.meta.limit).toBe(5);
+      expect(res.body.data.meta.page).toBe(1);
+      expect(res.body.data.meta.limit).toBe(5);
     });
 
     it("should handle all filter parameters together", async () => {
@@ -471,14 +471,14 @@ describe("Search Integration Tests", () => {
           minRating: 0,
           minRate: 3000,
           maxRate: 15000,
-          sortBy: "rating",
+          sortBy: "rating_desc",
           page: 1,
           limit: 20,
         });
 
       expect(res.status).toBe(200);
       expect(res.body.data.professionals.length).toBeGreaterThanOrEqual(0);
-      expect(res.body.meta).toBeDefined();
+      expect(res.body.data.meta).toBeDefined();
     });
   });
 
@@ -493,10 +493,10 @@ describe("Search Integration Tests", () => {
         .query({ q: "React" });
 
       expect(res.status).toBe(200);
-      expect(Array.isArray(res.body.data.suggestions)).toBe(true);
+      expect(Array.isArray(res.body.data.skills)).toBe(true);
 
-      if (res.body.data.suggestions.length > 0) {
-        res.body.data.suggestions.forEach((skill: any) => {
+      if (res.body.data.skills.length > 0) {
+        res.body.data.skills.forEach((skill: any) => {
           expect(skill.name.toLowerCase()).toContain("react");
         });
       }
@@ -508,7 +508,7 @@ describe("Search Integration Tests", () => {
         .query({ q: "type" });
 
       expect(res.status).toBe(200);
-      expect(Array.isArray(res.body.data.suggestions)).toBe(true);
+      expect(Array.isArray(res.body.data.skills)).toBe(true);
     });
 
     it("should handle empty query", async () => {
@@ -537,24 +537,23 @@ describe("Search Integration Tests", () => {
   // GET /search/filter-options - FILTER OPTIONS
   // ========================
 
-  describe("GET /api/search/filter-options - Get Filter Options", () => {
+  describe("GET /api/search/filters - Get Filter Options", () => {
     it("should return available filter options - 200", async () => {
-      const res = await request(app).get("/api/search/filter-options");
+      const res = await request(app).get("/api/search/filters");
 
       expect(res.status).toBe(200);
       expect(res.body.success).toBe(true);
-      expect(res.body.data).toHaveProperty("skills");
-      expect(res.body.data).toHaveProperty("availabilityStatuses");
-      expect(Array.isArray(res.body.data.skills)).toBe(true);
-      expect(Array.isArray(res.body.data.availabilityStatuses)).toBe(true);
+      expect(res.body.data).toHaveProperty("filters");
+      expect(Array.isArray(res.body.data.filters.skills)).toBe(true);
+      expect(Array.isArray(res.body.data.filters.availabilityStatuses)).toBe(true);
     });
 
     it("should return skills with required properties", async () => {
-      const res = await request(app).get("/api/search/filter-options");
+      const res = await request(app).get("/api/search/filters");
 
       expect(res.status).toBe(200);
-      if (res.body.data.skills.length > 0) {
-        const skill = res.body.data.skills[0];
+      if (res.body.data.filters.skills.length > 0) {
+        const skill = res.body.data.filters.skills[0];
         expect(skill).toHaveProperty("id");
         expect(skill).toHaveProperty("name");
         expect(skill).toHaveProperty("category");
@@ -562,17 +561,17 @@ describe("Search Integration Tests", () => {
     });
 
     it("should return availability status options", async () => {
-      const res = await request(app).get("/api/search/filter-options");
+      const res = await request(app).get("/api/search/filters");
 
       expect(res.status).toBe(200);
-      const statuses = res.body.data.availabilityStatuses;
+      const statuses = res.body.data.filters.availabilityStatuses;
       expect(statuses).toContain("available");
       expect(statuses).toContain("unavailable");
       expect(statuses).toContain("away");
     });
 
     it("should be publicly accessible", async () => {
-      const res = await request(app).get("/api/search/filter-options");
+      const res = await request(app).get("/api/search/filters");
 
       expect(res.status).toBe(200);
       expect(res.body.success).toBe(true);
@@ -591,7 +590,7 @@ describe("Search Integration Tests", () => {
 
       expect(res.status).toBe(200);
       expect(res.body.data.professionals).toEqual([]);
-      expect(res.body.meta.total).toBe(0);
+      expect(res.body.data.meta.total).toBe(0);
     });
 
     it("should handle large page limits", async () => {
@@ -608,7 +607,7 @@ describe("Search Integration Tests", () => {
         .get("/api/search/professionals")
         .query({ page: 1, limit: 10 });
 
-      const lastPage = Math.ceil(firstRes.body.meta.total / 10);
+      const lastPage = Math.ceil(firstRes.body.data.meta.total / 10);
       const lastRes = await request(app)
         .get("/api/search/professionals")
         .query({ page: lastPage, limit: 10 });
@@ -626,3 +625,4 @@ describe("Search Integration Tests", () => {
     });
   });
 });
+

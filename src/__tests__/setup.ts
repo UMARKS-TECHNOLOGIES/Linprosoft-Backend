@@ -3,6 +3,7 @@
  * Configures test environment, database connections, and global test utilities
  */
 
+import type { QueryResultRow } from "pg";
 import pool from "../config/db";
 
 // Increase timeout for database operations
@@ -35,7 +36,6 @@ export async function clearTestData() {
     await testDb.query("DELETE FROM certifications");
     await testDb.query("DELETE FROM professional_skills");
     await testDb.query("DELETE FROM professional_profiles");
-    await testDb.query("DELETE FROM skills");
     await testDb.query("DELETE FROM users WHERE id > 0");
   } catch (error) {
     console.error("Error clearing test data:", error);
@@ -58,7 +58,7 @@ export async function teardownTestDb() {
 /**
  * Helper to run queries in tests
  */
-export async function query<T = any>(sql: string, values: any[] = []): Promise<T[]> {
+export async function query<T extends QueryResultRow = QueryResultRow>(sql: string, values: any[] = []): Promise<T[]> {
   const result = await testDb.query<T>(sql, values);
   return result.rows;
 }
@@ -77,3 +77,4 @@ afterAll(async () => {
   await clearTestData();
   await teardownTestDb();
 });
+

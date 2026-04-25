@@ -1,0 +1,2383 @@
+=== src/__tests__/certification.integration.test.ts ===
+ExitCode: 1
+  console.log
+    ? Test database connected: { now: 2026-04-25T05:14:43.068Z }
+
+      at setupTestDb (src/__tests__/setup.ts:21:13)
+
+2026-04-25 06:14:43 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 326,
+  "email": "pro1.1777094083149.ebea97@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:14:43 [[32minfo[39m]: POST /signup - 201 - 506ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:43 [[32minfo[39m]: POST / - 201 - 60ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[32minfo[39m]: POST /me/certifications - 201 - 47ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[32minfo[39m]: POST /me/certifications - 201 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[32minfo[39m]: POST /me/certifications - 201 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[32minfo[39m]: POST /me/certifications - 201 - 27ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "POST",
+  "path": "/api/profiles/me/certifications",
+  "query": {}
+}
+2026-04-25 06:14:44 [[33mwarn[39m]: POST /api/profiles/me/certifications - 401 - 39ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 327,
+  "email": "pro2.1777094084389.ciq9et@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:14:44 [[32minfo[39m]: POST /signup - 201 - 469ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/profiles/me/certifications",
+  "query": {},
+  "userId": 327
+}
+2026-04-25 06:14:44 [[33mwarn[39m]: POST /api/profiles/me/certifications - 404 - 20ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:44 [[33mwarn[39m]: Client Error Invalid input: expected string, received undefined {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/certifications",
+  "query": {},
+  "userId": 326
+}
+2026-04-25 06:14:45 [[33mwarn[39m]: POST /api/profiles/me/certifications - 400 - 39ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:45 [[33mwarn[39m]: Client Error Invalid ISO date {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/certifications",
+  "query": {},
+  "userId": 326
+}
+2026-04-25 06:14:45 [[33mwarn[39m]: POST /api/profiles/me/certifications - 400 - 55ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:45 [[32minfo[39m]: POST /me/certifications - 201 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:45 [[32minfo[39m]: POST /me/certifications - 201 - 20ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:45 [[33mwarn[39m]: Client Error Invalid URL {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/certifications",
+  "query": {},
+  "userId": 326
+}
+2026-04-25 06:14:45 [[33mwarn[39m]: POST /api/profiles/me/certifications - 400 - 29ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:45 [[32minfo[39m]: POST /me/certifications - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:45 [[32minfo[39m]: GET /326/certifications - 200 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:45 [[32minfo[39m]: POST /me/certifications - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 328,
+  "email": "pro2.1777094085552.923q71@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /signup - 201 - 444ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: GET /328/certifications - 200 - 6ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/profiles/999999/certifications",
+  "query": {}
+}
+2026-04-25 06:14:46 [[33mwarn[39m]: GET /api/profiles/999999/certifications - 404 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: GET /326/certifications - 200 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: GET /326/certifications - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: PUT /me/certifications/75 - 200 - 31ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: PUT /me/certifications/76 - 200 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: PUT /me/certifications/77 - 200 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "PUT",
+  "path": "/api/profiles/me/certifications/78",
+  "query": {}
+}
+2026-04-25 06:14:46 [[33mwarn[39m]: PUT /api/profiles/me/certifications/78 - 401 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[32minfo[39m]: POST /me/certifications - 201 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:46 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "PUT",
+  "path": "/api/profiles/me/certifications/999999",
+  "query": {},
+  "userId": 326
+}
+2026-04-25 06:14:46 [[33mwarn[39m]: PUT /api/profiles/me/certifications/999999 - 404 - 24ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: POST /me/certifications - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: Client Error Invalid ISO date {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "PUT",
+  "path": "/api/profiles/me/certifications/80",
+  "query": {},
+  "userId": 326
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: PUT /api/profiles/me/certifications/80 - 400 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: POST /me/certifications - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: DELETE /me/certifications/81 - 204 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: GET /326/certifications - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: POST /me/certifications - 201 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "DELETE",
+  "path": "/api/profiles/me/certifications/82",
+  "query": {}
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: DELETE /api/profiles/me/certifications/82 - 401 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: POST /me/certifications - 201 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "DELETE",
+  "path": "/api/profiles/me/certifications/999999",
+  "query": {},
+  "userId": 326
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: DELETE /api/profiles/me/certifications/999999 - 404 - 29ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: POST /me/certifications - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: POST /me/certifications - 201 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[32minfo[39m]: POST /me/certifications - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: Client Error Invalid input: expected string, received null {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/certifications",
+  "query": {},
+  "userId": 326
+}
+2026-04-25 06:14:47 [[33mwarn[39m]: POST /api/profiles/me/certifications - 400 - 31ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:14:48 [[32minfo[39m]: POST /me/certifications - 201 - 9ms {
+  "service": "linkprosoft-backend"
+}
+FAIL src/__tests__/certification.integration.test.ts (15.068 s)
+  ? Certification Integration Tests › POST /api/profiles/me/certifications - Create Certification › should create certification with valid data - 201
+System.Management.Automation.RemoteException
+    expect(received).toContain(expected) // indexOf
+System.Management.Automation.RemoteException
+    Expected substring: "created successfully"
+    Received string:    "Certification added successfully"
+System.Management.Automation.RemoteException
+    [0m [90m 56 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mcertification[33m.[39mtitle)[33m.[39mtoBe(createCertificationFixtures[33m.[39mvalid[33m.[39mtitle)[33m;[39m
+     [90m 57 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mcertification[33m.[39missuer)[33m.[39mtoBe(createCertificationFixtures[33m.[39mvalid[33m.[39missuer)[33m;[39m
+    [31m[1m>[22m[39m[90m 58 |[39m       expect(res[33m.[39mbody[33m.[39mmessage)[33m.[39mtoContain([32m"created successfully"[39m)[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 59 |[39m     })[33m;[39m
+     [90m 60 |[39m
+     [90m 61 |[39m     it([32m"should create certification with minimal data"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/certification.integration.test.ts:58:32)
+System.Management.Automation.RemoteException
+  ? Certification Integration Tests › POST /api/profiles/me/certifications - Create Certification › should reject expiry date before issue date
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 400
+    Received: 201
+System.Management.Automation.RemoteException
+    [0m [90m 140 |[39m         [33m.[39msend(createCertificationFixtures[33m.[39minvalid[33m.[39mexpiryBeforeIssue)[33m;[39m
+     [90m 141 |[39m
+    [31m[1m>[22m[39m[90m 142 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m400[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 143 |[39m     })[33m;[39m
+     [90m 144 |[39m
+     [90m 145 |[39m     it([32m"should reject future issue date"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/certification.integration.test.ts:142:26)
+System.Management.Automation.RemoteException
+  ? Certification Integration Tests › POST /api/profiles/me/certifications - Create Certification › should reject future issue date
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 400
+    Received: 201
+System.Management.Automation.RemoteException
+    [0m [90m 149 |[39m         [33m.[39msend(createCertificationFixtures[33m.[39minvalid[33m.[39mfutureDateIssue)[33m;[39m
+     [90m 150 |[39m
+    [31m[1m>[22m[39m[90m 151 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m400[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 152 |[39m     })[33m;[39m
+     [90m 153 |[39m
+     [90m 154 |[39m     it([32m"should reject invalid credential URL"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/certification.integration.test.ts:151:26)
+System.Management.Automation.RemoteException
+  ? Certification Integration Tests › PUT /api/profiles/me/certifications/:certId - Update Certification › should update only expiry date
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: "2027-12-31"
+    Received: "2027-12-30T23:00:00.000Z"
+System.Management.Automation.RemoteException
+    [0m [90m 287 |[39m
+     [90m 288 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 289 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mcertification[33m.[39mexpiryDate)[33m.[39mtoBe(updateCertificationFixtures[33m.[39mupdateExpiry[33m.[39mexpiryDate)[33m;[39m
+     [90m     |[39m                                                      [31m[1m^[22m[39m
+     [90m 290 |[39m     })[33m;[39m
+     [90m 291 |[39m
+     [90m 292 |[39m     it([32m"should return 401 if not authenticated"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/certification.integration.test.ts:289:54)
+System.Management.Automation.RemoteException
+  ? Certification Integration Tests › Certification Validation & Edge Cases › should handle null credential URL
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 201
+    Received: 400
+System.Management.Automation.RemoteException
+    [0m [90m 419 |[39m         })[33m;[39m
+     [90m 420 |[39m
+    [31m[1m>[22m[39m[90m 421 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m201[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 422 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mcertification[33m.[39mcredentialUrl)[33m.[39mtoBeNull()[33m;[39m
+     [90m 423 |[39m     })[33m;[39m
+     [90m 424 |[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/certification.integration.test.ts:421:26)
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 25 passed, 30 total
+Snapshots:   0 total
+Time:        16.208 s, estimated 17 s
+Ran all test suites within paths "src/__tests__/certification.integration.test.ts".
+
+=== src/__tests__/portfolio.integration.test.ts ===
+ExitCode: 0
+  console.log
+    ? Test database connected: { now: 2026-04-25T05:15:06.019Z }
+
+      at setupTestDb (src/__tests__/setup.ts:21:13)
+
+2026-04-25 06:15:06 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 329,
+  "email": "pro1.1777094106094.yzpudq@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:15:06 [[32minfo[39m]: POST /signup - 201 - 519ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:06 [[32minfo[39m]: POST / - 201 - 46ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[32minfo[39m]: POST /me/portfolio - 201 - 90ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[32minfo[39m]: POST /me/portfolio - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[32minfo[39m]: POST /me/portfolio - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[32minfo[39m]: POST /me/portfolio - 201 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[32minfo[39m]: POST /me/portfolio - 201 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "POST",
+  "path": "/api/profiles/me/portfolio",
+  "query": {}
+}
+2026-04-25 06:15:07 [[33mwarn[39m]: POST /api/profiles/me/portfolio - 401 - 50ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 330,
+  "email": "pro2.1777094107426.q6w4i4@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:15:07 [[32minfo[39m]: POST /signup - 201 - 431ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/profiles/me/portfolio",
+  "query": {},
+  "userId": 330
+}
+2026-04-25 06:15:07 [[33mwarn[39m]: POST /api/profiles/me/portfolio - 404 - 30ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:07 [[33mwarn[39m]: Client Error Invalid input: expected string, received undefined {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/portfolio",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:07 [[33mwarn[39m]: POST /api/profiles/me/portfolio - 400 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: Client Error Too big: expected string to have <=255 characters {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/portfolio",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: POST /api/profiles/me/portfolio - 400 - 41ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: Client Error Too big: expected string to have <=5000 characters {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/portfolio",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: POST /api/profiles/me/portfolio - 400 - 33ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: Client Error Invalid URL {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/portfolio",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: POST /api/profiles/me/portfolio - 400 - 32ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: Client Error Invalid URL {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles/me/portfolio",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:08 [[33mwarn[39m]: POST /api/profiles/me/portfolio - 400 - 33ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[32minfo[39m]: POST /me/portfolio - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[32minfo[39m]: GET /329/portfolio - 200 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[32minfo[39m]: POST /me/portfolio - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:08 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 331,
+  "email": "pro2.1777094108546.mwsoh3@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /signup - 201 - 446ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST / - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: GET /331/portfolio - 200 - 8ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/profiles/999999/portfolio",
+  "query": {}
+}
+2026-04-25 06:15:09 [[33mwarn[39m]: GET /api/profiles/999999/portfolio - 404 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: GET /329/portfolio - 200 - 7ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: GET /329/portfolio - 200 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: PUT /me/portfolio/74 - 200 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: PUT /me/portfolio/75 - 200 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: PUT /me/portfolio/76 - 200 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: PUT /me/portfolio/77 - 200 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[32minfo[39m]: POST /me/portfolio - 201 - 30ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:09 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "PUT",
+  "path": "/api/profiles/me/portfolio/78",
+  "query": {}
+}
+2026-04-25 06:15:09 [[33mwarn[39m]: PUT /api/profiles/me/portfolio/78 - 401 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: POST /me/portfolio - 201 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "PUT",
+  "path": "/api/profiles/me/portfolio/999999",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: PUT /api/profiles/me/portfolio/999999 - 404 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: POST /me/portfolio - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: Client Error Too small: expected string to have >=1 characters {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "PUT",
+  "path": "/api/profiles/me/portfolio/80",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: PUT /api/profiles/me/portfolio/80 - 400 - 33ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: POST /me/portfolio - 201 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: Client Error Invalid URL {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "PUT",
+  "path": "/api/profiles/me/portfolio/81",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: PUT /api/profiles/me/portfolio/81 - 400 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: POST /me/portfolio - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: DELETE /me/portfolio/82 - 204 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: GET /329/portfolio - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: POST /me/portfolio - 201 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "DELETE",
+  "path": "/api/profiles/me/portfolio/83",
+  "query": {}
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: DELETE /api/profiles/me/portfolio/83 - 401 - 20ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: POST /me/portfolio - 201 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "DELETE",
+  "path": "/api/profiles/me/portfolio/999999",
+  "query": {},
+  "userId": 329
+}
+2026-04-25 06:15:10 [[33mwarn[39m]: DELETE /api/profiles/me/portfolio/999999 - 404 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:10 [[32minfo[39m]: POST /me/portfolio - 201 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:11 [[32minfo[39m]: POST /me/portfolio - 201 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:11 [[32minfo[39m]: POST /me/portfolio - 201 - 50ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:11 [[32minfo[39m]: POST /me/portfolio - 201 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:11 [[32minfo[39m]: POST /me/portfolio - 201 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:11 [[32minfo[39m]: POST /me/portfolio - 201 - 11ms {
+  "service": "linkprosoft-backend"
+}
+Test Suites: 1 passed, 1 total
+Tests:       34 passed, 34 total
+Snapshots:   0 total
+Time:        16.006 s
+Ran all test suites within paths "src/__tests__/portfolio.integration.test.ts".
+
+=== src/__tests__/profile.integration.test.ts ===
+ExitCode: 1
+  console.log
+    ? Test database connected: { now: 2026-04-25T05:15:29.163Z }
+
+      at setupTestDb (src/__tests__/setup.ts:21:13)
+
+2026-04-25 06:15:29 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 332,
+  "email": "pro1.1777094129239.glq3j5@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:15:29 [[32minfo[39m]: POST /signup - 201 - 582ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[32minfo[39m]: POST / - 201 - 82ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[32minfo[39m]: POST / - 201 - 40ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[32minfo[39m]: POST / - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "POST",
+  "path": "/api/profiles",
+  "query": {}
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: POST /api/profiles - 401 - 107ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[32minfo[39m]: POST / - 201 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 409,
+  "method": "POST",
+  "path": "/api/profiles",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: POST /api/profiles - 409 - 31ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: Client Error Too small: expected number to be >0 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: POST /api/profiles - 400 - 37ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: Client Error Too small: expected number to be >0 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:30 [[33mwarn[39m]: POST /api/profiles - 400 - 46ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: POST / - 201 - 82ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[33mwarn[39m]: Client Error Invalid option: expected one of "available"|"unavailable"|"away" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:31 [[33mwarn[39m]: POST /api/profiles - 400 - 24ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[33mwarn[39m]: Client Error Too small: expected number to be >=1 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/profiles",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:31 [[33mwarn[39m]: POST /api/profiles - 400 - 39ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: GET /332 - 200 - 8ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/profiles/999999",
+  "query": {}
+}
+2026-04-25 06:15:31 [[33mwarn[39m]: GET /api/profiles/999999 - 404 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: POST / - 201 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: GET /332 - 200 - 7ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: GET /332/detailed - 200 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: POST / - 201 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: GET /332/detailed - 200 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: POST / - 201 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:31 [[32minfo[39m]: GET /332/detailed - 200 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/profiles/999999/detailed",
+  "query": {}
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: GET /api/profiles/999999/detailed - 404 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: GET /me - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "GET",
+  "path": "/api/profiles/me",
+  "query": {}
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: GET /api/profiles/me - 401 - 20ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 28ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/profiles/me",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: GET /api/profiles/me - 404 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: PUT /me - 200 - 32ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 63ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: PUT /me - 200 - 7ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: PUT /me - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "PUT",
+  "path": "/api/profiles/me",
+  "query": {}
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: PUT /api/profiles/me - 401 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: Client Error Too small: expected number to be >0 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "PUT",
+  "path": "/api/profiles/me",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:32 [[33mwarn[39m]: PUT /api/profiles/me - 400 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:32 [[32minfo[39m]: POST / - 201 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: PUT /me - 200 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: POST / - 201 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "PUT",
+  "path": "/api/profiles/me",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: PUT /api/profiles/me - 404 - 24ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: POST / - 201 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: DELETE /me - 204 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/profiles/332",
+  "query": {}
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: GET /api/profiles/332 - 404 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: POST / - 201 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "DELETE",
+  "path": "/api/profiles/me",
+  "query": {}
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: DELETE /api/profiles/me - 401 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: POST / - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "DELETE",
+  "path": "/api/profiles/me",
+  "query": {},
+  "userId": 332
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: DELETE /api/profiles/me - 404 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: POST / - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: GET /332 - 200 - 5ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: DELETE /me - 204 - 201ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/profiles/332",
+  "query": {}
+}
+2026-04-25 06:15:33 [[33mwarn[39m]: GET /api/profiles/332 - 404 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: POST / - 201 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:33 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:34 [[32minfo[39m]: POST / - 201 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:34 [[32minfo[39m]: POST / - 201 - 19ms {
+  "service": "linkprosoft-backend"
+}
+FAIL src/__tests__/profile.integration.test.ts (15.545 s)
+  ? Profile Integration Tests › POST /api/profiles - Create Profile › should return 401 if not authenticated
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: "authentication_error"
+    Received: undefined
+System.Management.Automation.RemoteException
+    [0m [90m 83 |[39m
+     [90m 84 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m401[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 85 |[39m       expect(res[33m.[39mbody[33m.[39mcode)[33m.[39mtoBe([32m"authentication_error"[39m)[33m;[39m
+     [90m    |[39m                             [31m[1m^[22m[39m
+     [90m 86 |[39m     })[33m;[39m
+     [90m 87 |[39m
+     [90m 88 |[39m     it([32m"should return 409 if profile already exists"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/profile.integration.test.ts:85:29)
+System.Management.Automation.RemoteException
+  ? Profile Integration Tests › POST /api/profiles - Create Profile › should return 409 if profile already exists
+System.Management.Automation.RemoteException
+    expect(received).toContain(expected) // indexOf
+System.Management.Automation.RemoteException
+    Matcher error: received value must not be null nor undefined
+System.Management.Automation.RemoteException
+    Received has value: undefined
+System.Management.Automation.RemoteException
+    [0m [90m 100 |[39m
+     [90m 101 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m409[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 102 |[39m       expect(res[33m.[39mbody[33m.[39mcode)[33m.[39mtoContain([32m"409"[39m)[33m;[39m
+     [90m     |[39m                             [31m[1m^[22m[39m
+     [90m 103 |[39m       expect(res[33m.[39mbody[33m.[39mmessage)[33m.[39mtoContain([32m"already has"[39m)[33m;[39m
+     [90m 104 |[39m     })[33m;[39m
+     [90m 105 |[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/profile.integration.test.ts:102:29)
+System.Management.Automation.RemoteException
+  ? Profile Integration Tests › POST /api/profiles - Create Profile › should reject negative hourly rate
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: "VALIDATION_ERROR"
+    Received: undefined
+System.Management.Automation.RemoteException
+    [0m [90m 111 |[39m
+     [90m 112 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m400[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 113 |[39m       expect(res[33m.[39mbody[33m.[39mcode)[33m.[39mtoBe([32m"VALIDATION_ERROR"[39m)[33m;[39m
+     [90m     |[39m                             [31m[1m^[22m[39m
+     [90m 114 |[39m     })[33m;[39m
+     [90m 115 |[39m
+     [90m 116 |[39m     it([32m"should reject zero hourly rate"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/profile.integration.test.ts:113:29)
+System.Management.Automation.RemoteException
+  ? Profile Integration Tests › POST /api/profiles - Create Profile › should reject bio exceeding max length
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 400
+    Received: 201
+System.Management.Automation.RemoteException
+    [0m [90m 129 |[39m         [33m.[39msend(createProfileFixtures[33m.[39minvalid[33m.[39mbioTooLong)[33m;[39m
+     [90m 130 |[39m
+    [31m[1m>[22m[39m[90m 131 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m400[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 132 |[39m     })[33m;[39m
+     [90m 133 |[39m
+     [90m 134 |[39m     it([32m"should reject invalid availability status"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/profile.integration.test.ts:131:26)
+System.Management.Automation.RemoteException
+  ? Profile Integration Tests › PUT /api/profiles/me - Update Profile › should reject bio exceeding max length in update
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 400
+    Received: 200
+System.Management.Automation.RemoteException
+    [0m [90m 360 |[39m         [33m.[39msend(updateProfileFixtures[33m.[39minvalid[33m.[39mbioTooLong)[33m;[39m
+     [90m 361 |[39m
+    [31m[1m>[22m[39m[90m 362 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m400[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 363 |[39m     })[33m;[39m
+     [90m 364 |[39m
+     [90m 365 |[39m     it([32m"should return 404 if profile doesn't exist"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/profile.integration.test.ts:362:26)
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 30 passed, 35 total
+Snapshots:   0 total
+Time:        16.449 s
+Ran all test suites within paths "src/__tests__/profile.integration.test.ts".
+
+=== src/__tests__/search.integration.test.ts ===
+ExitCode: 1
+2026-04-25 06:15:51 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 333,
+  "email": "pro1.1777094150298.eimcvp@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:15:51 [[32minfo[39m]: POST /signup - 201 - 723ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:51 [[32minfo[39m]: POST / - 201 - 48ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:51 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 333
+}
+2026-04-25 06:15:51 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 64ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:51 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 334,
+  "email": "pro2.1777094151405.l66vay@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:15:51 [[32minfo[39m]: POST /signup - 201 - 537ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: POST / - 201 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 334
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 50ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 334
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 28ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: GET /professionals - 200 - 127ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: GET /professionals - 200 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: GET /professionals - 200 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: GET /professionals - 200 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: GET /professionals - 200 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: GET /professionals - 200 - 37ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: Client Error Invalid input: expected number, received NaN {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "skills": "invalid"
+  }
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: GET /api/search/professionals - 400 - 34ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[32minfo[39m]: GET /professionals - 200 - 27ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: Client Error Too big: expected number to be <=5 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "minRating": "6"
+  }
+}
+2026-04-25 06:15:52 [[33mwarn[39m]: GET /api/search/professionals - 400 - 46ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: Client Error Too small: expected number to be >=0 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "minRating": "-1"
+  }
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: GET /api/search/professionals - 400 - 29ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: Client Error minRate cannot be greater than maxRate {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "minRate": "10000",
+    "maxRate": "5000"
+  }
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: GET /api/search/professionals - 400 - 57ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: Client Error Too small: expected number to be >=0 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "minRate": "-1000"
+  }
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: GET /api/search/professionals - 400 - 28ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: Client Error Too small: expected number to be >=1 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "page": "0"
+  }
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: GET /api/search/professionals - 400 - 24ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: Client Error Too small: expected number to be >=1 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "limit": "-10"
+  }
+}
+2026-04-25 06:15:53 [[33mwarn[39m]: GET /api/search/professionals - 400 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:53 [[32minfo[39m]: GET /professionals - 200 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: Client Error Invalid option: expected one of "rating_desc"|"rate_asc"|"recent_desc" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "sortBy": "rating"
+  }
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: GET /api/search/professionals - 400 - 32ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: Client Error Invalid option: expected one of "rating_desc"|"rate_asc"|"recent_desc" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "sortBy": "hourlyRate"
+  }
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: GET /api/search/professionals - 400 - 21ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: Client Error Invalid option: expected one of "rating_desc"|"rate_asc"|"recent_desc" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "sortBy": "recent"
+  }
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: GET /api/search/professionals - 400 - 31ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: Client Error Invalid option: expected one of "rating_desc"|"rate_asc"|"recent_desc" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "sortBy": "invalid_field"
+  }
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: GET /api/search/professionals - 400 - 59ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /professionals - 200 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: Client Error Invalid option: expected one of "rating_desc"|"rate_asc"|"recent_desc" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "skills": "3",
+    "minRate": "6000",
+    "sortBy": "rating",
+    "page": "1",
+    "limit": "5"
+  }
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: GET /api/search/professionals - 400 - 39ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: Client Error Invalid option: expected one of "rating_desc"|"rate_asc"|"recent_desc" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/professionals",
+  "query": {
+    "skills": "1",
+    "minRating": "0",
+    "minRate": "3000",
+    "maxRate": "15000",
+    "sortBy": "rating",
+    "page": "1",
+    "limit": "20"
+  }
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: GET /api/search/professionals - 400 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /skills - 200 - 5ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /skills - 200 - 5ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: Client Error Too small: expected string to have >=1 characters {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/search/skills",
+  "query": {
+    "q": ""
+  }
+}
+2026-04-25 06:15:54 [[33mwarn[39m]: GET /api/search/skills - 400 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /skills - 200 - 3ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /skills - 200 - 6ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /filters - 200 - 88ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /filters - 200 - 7ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:54 [[32minfo[39m]: GET /filters - 200 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:55 [[32minfo[39m]: GET /filters - 200 - 6ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:55 [[32minfo[39m]: GET /professionals - 200 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:55 [[32minfo[39m]: GET /professionals - 200 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:55 [[32minfo[39m]: GET /professionals - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:15:55 [[32minfo[39m]: GET /professionals - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+FAIL src/__tests__/search.integration.test.ts (13.845 s)
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should return paginated results
+System.Management.Automation.RemoteException
+    expect(received).toHaveProperty(path)
+System.Management.Automation.RemoteException
+    Matcher error: received value must not be null nor undefined
+System.Management.Automation.RemoteException
+    Received has value: undefined
+System.Management.Automation.RemoteException
+    [0m [90m 294 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m 295 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals[33m.[39mlength)[33m.[39mtoBeLessThanOrEqual([35m10[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 296 |[39m       expect(res[33m.[39mbody[33m.[39mmeta)[33m.[39mtoHaveProperty([32m"page"[39m)[33m;[39m
+     [90m     |[39m                             [31m[1m^[22m[39m
+     [90m 297 |[39m       expect(res[33m.[39mbody[33m.[39mmeta)[33m.[39mtoHaveProperty([32m"limit"[39m)[33m;[39m
+     [90m 298 |[39m       expect(res[33m.[39mbody[33m.[39mmeta)[33m.[39mtoHaveProperty([32m"total"[39m)[33m;[39m
+     [90m 299 |[39m       expect(res[33m.[39mbody[33m.[39mmeta)[33m.[39mtoHaveProperty([32m"pages"[39m)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:296:29)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should return correct page number
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'page')
+System.Management.Automation.RemoteException
+    [0m [90m 306 |[39m
+     [90m 307 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 308 |[39m       expect(res[33m.[39mbody[33m.[39mmeta[33m.[39mpage)[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m     |[39m                            [31m[1m^[22m[39m
+     [90m 309 |[39m       expect(res[33m.[39mbody[33m.[39mmeta[33m.[39mlimit)[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m 310 |[39m     })[33m;[39m
+     [90m 311 |[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:308:28)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should support offset-based pagination
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'total')
+System.Management.Automation.RemoteException
+    [0m [90m 322 |[39m       expect(page2[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m 323 |[39m
+    [31m[1m>[22m[39m[90m 324 |[39m       [36mif[39m (page1[33m.[39mbody[33m.[39mmeta[33m.[39mtotal [33m>[39m [35m5[39m) {
+     [90m     |[39m                           [31m[1m^[22m[39m
+     [90m 325 |[39m         [90m// Different pages should have different data[39m
+     [90m 326 |[39m         expect(page1[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals[[35m0[39m][33m?[39m[33m.[39mid)[33m.[39mnot[33m.[39mtoEqual(
+     [90m 327 |[39m           page2[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals[[35m0[39m][33m?[39m[33m.[39mid[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:324:27)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should return correct total pages
+System.Management.Automation.RemoteException
+    TypeError: Cannot destructure property 'total' of 'res.body.meta' as it is undefined.
+System.Management.Automation.RemoteException
+    [0m [90m 352 |[39m
+     [90m 353 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 354 |[39m       [36mconst[39m { total[33m,[39m limit[33m,[39m pages } [33m=[39m res[33m.[39mbody[33m.[39mmeta[33m;[39m
+     [90m     |[39m               [31m[1m^[22m[39m
+     [90m 355 |[39m       [36mconst[39m expectedPages [33m=[39m [33mMath[39m[33m.[39mceil(total [33m/[39m limit)[33m;[39m
+     [90m 356 |[39m       expect(pages)[33m.[39mtoBe(expectedPages)[33m;[39m
+     [90m 357 |[39m     })[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:354:15)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Sorting › should support sorting by rating
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 400
+System.Management.Automation.RemoteException
+    [0m [90m 368 |[39m         [33m.[39mquery({ sortBy[33m:[39m [32m"rating"[39m })[33m;[39m
+     [90m 369 |[39m
+    [31m[1m>[22m[39m[90m 370 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 371 |[39m       [36mconst[39m professionals [33m=[39m res[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals[33m;[39m
+     [90m 372 |[39m       [36mif[39m (professionals[33m.[39mlength [33m>[39m [35m1[39m) {
+     [90m 373 |[39m         [36mfor[39m ([36mlet[39m i [33m=[39m [35m0[39m[33m;[39m i [33m<[39m professionals[33m.[39mlength [33m-[39m [35m1[39m[33m;[39m i[33m++[39m) {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:370:26)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Sorting › should support sorting by hourly rate
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 400
+System.Management.Automation.RemoteException
+    [0m [90m 384 |[39m         [33m.[39mquery({ sortBy[33m:[39m [32m"hourlyRate"[39m })[33m;[39m
+     [90m 385 |[39m
+    [31m[1m>[22m[39m[90m 386 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 387 |[39m       [36mconst[39m professionals [33m=[39m res[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals[33m;[39m
+     [90m 388 |[39m       [36mif[39m (professionals[33m.[39mlength [33m>[39m [35m1[39m) {
+     [90m 389 |[39m         [90m// Should be sorted in some order (asc or desc)[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:386:26)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Sorting › should support sorting by recently updated
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 400
+System.Management.Automation.RemoteException
+    [0m [90m 400 |[39m         [33m.[39mquery({ sortBy[33m:[39m [32m"recent"[39m })[33m;[39m
+     [90m 401 |[39m
+    [31m[1m>[22m[39m[90m 402 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 403 |[39m       [36mconst[39m professionals [33m=[39m res[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals[33m;[39m
+     [90m 404 |[39m       [36mif[39m (professionals[33m.[39mlength [33m>[39m [35m1[39m) {
+     [90m 405 |[39m         [36mfor[39m ([36mlet[39m i [33m=[39m [35m0[39m[33m;[39m i [33m<[39m professionals[33m.[39mlength [33m-[39m [35m1[39m[33m;[39m i[33m++[39m) {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:402:26)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Complex Filters › should handle filters with pagination and sorting
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 400
+System.Management.Automation.RemoteException
+    [0m [90m 458 |[39m         })[33m;[39m
+     [90m 459 |[39m
+    [31m[1m>[22m[39m[90m 460 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 461 |[39m       expect([33mArray[39m[33m.[39misArray(res[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 462 |[39m       expect(res[33m.[39mbody[33m.[39mmeta[33m.[39mpage)[33m.[39mtoBe([35m1[39m)[33m;[39m
+     [90m 463 |[39m       expect(res[33m.[39mbody[33m.[39mmeta[33m.[39mlimit)[33m.[39mtoBe([35m5[39m)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:460:26)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Complex Filters › should handle all filter parameters together
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 400
+System.Management.Automation.RemoteException
+    [0m [90m 477 |[39m         })[33m;[39m
+     [90m 478 |[39m
+    [31m[1m>[22m[39m[90m 479 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 480 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals[33m.[39mlength)[33m.[39mtoBeGreaterThanOrEqual([35m0[39m)[33m;[39m
+     [90m 481 |[39m       expect(res[33m.[39mbody[33m.[39mmeta)[33m.[39mtoBeDefined()[33m;[39m
+     [90m 482 |[39m     })[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:479:26)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/skills - Skills Autocomplete › should autocomplete skills by name
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: true
+    Received: false
+System.Management.Automation.RemoteException
+    [0m [90m 494 |[39m
+     [90m 495 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 496 |[39m       expect([33mArray[39m[33m.[39misArray(res[33m.[39mbody[33m.[39mdata[33m.[39msuggestions))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m     |[39m                                                        [31m[1m^[22m[39m
+     [90m 497 |[39m
+     [90m 498 |[39m       [36mif[39m (res[33m.[39mbody[33m.[39mdata[33m.[39msuggestions[33m.[39mlength [33m>[39m [35m0[39m) {
+     [90m 499 |[39m         res[33m.[39mbody[33m.[39mdata[33m.[39msuggestions[33m.[39mforEach((skill[33m:[39m any) [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:496:56)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/skills - Skills Autocomplete › should return suggestions in relevant order
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: true
+    Received: false
+System.Management.Automation.RemoteException
+    [0m [90m 509 |[39m
+     [90m 510 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 511 |[39m       expect([33mArray[39m[33m.[39misArray(res[33m.[39mbody[33m.[39mdata[33m.[39msuggestions))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m     |[39m                                                        [31m[1m^[22m[39m
+     [90m 512 |[39m     })[33m;[39m
+     [90m 513 |[39m
+     [90m 514 |[39m     it([32m"should handle empty query"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:511:56)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/filters - Get Filter Options › should return available filter options - 200
+System.Management.Automation.RemoteException
+    expect(received).toHaveProperty(path)
+System.Management.Automation.RemoteException
+    Expected path: "skills"
+    Received path: []
+System.Management.Automation.RemoteException
+    Received value: {"filters": {"availabilityStatuses": ["available", "unavailable", "away"], "maxHourlyRate": 8000, "minHourlyRate": 6500, "skills": []}}
+System.Management.Automation.RemoteException
+    [0m [90m 544 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m 545 |[39m       expect(res[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 546 |[39m       expect(res[33m.[39mbody[33m.[39mdata)[33m.[39mtoHaveProperty([32m"skills"[39m)[33m;[39m
+     [90m     |[39m                             [31m[1m^[22m[39m
+     [90m 547 |[39m       expect(res[33m.[39mbody[33m.[39mdata)[33m.[39mtoHaveProperty([32m"availabilityStatuses"[39m)[33m;[39m
+     [90m 548 |[39m       expect([33mArray[39m[33m.[39misArray(res[33m.[39mbody[33m.[39mdata[33m.[39mskills))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 549 |[39m       expect([33mArray[39m[33m.[39misArray(res[33m.[39mbody[33m.[39mdata[33m.[39mavailabilityStatuses))[33m.[39mtoBe([36mtrue[39m)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:546:29)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/filters - Get Filter Options › should return skills with required properties
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'length')
+System.Management.Automation.RemoteException
+    [0m [90m 554 |[39m
+     [90m 555 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 556 |[39m       [36mif[39m (res[33m.[39mbody[33m.[39mdata[33m.[39mskills[33m.[39mlength [33m>[39m [35m0[39m) {
+     [90m     |[39m                                [31m[1m^[22m[39m
+     [90m 557 |[39m         [36mconst[39m skill [33m=[39m res[33m.[39mbody[33m.[39mdata[33m.[39mskills[[35m0[39m][33m;[39m
+     [90m 558 |[39m         expect(skill)[33m.[39mtoHaveProperty([32m"id"[39m)[33m;[39m
+     [90m 559 |[39m         expect(skill)[33m.[39mtoHaveProperty([32m"name"[39m)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:556:32)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/filters - Get Filter Options › should return availability status options
+System.Management.Automation.RemoteException
+    expect(received).toContain(expected) // indexOf
+System.Management.Automation.RemoteException
+    Matcher error: received value must not be null nor undefined
+System.Management.Automation.RemoteException
+    Received has value: undefined
+System.Management.Automation.RemoteException
+    [0m [90m 567 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m 568 |[39m       [36mconst[39m statuses [33m=[39m res[33m.[39mbody[33m.[39mdata[33m.[39mavailabilityStatuses[33m;[39m
+    [31m[1m>[22m[39m[90m 569 |[39m       expect(statuses)[33m.[39mtoContain([32m"available"[39m)[33m;[39m
+     [90m     |[39m                        [31m[1m^[22m[39m
+     [90m 570 |[39m       expect(statuses)[33m.[39mtoContain([32m"unavailable"[39m)[33m;[39m
+     [90m 571 |[39m       expect(statuses)[33m.[39mtoContain([32m"away"[39m)[33m;[39m
+     [90m 572 |[39m     })[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:569:24)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › Search Performance & Edge Cases › should handle search with no results
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'total')
+System.Management.Automation.RemoteException
+    [0m [90m 592 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m 593 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mprofessionals)[33m.[39mtoEqual([])[33m;[39m
+    [31m[1m>[22m[39m[90m 594 |[39m       expect(res[33m.[39mbody[33m.[39mmeta[33m.[39mtotal)[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m     |[39m                            [31m[1m^[22m[39m
+     [90m 595 |[39m     })[33m;[39m
+     [90m 596 |[39m
+     [90m 597 |[39m     it([32m"should handle large page limits"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:594:28)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › Search Performance & Edge Cases › should handle accessing last page
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'total')
+System.Management.Automation.RemoteException
+    [0m [90m 609 |[39m         [33m.[39mquery({ page[33m:[39m [35m1[39m[33m,[39m limit[33m:[39m [35m10[39m })[33m;[39m
+     [90m 610 |[39m
+    [31m[1m>[22m[39m[90m 611 |[39m       [36mconst[39m lastPage [33m=[39m [33mMath[39m[33m.[39mceil(firstRes[33m.[39mbody[33m.[39mmeta[33m.[39mtotal [33m/[39m [35m10[39m)[33m;[39m
+     [90m     |[39m                                                     [31m[1m^[22m[39m
+     [90m 612 |[39m       [36mconst[39m lastRes [33m=[39m [36mawait[39m request(app)
+     [90m 613 |[39m         [33m.[39m[36mget[39m([32m"/api/search/professionals"[39m)
+     [90m 614 |[39m         [33m.[39mquery({ page[33m:[39m lastPage[33m,[39m limit[33m:[39m [35m10[39m })[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:611:53)
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       16 failed, 25 passed, 41 total
+Snapshots:   0 total
+Time:        14.687 s
+Ran all test suites within paths "src/__tests__/search.integration.test.ts".
+
+=== src/__tests__/skill.integration.test.ts ===
+ExitCode: 1
+  console.log
+    ? Test database connected: { now: 2026-04-25T05:16:20.105Z }
+
+      at setupTestDb (src/__tests__/setup.ts:21:13)
+
+2026-04-25 06:16:20 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 335,
+  "email": "pro1.1777094180169.dktad1@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:16:20 [[32minfo[39m]: POST /signup - 201 - 439ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:20 [[32minfo[39m]: POST / - 201 - 37ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:20 [[32minfo[39m]: GET / - 200 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:20 [[32minfo[39m]: GET / - 200 - 7ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:20 [[32minfo[39m]: GET / - 200 - 8ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:20 [[32minfo[39m]: GET / - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[32minfo[39m]: GET / - 200 - 7ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[32minfo[39m]: GET / - 200 - 6ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: Client Error Too big: expected number to be <=100 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/skills",
+  "query": {
+    "limit": "150"
+  }
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: GET /api/skills - 400 - 17ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: Client Error Too small: expected number to be >=1 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/skills",
+  "query": {
+    "limit": "0"
+  }
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: GET /api/skills - 400 - 40ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: Client Error Too small: expected number to be >=0 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "GET",
+  "path": "/api/skills",
+  "query": {
+    "offset": "-5"
+  }
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: GET /api/skills - 400 - 33ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[32minfo[39m]: GET / - 200 - 6ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[32minfo[39m]: GET / - 200 - 8ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 33ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[32minfo[39m]: GET /335/skills - 200 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:21 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 21ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 336,
+  "email": "pro2.1777094181513.sbllky@example.com",
+  "userType": "professional"
+}
+2026-04-25 06:16:22 [[32minfo[39m]: POST /signup - 201 - 491ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[32minfo[39m]: POST / - 201 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[32minfo[39m]: GET /336/skills - 200 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 21ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "GET",
+  "path": "/api/skills/999999/skills",
+  "query": {}
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: GET /api/skills/999999/skills - 404 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[32minfo[39m]: GET /335/skills - 200 - 6ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 21ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {}
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 401 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 35ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error Invalid input: expected number, received NaN {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 400 - 29ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error Invalid option: expected one of "beginner"|"intermediate"|"expert" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 400 - 32ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error Too small: expected number to be >=0 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 400 - 30ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error Too big: expected number to be <=80 {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 400 - 20ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:22 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "PUT",
+  "path": "/api/skills/me/skills/1",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: PUT /api/skills/me/skills/1 - 404 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 24ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "PUT",
+  "path": "/api/skills/me/skills/1",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: PUT /api/skills/me/skills/1 - 404 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 22ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "PUT",
+  "path": "/api/skills/me/skills/1",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: PUT /api/skills/me/skills/1 - 404 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "PUT",
+  "path": "/api/skills/me/skills/1",
+  "query": {}
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: PUT /api/skills/me/skills/1 - 401 - 12ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 13ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "PUT",
+  "path": "/api/skills/me/skills/999999",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: PUT /api/skills/me/skills/999999 - 404 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error At least one field is required for update {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "PUT",
+  "path": "/api/skills/me/skills/1",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: PUT /api/skills/me/skills/1 - 400 - 25ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 27ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error Invalid option: expected one of "beginner"|"intermediate"|"expert" {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "PUT",
+  "path": "/api/skills/me/skills/1",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: PUT /api/skills/me/skills/1 - 400 - 30ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 27ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "DELETE",
+  "path": "/api/skills/me/skills/1",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: DELETE /api/skills/me/skills/1 - 404 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 32ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "DELETE",
+  "path": "/api/skills/me/skills/1",
+  "query": {}
+}
+2026-04-25 06:16:23 [[33mwarn[39m]: DELETE /api/skills/me/skills/1 - 401 - 20ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 23ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "DELETE",
+  "path": "/api/skills/me/skills/999999",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: DELETE /api/skills/me/skills/999999 - 404 - 28ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 26ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 24ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 21ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 29ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: Client Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 404,
+  "method": "POST",
+  "path": "/api/skills/me/skills",
+  "query": {},
+  "userId": 335
+}
+2026-04-25 06:16:24 [[33mwarn[39m]: POST /api/skills/me/skills - 404 - 24ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-25 06:16:24 [[32minfo[39m]: GET /335/skills - 200 - 13ms {
+  "service": "linkprosoft-backend"
+}
+FAIL src/__tests__/skill.integration.test.ts (11.481 s)
+  ? Skill Integration Tests › GET /:userId/skills - Retrieve Profile Skills › should retrieve skills for a profile - 200
+System.Management.Automation.RemoteException
+    expect(received).toBeGreaterThan(expected)
+System.Management.Automation.RemoteException
+    Expected: > 0
+    Received:   0
+System.Management.Automation.RemoteException
+    [0m [90m 153 |[39m       expect(res[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 154 |[39m       expect([33mArray[39m[33m.[39misArray(res[33m.[39mbody[33m.[39mdata[33m.[39mskills))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 155 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskills[33m.[39mlength)[33m.[39mtoBeGreaterThan([35m0[39m)[33m;[39m
+     [90m     |[39m                                           [31m[1m^[22m[39m
+     [90m 156 |[39m     })[33m;[39m
+     [90m 157 |[39m
+     [90m 158 |[39m     it([32m"should return empty array when no skills"[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:155:43)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › POST /api/skills/me/skills - Add Skill › should add skill with valid data - 201
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 201
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 210 |[39m         [33m.[39msend(addSkillFixtures[33m.[39mvalid)[33m;[39m
+     [90m 211 |[39m
+    [31m[1m>[22m[39m[90m 212 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m201[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 213 |[39m       expect(res[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 214 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill)[33m.[39mtoHaveProperty([32m"skillId"[39m)[33m;[39m
+     [90m 215 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39mskillId)[33m.[39mtoBe(addSkillFixtures[33m.[39mvalid[33m.[39mskillId)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:212:26)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › POST /api/skills/me/skills - Add Skill › should add skill with minimal data
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 201
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 225 |[39m         [33m.[39msend(addSkillFixtures[33m.[39mvalidMinimal)[33m;[39m
+     [90m 226 |[39m
+    [31m[1m>[22m[39m[90m 227 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m201[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 228 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39mskillId)[33m.[39mtoBe([35m2[39m)[33m;[39m
+     [90m 229 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39mproficiencyLevel)[33m.[39mtoBeNull()[33m;[39m
+     [90m 230 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39misPrimary)[33m.[39mtoBe([36mfalse[39m)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:227:26)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › POST /api/skills/me/skills - Add Skill › should set primary skill correctly
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 201
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 237 |[39m         [33m.[39msend({ [33m...[39maddSkillFixtures[33m.[39mvalidIntermediate[33m,[39m isPrimary[33m:[39m [36mtrue[39m })[33m;[39m
+     [90m 238 |[39m
+    [31m[1m>[22m[39m[90m 239 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m201[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 240 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39misPrimary)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 241 |[39m     })[33m;[39m
+     [90m 242 |[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:239:26)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › POST /api/skills/me/skills - Add Skill › should return 409 if skill already added
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 409
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 262 |[39m         [33m.[39msend(addSkillFixtures[33m.[39mvalid)[33m;[39m
+     [90m 263 |[39m
+    [31m[1m>[22m[39m[90m 264 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m409[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 265 |[39m       expect(res[33m.[39mbody[33m.[39mmessage)[33m.[39mtoContain([32m"already added"[39m)[33m;[39m
+     [90m 266 |[39m     })[33m;[39m
+     [90m 267 |[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:264:26)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › PUT /api/skills/me/skills/:skillId - Update Skill › should update skill with valid data - 200
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 330 |[39m         [33m.[39msend(updateSkillFixtures[33m.[39mvalid)[33m;[39m
+     [90m 331 |[39m
+    [31m[1m>[22m[39m[90m 332 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 333 |[39m       expect(res[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 334 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39mproficiencyLevel)[33m.[39mtoBe([32m"expert"[39m)[33m;[39m
+     [90m 335 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39myearsOfExperience)[33m.[39mtoBe([35m5[39m)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:332:26)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › PUT /api/skills/me/skills/:skillId - Update Skill › should support partial updates
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 343 |[39m         [33m.[39msend(updateSkillFixtures[33m.[39mpartialUpdate)[33m;[39m
+     [90m 344 |[39m
+    [31m[1m>[22m[39m[90m 345 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 346 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39mproficiencyLevel)[33m.[39mtoBe([32m"intermediate"[39m)[33m;[39m
+     [90m 347 |[39m       [90m// Other fields should remain unchanged[39m
+     [90m 348 |[39m     })[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:345:26)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › PUT /api/skills/me/skills/:skillId - Update Skill › should update only years of experience
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 200
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 354 |[39m         [33m.[39msend(updateSkillFixtures[33m.[39mupdateYears)[33m;[39m
+     [90m 355 |[39m
+    [31m[1m>[22m[39m[90m 356 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 357 |[39m       expect(res[33m.[39mbody[33m.[39mdata[33m.[39mskill[33m.[39myearsOfExperience)[33m.[39mtoBe([35m3[39m)[33m;[39m
+     [90m 358 |[39m     })[33m;[39m
+     [90m 359 |[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:356:26)
+System.Management.Automation.RemoteException
+  ? Skill Integration Tests › DELETE /api/skills/me/skills/:skillId - Remove Skill › should remove skill - 204
+System.Management.Automation.RemoteException
+    expect(received).toBe(expected) // Object.is equality
+System.Management.Automation.RemoteException
+    Expected: 204
+    Received: 404
+System.Management.Automation.RemoteException
+    [0m [90m 411 |[39m         [33m.[39m[36mset[39m([32m"Cookie"[39m[33m,[39m authToken)[33m;[39m
+     [90m 412 |[39m
+    [31m[1m>[22m[39m[90m 413 |[39m       expect(res[33m.[39mstatus)[33m.[39mtoBe([35m204[39m)[33m;[39m
+     [90m     |[39m                          [31m[1m^[22m[39m
+     [90m 414 |[39m
+     [90m 415 |[39m       [90m// Verify removed[39m
+     [90m 416 |[39m       [36mconst[39m getRes [33m=[39m [36mawait[39m request(app)[33m.[39m[36mget[39m([32m`/api/skills/${userId}/skills`[39m)[33m;[39m[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/skill.integration.test.ts:413:26)
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       9 failed, 27 passed, 36 total
+Snapshots:   0 total
+Time:        12.314 s
+Ran all test suites within paths "src/__tests__/skill.integration.test.ts".
+

@@ -1,0 +1,1060 @@
+=== auth.integration.test.ts ===
+ExitCode: 0
+2026-04-24 19:26:10 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 279,
+  "email": "john.doe.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:10 [[32minfo[39m]: POST /signup - 201 - 2287ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:11 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 280,
+  "email": "jane.smith.1777055167603-50784@company.com",
+  "userType": "employer"
+}
+2026-04-24 19:26:11 [[32minfo[39m]: POST /signup - 201 - 473ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: Client Error Invalid input: expected string, received undefined {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: POST /api/auth/signup - 400 - 66ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: Client Error Invalid email address {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: POST /api/auth/signup - 400 - 15ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: Client Error Password must be at least 8 characters, Password must contain at least one special character, Password must be at least 8 characters, Password must contain at least one special character {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: POST /api/auth/signup - 400 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: Client Error Passwords don't match {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: POST /api/auth/signup - 400 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: Client Error Company name is required for employers {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:26:11 [[33mwarn[39m]: POST /api/auth/signup - 400 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:12 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 281,
+  "email": "duplicate.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:12 [[32minfo[39m]: POST /signup - 201 - 395ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:12 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 409,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {},
+  "email": "duplicate.1777055167603-50784@test.com"
+}
+2026-04-24 19:26:12 [[33mwarn[39m]: POST /api/auth/signup - 409 - 16ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:12 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 282,
+  "email": "login.test.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:12 [[32minfo[39m]: POST /signup - 201 - 419ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:13 [[32minfo[39m]: User login successful {
+  "service": "linkprosoft-backend",
+  "userId": 282,
+  "email": "login.test.1777055167603-50784@test.com",
+  "ip": "::ffff:127.0.0.1"
+}
+2026-04-24 19:26:13 [[32minfo[39m]: POST /login - 200 - 409ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "POST",
+  "path": "/api/auth/login",
+  "query": {},
+  "email": "login.test.1777055167603-50784@test.com"
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: POST /api/auth/login - 401 - 393ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "POST",
+  "path": "/api/auth/login",
+  "query": {},
+  "email": "nonexistent@test.com"
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: POST /api/auth/login - 401 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: Client Error Invalid input: expected string, received undefined {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/login",
+  "query": {}
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: POST /api/auth/login - 400 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: Client Error Invalid input: expected string, received undefined {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/login",
+  "query": {}
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: POST /api/auth/login - 400 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: Client Error Invalid email address {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/login",
+  "query": {}
+}
+2026-04-24 19:26:13 [[33mwarn[39m]: POST /api/auth/login - 400 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 283,
+  "email": "verify.test.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: POST /signup - 201 - 402ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: User login successful {
+  "service": "linkprosoft-backend",
+  "userId": 283,
+  "email": "verify.test.1777055167603-50784@test.com",
+  "ip": "::ffff:127.0.0.1"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: POST /login - 200 - 385ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: Session verified {
+  "service": "linkprosoft-backend",
+  "userId": 283,
+  "email": "verify.test.1777055167603-50784@test.com"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: GET /verify - 200 - 41ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:14 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "GET",
+  "path": "/api/auth/verify",
+  "query": {}
+}
+2026-04-24 19:26:14 [[33mwarn[39m]: GET /api/auth/verify - 401 - 38ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:14 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "GET",
+  "path": "/api/auth/verify",
+  "query": {}
+}
+2026-04-24 19:26:14 [[33mwarn[39m]: GET /api/auth/verify - 401 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: Session verified {
+  "service": "linkprosoft-backend",
+  "userId": 283,
+  "email": "verify.test.1777055167603-50784@test.com"
+}
+2026-04-24 19:26:14 [[32minfo[39m]: GET /verify - 200 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:15 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 284,
+  "email": "logout.test.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:15 [[32minfo[39m]: POST /signup - 201 - 386ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:15 [[32minfo[39m]: User login successful {
+  "service": "linkprosoft-backend",
+  "userId": 284,
+  "email": "logout.test.1777055167603-50784@test.com",
+  "ip": "::ffff:127.0.0.1"
+}
+2026-04-24 19:26:15 [[32minfo[39m]: POST /login - 200 - 397ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:15 [[32minfo[39m]: User logged out {
+  "service": "linkprosoft-backend",
+  "userId": 284
+}
+2026-04-24 19:26:15 [[32minfo[39m]: POST /logout - 200 - 19ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:15 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "POST",
+  "path": "/api/auth/logout",
+  "query": {}
+}
+2026-04-24 19:26:15 [[33mwarn[39m]: POST /api/auth/logout - 401 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:15 [[32minfo[39m]: User logged out {
+  "service": "linkprosoft-backend",
+  "userId": 284
+}
+2026-04-24 19:26:15 [[32minfo[39m]: POST /logout - 200 - 18ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:15 [[33mwarn[39m]: Authentication Error {
+  "service": "linkprosoft-backend",
+  "statusCode": 401,
+  "method": "GET",
+  "path": "/api/auth/verify",
+  "query": {}
+}
+2026-04-24 19:26:15 [[33mwarn[39m]: GET /api/auth/verify - 401 - 11ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:16 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 285,
+  "email": "format.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:16 [[32minfo[39m]: POST /signup - 201 - 388ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:16 [[33mwarn[39m]: Client Error Invalid email address {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/login",
+  "query": {}
+}
+2026-04-24 19:26:16 [[33mwarn[39m]: POST /api/auth/login - 400 - 10ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:16 [[33mwarn[39m]: Client Error Invalid email address, Password must be at least 8 characters, Password must contain at least one uppercase letter, Password must contain at least one number, Password must contain at least one special character, Password must contain at least one uppercase letter, Password must contain at least one number, Password must contain at least one special character, User type must be 'professional' or 'employer' {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:26:16 [[33mwarn[39m]: POST /api/auth/signup - 400 - 14ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:16 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 286,
+  "email": "security1.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:16 [[32minfo[39m]: POST /signup - 201 - 416ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:17 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 287,
+  "email": "security2.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:17 [[32minfo[39m]: POST /signup - 201 - 413ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:17 [[32minfo[39m]: User login successful {
+  "service": "linkprosoft-backend",
+  "userId": 287,
+  "email": "security2.1777055167603-50784@test.com",
+  "ip": "::ffff:127.0.0.1"
+}
+2026-04-24 19:26:17 [[32minfo[39m]: POST /login - 200 - 391ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:17 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 288,
+  "email": "token.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:17 [[32minfo[39m]: POST /signup - 201 - 388ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:18 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 289,
+  "email": "cookie.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:18 [[32minfo[39m]: POST /signup - 201 - 398ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:18 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 290,
+  "email": "prof.1777055167603-50784@test.com",
+  "userType": "professional"
+}
+2026-04-24 19:26:18 [[32minfo[39m]: POST /signup - 201 - 389ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:18 [[33mwarn[39m]: Client Error Company name is required for employers {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:26:18 [[33mwarn[39m]: POST /api/auth/signup - 400 - 9ms {
+  "service": "linkprosoft-backend"
+}
+2026-04-24 19:26:19 [[32minfo[39m]: User signup successful {
+  "service": "linkprosoft-backend",
+  "userId": 291,
+  "email": "employer2.1777055167603-50784@test.com",
+  "userType": "employer"
+}
+2026-04-24 19:26:19 [[32minfo[39m]: POST /signup - 201 - 391ms {
+  "service": "linkprosoft-backend"
+}
+Test Suites: 1 passed, 1 total
+Tests:       31 passed, 31 total
+Snapshots:   0 total
+Time:        59.48 s
+Ran all test suites within paths "C:\Users\USER\UMARKS\Linkprosoft\linkprosoft_backend\src\__tests__\auth.integration.test.ts".
+
+=== certification.integration.test.ts ===
+ExitCode: 1
+FAIL src/__tests__/certification.integration.test.ts
+  ? Test suite failed to run
+System.Management.Automation.RemoteException
+    [96msrc/__tests__/certification.integration.test.ts[0m:[93m10[0m:[93m68[0m - [91merror[0m[90m TS6133: [0m'testCertifications' is declared but its value is never read.
+System.Management.Automation.RemoteException
+    [7m10[0m import { createCertificationFixtures, updateCertificationFixtures, testCertifications } from "./fixtures/certifications.fixture";
+    [7m  [0m [91m                                                                   ~~~~~~~~~~~~~~~~~~[0m
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        11.973 s
+Ran all test suites within paths "C:\Users\USER\UMARKS\Linkprosoft\linkprosoft_backend\src\__tests__\certification.integration.test.ts".
+
+=== portfolio.integration.test.ts ===
+ExitCode: 1
+FAIL src/__tests__/portfolio.integration.test.ts
+  ? Test suite failed to run
+System.Management.Automation.RemoteException
+    [96msrc/__tests__/portfolio.integration.test.ts[0m:[93m10[0m:[93m60[0m - [91merror[0m[90m TS6133: [0m'testPortfolioItems' is declared but its value is never read.
+System.Management.Automation.RemoteException
+    [7m10[0m import { createPortfolioFixtures, updatePortfolioFixtures, testPortfolioItems } from "./fixtures/portfolioItems.fixture";
+    [7m  [0m [91m                                                           ~~~~~~~~~~~~~~~~~~[0m
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5.49 s
+Ran all test suites within paths "C:\Users\USER\UMARKS\Linkprosoft\linkprosoft_backend\src\__tests__\portfolio.integration.test.ts".
+
+=== profile.integration.test.ts ===
+ExitCode: 1
+FAIL src/__tests__/profile.integration.test.ts
+  ? Test suite failed to run
+System.Management.Automation.RemoteException
+    [96msrc/__tests__/setup.ts[0m:[93m62[0m:[93m37[0m - [91merror[0m[90m TS2344: [0mType 'T' does not satisfy the constraint 'QueryResultRow'.
+System.Management.Automation.RemoteException
+    [7m62[0m   const result = await testDb.query<T>(sql, values);
+    [7m  [0m [91m                                    ~[0m
+System.Management.Automation.RemoteException
+      [96msrc/__tests__/setup.ts[0m:[93m61[0m:[93m29[0m
+        [7m61[0m export async function query<T = any>(sql: string, values: any[] = []): Promise<T[]> {
+        [7m  [0m [96m                            ~~~~~~~[0m
+        This type parameter might need an `extends QueryResultRow` constraint.
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        25.055 s
+Ran all test suites within paths "C:\Users\USER\UMARKS\Linkprosoft\linkprosoft_backend\src\__tests__\profile.integration.test.ts".
+
+=== search.integration.test.ts ===
+ExitCode: 1
+2026-04-24 19:28:01 [[33mwarn[39m]: Client Error Password must contain at least one special character, Password must contain at least one special character {
+  "service": "linkprosoft-backend",
+  "statusCode": 400,
+  "method": "POST",
+  "path": "/api/auth/signup",
+  "query": {}
+}
+2026-04-24 19:28:01 [[33mwarn[39m]: POST /api/auth/signup - 400 - 60ms {
+  "service": "linkprosoft-backend"
+}
+FAIL src/__tests__/search.integration.test.ts (7.035 s)
+  ? Search Integration Tests › GET /api/search/professionals - Basic Search › should retrieve all professionals - 200
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Basic Search › should return professionals with expected structure
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Basic Search › should be publicly accessible (no auth required)
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Skills › should filter by single skill
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Skills › should filter by multiple skills (OR logic)
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Skills › should return empty result for non-existent skill
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Skills › should handle invalid skill ID format
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Rating › should filter by minimum rating
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Rating › should reject invalid rating range (> 5)
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Rating › should reject negative rating
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Rating › should accept decimal ratings
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Hourly Rate › should filter by hourly rate range
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Hourly Rate › should filter by minimum rate only
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Hourly Rate › should filter by maximum rate only
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Hourly Rate › should reject maxRate < minRate
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Filter by Hourly Rate › should reject negative rates
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should return paginated results
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should return correct page number
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should support offset-based pagination
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should reject page 0
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should reject negative limit
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Pagination › should return correct total pages
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Sorting › should support sorting by rating
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Sorting › should support sorting by hourly rate
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Sorting › should support sorting by recently updated
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Sorting › should reject invalid sortBy value
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Complex Filters › should handle skills + rating + rate filters
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Complex Filters › should handle filters with pagination and sorting
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/professionals - Complex Filters › should handle all filter parameters together
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/skills - Skills Autocomplete › should autocomplete skills by name
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/skills - Skills Autocomplete › should return suggestions in relevant order
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/skills - Skills Autocomplete › should handle empty query
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/skills - Skills Autocomplete › should be case-insensitive
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/filter-options - Get Filter Options › should return available filter options - 200
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/filter-options - Get Filter Options › should return skills with required properties
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/filter-options - Get Filter Options › should return availability status options
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › GET /api/search/filter-options - Get Filter Options › should be publicly accessible
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › Search Performance & Edge Cases › should handle search with no results
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › Search Performance & Edge Cases › should handle large page limits
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › Search Performance & Edge Cases › should handle accessing last page
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+  ? Search Integration Tests › Search Performance & Edge Cases › should handle accessing beyond last page
+System.Management.Automation.RemoteException
+    TypeError: Cannot read properties of undefined (reading 'user')
+System.Management.Automation.RemoteException
+    [0m [90m 19 |[39m       [33m.[39mpost([32m"/api/auth/signup"[39m)
+     [90m 20 |[39m       [33m.[39msend(testUsers[33m.[39mprofessional1)[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m     testUserIds[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mid[33m;[39m
+     [90m    |[39m                                                      [31m[1m^[22m[39m
+     [90m 22 |[39m     testAuthTokens[[32m"react_senior"[39m] [33m=[39m user1Res[33m.[39mheaders[[32m"set-cookie"[39m][33m;[39m
+     [90m 23 |[39m
+     [90m 24 |[39m     [36mconst[39m profile1Res [33m=[39m [36mawait[39m request(app)[0m
+System.Management.Automation.RemoteException
+      at Object.<anonymous> (src/__tests__/search.integration.test.ts:21:54)
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       41 failed, 41 total
+Snapshots:   0 total
+Time:        7.884 s, estimated 8 s
+Ran all test suites within paths "C:\Users\USER\UMARKS\Linkprosoft\linkprosoft_backend\src\__tests__\search.integration.test.ts".
+
+=== skill.integration.test.ts ===
+ExitCode: 1
+FAIL src/__tests__/skill.integration.test.ts
+  ? Test suite failed to run
+System.Management.Automation.RemoteException
+    [96msrc/__tests__/skill.integration.test.ts[0m:[93m7[0m:[93m17[0m - [91merror[0m[90m TS2307: [0mCannot find module '../../app' or its corresponding type declarations.
+System.Management.Automation.RemoteException
+    [7m7[0m import app from "../../app";
+    [7m [0m [91m                ~~~~~~~~~~~[0m
+    [96msrc/__tests__/skill.integration.test.ts[0m:[93m8[0m:[93m27[0m - [91merror[0m[90m TS2307: [0mCannot find module '../fixtures/users.fixture' or its corresponding type declarations.
+System.Management.Automation.RemoteException
+    [7m8[0m import { testUsers } from "../fixtures/users.fixture";
+    [7m [0m [91m                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/__tests__/skill.integration.test.ts[0m:[93m9[0m:[93m39[0m - [91merror[0m[90m TS2307: [0mCannot find module '../fixtures/profiles.fixture' or its corresponding type declarations.
+System.Management.Automation.RemoteException
+    [7m9[0m import { createProfileFixtures } from "../fixtures/profiles.fixture";
+    [7m [0m [91m                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/__tests__/skill.integration.test.ts[0m:[93m10[0m:[93m49[0m - [91merror[0m[90m TS6133: [0m'getAllSkillsFixture' is declared but its value is never read.
+System.Management.Automation.RemoteException
+    [7m10[0m import { addSkillFixtures, updateSkillFixtures, getAllSkillsFixture } from "../fixtures/skills.fixture";
+    [7m  [0m [91m                                                ~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/__tests__/skill.integration.test.ts[0m:[93m10[0m:[93m76[0m - [91merror[0m[90m TS2307: [0mCannot find module '../fixtures/skills.fixture' or its corresponding type declarations.
+System.Management.Automation.RemoteException
+    [7m10[0m import { addSkillFixtures, updateSkillFixtures, getAllSkillsFixture } from "../fixtures/skills.fixture";
+    [7m  [0m [91m                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/__tests__/skill.integration.test.ts[0m:[93m11[0m:[93m23[0m - [91merror[0m[90m TS2307: [0mCannot find module '../setup' or its corresponding type declarations.
+System.Management.Automation.RemoteException
+    [7m11[0m import { query } from "../setup";
+    [7m  [0m [91m                      ~~~~~~~~~~[0m
+    [96msrc/__tests__/skill.integration.test.ts[0m:[93m478[0m:[93m15[0m - [91merror[0m[90m TS6133: [0m'firstSkill' is declared but its value is never read.
+System.Management.Automation.RemoteException
+    [7m478[0m         const firstSkill = res.body.data.skills[0];
+    [7m   [0m [91m              ~~~~~~~~~~[0m
+System.Management.Automation.RemoteException
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        5.169 s
+Ran all test suites within paths "C:\Users\USER\UMARKS\Linkprosoft\linkprosoft_backend\src\__tests__\skill.integration.test.ts".
+
