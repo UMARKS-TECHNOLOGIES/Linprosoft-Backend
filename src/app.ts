@@ -48,11 +48,7 @@ app.use(
     noSniff: true,
     xssFilter: true,
     referrerPolicy: { policy: "strict-origin-when-cross-origin" },
-    permissionsPolicy: {
-      camera: [],
-      microphone: [],
-      geolocation: [],
-    },
+   // permissionsPolicy: false, // Disable Permissions-Policy header by default
   })
 );
 

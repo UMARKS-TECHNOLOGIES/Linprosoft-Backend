@@ -30,7 +30,7 @@ describe('Skill Integration Tests', () => {
   // Test data
   let professionalToken: string;
   let professionalUserId: number;
-  let skillId = 1; // Assuming skills table has pre-populated data
+  // let skillId = 1; // Assuming skills table has pre-populated data
 
   const testProfessional = {
     firstName: 'Skill',
@@ -321,7 +321,7 @@ describe('Skill Integration Tests', () => {
 
       if (skills.length > 1) {
         const primarySkills = skills.filter((s: any) => s.isPrimary);
-        const nonPrimarySkills = skills.filter((s: any) => !s.isPrimary);
+        // const nonPrimarySkills = skills.filter((s: any) => !s.isPrimary);
 
         if (primarySkills.length > 0) {
           expect(skills[0].isPrimary).toBe(true);
