@@ -15,6 +15,8 @@ import portfolioRoutes from "./modules/portfolio/portfolioRoutes";
 import searchRoutes from "./modules/search/searchRoutes";
 import { errorHandler } from "./middleware/errorMiddleware";
 import { requestLogger } from "./middleware/requestLogger";
+import jobRoutes from "./modules/jobs/jobRoutes";
+import assignmentsRoutes from './modules/assignments/assignmentRoutes';
 import {
   generalLimiter,
   authLimiter,
@@ -107,6 +109,11 @@ app.get("/health", (_req: Request, res: Response) => {
   });
 });
 
+//Jobs routes
+app.use('/api/jobs', jobRoutes);
+
+//Assignment routes
+app.use('/api/assignments', assignmentsRoutes);
 // 404 handler - must come before error handler
 app.use("*", (_req: Request, res: Response) => {
   res.status(404).json({

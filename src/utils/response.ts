@@ -55,7 +55,33 @@ export class ApiResponseHandler {
   ): Response {
     return this.success(res, data, message, 201);
   }
+/**
+ * 
+ * @param res - Express Response object
+ * @param data - Updated response data
+ * @param message Success message
+ * @returns 200
+ */
+  static updated<T>(
+    res: Response,
+    data: T,
+    message: string = "Resource updated successfully"
+  ): Response {
+    return this.success(res, data, message, 200);
+  }
 
+  /**
+   * 
+   * @param res - Response object
+   * @param message - Deleted resource data
+   * @returns 200
+   */
+  static deleted(
+    res: Response,
+    message: string = "Resource deleted successfully"
+  ): Response {
+    return this.success(res, undefined, message, 200);
+  }
   /**
    * Send paginated response
    * For list endpoints that return paginated data

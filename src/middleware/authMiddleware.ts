@@ -6,6 +6,7 @@
 
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
+import { verifyAccessToken } from "../utils/jwt";
 import catchAsync from "../utils/catchAsync";
 import { AppError } from "../utils/appError";
 import { JwtPayload } from "../types/authTypes";
@@ -31,13 +32,16 @@ export const protect = catchAsync(
   async (req: Request, _res: Response, next: NextFunction) => {
     let token = "";
 
-    // Step 1: Try to get token from cookies (primary method - most secure)
-    if (req.cookies?.token) {
+    // Step 1: Try to get token from cookies (accessToken preferred, fallback to legacy token)
+    if (req.cookies?.accessToken) {
+      token = req.cookies.accessToken;
+    } else if (req.cookies?.token) {
       token = req.cookies.token;
     }
+
     // Step 2: Fallback to Authorization header (for mobile/non-cookie clients)
     // Expected format: "Bearer <token>"
-    else if (req.headers.authorization?.startsWith("Bearer ")) {
+    if (!token && req.headers.authorization?.startsWith("Bearer ")) {
       token = req.headers.authorization.split(" ")[1];
     }
 
@@ -48,15 +52,13 @@ export const protect = catchAsync(
 
     // Step 4: Verify and decode JWT token
     try {
-      const decoded = jwt.verify(
-        token,
-        process.env.JWT_SECRET!
-      ) as JwtPayload;
+      // Use helper to verify access token
+      const decoded = verifyAccessToken(token as string) as JwtPayload;
 
       // Step 5: Attach user info to request for downstream use
       req.user = decoded;
       next();
-    } catch (error) {
+    } catch (error: any) {
       // Handle specific JWT errors
       if (error instanceof jwt.TokenExpiredError) {
         throw new AppError("Token expired, please login again", 401);

@@ -46,7 +46,7 @@ export interface UserRow {
   deleted_at: Date | null;
 }
 
-/** Mapper fuction from DB row to API DTO*/
+/** Mapper function from DB row to API DTO*/
 export const toUserResponseDTO = (user: UserRow): UserResponseDTO => ({
   id: user.id,
   email: user.email,

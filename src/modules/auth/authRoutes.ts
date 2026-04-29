@@ -23,6 +23,9 @@ router.post("/signup", controller.signup);
  */
 router.post("/login", controller.login);
 
+// Refresh tokens: rotate access token using refresh cookie
+router.post("/refresh", controller.refresh);
+
 /**
  * Protected Routes
  * Require valid JWT token in cookie or Authorization header

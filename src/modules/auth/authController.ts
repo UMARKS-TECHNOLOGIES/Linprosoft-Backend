@@ -8,16 +8,23 @@ import * as authRepository from "./authRepository";
 import logger from "../../utils/logger";
 
 /**
- * HTTP-only cookie configuration for JWT tokens
- * Prevents XSS attacks by making token inaccessible to JavaScript
- * Secure flag enabled in production; Samecookie prevents CSRF
+ * Cookie configuration
+ * We issue two cookies:
+ * - accessToken: short-lived access token (HttpOnly)
+ * - refreshToken: longer-lived refresh token (HttpOnly, narrower path)
+ * For backward compatibility we also set a legacy `token` cookie equal to accessToken.
  */
-const cookieConfig = {
-  httpOnly: true, // Prevents JavaScript access (XSS protection)
-  secure: process.env.NODE_ENV === "production", // HTTPS only in production
-  sameSite: "lax" as const, // CSRF protection
-  maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
+const baseCookie = {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax" as const,
 };
+
+const ACCESS_TOKEN_MAX_AGE_MS = (Number(process.env.ACCESS_TOKEN_EXPIRES_SECONDS || 1800) || 1800) * 1000;
+const REFRESH_TOKEN_MAX_AGE_MS = (Number(process.env.REFRESH_TOKEN_EXPIRES_DAYS || 7) || 7) * 24 * 60 * 60 * 1000;
+
+const accessCookieConfig = { ...baseCookie, maxAge: ACCESS_TOKEN_MAX_AGE_MS };
+const refreshCookieConfig = { ...baseCookie, maxAge: REFRESH_TOKEN_MAX_AGE_MS, path: "/api/auth/refresh" };
 
 /**
  * POST /api/auth/signup
@@ -57,9 +64,10 @@ export const signup = catchAsync(async (req: Request, res: Response) => {
     userType: result.user.userType,
   });
 
-  // Step 3: Set HTTP-only cookie with JWT token
-  // Token stored in cookie, never exposed in response body
-  res.cookie("token", result.token, cookieConfig);
+  // Step 3: Set HTTP-only cookies: access + refresh. Also set legacy `token` cookie for compatibility.
+  res.cookie("accessToken", result.accessToken, accessCookieConfig);
+  res.cookie("refreshToken", result.refreshToken, refreshCookieConfig);
+  res.cookie("token", result.accessToken, accessCookieConfig);
 
   // Step 4: Return standardized response with user data
   // User object already filtered by repository (no password exposed)
@@ -99,9 +107,10 @@ export const login = catchAsync(async (req: Request, res: Response) => {
     ip: req.ip,
   });
 
-  // Step 3: Set HTTP-only cookie with JWT token
-  // Token stored in cookie, never exposed in response body
-  res.cookie("token", result.token, cookieConfig);
+  // Step 3: Set HTTP-only cookies: access + refresh. Also set legacy `token` cookie for compatibility.
+  res.cookie("accessToken", result.accessToken, accessCookieConfig);
+  res.cookie("refreshToken", result.refreshToken, refreshCookieConfig);
+  res.cookie("token", result.accessToken, accessCookieConfig);
 
   // Step 4: Return standardized response with user data
   // User object already filtered by repository (no password exposed)
@@ -125,13 +134,10 @@ export const logout = catchAsync(async (req: AuthRequest, res: Response) => {
   // Step 0: Extract userId from request before clearing cookie
   const userId = req.user?.id;
 
-  // Step 1: Clear the token cookie
-  // Setting maxAge to 0 expires the cookie immediately
-  res.clearCookie("token", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax" as const,
-  });
+  // Step 1: Clear cookies
+  res.clearCookie("accessToken", accessCookieConfig as any);
+  res.clearCookie("refreshToken", refreshCookieConfig as any);
+  res.clearCookie("token", accessCookieConfig as any);
 
   // Step 1.5: Log logout event
   if (userId) {
@@ -142,6 +148,37 @@ export const logout = catchAsync(async (req: AuthRequest, res: Response) => {
 
   // Step 2: Return standardized response
   return ApiResponseHandler.success(res, undefined, "Logged out successfully", 200);
+});
+
+/**
+ * POST /api/auth/refresh
+ * Verify the refresh token cookie and rotate tokens (issue new access + refresh tokens).
+ * This endpoint is public and only requires the refresh cookie.
+ */
+export const refresh = catchAsync(async (req: Request, res: Response) => {
+  const refreshCookie = req.cookies?.refreshToken;
+
+  if (!refreshCookie) {
+    return ApiResponseHandler.error(res, "authentication_error", "No refresh token provided", 401);
+  }
+
+  try {
+    const { verifyRefreshToken, createAccessToken, createRefreshToken } = await import("../../utils/jwt");
+    const decoded = verifyRefreshToken(refreshCookie) as any;
+
+    // Issue new tokens
+    const accessToken = createAccessToken({ id: decoded.id, email: decoded.email, userType: decoded.userType });
+    const newRefreshToken = createRefreshToken({ id: decoded.id, email: decoded.email, userType: decoded.userType });
+
+    // Set cookies
+    res.cookie("accessToken", accessToken, accessCookieConfig);
+    res.cookie("refreshToken", newRefreshToken, refreshCookieConfig);
+    res.cookie("token", accessToken, accessCookieConfig);
+
+    return ApiResponseHandler.success(res, undefined, "Token refreshed", 200);
+  } catch (err: any) {
+    return ApiResponseHandler.error(res, "authentication_error", "Invalid refresh token", 401);
+  }
 });
 
 /**

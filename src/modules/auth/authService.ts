@@ -4,10 +4,10 @@
  * Handles signup, login, and token operations
  */
 
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import * as repo from "./authRepository";
 import { AppError } from "../../utils/appError";
-import { signToken } from "../../utils/jwt";
+import { createAccessToken, createRefreshToken } from "../../utils/jwt";
 import { SignupInput, LoginInput } from "./authValidation";
 import { toUserResponseDTO } from "../../types/userTypes";
 
@@ -50,12 +50,12 @@ export const signup = async (input: SignupInput) => {
     compName
   );
 
-  // Step 4: Generate JWT token
-  // Token contains user ID, email, and type
-  const token = signToken({ id: user.id, email: user.email, userType });
+  // Step 4: Generate access and refresh tokens
+  const accessToken = createAccessToken({ id: user.id, email: user.email, userType });
+  const refreshToken = createRefreshToken({ id: user.id, email: user.email, userType });
 
-  // Step 5: Return user and token
-  return { user, token };
+  // Step 5: Return user and tokens
+  return { user, accessToken, refreshToken };
 };
 
 /**
@@ -94,12 +94,9 @@ export const login = async (input: LoginInput) => {
   // Convert user to DTO for token (exclude password)
   const userDTO = toUserResponseDTO(user);
 
-  const token = signToken({ 
-    id: user.id, 
-    email: user.email, 
-    userType: user.user_type 
-  });
+  const accessToken = createAccessToken({ id: user.id, email: user.email, userType: user.user_type });
+  const refreshToken = createRefreshToken({ id: user.id, email: user.email, userType: user.user_type });
 
-  // Step 4: Return user DTO and token (NOT full user with password)
-  return { user: userDTO, token };
+  // Step 4: Return user DTO and both tokens
+  return { user: userDTO, accessToken, refreshToken };
 };
