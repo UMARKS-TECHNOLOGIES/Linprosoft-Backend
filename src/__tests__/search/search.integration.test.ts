@@ -4,8 +4,8 @@
  */
 
 import request from "supertest";
-import app from "../app";
-import { testUsers } from "./fixtures/users.fixture";
+import app from "../../app";
+import { testUsers } from "../fixtures/users.fixture";
 
 describe("Search Integration Tests", () => {
   let testUserIds: { [key: string]: number } = {};

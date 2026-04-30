@@ -1,29 +1,343 @@
 {
   "info": {
-    "_postman_id": "phase3-collection",
-    "name": "Linkprosoft Phase 3",
-    "schema": "https://raw.githubusercontent.com/getpostman/postman-collection/v2.1.0/schema.json"
+    "name": "Linkprosoft API - Phase 3 Testing",
+    "description": "Complete Thunder Client collection for Phase 3: Jobs & Assignments (includes auth, job lifecycle, matches, assignments lifecycle)",
+    "version": "1.1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "baseURL": "http://localhost:5020"
   },
   "item": [
     {
-      "name": "Create Job",
-      "request": {
-        "method": "POST",
-        "header": [
-          { "key": "Content-Type", "value": "application/json" },
-          { "key": "Authorization", "value": "Bearer {{token}}" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"title\": \"Build landing page\",\n  \"description\": \"Create a responsive landing page\",\n  \"skillId\": 1,\n  \"budget\": 50000\n}"
+      "name": "🔍 SETUP",
+      "item": [
+        {
+          "name": "0. Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/health",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "health"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "const body = pm.response.json();",
+                  "pm.test('response is object', () => pm.expect(body).to.be.an('object'));"
+                ]
+              }
+            }
+          ]
         },
-        "url": { "raw": "{{base_url}}/jobs", "host": ["{{base_url}}"], "path": ["jobs"] }
-      }
+        {
+          "name": "1. Signup Employer",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"employer+tc@example.com\",\"password\":\"Password123!\",\"role\":\"employer\",\"name\":\"TC Employer\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/auth/signup",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "auth", "signup"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('signup success', () => pm.response.to.have.status(201));",
+                  "const body = pm.response.json();",
+                  "if (body && body.data && body.data.user) pm.environment.set('employerId', body.data.user.id);",
+                  "if (body && body.data && body.data.accessToken) pm.environment.set('token', body.data.accessToken);",
+                  "const cookie = pm.cookies.get('access_token');",
+                  "if (cookie) pm.environment.set('token', cookie);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "2. Signup Professional",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"pro+tc@example.com\",\"password\":\"Password123!\",\"role\":\"professional\",\"name\":\"TC Pro\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/auth/signup",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "auth", "signup"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('signup success', () => pm.response.to.have.status(201));",
+                  "const body = pm.response.json();",
+                  "if (body && body.data && body.data.user) pm.environment.set('professionalId', body.data.user.id);",
+                  "if (body && body.data && body.data.accessToken) pm.environment.set('professionalToken', body.data.accessToken);",
+                  "const cookie = pm.cookies.get('access_token');",
+                  "if (cookie) pm.environment.set('professionalToken', cookie);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "3. Login (Employer)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"employer+tc@example.com\",\"password\":\"Password123!\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "auth", "login"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('login success', () => pm.response.to.have.status(200));",
+                  "const body = pm.response.json();",
+                  "if (body && body.data && body.data.accessToken) pm.environment.set('token', body.data.accessToken);",
+                  "const cookie = pm.cookies.get('access_token');",
+                  "if (cookie) pm.environment.set('token', cookie);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "4. Login (Professional)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"pro+tc@example.com\",\"password\":\"Password123!\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "auth", "login"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('login success', () => pm.response.to.have.status(200));",
+                  "const body = pm.response.json();",
+                  "if (body && body.data && body.data.accessToken) pm.environment.set('professionalToken', body.data.accessToken);",
+                  "const cookie = pm.cookies.get('access_token');",
+                  "if (cookie) pm.environment.set('professionalToken', cookie);"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "💼 JOBS",
+      "item": [
+        {
+          "name": "POST - Create Job",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"React Developer - 2 week contract\",\"description\":\"Build UI components\",\"skillId\":{{skillId}},\"budget\":150000,\"currency\":\"NGN\",\"durationDays\":14,\"location\":\"Remote\",\"visibility\":\"public\"}"
+            },
+            "url": {
+              "raw": "http://localhost:5020/api/jobs",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "jobs"]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "const t = pm.environment.get('token');",
+                  "if (t) {",
+                  "  if (t.includes('access_token')) pm.request.headers.add({key: 'Cookie', value: t});",
+                  "  else pm.request.headers.add({key: 'Authorization', value: 'Bearer ' + t});",
+                  "}"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));",
+                  "const body = pm.response.json();",
+                  "pm.test('has id', () => pm.expect(body.data.id).to.be.a('number'));",
+                  "if (body && body.data && body.data.id) pm.environment.set('jobId', body.data.id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET - List Jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/jobs?page=1&limit=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "jobs"],
+              "query": [
+                {"key": "page", "value": "1"},
+                {"key": "limit", "value": "10"}
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "const body = pm.response.json();",
+                  "pm.test('has data array', () => pm.expect(body.data.jobs).to.be.an('array'));",
+                  "if (body.data.jobs && body.data.jobs.length>0) pm.environment.set('jobId', body.data.jobs[0].id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET - Get Job by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5020/api/jobs/{{jobId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5020",
+              "path": ["api", "jobs", "{{jobId}}"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {"exec": ["pm.test('status 200', () => pm.response.to.have.status(200));"]}
+            }
+          ]
+        },
+        {
+          "name": "PUT - Update Job",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {"mode": "raw", "raw": "{\"title\":\"React Developer - 3 week contract\",\"budget\":180000}"},
+            "url": {"raw": "http://localhost:5020/api/jobs/{{jobId}}", "protocol": "http", "host": ["localhost"], "port": "5020", "path": ["api", "jobs", "{{jobId}}"]}
+          },
+          "event": [
+            {"listen": "prerequest", "script": {"exec": ["const t = pm.environment.get('token'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},
+            {"listen": "test", "script": {"exec": ["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('title updated', () => pm.expect(body.data.title).to.eql('React Developer - 3 week contract'));" ]}}
+          ]
+        },
+        {
+          "name": "DELETE - Soft Delete Job",
+          "request": {"method": "DELETE", "header": [], "url": {"raw": "http://localhost:5020/api/jobs/{{jobId}}", "protocol": "http", "host": ["localhost"], "port": "5020", "path": ["api", "jobs", "{{jobId}}"]}},
+          "event": [{"listen":"prerequest","script":{"exec":["const t = pm.environment.get('token'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},{"listen":"test","script":{"exec":["pm.test('status 204 or 200', () => { pm.expect([200,204]).to.include(pm.response.code); });"]}}]
+        },
+        {
+          "name": "GET - Job Matches",
+          "request": {"method": "GET", "header": [], "url": {"raw": "http://localhost:5020/api/jobs/{{jobId}}/matches", "protocol": "http", "host": ["localhost"], "port": "5020", "path": ["api", "jobs", "{{jobId}}", "matches"]}},
+          "event": [{"listen":"test","script":{"exec":["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('matches array', () => pm.expect(body.data).to.be.an('array'));","if (body.data && body.data.length>0) pm.environment.set('matchId', body.data[0].id);"
+          ]}}]
+        }
+      ]
+    },
+    {
+      "name": "🧾 ASSIGNMENTS",
+      "item": [
+        {
+          "name": "POST - Create Assignment (invite professional)",
+          "request": {
+            "method": "POST",
+            "header": [{"key":"Content-Type","value":"application/json"}],
+            "body": {"mode":"raw","raw":"{\"jobId\": {{jobId}}, \"professionalId\": {{professionalId}}, \"message\": \"Please join this job\", \"proposedBudget\": 140000 }"},
+            "url": {"raw":"http://localhost:5020/api/assignments","protocol":"http","host":["localhost"],"port":"5020","path":["api","assignments"]}
+          },
+          "event": [
+            {"listen":"prerequest","script":{"exec":["const t = pm.environment.get('token'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},
+            {"listen":"test","script":{"exec":["pm.test('status 201', () => pm.response.to.have.status(201));","const body = pm.response.json();","if (body && body.data && body.data.id) pm.environment.set('assignmentId', body.data.id);","pm.test('assignment id set', () => pm.expect(body.data.id).to.be.a('number'));"
+          ]}}]
+        },
+        {
+          "name": "GET - Get Assignment",
+          "request": {"method":"GET","header":[],"url":{"raw":"http://localhost:5020/api/assignments/{{assignmentId}}","protocol":"http","host":["localhost"],"port":"5020","path":["api","assignments","{{assignmentId}}"]}},
+          "event":[{"listen":"test","script":{"exec":["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('jobId match', () => pm.expect(body.data.jobId).to.eql(Number(pm.environment.get('jobId'))));"]}}]
+        },
+        {
+          "name": "PUT - Accept Assignment",
+          "request": {"method":"PUT","header":[],"url":{"raw":"http://localhost:5020/api/assignments/{{assignmentId}}/accept","protocol":"http","host":["localhost"],"port":"5020","path":["api","assignments","{{assignmentId}}","accept"]}},
+          "event":[{"listen":"prerequest","script":{"exec":["const t = pm.environment.get('professionalToken') || pm.environment.get('token'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},{"listen":"test","script":{"exec":["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('status accepted', () => pm.expect(body.data.status).to.match(/accepted|in_progress/i));"]}}]
+        },
+        {
+          "name": "PUT - Reject Assignment",
+          "request": {"method":"PUT","header":[],"url":{"raw":"http://localhost:5020/api/assignments/{{assignmentId}}/reject","protocol":"http","host":["localhost"],"port":"5020","path":["api","assignments","{{assignmentId}}","reject"]}},
+          "event":[{"listen":"prerequest","script":{"exec":["const t = pm.environment.get('professionalToken') || pm.environment.get('token'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},{"listen":"test","script":{"exec":["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('status rejected', () => pm.expect(body.data.status).to.match(/rejected/i));"]}}]
+        },
+        {
+          "name": "PUT - Start Assignment",
+          "request": {"method":"PUT","header":[],"url":{"raw":"http://localhost:5020/api/assignments/{{assignmentId}}/start","protocol":"http","host":["localhost"],"port":"5020","path":["api","assignments","{{assignmentId}}","start"]}},
+          "event":[{"listen":"prerequest","script":{"exec":["const t = pm.environment.get('professionalToken') || pm.environment.get('token'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},{"listen":"test","script":{"exec":["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('status in_progress', () => pm.expect(body.data.status).to.match(/in_progress/i));"]}}]
+        },
+        {
+          "name": "PUT - Complete Assignment",
+          "request": {"method":"PUT","header":[],"url":{"raw":"http://localhost:5020/api/assignments/{{assignmentId}}/complete","protocol":"http","host":["localhost"],"port":"5020","path":["api","assignments","{{assignmentId}}","complete"]}},
+          "event":[{"listen":"prerequest","script":{"exec":["const t = pm.environment.get('professionalToken') || pm.environment.get('token'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},{"listen":"test","script":{"exec":["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('status completed', () => pm.expect(body.data.status).to.match(/completed/i));"]}}]
+        },
+        {
+          "name": "PUT - Cancel Assignment",
+          "request": {"method":"PUT","header":[],"url":{"raw":"http://localhost:5020/api/assignments/{{assignmentId}}/cancel","protocol":"http","host":["localhost"],"port":"5020","path":["api","assignments","{{assignmentId}}","cancel"]}},
+          "event":[{"listen":"prerequest","script":{"exec":["const t = pm.environment.get('token') || pm.environment.get('professionalToken'); if (t) { if (t.includes('access_token')) pm.request.headers.add({key:'Cookie', value: t}); else pm.request.headers.add({key:'Authorization', value: 'Bearer ' + t}); }"]}},{"listen":"test","script":{"exec":["pm.test('status 200', () => pm.response.to.have.status(200));","const body = pm.response.json();","pm.test('status cancelled', () => pm.expect(body.data.status).to.match(/cancelled|canceled/i));"]}}]
+        }
+      ]
     }
-  ],
-  "event": [],
-  "variable": [
-    { "key": "base_url", "value": "http://localhost:5020/api" },
-    { "key": "token", "value": "" }
   ]
 }

@@ -7,8 +7,13 @@ export const createAssignment = async (a: Partial<JobAssignmentRow>) => {
     accepted_budget) VALUES ($1,$2,$3,$4,$5) RETURNING *`;
     const values = [a.job_id, a.professional_id, a.employer_id, a.status ?? 'invited', a.accepted_budget ?? null];
     
-    const res = await pool.query(query, values);
-    return res.rows[0] as JobAssignmentRow;
+    try {
+        const res = await pool.query(query, values);
+        return res.rows[0] as JobAssignmentRow;
+    } catch (err) {
+        console.error('assignmentRepository.createAssignment SQL Error', { query, values, err });
+        throw err;
+    }
 };
 
 //Find a job assignments from the job assignments table using id

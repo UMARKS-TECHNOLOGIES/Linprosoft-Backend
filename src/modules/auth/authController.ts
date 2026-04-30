@@ -6,6 +6,7 @@ import { signupSchema, loginSchema } from "./authValidation";
 import { AuthRequest } from "../../types/authRequest";
 import * as authRepository from "./authRepository";
 import logger from "../../utils/logger";
+import { env } from "../../config/environment";
 
 /**
  * Cookie configuration
@@ -16,12 +17,12 @@ import logger from "../../utils/logger";
  */
 const baseCookie = {
   httpOnly: true,
-  secure: process.env.NODE_ENV === "production",
+  secure: env.NODE_ENV === "production",
   sameSite: "lax" as const,
 };
 
-const ACCESS_TOKEN_MAX_AGE_MS = (Number(process.env.ACCESS_TOKEN_EXPIRES_SECONDS || 1800) || 1800) * 1000;
-const REFRESH_TOKEN_MAX_AGE_MS = (Number(process.env.REFRESH_TOKEN_EXPIRES_DAYS || 7) || 7) * 24 * 60 * 60 * 1000;
+const ACCESS_TOKEN_MAX_AGE_MS = env.ACCESS_TOKEN_EXPIRES_SECONDS * 1000;
+const REFRESH_TOKEN_MAX_AGE_MS = env.REFRESH_TOKEN_EXPIRES_DAYS * 24 * 60 * 60 * 1000;
 
 const accessCookieConfig = { ...baseCookie, maxAge: ACCESS_TOKEN_MAX_AGE_MS };
 const refreshCookieConfig = { ...baseCookie, maxAge: REFRESH_TOKEN_MAX_AGE_MS, path: "/api/auth/refresh" };

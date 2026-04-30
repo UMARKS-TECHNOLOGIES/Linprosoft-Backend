@@ -3,6 +3,7 @@ import * as jobRepo from '../jobs/jobsRepository';
 import { AppError } from "../../utils/appError";
 
 //Invite a professional to perfom a job
+//Employer can invite a professional to perform a job. This creates an assignment with status 'invited'.
 export const inviteProfessional = async (employerId:number, {jobId, professionalId, acceptedBudget }: any ) => {
     const job = await jobRepo.findJobById(jobId);
 
@@ -19,6 +20,7 @@ export const inviteProfessional = async (employerId:number, {jobId, professional
     return assignment;
 };
 
+//Professional accepts the job assignment
 export const acceptAssignment = async (assignmentId:number, professionalId: number) => {
     const assignment = await repo.findAssignmentById(assignmentId);
     if (!assignment) throw new AppError('Assignment not Found', 404);

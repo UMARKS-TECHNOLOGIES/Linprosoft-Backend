@@ -1,5 +1,5 @@
 import pool from '../../config/db';
-import { JobRow } from "../../types/jobTypes";
+import { JobRow, UpdateJobRow } from "../../types/jobTypes";
 
 // Create a new job posting
 export const createJob = async (data:Partial<JobRow>) => {
@@ -30,14 +30,29 @@ export const findJobById = async (id:number) => {
 }
 
 // Update a job posting by ID (only if not deleted)
-export const updateJob = async (id:number, patch: Partial<JobRow>) => {
-    const fields = Object.keys(patch);
+export const updateJob = async (id:number, patch: UpdateJobRow) => {
+    //Define the fields to update based on the patch object
+    const allowedFields = [
+        'skill_id',
+        'title',
+        'description',
+        'budget',
+        'currency',
+        'duration_days',
+        'location',
+        'status',
+        'visibility'
+    ] as const;
+    const fields = allowedFields.filter((field) => patch[field] !== undefined);
+
+    // If no fields to update, return existing job
     if (fields.length === 0) {
         // nothing to update
         return await findJobById(id) as JobRow;
     }
+
     const sets = fields.map((f, i) => `${f}=$${i+2}`).join(', ');
-    const values = fields.map(k => (patch as any)[k]);
+    const values = fields.map(k => patch[k]);
     const query =  `UPDATE job_postings SET ${sets}, updated_at = CURRENT_TIMESTAMP WHERE 
         id=$1 RETURNING *`;
     
@@ -50,9 +65,10 @@ export const updateJob = async (id:number, patch: Partial<JobRow>) => {
 export const softDeleteJob = async (id:number) => {
     const query = `UPDATE job_postings
      SET deleted_at = CURRENT_TIMESTAMP WHERE id=$1`;;
+    
     const values = [id];
     const res = await pool.query(query, values);
-    return res.rowCount > 0;
+    return (res.rowCount ?? 0) > 0;
 };
 
  

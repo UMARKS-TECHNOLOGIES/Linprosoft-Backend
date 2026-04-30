@@ -4,10 +4,10 @@
  */
 
 import request from "supertest";
-import app from "../app";
-import { testUsers } from "./fixtures/users.fixture";
-import { createProfileFixtures, updateProfileFixtures, testProfiles } from "./fixtures/profiles.fixture";
-import { query } from "./setup";
+import app from "../../app";
+import { testUsers } from "../fixtures/users.fixture";
+import { createProfileFixtures, updateProfileFixtures, testProfiles } from "../fixtures/profiles.fixture";
+import { query } from "../setup";
 
 describe("Profile Integration Tests", () => {
   let userId: number;

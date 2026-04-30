@@ -1,10 +1,12 @@
 import * as repo from './jobsRepository';
 import { AppError } from '../../utils/appError';
-import { JobRow, mapJobRowToDTO, UpdateJobRow } from '../../types/jobTypes';
+import { JobRow, mapJobRowToDTO, UpdateJobInput, UpdateJobRow, CreateJobInput } from '../../types/jobTypes';
+import { mapCreateJobInputToRow, mapUpdateJobInputToRow } from './jobMappers';
 
-export const createJobService = async (employerId: number, payload: any) => {
-  // assume payload validated
-  const job = await repo.createJob({ ...payload, employer_id: employerId, status: 'posted' });
+export const createJobService = async (employerId: number, payload: CreateJobInput) => {
+  // payload should be validated by controller Zod schema
+  const row = mapCreateJobInputToRow(payload, employerId);
+  const job = await repo.createJob(row as any);
   return mapJobRowToDTO(job as JobRow);
 };
 
@@ -15,23 +17,20 @@ export const getJobService = async (id: number) => {
   return mapJobRowToDTO(job);
 };
 
-// Helper function to ensure only the employer who created the job can update it
-function validateEmployerOwnership(input: UpdateJobRow, existing: JobRow) {
-  if ((input as any).employer_id && (input as any).employer_id !== existing.employer_id) {
-    throw new AppError('Forbidden: cannot change employer', 403);
-  }
-}
-
 //Update job posting row
-export const updateJobService = async (id:number, input: UpdateJobRow) => {
+export const updateJobService = async (employerId: number, jobId: number, input: UpdateJobInput) => {
     //Check if job exists
-    const existing = await repo.findJobById(id);
+    const existing = await repo.findJobById(jobId);
     if (!existing) throw new AppError('Job not Found', 404);
 
     // Ownership check: only employer who created the job may update
-    validateEmployerOwnership(input, existing);
+    if (existing.employer_id !== employerId) {
+      throw new AppError('Forbidden', 403);
+    }
 
-    const job = await repo.updateJob(id, input);
+    const patch = mapUpdateJobInputToRow(input);
+
+    const job = await repo.updateJob(jobId, patch as UpdateJobRow);
     return mapJobRowToDTO(job as JobRow);
 };
 
@@ -43,6 +42,7 @@ export const listJobsService = async (filters: { skillId?: number; location?: st
     pagination: res.pagination
   };
 };
+
 
 // soft-delete job with ownership check
 export const deleteJobService = async (employerId: number, id: number) => {

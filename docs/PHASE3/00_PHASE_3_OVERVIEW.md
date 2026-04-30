@@ -170,6 +170,26 @@ Week 3 — Hardening & Documentation
 
 ---
 
+## Deliverables (Phase 3)
+
+- Source: `src/modules/jobs/*`, `src/modules/assignments/*` (controllers, services, repositories, validation, types)
+- DB migrations: `src/migrations/00*_job_postings_assignments.sql`
+- Tests: `__tests__/jobs/*`, `__tests__/assignments/*` (integration + unit)
+- Docs: `docs/PHASE3/*` (architecture, implementation, API endpoints, testing, Thunder Client)
+- Thunder Client: `docs/PHASE3/Thunder-Client-Collection-Phase3.json`
+
+---
+
+## Quick Publish Checklist
+
+- [ ] Review and approve docs content
+- [ ] Commit docs and migration files to `main` branch
+- [ ] Add migration to CI pipeline and run in staging
+- [ ] Publish Thunder Client collection file in `docs/PHASE3`
+
+
+---
+
 ## Acceptance Checklist
 
 - [ ] DB migrations added: `job_postings`, `job_assignments`  

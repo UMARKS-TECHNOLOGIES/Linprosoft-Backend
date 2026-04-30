@@ -17,6 +17,9 @@ import { errorHandler } from "./middleware/errorMiddleware";
 import { requestLogger } from "./middleware/requestLogger";
 import jobRoutes from "./modules/jobs/jobRoutes";
 import assignmentsRoutes from './modules/assignments/assignmentRoutes';
+import paymentsRoutes from "./modules/payments/paymentsRoutes";
+import reviewRoutes from "./modules/reviews/reviewsRoutes";
+import { env } from "./config/environment";
 import {
   generalLimiter,
   authLimiter,
@@ -63,7 +66,7 @@ app.use(cookieParser());
 // CORS configuration - allow frontend to communicate with backend
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: env.FRONTEND_URL,
     credentials: true, // Allow cookies in requests
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -100,6 +103,9 @@ app.use("/api/profiles", moderateLimiter, portfolioRoutes);
 // Search routes - search-specific rate limiting (50 requests per 15 minutes)
 app.use("/api/search", searchLimiter, searchRoutes);
 
+// Payments routes
+app.use("/api/payments", paymentsRoutes);
+app.use("/api/reviews", reviewRoutes);
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {
   res.status(200).json({

@@ -52,6 +52,9 @@ export const protect = catchAsync(
 
     // Step 4: Verify and decode JWT token
     try {
+      // Debug: log presence of token during tests
+      // eslint-disable-next-line no-console
+      console.log('DEBUG Auth token length:', token ? token.length : 0);
       // Use helper to verify access token
       const decoded = verifyAccessToken(token as string) as JwtPayload;
 

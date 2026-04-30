@@ -2,6 +2,7 @@
 import winston from "winston";
 import fs from "fs";
 import path from "path";
+import { env } from "../config/environment";
 
 // Create logs directory if it doesn't exist
 const logsDir = path.join(process.cwd(), "logs");
@@ -10,7 +11,7 @@ if (!fs.existsSync(logsDir)) {
 }
 
 const logger = winston.createLogger({
-  level: process.env.LOG_LEVEL || "info",
+  level: env.LOG_LEVEL,
   format: winston.format.combine(
     winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
     winston.format.errors({ stack: true }),
@@ -32,7 +33,7 @@ const logger = winston.createLogger({
       maxFiles: 5,
     }),
     // Console in development
-    ...(process.env.NODE_ENV !== "production"
+    ...(env.NODE_ENV !== "production"
       ? [
           new winston.transports.Console({
             format: winston.format.combine(

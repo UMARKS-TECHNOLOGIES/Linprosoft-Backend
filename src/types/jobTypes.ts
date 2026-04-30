@@ -43,20 +43,28 @@ export const mapJobRowToDTO = (row: JobRow) => {
 
 //Update Job Row shape
 export type UpdateJobRow = {
-    id?: number;
-    employer_id?: number;
     skill_id?: number | null;
     title?: string;
     description?: string;
-    budget?: string | null;
+    budget?: number | null;
     currency?: string | null;
     duration_days?: number | null;
     location?: string | null;
     status?: string;
     visibility?: string; // "public" or "private"
-    created_at?: Date;
-    updated_at?: Date;
-    deleted_at?: Date | null;
+}
+
+//Update Job Input - shape of data accepted by update API endpoint (partial fields allowed)
+export type UpdateJobInput = {
+    skillId?: number | null;
+    title?: string;
+    description?: string;
+    budget?: number | null;
+    currency?: string | null;
+    durationDays?: number | null;
+    location?: string | null;
+    status?: string;
+    visibility?: string;
 }
 
 
@@ -74,6 +82,19 @@ export type JobPostingDTO = {
 
 }
 
+// DB-facing create row (snake_case) used by repository
+export type CreateJobRow = {
+    employer_id: number;
+    skill_id?: number | null;
+    title: string;
+    description: string;
+    budget?: string | null;
+    currency?: string | null;
+    duration_days?: number | null;
+    location?: string | null;
+    status?: string;
+    visibility?: string;
+};
 // JobAssignmentRow - Represents a row from the job_assignments table
 export type JobAssignmentRow = {
     id: number;
@@ -104,3 +125,18 @@ export type JobAssignmentDTO = {
 };
 
 
+
+
+//Create Job Posting Input
+export type CreateJobInput = {
+    title: string;
+    description: string;
+    skillId?: number;
+    budget?: number;
+    currency?: string;
+    durationDays?: number;
+    location?: string;
+    visibility?: 'public' | 'private';
+};
+
+//Update Job Posting Input

@@ -2,6 +2,7 @@
 import { Request, Response, NextFunction } from "express";
 import { ZodError } from "zod";
 import logger from "../utils/logger";
+import { env } from "../config/environment";
 
 // Status code constants
 const STATUS_CODES = {
@@ -56,7 +57,7 @@ const buildErrorLog = (
   }
 
   // Include stack trace in development
-  if (process.env.NODE_ENV === "development" && err.stack) {
+  if (env.NODE_ENV === "development" && err.stack) {
     errorLog.stack = err.stack;
   }
 
@@ -94,7 +95,7 @@ const buildErrorResponse = (
   statusCode: number,
   timestamp: string
 ) => {
-  const isProduction = process.env.NODE_ENV === "production";
+  const isProduction = env.NODE_ENV === "production";
 
   return {
     success: false,

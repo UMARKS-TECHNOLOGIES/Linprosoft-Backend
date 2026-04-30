@@ -5020,3 +5020,501 @@
 {"level":"error","message":"POST /api/auth/signup - 500 - 777ms","service":"linkprosoft-backend","timestamp":"2026-04-29 06:02:35"}
 {"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/certifications","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 06:02:35"}
 {"level":"warn","message":"POST /api/profiles/me/certifications - 401 - 23ms","service":"linkprosoft-backend","timestamp":"2026-04-29 06:02:35"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 07:49:33"}
+{"level":"warn","message":"POST /api/jobs - 401 - 70ms","service":"linkprosoft-backend","timestamp":"2026-04-29 07:49:34"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 07:49:38"}
+{"level":"warn","message":"POST /api/jobs - 401 - 41ms","service":"linkprosoft-backend","timestamp":"2026-04-29 07:49:38"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:02:09"}
+{"level":"warn","message":"POST /api/jobs - 401 - 60ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:02:09"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:02:12"}
+{"level":"warn","message":"POST /api/jobs - 401 - 29ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:02:12"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:03:28"}
+{"level":"warn","message":"POST /api/jobs - 401 - 44ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:03:28"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:46"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:46"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1396ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:46"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:47"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:47"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 821ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 39ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"Client Error Password must be at least 8 characters, Password must contain at least one special character, Password must be at least 8 characters, Password must contain at least one special character","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"Client Error Passwords don't match","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"Client Error Company name is required for employers","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:47"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:48"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:48"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 757ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:48"}
+{"email":"duplicate.1777475924557-39284@test.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":409,"timestamp":"2026-04-29 08:18:48"}
+{"level":"warn","message":"POST /api/auth/signup - 409 - 18ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:48"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:49"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:49"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 830ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:49"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:50"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:50"}
+{"level":"error","message":"POST /api/auth/login - 500 - 816ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:50"}
+{"email":"login.test.1777475924557-39284@test.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:50"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 834ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:50"}
+{"email":"nonexistent@test.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:51"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 22ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:51"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:51"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:51"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:51"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:51"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:51"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:51"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:52"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:52"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 868ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:52"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:53"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:53"}
+{"level":"error","message":"POST /api/auth/login - 500 - 966ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 37ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 26ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 35ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:53"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 14ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:53"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:54"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:54"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 707ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:54"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:55"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:55"}
+{"level":"error","message":"POST /api/auth/login - 500 - 773ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 32ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 31ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 20ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:18:55"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 26ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:55"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:56"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:56"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 862ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:56"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:56"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 23ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:56"}
+{"level":"warn","message":"Client Error Invalid email address, Password must be at least 8 characters, Password must contain at least one uppercase letter, Password must contain at least one number, Password must contain at least one special character, Password must contain at least one uppercase letter, Password must contain at least one number, Password must contain at least one special character, User type must be 'professional' or 'employer'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:18:56"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 24ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:56"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:57"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:57"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 857ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:57"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:58"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:58"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 719ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:58"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:58"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:58"}
+{"level":"error","message":"POST /api/auth/login - 500 - 712ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:58"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:59"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:18:59"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 797ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:18:59"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:00"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:00"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 794ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:00"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:01"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:01"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 727ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:01"}
+{"level":"warn","message":"Client Error Company name is required for employers","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:01"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 19ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:01"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:02"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:02"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 643ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:02"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:04"}
+{"level":"warn","message":"POST /api/jobs - 401 - 38ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:04"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:06"}
+{"level":"warn","message":"POST /api/jobs - 401 - 44ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:06"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:09"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:09"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1008ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:09"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:12"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:12"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 937ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:12"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/certifications","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:12"}
+{"level":"warn","message":"POST /api/profiles/me/certifications - 401 - 38ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:12"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:14"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:14"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 965ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:14"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:17"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:17"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 939ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:17"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/portfolio","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:17"}
+{"level":"warn","message":"POST /api/profiles/me/portfolio - 401 - 34ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:17"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:20"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:20"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 963ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:20"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:23"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:23"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1016ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:23"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:26"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:26"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 939ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:26"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:27"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:27"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 683ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 27ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"Client Error Password must be at least 8 characters, Password must contain at least one special character, Password must be at least 8 characters, Password must contain at least one special character","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"Client Error Passwords don't match","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"Client Error Company name is required for employers","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:27"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:27"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:28"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:28"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 736ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:28"}
+{"email":"duplicate.1777475965349-76529@test.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":409,"timestamp":"2026-04-29 08:19:28"}
+{"level":"warn","message":"POST /api/auth/signup - 409 - 21ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:28"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:29"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:29"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 764ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:29"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:29"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:29"}
+{"level":"error","message":"POST /api/auth/login - 500 - 779ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:29"}
+{"email":"login.test.1777475965349-76529@test.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 690ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:30"}
+{"email":"nonexistent@test.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 24ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 23ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:30"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:30"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:31"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:31"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 759ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:31"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:32"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:32"}
+{"level":"error","message":"POST /api/auth/login - 500 - 755ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 31ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 28ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 28ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:32"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 20ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:32"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:33"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:33"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 771ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:33"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:34"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:34"}
+{"level":"error","message":"POST /api/auth/login - 500 - 723ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 21ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 17ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 19ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:34"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 16ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:34"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:35"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:35"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 723ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:35"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:35"}
+{"level":"warn","message":"POST /api/auth/login - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:35"}
+{"level":"warn","message":"Client Error Invalid email address, Password must be at least 8 characters, Password must contain at least one uppercase letter, Password must contain at least one number, Password must contain at least one special character, Password must contain at least one uppercase letter, Password must contain at least one number, Password must contain at least one special character, User type must be 'professional' or 'employer'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:35"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 20ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:35"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:36"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:36"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 725ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:36"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:37"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:37"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 829ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:37"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:37"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:37"}
+{"level":"error","message":"POST /api/auth/login - 500 - 799ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:37"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:38"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:38"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 817ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:38"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:39"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:39"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 927ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:39"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:40"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:40"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 812ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:40"}
+{"level":"warn","message":"Client Error Company name is required for employers","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 08:19:40"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 20ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:40"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:41"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:41"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 704ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:41"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:45"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:45"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1363ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:45"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:49"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:49"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1101ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:49"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:52"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:52"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 911ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:52"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/portfolio","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:19:52"}
+{"level":"warn","message":"POST /api/profiles/me/portfolio - 401 - 52ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:52"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:56"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:56"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 901ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:56"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:59"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:19:59"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1133ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:19:59"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:02"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:02"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 912ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:20:02"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:06"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:06"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 914ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:20:06"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:09"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:09"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 974ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:20:09"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/certifications","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 08:20:09"}
+{"level":"warn","message":"POST /api/profiles/me/certifications - 401 - 35ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:20:09"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:12"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:12"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1104ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:20:12"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:32"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-29 08:20:32"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1136ms","service":"linkprosoft-backend","timestamp":"2026-04-29 08:20:32"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 13:57:26"}
+{"level":"warn","message":"POST /api/jobs - 401 - 76ms","service":"linkprosoft-backend","timestamp":"2026-04-29 13:57:26"}
+{"email":"employer.1777498979206.dqebir@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:00","userId":80,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 1059ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:00"}
+{"email":"employer.1777498979206.dqebir@example.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:01","userId":80}
+{"level":"info","message":"POST /login - 200 - 652ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:01"}
+{"level":"info","message":"POST / - 201 - 43ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:01"}
+{"email":"employer.1777498990400.0teu2b@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:11","userId":81,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 1360ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:11"}
+{"email":"employer.1777498990400.0teu2b@example.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:12","userId":81}
+{"level":"info","message":"POST /login - 200 - 878ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:12"}
+{"level":"info","message":"POST / - 201 - 30ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:43:12"}
+{"email":"employer.1777499138155.3ss0s8@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:45:39","userId":82,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 1163ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:45:39"}
+{"email":"employer.1777499138155.3ss0s8@example.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:45:40","userId":82}
+{"level":"info","message":"POST /login - 200 - 845ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:45:40"}
+{"level":"info","message":"POST / - 201 - 65ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:45:40"}
+{"email":"employer.1777499200344.v8msrw@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:46:41","userId":83,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 942ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:46:41"}
+{"email":"employer.1777499200344.v8msrw@example.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-29 14:46:42","userId":83}
+{"level":"info","message":"POST /login - 200 - 701ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:46:42"}
+{"level":"info","message":"POST / - 201 - 40ms","service":"linkprosoft-backend","timestamp":"2026-04-29 14:46:42"}
+{"email":"pro1.1777518582583.084bkb@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:43","userId":84,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 693ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:43"}
+{"level":"info","message":"POST / - 201 - 100ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:43"}
+{"level":"info","message":"POST /me/skills - 201 - 51ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:43"}
+{"email":"pro2.1777518583617.xaei3d@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44","userId":85,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 453ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"POST / - 201 - 12ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"POST /me/skills - 201 - 17ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"POST /me/skills - 201 - 19ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 72ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 10ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/search/professionals","query":{"skills":"invalid"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"Client Error Too big: expected number to be <=5","method":"GET","path":"/api/search/professionals","query":{"minRating":"6"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 41ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"Client Error Too small: expected number to be >=0","method":"GET","path":"/api/search/professionals","query":{"minRating":"-1"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 11ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 11ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 8ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"Client Error minRate cannot be greater than maxRate","method":"GET","path":"/api/search/professionals","query":{"maxRate":"5000","minRate":"10000"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 22ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"Client Error Too small: expected number to be >=0","method":"GET","path":"/api/search/professionals","query":{"minRate":"-1000"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:44"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 19ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:44"}
+{"level":"info","message":"GET /professionals - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"Client Error Too small: expected number to be >=1","method":"GET","path":"/api/search/professionals","query":{"page":"0"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"Client Error Too small: expected number to be >=1","method":"GET","path":"/api/search/professionals","query":{"limit":"-10"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 4ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"Client Error Invalid option: expected one of \"rating_desc\"|\"rate_asc\"|\"recent_desc\"","method":"GET","path":"/api/search/professionals","query":{"sortBy":"invalid_field"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /skills - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /skills - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"Client Error Too small: expected string to have >=1 characters","method":"GET","path":"/api/search/skills","query":{"q":""},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:09:45"}
+{"level":"warn","message":"GET /api/search/skills - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /skills - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /skills - 200 - 2ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /filters - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /filters - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /filters - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /filters - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:09:45"}
+{"email":"senior.node.1777518746468-83628@test.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27","userId":86,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 609ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27"}
+{"level":"info","message":"POST / - 201 - 76ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27"}
+{"level":"info","message":"POST /me/skills - 201 - 35ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27"}
+{"email":"junior.react.1777518746468-83628@test.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27","userId":87,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 403ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27"}
+{"level":"info","message":"POST / - 201 - 18ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27"}
+{"level":"info","message":"POST /me/skills - 201 - 24ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:27"}
+{"email":"fullstack.1777518746468-83628@test.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28","userId":88,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 417ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28"}
+{"level":"info","message":"POST / - 201 - 16ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28"}
+{"level":"info","message":"POST /me/skills - 201 - 17ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28"}
+{"level":"info","message":"POST /me/skills - 201 - 19ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28"}
+{"email":"python.away.1777518746468-83628@test.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28","userId":89,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 403ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28"}
+{"level":"info","message":"POST / - 201 - 13ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28"}
+{"level":"info","message":"POST /me/skills - 201 - 17ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:28"}
+{"level":"info","message":"GET /professionals - 200 - 70ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 14ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 10ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 8ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"Client Error minRate cannot be greater than maxRate","method":"GET","path":"/api/search/professionals","query":{"maxRate":"4000","minRate":"7000","sortBy":"rate_asc"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 24ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 18ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 11ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"Client Error Invalid option: expected one of \"available\"|\"unavailable\"|\"away\"","method":"GET","path":"/api/search/professionals","query":{"availabilityStatus":"invalid_status","sortBy":"rating_desc"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 35ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 10ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 8ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 10ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 8ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 10ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"Client Error Too big: expected number to be <=100","method":"GET","path":"/api/search/professionals","query":{"limit":"200","sortBy":"rating_desc"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 24ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"Client Error Too small: expected number to be >=1","method":"GET","path":"/api/search/professionals","query":{"page":"0","sortBy":"rating_desc"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"GET /api/search/professionals - 400 - 19ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /professionals - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /skills - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"info","message":"GET /skills - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:29"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"GET","path":"/api/search/skills","query":{"limit":"10"},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:12:30"}
+{"level":"warn","message":"GET /api/search/skills - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"warn","message":"Client Error Too small: expected string to have >=1 characters","method":"GET","path":"/api/search/skills","query":{"limit":"10","q":""},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-29 20:12:30"}
+{"level":"warn","message":"GET /api/search/skills - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /skills - 200 - 4ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /filters - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /filters - 200 - 6ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /filters - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /filters - 200 - 7ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /professionals - 200 - 8ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /professionals - 200 - 5ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /professionals - 200 - 8ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"info","message":"GET /professionals - 200 - 9ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:12:30"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 20:17:13"}
+{"level":"warn","message":"GET /api/jobs - 401 - 22ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:17:13"}
+{"email":"john.doe@test.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-04-29 20:18:39"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 74ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:18:39"}
+{"email":"john.doe@test.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:19:22","userId":90,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 457ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:19:22"}
+{"email":"john.doe@test.com","ip":"::ffff:127.0.0.1","level":"info","message":"User login successful","service":"linkprosoft-backend","timestamp":"2026-04-29 20:19:42","userId":90}
+{"level":"info","message":"POST /login - 200 - 533ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:19:42"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:23:23"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:23:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:23:26"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:23:26"}
+{"level":"info","message":"GET /1 - 200 - 52ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:23:52"}
+{"level":"info","message":"GET /1 - 200 - 174ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:06"}
+{"level":"info","message":"GET /1 - 200 - 2ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:07"}
+{"level":"info","message":"GET /1 - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:07"}
+{"level":"info","message":"GET /1 - 200 - 4ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:08"}
+{"level":"info","message":"GET /1 - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:08"}
+{"level":"info","message":"GET /1 - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:08"}
+{"level":"info","message":"GET /1 - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:09"}
+{"level":"info","message":"GET /1 - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:10"}
+{"level":"info","message":"GET /1 - 200 - 64ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:25"}
+{"level":"info","message":"GET /1 - 200 - 3ms","service":"linkprosoft-backend","timestamp":"2026-04-29 20:24:34"}
+{"level":"info","message":"POST /initiate - 201 - 1ms","service":"linkprosoft-backend","timestamp":"2026-04-30 00:36:51"}
+{"level":"info","message":"POST /webhook - 200 - 0ms","service":"linkprosoft-backend","timestamp":"2026-04-30 00:36:51"}
+{"email":"employer.1777536576650.qke334@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:09:37","userId":91,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 932ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:09:37"}
+{"email":"pro1.1777536577834.fg8i3m@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:09:38","userId":92,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 787ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:09:38"}
+{"level":"info","message":"POST / - 201 - 69ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:09:38"}
+{"level":"info","message":"POST / - 201 - 30ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:09:38"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:09:38","userId":91}
+{"error":{"code":"42703","file":"parse_target.c","length":139,"line":"1073","name":"error","position":"55","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:09:39","userId":91}
+{"level":"error","message":"POST /api/assignments - 500 - 155ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:09:39"}
+{"email":"employer.1777537381345.le7uu8@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:23:02","userId":93,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 812ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:23:02"}
+{"email":"pro1.1777537382249.7wqpil@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:23:03","userId":94,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 847ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:23:03"}
+{"level":"info","message":"POST / - 201 - 54ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:23:03"}
+{"level":"info","message":"POST / - 201 - 22ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:23:03"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:23:03","userId":93}
+{"error":{"code":"42703","file":"parse_target.c","length":139,"line":"1073","name":"error","position":"55","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:23:03","userId":93}
+{"level":"error","message":"POST /api/assignments - 500 - 37ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:23:03"}
+{"email":"employer.1777537625385.zuadyd@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:06","userId":95,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 871ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:06"}
+{"email":"pro1.1777537626508.t2k028@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:07","userId":96,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 827ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:07"}
+{"level":"info","message":"POST / - 201 - 62ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:07"}
+{"level":"info","message":"POST / - 201 - 23ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:07"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:27:07","userId":95}
+{"error":{"code":"42703","file":"parse_target.c","length":139,"line":"1073","name":"error","position":"55","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:27:07","userId":95}
+{"level":"error","message":"POST /api/assignments - 500 - 85ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:07"}
+{"email":"employer.1777537663385.mv32tn@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:44","userId":97,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 810ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:44"}
+{"email":"pro1.1777537664403.2r8alf@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:45","userId":98,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 855ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:45"}
+{"level":"info","message":"POST / - 201 - 52ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:45"}
+{"level":"info","message":"POST / - 201 - 31ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:45"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:27:45","userId":97}
+{"error":{"code":"42703","file":"parse_target.c","length":139,"line":"1073","name":"error","position":"55","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/assignments","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-04-30 01:27:45","userId":97}
+{"level":"error","message":"POST /api/assignments - 500 - 78ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:27:45"}
+{"email":"employer.1777538042369.wviq8y@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:03","userId":99,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 927ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:03"}
+{"email":"pro1.1777538043587.i85q5k@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:04","userId":100,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 793ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:04"}
+{"level":"info","message":"POST / - 201 - 80ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:04"}
+{"level":"info","message":"POST / - 201 - 35ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:04"}
+{"level":"info","message":"POST / - 201 - 49ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:04"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/reviews","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-30 01:34:04"}
+{"level":"warn","message":"POST /api/reviews - 400 - 36ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:34:04"}
+{"email":"employer.1777538121761.hfkz72@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:22","userId":101,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 868ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:22"}
+{"email":"pro1.1777538122864.zv8lej@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:23","userId":102,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 722ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:23"}
+{"level":"info","message":"POST / - 201 - 54ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:23"}
+{"level":"info","message":"POST / - 201 - 29ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:23"}
+{"level":"info","message":"POST / - 201 - 33ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:23"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/reviews","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-30 01:35:23"}
+{"level":"warn","message":"POST /api/reviews - 400 - 30ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:35:23"}
+{"email":"employer.1777538218883.h06pg1@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:36:59","userId":103,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 937ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:36:59"}
+{"email":"pro1.1777538220041.72cxd0@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:37:00","userId":104,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 731ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:37:00"}
+{"level":"info","message":"POST / - 201 - 67ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:37:00"}
+{"level":"info","message":"POST / - 201 - 30ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:37:01"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/reviews","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-30 01:37:01"}
+{"level":"warn","message":"POST /api/reviews - 400 - 32ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:37:01"}
+{"email":"employer.1777538359424.atkomx@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:39:20","userId":105,"userType":"employer"}
+{"level":"info","message":"POST /signup - 201 - 823ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:39:20"}
+{"email":"pro1.1777538360480.wzod0w@example.com","level":"info","message":"User signup successful","service":"linkprosoft-backend","timestamp":"2026-04-30 01:39:21","userId":106,"userType":"professional"}
+{"level":"info","message":"POST /signup - 201 - 755ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:39:21"}
+{"level":"info","message":"POST / - 201 - 62ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:39:21"}
+{"level":"info","message":"POST / - 201 - 30ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:39:21"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/reviews","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-04-30 01:39:21"}
+{"level":"warn","message":"POST /api/reviews - 400 - 37ms","service":"linkprosoft-backend","timestamp":"2026-04-30 01:39:21"}

@@ -14,6 +14,58 @@ This guide outlines concrete steps to implement `jobs` and `assignments` modules
 
 - Add migration SQL for `job_postings` and `job_assignments` (include `deleted_at` for soft deletes as needed).
 
+## Step-by-step Implementation (detailed)
+
+1. Database
+	- Add migration file `src/migrations/00xx_job_postings_assignments.sql` (see `PHASE_3_DATABASE_SCHEMA.md`).
+	- Run migrations in staging first; ensure no destructive operations on production tables.
+
+2. Types
+	- Add `src/types/jobTypes.ts` and `src/types/assignmentTypes.ts` with `JobRow`, `JobDTO`, `CreateJobInput`, `UpdateJobInput`, `JobAssignmentRow`, `AssignmentDTO`.
+
+3. Validation
+	- Create `src/modules/jobs/jobsValidation.ts` and `src/modules/assignments/assignmentsValidation.ts` using Zod. Include transition schemas for `accept`, `reject`, `start`, `complete`.
+
+4. Repository
+	- Implement `src/modules/jobs/jobsRepository.ts` with `createJob`, `findJobById`, `listJobs`, `updateJob`, `softDeleteJob`, `findMatchesForJob`.
+	- Implement `src/modules/assignments/assignmentsRepository.ts` with `createAssignment`, `findById`, `updateStatus`, `listByProfessional`, `listByEmployer`.
+
+5. Service Layer
+	- Implement safe state transition helpers and ownership checks in `jobsService` and `assignmentsService`.
+	- Map camelCase DTOs → snake_case DB rows in service layer using small mapper helpers.
+
+6. Controllers & Routes
+	- Add `jobsRoutes.ts` and `assignmentsRoutes.ts` and wire them into `app.ts`.
+	- Protect write endpoints with `protect` middleware and ensure role checks where needed.
+
+7. Tests
+	- Add unit tests for mappers and services.
+	- Add integration tests under `__tests__/jobs/` and `__tests__/assignments/` using fixtures and the existing test DB setup.
+
+8. Documentation
+	- Finalize `docs/PHASE3/*` (this set) including Thunder Client collection and cURL samples.
+
+## Files & Location Checklist
+
+- `src/modules/jobs/` — routes, controller, service, repository, validation, tests
+- `src/modules/assignments/` — routes, controller, service, repository, validation, tests
+- `src/types/jobTypes.ts`, `src/types/assignmentTypes.ts`
+- `src/migrations/00xx_job_postings_assignments.sql`
+
+## Example: wiring route in `app.ts`
+
+Add:
+
+```ts
+import jobsRoutes from './modules/jobs/jobsRoutes';
+import assignmentsRoutes from './modules/assignments/assignmentsRoutes';
+
+app.use('/api/jobs', jobsRoutes);
+app.use('/api/assignments', assignmentsRoutes);
+```
+
+
+
 ## Types
 
 - Define `JobRow`, `JobPostingResponseDTO`, `JobAssignmentRow`, and `JobAssignmentResponseDTO` in `src/types`.

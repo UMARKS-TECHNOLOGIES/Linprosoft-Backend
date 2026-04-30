@@ -21,13 +21,20 @@ export const getJobs = catchAsync(async (req: Request, res: Response) => {
     
 });
 export const updateJob = catchAsync(async (req: Request, res: Response) => {
-    const id = (req as any).user.id;
+    const employerId = (req as any).user.id;
+    const jobId = Number(req.params.id);
 
-    const job = await service.updateJobService(id, req.body);
+    const job = await service.updateJobService(employerId, jobId, req.body);
     return ApiResponseHandler.updated(res, job, 'Job updated');
 });
 export const deleteJob = catchAsync(async (req: Request, res: Response) => {
     const id = (req as any).user.id;
     await service.deleteJobService(id, parseInt(req.params.id));
     return ApiResponseHandler.deleted(res, 'Job deleted');
+});
+//Get job detail's details by id
+export const getJob = catchAsync(async (req: Request, res: Response) => {
+    const id = parseInt(req.params.id);
+    const job = await service.getJobService(id);
+    return ApiResponseHandler.success(res, job, 'Job details retrieved');
 });

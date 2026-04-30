@@ -10,6 +10,7 @@
 
 import { Response } from "express";
 import { ApiSuccessResponse, ApiErrorResponse, ApiPaginatedResponse } from "../types/apiTypes";
+import { env } from "../config/environment";
 
 /**
  * Response handler class with static methods for consistent responses
@@ -141,7 +142,7 @@ export class ApiResponseHandler {
       statusCode,
       timestamp: new Date().toISOString(),
       // Only include stack in development environment
-      ...(process.env.NODE_ENV === "development" && { 
+      ...(env.NODE_ENV === "development" && { 
         stack: new Error().stack 
       }),
     };
