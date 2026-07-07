@@ -44,3 +44,22 @@ export const deleteAssignment = catchAsync(async (_req: Request, res: Response) 
     // This can be implemented to delete an assignment
     return ApiResponseHandler.success(res, {}, 'Assignment deleted');
 });
+
+// Employer approves satisfaction for an assignment
+export const approveSatisfaction = catchAsync(async (req: Request, res: Response) => {
+    const employerId = (req as any).user.id;
+    const assignmentId = parseInt(req.params.id, 10);
+
+    const updated = await service.approveSatisfaction(assignmentId, employerId);
+    return ApiResponseHandler.success(res, updated, 'Assignment satisfaction approved');
+});
+
+// Employer disputes satisfaction for an assignment
+export const disputeSatisfaction = catchAsync(async (req: Request, res: Response) => {
+    const employerId = (req as any).user.id;
+    const assignmentId = parseInt(req.params.id, 10);
+    const { reason, notes } = req.body;
+
+    const updated = await service.disputeSatisfaction(assignmentId, employerId, reason, notes);
+    return ApiResponseHandler.success(res, updated, 'Assignment satisfaction disputed');
+});

@@ -27,6 +27,16 @@ describe('Auth Integration Tests', () => {
   let app: Express;
   const runId = `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
   const makeEmail = (prefix: string, domain = "test.com") => `${prefix}.${runId}@${domain}`;
+  const extractTokenFromSetCookie = (setCookie: string[] | string | undefined) => {
+    if (!setCookie) return undefined;
+
+    const cookies = Array.isArray(setCookie) ? setCookie : [setCookie];
+    const tokenCookie = cookies.find(
+      (cookie) => cookie.startsWith('accessToken=') || cookie.startsWith('token=')
+    );
+
+    return tokenCookie?.split(';')[0].split('=')[1];
+  };
 
   /**
    * Setup: Create Express app with all middleware and routes
@@ -407,9 +417,7 @@ describe('Auth Integration Tests', () => {
 
       // Extract token from Set-Cookie header
       const setCookie = loginResponse.headers['set-cookie'];
-      if (setCookie) {
-        loginToken = setCookie[0].split(';')[0].replace('token=', '');
-      }
+      loginToken = extractTokenFromSetCookie(setCookie) || '';
     });
 
     /**
@@ -497,9 +505,7 @@ describe('Auth Integration Tests', () => {
         });
 
       const setCookie = loginResponse.headers['set-cookie'];
-      if (setCookie) {
-        logoutToken = setCookie[0].split(';')[0].replace('token=', '');
-      }
+      logoutToken = extractTokenFromSetCookie(setCookie) || '';
     });
 
     /**

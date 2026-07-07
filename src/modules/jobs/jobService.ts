@@ -54,3 +54,21 @@ export const deleteJobService = async (employerId: number, id: number) => {
   return { success: true };
   };
 
+
+//Match jobs to Professional Skills
+export const MatchJobsService = async (jobId: number, limit=20, offset=0 ) => {
+  
+
+    const matches = await repo.findMatchesForJob(jobId, limit, offset);
+    
+    return {
+      success: true,
+      data: matches, 
+      pagination: {
+        limit,
+        offset,
+
+        total: matches.length
+      }
+    };
+};

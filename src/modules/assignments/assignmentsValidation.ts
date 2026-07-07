@@ -28,3 +28,12 @@ export const deleteAssignmentSchema = z.object({
 export const getAssignmentByIdSchema = z.object({
     assignmentId: z.number()
 });                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+export const approveSatisfactionSchema = z.object({
+    notes: z.string().trim().max(1000).optional(),
+});
+
+export const disputeSatisfactionSchema = z.object({
+    reason: z.string().trim().min(1).max(1000),
+    notes: z.string().trim().max(1000).optional(),
+});

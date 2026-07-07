@@ -83,17 +83,22 @@ pm.test("body has uptime or ok", () => {
 ## Authentication (Signup / Login)
 
 1) POST `{{base_url}}/api/auth/signup`
-
+ 
 Headers:
 Content-Type: application/json
 
 Body example (Employer):
 ```json
 {
-	"email": "employer+tc@example.com",
-	"password": "Password123!",
-	"role": "employer",
-	"name": "TC Employer"
+  "firstName": "Test",
+  "lastName": "Employer",
+  "email": "test.employer@test.com",
+  "password": "SecurePass123!",
+  "passwordConfirm": "SecurePass123!",
+  "userType": "employer",
+  "phone": "+1234567890",
+  "location": "New York",
+  "compName": "JobTogether"
 }
 ```
 
@@ -116,9 +121,9 @@ if (body && body.data && body.data.accessToken) {
 Body example:
 ```json
 {
-	"email": "employer+tc@example.com",
-	"password": "Password123!"
-}
+  "email": "test.employer@test.com",
+  "password": "SecurePass123!"
+} 
 ```
 
 Test script (capture cookie or token):

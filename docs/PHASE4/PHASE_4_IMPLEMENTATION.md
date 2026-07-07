@@ -28,6 +28,7 @@
 
 ### Phase 4 Objectives
 
+- **MVP Admin Approval Gate**: All employer payments must be approved by admin before funds enter escrow (fraud prevention layer)
 - Integrate a payment gateway (Paystack or HTTP client) for initiating and verifying payments.
 - Implement commission and fee calculations (default: 15% seller, 1% buyer).
 - Persist payment lifecycle records and reconcile with job assignments.
@@ -38,11 +39,14 @@
 
 ### Success Criteria
 
+- **MVP Gate Implemented**: Payments move to `pending_admin_approval` after webhook confirmation; admin must approve before `held_in_escrow`
 - Payments can be initiated and return a gateway checkout link or payment reference.
 - Payment verification updates `payments` record and job/assignment status atomically.
 - Commission, platform fees, and net amounts correctly calculated and stored.
 - Webhook processing is idempotent and secure (signature verification).
-- Reviews can be created only after assignment completion and update professional rating.
+- Admin approval/rejection endpoints working with proper role checks
+- Reviews can be created only after assignment completion and employer approval
+- Employer satisfaction approval required before professional payout
 - Test coverage for payments and reviews endpoints achieves required confidence.
 
 ---
@@ -56,13 +60,20 @@ Key integrations:
 - Background reconciliation tasks (optional) to re-check unsettled payments.
 - Accounting-friendly `payments` table with detailed fee breakdown for future reporting.
 
-High level flow (payment):
+High level flow (payment) with MVP Admin Approval:
 
 1. Employer initiates payment for a `job_assignment` via `POST /api/payments/initiate`.
-2. Backend creates `payments` record (status: pending) and requests a payment URL (or returns gateway flow data).
-3. User completes payment on gateway; gateway calls our `POST /api/payments/webhook`.
-4. Webhook verifies signature → updates payment status to `completed` (or `failed`) and records transaction reference.
-5. On success, backend marks job_assignment/payment as settled, calculates commissions, and triggers post-payment actions (notification, release to payee, etc.).
+2. Backend creates `payments` record (status: `pending_payment`) and requests a payment URL from Paystack.
+3. User completes payment on Paystack; gateway calls our `POST /api/payments/webhook`.
+4. Webhook verifies signature → updates payment status to `pending_admin_approval` (NEW - MVP) and records transaction reference.
+5. **System notifies admin dashboard**: Admin reviews payment for fraud indicators, employer verification, payment method legitimacy.
+6. **Admin Approval (Critical MVP Gate)**:
+   - If approved: status → `held_in_escrow`, professional notified can start work
+   - If rejected: status → `payment_rejected`, refund queued to employer
+7. On success (after approval), backend marks job_assignment as `funded` and triggers work start notifications.
+8. Professional works, completes assignment
+9. Employer reviews and approves work (satisfaction gate)
+10. After employer approval: funds released to professional, platform commission deducted.
 
 High level flow (review):
 
@@ -109,25 +120,47 @@ Add module folders and types similar to previous phases.
    - Call gateway to create transaction (or build checkout link); persist returned reference.
 4. Implement `POST /api/payments/initiate` route and controller.
 
-### Week 1 — Webhook Handler & Verification (Days 3–5)
+### Week 1 — Webhook Handler & MVP Admin Approval Gate (Days 3–5)
 
 1. Implement secure `POST /api/payments/webhook` that:
    - Verifies gateway signature.
    - Finds corresponding `payments` record by `transaction_reference` or gateway id.
    - Uses idempotency: if payment already processed, return 200.
-   - Updates `payments` to `completed` (or `failed`) with gateway payload.
-   - Calls `paymentService.finalizePayment()` that:
-     - Calculates commissions and platform fees.
-     - Updates `job_assignment` and triggers notifications.
+   - Updates `payments` status to `pending_admin_approval` (NEW - MVP) with gateway payload.
+   - Sets `pending_admin_review_at` timestamp.
+   - Calls `paymentService.notifyAdminPaymentPending()` to alert admin dashboard.
 
-### Week 2 — Reviews & Ratings (Days 6–10)
+2. Implement MVP Admin Approval Endpoints:
+   - `POST /api/admin/payments/{paymentId}/approve-payment` (Admin only):
+     - Validates payment is in `pending_admin_approval` status
+     - Updates: status → `held_in_escrow`, `admin_approval_status` → `approved`, `admin_approved_at`, `admin_approved_by`
+     - Updates `job_assignments.payment_status` → `funded`
+     - Triggers notifications to professional (can start work) and employer (work funded)
+   - `POST /api/admin/payments/{paymentId}/reject-payment` (Admin only):
+     - Validates payment is in `pending_admin_approval` status
+     - Updates: status → `payment_rejected`, `admin_approval_status` → `rejected`, `admin_rejected_at`, `admin_rejected_by`
+     - Queues background job `process_refund_payment` to return funds to employer
+     - Triggers notifications to employer with rejection reason
+   - `GET /api/admin/payments/pending-admin-approval` to list payments awaiting admin review
 
-1. Add `reviews` table migration (if not already present).
-2. Implement `reviewService.createReview(assignmentId, reviewerId, rating, comment)` to:
-   - Verify assignment is completed and reviewer is allowed.
+### Week 2 — Employer Satisfaction & Reviews (Days 6–10)
+
+1. Implement employer satisfaction approval workflow:
+   - Endpoint for employer to approve/dispute completed work before professional gets paid
+   - Updates `job_assignments.satisfaction_status` and `payments.employer_approval_status`
+   - Only after employer approves can professional payout be queued
+
+2. Add `reviews` table migration (if not already present).
+
+3. Implement `reviewService.createReview(assignmentId, reviewerId, rating, comment)` to:
+   - Verify assignment is completed AND employer has approved satisfaction
+   - Verify reviewer is the employer (not professional)
    - Insert review and update `professional_profiles` aggregates in a transaction.
-3. Add endpoints and tests:
-   - `POST /api/reviews`
+
+4. Add endpoints and tests:
+   - `PATCH /api/assignments/{id}/approve-satisfaction` (employer approves work quality)
+   - `PATCH /api/assignments/{id}/dispute-satisfaction` (employer disputes work)
+   - `POST /api/reviews` (create review after approval)
    - `GET /api/reviews/:professionalId`
    - `GET /api/reviews/:id`
 

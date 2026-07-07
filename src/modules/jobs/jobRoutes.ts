@@ -11,4 +11,6 @@ router.get('/:id', protect, validate(jobIdParamSchema, { source: "params" }), co
 router.put('/:id', protect, validate(jobIdParamSchema, { source: "params" }), validate(updateJobSchema), controller.updateJob);//Update job posting(employer only)
 router.delete('/:id', protect, validate(jobIdParamSchema, { source: "params" }), controller.deleteJob);//Soft-delete job posting(employer only)
 
+router.get('/:id/matches', protect, validate(jobIdParamSchema, { source: "params" }), controller.matchJobToProfessionalSkill); //Match jobs to professional skills
+
 export default router;

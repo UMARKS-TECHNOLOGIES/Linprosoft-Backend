@@ -31,10 +31,28 @@ class ReviewsRepository {
   }
 
   async existsByAssignmentAndReviewer(assignmentId: number, reviewerId: number) {
-    // Check that the reviewer is associated with the assignment and that status = 'completed'
-    const q = `SELECT id FROM job_assignments WHERE id = $1 AND (employer_id = $2 OR professional_id = $2) AND status = 'completed' LIMIT 1`;
+    // Allow reviews ONLY when:
+    // - reviewer is the employer for the assignment
+    // - assignment.status = 'completed'
+    // - assignment.satisfaction_status = 'satisfied'
+    // - reviewer has not already submitted a review for this assignment
+
+    const q = `
+      SELECT ja.id
+      FROM job_assignments ja
+      WHERE ja.id = $1
+        AND ja.employer_id = $2
+        AND ja.status = 'completed'
+        AND ja.satisfaction_status = 'satisfied'
+      LIMIT 1
+    `;
     const res = await this.db.query(q, [assignmentId, reviewerId]);
-    return (res.rowCount || 0) > 0;
+    if (!res.rowCount || res.rowCount === 0) return false;
+
+    // Prevent duplicate review by same reviewer on same assignment
+    const q2 = `SELECT id FROM reviews WHERE job_assignment_id = $1 AND reviewer_id = $2 LIMIT 1`;
+    const res2 = await this.db.query(q2, [assignmentId, reviewerId]);
+    return (res2.rowCount || 0) === 0;
   }
 
   async findProfessionalIdByAssignment(assignmentId: number) {

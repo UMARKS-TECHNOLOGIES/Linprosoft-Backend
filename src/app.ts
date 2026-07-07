@@ -18,6 +18,7 @@ import { requestLogger } from "./middleware/requestLogger";
 import jobRoutes from "./modules/jobs/jobRoutes";
 import assignmentsRoutes from './modules/assignments/assignmentRoutes';
 import paymentsRoutes from "./modules/payments/paymentsRoutes";
+import adminPaymentsRoutes from "./modules/payments/adminPaymentsRoutes";
 import reviewRoutes from "./modules/reviews/reviewsRoutes";
 import { env } from "./config/environment";
 import {
@@ -57,8 +58,23 @@ app.use(
   })
 );
 
-// Parse JSON request bodies
-app.use(express.json());
+/**
+ * ✅ Raw Body Middleware for Webhook Signature Verification
+ * Captures raw request body before JSON parsing
+ * Used by Paystack webhook to verify x-paystack-signature header
+ * Must come before express.json() middleware
+ */
+app.use(
+  express.json({
+    verify: (req: any, _: any, buf: Buffer) => {
+      // Store raw body for webhook signature verification
+      req.rawBody = buf.toString("utf8");
+    },
+  })
+);
+
+// Alternative: For routes that don't need raw body, use standard JSON parsing
+// This is already done above with the verify callback
 
 // Parse cookies from headers
 app.use(cookieParser());
@@ -105,6 +121,8 @@ app.use("/api/search", searchLimiter, searchRoutes);
 
 // Payments routes
 app.use("/api/payments", paymentsRoutes);
+// Admin payment approval endpoints (router enforces admin role)
+app.use("/api/admin/payments", adminPaymentsRoutes);
 app.use("/api/reviews", reviewRoutes);
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {

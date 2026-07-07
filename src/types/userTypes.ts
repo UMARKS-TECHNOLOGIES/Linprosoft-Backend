@@ -4,7 +4,7 @@
  */
 
 // User type discriminator
-export type UserType = "professional" | "employer";
+export type UserType = "professional" | "employer" | "admin";
 
 /**
  * Database User Entity - Full user record with password hash

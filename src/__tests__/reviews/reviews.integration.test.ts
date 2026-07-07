@@ -6,6 +6,7 @@ import { query } from '../setup';
 
 describe('Reviews integration (DB-backed)', () => {
   let employerCookie: string;
+  let employerId: number;
   let professionalCookie: string;
   let professionalProfileId: number;
   let jobId: number;
@@ -16,6 +17,7 @@ describe('Reviews integration (DB-backed)', () => {
     const signupEmployer = await request(app).post('/api/auth/signup').send(testUsers.employer);
     expect(signupEmployer.status).toBe(201);
     employerCookie = signupEmployer.headers['set-cookie'];
+    employerId = signupEmployer.body.data.user.id;
 
     // Create professional user and profile
     const signupPro = await request(app).post('/api/auth/signup').send(testUsers.professional1);
@@ -38,9 +40,9 @@ describe('Reviews integration (DB-backed)', () => {
 
     // Create assignment directly in DB (some test DBs have different assignment schema)
     const insert = await query(
-      `INSERT INTO job_assignments (job_id, professional_id, status, accepted_budget, assigned_at, completed_at)
-       VALUES ($1,$2,$3,$4,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP) RETURNING id`,
-      [jobId, professionalProfileId, 'completed', 9000]
+      `INSERT INTO job_assignments (job_id, professional_id, employer_id, status, accepted_budget, assigned_at, completed_at)
+       VALUES ($1,$2,$3,$4,$5,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP) RETURNING id`,
+      [jobId, professionalProfileId, employerId, 'completed', 9000]
     );
     assignmentId = insert[0].id;
 

@@ -22,8 +22,8 @@ class ReviewsService {
     if (input.rating < 1 || input.rating > 5) throw new AppError('rating must be between 1 and 5', 400);
 
     // Ensure job assignment is completed and reviewer is owner - placeholder checks
-    const exists = await this.repo.existsByAssignmentAndReviewer(input.jobAssignmentId, input.reviewerId);
-    if (!exists) throw new AppError('Reviewer is not allowed to review this assignment', 403);
+    const allowed = await this.repo.existsByAssignmentAndReviewer(input.jobAssignmentId, input.reviewerId);
+    if (!allowed) throw new AppError('Only the assignment employer may review after satisfaction approval', 403);
 
     const review = await this.repo.create({
       job_assignment_id: input.jobAssignmentId,

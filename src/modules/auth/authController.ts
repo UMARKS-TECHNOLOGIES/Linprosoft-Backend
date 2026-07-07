@@ -58,7 +58,7 @@ export const signup = catchAsync(async (req: Request, res: Response) => {
   // Step 2: Call service to create user (handles password hashing, duplicate check)
   const result = await service.signup(input);
 
-  // Step 2.5: Log successful signup
+  // Step 2.5: Log successful signup 
   logger.info("User signup successful", {
     userId: result.user.id,
     email: result.user.email,

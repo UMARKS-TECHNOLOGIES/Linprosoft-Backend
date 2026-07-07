@@ -51,6 +51,22 @@ const environmentSchema = z.object({
     .string()
     .trim()
     .default("info"),
+
+  // Paystack Integration (Phase 4 MVP)
+  PAYSTACK_PUBLIC_KEY: z
+    .string()
+    .trim()
+    .min(1, "PAYSTACK_PUBLIC_KEY is required for payment integration"),
+
+  PAYSTACK_SECRET_KEY: z
+    .string()
+    .trim()
+    .min(1, "PAYSTACK_SECRET_KEY is required for payment integration"),
+
+  PAYSTACK_WEBHOOK_SECRET: z
+    .string()
+    .trim()
+    .min(1, "PAYSTACK_WEBHOOK_SECRET is required for webhook signature verification"),
 });
 
 const parsed = environmentSchema.safeParse(process.env);
