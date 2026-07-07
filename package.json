@@ -1,11 +1,11 @@
 {
   "name": "linkprosoft_backend",
   "version": "1.0.0",
-  "main": "node dist/server.ts",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
-    "start": "node dist/app.js",
+    "start": "node dist/server.js",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "test": "jest --detectOpenHandles",
