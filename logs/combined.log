@@ -6662,3 +6662,10 @@
 {"email":"gidsoala@gmail.com","event_type":"otp_sent","level":"info","message":"AUDIT_EVENT","purpose":"email_verification","service":"linkprosoft-backend","timestamp":"2026-07-12 15:46:47","user_id":""}
 {"email":"gidsoala@gmail.com","event_type":"signup","existing_user":false,"ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","role":"professional","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-12 15:46:47","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"583772e9-e6a0-4d2a-bfd6-8511e40583e9"}
 {"level":"info","message":"POST /signup - 200 - 3764ms","service":"linkprosoft-backend","timestamp":"2026-07-12 15:46:47"}
+{"level":"warn","message":"GET / - 404 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-12 16:07:48"}
+{"email":"john@example.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-12 16:08:28","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":null}
+{"email":"john@example.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-12 16:08:28"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 3043ms","service":"linkprosoft-backend","timestamp":"2026-07-12 16:08:28"}
+{"email":"gidsoala@gmail.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"email_not_verified","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-12 16:08:45","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"583772e9-e6a0-4d2a-bfd6-8511e40583e9"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-12 16:08:45"}
+{"level":"warn","message":"POST /api/auth/login - 403 - 2043ms","service":"linkprosoft-backend","timestamp":"2026-07-12 16:08:45"}

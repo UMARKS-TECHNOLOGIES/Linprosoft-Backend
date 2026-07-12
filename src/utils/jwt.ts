@@ -41,7 +41,7 @@ export const generateRefreshToken = async (payload: object) => {
             { expiresIn: `${env.REFRESH_TOKEN_EXPIRES_DAYS}d` },
             (err, token) => {
                 if (err) reject(err);
-                else resolve(token);
+                else resolve(token!);
             }
         );
     });

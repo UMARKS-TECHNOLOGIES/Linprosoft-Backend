@@ -1,5 +1,6 @@
 import pool from "../../config/db";
 import { OtpPurpose, OtpRow, OtpResponseDTO, toOtpResponseDTO } from "./otpTypes";
+import { env } from "../../config/environment";
 
 /**
  * Update an existing OTP record
@@ -151,7 +152,7 @@ export const createOtp = async (
       purpose,
       codeHash,
       0, // attempts - start at 0
-      5, // max_attempts - default from config, but we can hardcode or import from config
+      env.OTP_MAX_ATTEMPTS, // max_attempts from config
       expiresAt
     ]);
 

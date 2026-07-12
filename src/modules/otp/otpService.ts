@@ -5,21 +5,36 @@
  */
 
 import * as otpRepository from "./otpRepository";
-//import * as otpTypes from "./otpTypes";
 import { OtpPurpose } from "./otpTypes";
 import bcrypt from "bcryptjs";
 import { logAuthEvent } from "../../utils/logger";
-//import { OtpEntity, OtpResponseDTO } from "./otpTypes";
+import { env } from "../../config/environment";
+import nodemailer from "nodemailer";
 
 /**
  * OTP service configuration
  */
 const otpConfig = {
-  length: Number(process.env.OTP_LENGTH) || 6,
-  expiresInSeconds: Number(process.env.OTP_EXPIRES_SECONDS) || 600, // 10 minutes
-  maxAttempts: Number(process.env.OTP_MAX_ATTEMPTS) || 5,
-  resendCooldownSeconds: Number(process.env.OTP_RESEND_COOLDOWN_SECONDS) || 60, // 1 minute
+  length: env.OTP_LENGTH,
+  expiresInSeconds: env.OTP_EXPIRES_SECONDS, // 10 minutes
+  maxAttempts: env.OTP_MAX_ATTEMPTS,
+  resendCooldownSeconds: env.OTP_RESEND_COOLDOWN_SECONDS, // 1 minute
   bcryptSaltRounds: 10 // For hashing OTP codes (same as password hashing strength)
+};
+
+/**
+ * Create nodemailer transporter
+ */
+const createTransport = () => {
+  return nodemailer.createTransport({
+    host: env.EMAIL_HOST,
+    port: env.EMAIL_PORT,
+    secure: env.EMAIL_SECURE, // true for 465, false for other ports
+    auth: {
+      user: env.EMAIL_USER,
+      pass: env.EMAIL_PASS,
+    },
+  });
 };
 
 /**
@@ -46,9 +61,9 @@ export const generateHashedOtP = () => {
  *
  * @returns Date object representing expiration time
  */
-export const getOtPExpirationTime = (): Date => {
+export const getOtPExpirationTime = ((): Date => {
   return new Date(Date.now() + otpConfig.expiresInSeconds * 1000);
-};
+});
 
 /**
  * Check if enough time has passed since last OTP send for resend cooldown
@@ -65,8 +80,7 @@ export const isResendAllowed = (lastSentAt: Date): boolean => {
 
 /**
  * Send OTP email
- * In a real implementation, this would use an email service (SendGrid, SES, etc.)
- * For now, we'll just log it (in production, replace with actual email sending)
+ * Uses nodemailer to send actual emails
  *
  * @param email - Recipient email
  * @param otpCode - OTP code to send
@@ -77,26 +91,41 @@ export const sendOtPEmail = async (
   otpCode: string,
   purpose: OtpPurpose
 ): Promise<void> => {
-  // In production, replace this with actual email service call
-  // For example: await sendGrid.send({ to: email, from, templateId, dynamicTemplateData: { otpCode } });
+  try {
+    const transport = createTransport();
 
-  const purposeText = purpose === "email_verification"
-    ? "email verification"
-    : "password reset";
+    const purposeText = purpose === "email_verification"
+      ? "email verification"
+      : "password reset";
 
-  console.log(`[OTP] Sending ${purposeText} OTP to ${email}: ${otpCode}`);
+    const mailOptions = {
+      from: env.EMAIL_FROM,
+      to: email,
+      subject: `Your ${purposeText} code`,
+      text: `Your ${purposeText} code is: ${otpCode}\n\nThis code will expire in ${otpConfig.expiresInSeconds / 60} minutes.`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2>${purposeText === "email verification" ? "Verify Your Email" : "Password Reset"}</h2>
+          <p>Your ${purposeText} code is:</p>
+          <div style="background-color: #f4f4f4; border: 1px solid #ddd; padding: 15px; text-align: center; font-size: 24px; letter-spacing: 5px; margin: 20px 0;">
+            <strong>${otpCode}</strong>
+          </div>
+          <p>This code will expire in ${otpConfig.expiresInSeconds / 60} minutes.</p>
+          <p>If you didn't request this, please ignore this email.</p>
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+          <p style="font-size: 12px; color: #777;">This is an automated message, please do not reply.</p>
+        </div>
+      `,
+    };
 
-  // Log audit event for OTP sent
-  await logAuthEvent(
-    "", // User ID will be added by caller
-    "otp_sent",
-    {
-      purpose,
-      email, // Include email in metadata for logging
-      // Note: In a real implementation, we would have the user ID here
-      // For now, we'll leave it empty as the caller will add it
-    }
-  );
+    await transport.sendMail(mailOptions);
+
+    // Close the transporter
+    transport.close();
+  } catch (error) {
+    console.error("Error sending OTP email:", error);
+    throw new Error(`Failed to send OTP email: ${error instanceof Error ? error.message : String(error)}`);
+  }
 };
 
 /**
@@ -176,7 +205,7 @@ export const generateAndSendOtP = async (
  * Verify OTP code
  *
  * @param userId - User ID
- * @param purpose - OTP purpose
+* @param purpose - OTP purpose
  * @param otpCode - Plain OTP code to verify
  * @param auditInfo - Optional audit information (IP address, user agent)
  * @returns Boolean indicating if OTP is valid
@@ -211,8 +240,26 @@ export const verifyOtP = async (
       return false;
     }
 
+    // Get the full OTP record (including hash) for verification
+    const fullOtpRecord = await otpRepository.findOtpById(otpEntity.id);
+    if (!fullOtpRecord) {
+      await logAuthEvent(
+        userId,
+        "otp_verification_failed",
+        {
+          purpose,
+          ipAddress: auditInfo.ipAddress,
+          user_agent: auditInfo.userAgent,
+          success: false,
+          reason: "otp_not_found"
+        }
+      );
+
+      return false;
+    }
+
     // Check if OTP has expired (should already be filtered by repository, but double-check)
-    if (otpEntity.expiresAt < new Date()) {
+    if (fullOtpRecord.expires_at < new Date()) {
       await logAuthEvent(
         userId,
         "otp_verification_failed",
@@ -229,7 +276,7 @@ export const verifyOtP = async (
     }
 
     // Check if max attempts exceeded
-    if (otpEntity.attempts >= otpConfig.maxAttempts) {
+    if (fullOtpRecord.attempts >= otpConfig.maxAttempts) {
       await logAuthEvent(
         userId,
         "otp_verification_failed",
@@ -246,11 +293,11 @@ export const verifyOtP = async (
     }
 
     // Verify the OTP code against the hash
-    const isValid = await bcrypt.compare(otpCode, otpEntity.codeHash);
+    const isValid = await bcrypt.compare(otpCode, fullOtpRecord.code_hash);
 
     if (isValid) {
       // Mark OTP as consumed on successful verification
-      await otpRepository.consumeOtp(otpEntity.id);
+      await otpRepository.consumeOtp(fullOtpRecord.id);
 
       // Log audit event for successful OTP verification
       await logAuthEvent(
@@ -265,7 +312,7 @@ export const verifyOtP = async (
       );
     } else {
       // Increment attempt count on failed verification
-      await otpRepository.incrementOtpAttempts(otpEntity.id);
+      await otpRepository.incrementOtpAttempts(fullOtpRecord.id);
 
       // Log audit event for failed OTP verification
       await logAuthEvent(
@@ -277,7 +324,7 @@ export const verifyOtP = async (
           user_agent: auditInfo.userAgent,
           success: false,
           reason: "invalid_otp",
-          attempt: otpEntity.attempts + 1,
+          attempt: fullOtpRecord.attempts + 1,
           maxAttempts: otpConfig.maxAttempts
         }
       );

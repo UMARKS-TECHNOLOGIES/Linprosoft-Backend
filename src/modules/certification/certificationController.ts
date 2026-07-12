@@ -19,7 +19,7 @@ export const createMyCertification = catchAsync(async (req: Request, res: Respon
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);
   }
 
-  const certification = await certificationService.createForUser(userId, req.body);
+  const certification = await certificationService.createForUser(Number(userId), req.body);
 
   return ApiResponseHandler.created(res, { certification }, "Certification added successfully");
 });
@@ -33,7 +33,7 @@ export const updateMyCertification = catchAsync(async (req: Request, res: Respon
   }
 
   const certificationId = Number(req.params.certificationId);
-  const certification = await certificationService.updateForUser(userId, certificationId, req.body);
+  const certification = await certificationService.updateForUser(Number(userId), certificationId, req.body);
 
   return ApiResponseHandler.success(res, { certification }, "Certification updated successfully");
 });
@@ -47,7 +47,7 @@ export const deleteMyCertification = catchAsync(async (req: Request, res: Respon
   }
 
   const certificationId = Number(req.params.certificationId);
-  await certificationService.deleteForUser(userId, certificationId);
+  await certificationService.deleteForUser(Number(userId), certificationId);
 
   return res.status(204).send();
 });

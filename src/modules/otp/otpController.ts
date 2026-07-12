@@ -8,7 +8,7 @@ import * as otpService from "./otpService";
 import catchAsync from "../../utils/catchAsync";
 import { ApiResponseHandler } from "../../utils/response";
 import * as otpValidation from "./otpValidation";
-import logger from "../../utils/logger";
+import { findByEmail } from "../auth/authRepository";
 
 /**
  * POST /api/auth/verify-email
@@ -26,18 +26,44 @@ export const verifyEmail = catchAsync(async (req: Request, res: Response) => {
   // Step 1: Validate input against Zod schema
   const input = otpValidation.verifyEmailSchema.parse(req.body);
 
-  // Step 2: Verify OTP
-  // Note: This implementation needs to be updated to work with email instead of userId
-  // For now, returning placeholder - actual implementation would:
-  // 1. Look up user by email
-  // 2. Verify the OTP for email_verification purpose
-  // 3. Mark email as verified and generate tokens
+  // Step 2: Find user by email to get userId
+  const user = await findByEmail(input.email);
+  if (!user) {
+    // For security, always return success message even if email doesn't exist
+    // This prevents email enumeration attacks
+    return ApiResponseHandler.success(
+      res,
+      null,
+      "If the email exists in our system and the OTP is correct, your email has been verified"
+    );
+  }
 
-  return ApiResponseHandler.success(
-    res,
-    null,
-    "Email verification endpoint - implementation pending"
+  // Step 3: Verify the OTP code
+  const isValid = await otpService.verifyOtP(
+    user.id,
+    "email_verification",
+    input.otp_code,
+    {
+      ipAddress: req.ip,
+      userAgent: req.get("User-Agent"),
+    }
   );
+
+  // Step 4: Return appropriate response
+  if (isValid) {
+    return ApiResponseHandler.success(
+      res,
+      null,
+      "Email verified successfully"
+    );
+  } else {
+    return ApiResponseHandler.error(
+      res,
+      "invalid_otp",
+      "Invalid or expired OTP code",
+      400
+    );
+  }
 });
 
 /**
@@ -55,26 +81,26 @@ export const resendOtp = catchAsync(async (req: Request, res: Response) => {
   // Step 1: Validate input against Zod schema
   const input = otpValidation.resendOtpSchema.parse(req.body);
 
-  // Step 2: For security, always return success (even if email doesn't exist)
-  // In a real implementation, we would:
-  // 1. Look up user by email
-  // 2. If user exists, generate and send new OTP
-  // 3. Always return the same message to prevent email enumeration
-
-  try {
-    // Attempt to resend OTP (will fail silently if user doesn't exist)
-    // Note: This would need to be updated to work with email lookup
-    await otpService.resendOtP(
-      "", // Would need userId from email lookup
-      req.body.email,
-      input.purpose
+  // Step 2: Find user by email to get userId
+  const user = await findByEmail(input.email);
+  if (!user) {
+    // For security, always return success message even if email doesn't exist
+    // This prevents email enumeration attacks
+    return ApiResponseHandler.success(
+      res,
+      null,
+      "If the email exists in our system, a new OTP has been sent"
     );
-  } catch (error) {
-    // Ignore errors for security - always return success
-    logger.warn(`Error in resendOtp (intentionally ignored for security): ${error.message}`);
   }
 
-  // Step 3: Always return generic success message
+  // Step 3: Resend OTP
+  await otpService.resendOtP(
+    user.id,
+    input.email,
+    input.purpose
+  );
+
+  // Step 4: Always return generic success message for security
   return ApiResponseHandler.success(
     res,
     null,
@@ -96,25 +122,26 @@ export const forgotPassword = catchAsync(async (req: Request, res: Response) => 
   // Step 1: Validate input against Zod schema
   const input = otpValidation.forgotPasswordSchema.parse(req.body);
 
-  // Step 2: For security, always return success (even if email doesn't exist)
-  // In a real implementation, we would:
-  // 1. Look up user by email
-  // 2. If user exists, generate and send password reset OTP
-  // 3. Always return the same message to prevent email enumeration
-
-  try {
-    // Attempt to send password reset OTP (will fail silently if user doesn't exist)
-    await otpService.generateAndSendOtP(
-      "", // Would need userId from email lookup
-      req.body.email,
-      "password_reset"
+  // Step 2: Find user by email to get userId
+  const user = await findByEmail(input.email);
+  if (!user) {
+    // For security, always return success message even if email doesn't exist
+    // This prevents email enumeration attacks
+    return ApiResponseHandler.success(
+      res,
+      null,
+      "If the email exists in our system, a password reset OTP has been sent"
     );
-  } catch (error) {
-    // Ignore errors for security - always return success
-    logger.warn(`Error in forgotPassword (intentionally ignored for security): ${error.message}`);
   }
 
-  // Step 3: Always return generic success message
+  // Step 3: Generate and send OTP
+  await otpService.generateAndSendOtP(
+    user.id,
+    input.email,
+    "password_reset"
+  );
+
+  // Step 4: Always return generic success message for security
   return ApiResponseHandler.success(
     res,
     null,
@@ -127,56 +154,84 @@ export const forgotPassword = catchAsync(async (req: Request, res: Response) => 
  * Verify password reset OTP code
  *
  * Request body:
-   *   - email: string (valid email)
-   *   - otp_code: string (6-digit OTP)
-   *
-   * Response:
-   *   - Success: Returns reset token for password reset
-   *   - Error: Appropriate error response
-   */
-  export const verifyResetCode = catchAsync(async (req: Request, res: Response) => {
-    // Step 1: Validate input against Zod schema
-    const input = otpValidation.verifyResetCodeSchema.parse(req.body);
+ *   - email: string (valid email)
+ *   - otp_code: string (6-digit OTP)
+ *
+ * Response:
+ *   - Success: Returns reset token for password reset
+ *   - Error: Appropriate error response
+ */
+export const verifyResetCode = catchAsync(async (req: Request, res: Response) => {
+  // Step 1: Validate input against Zod schema
+  const input = otpValidation.verifyResetCodeSchema.parse(req.body);
 
-    // Step 2: Verify OTP
-    // Note: This would need to be implemented to work with email lookup
-    // Actual implementation would:
-    // 1. Look up user by email
-    // 2. Verify the OTP for password_reset purpose
-    // 3. Generate and return a reset token
-
+  // Step 2: Find user by email to get userId
+  const user = await findByEmail(input.email);
+  if (!user) {
+    // For security, always return success message even if email doesn't exist
+    // This prevents email enumeration attacks
     return ApiResponseHandler.success(
       res,
-      { resetToken: "placeholder-reset-token" },
+      { resetToken: "placeholder-reset-token", email: input.email },
       "Reset code verification endpoint - implementation pending"
     );
-  });
+  }
 
-  /**
-   * POST /api/auth/reset-password
-   * Complete password reset process
-   *
-   * Request body:
-   *   - reset_token: string (from verify-reset-code response)
-   *   - new_password: string (must meet password requirements)
-   *
-   * Response:
-   *   - Success: Returns success message
-   *   - Error: Appropriate error response
-   */
-  export const resetPassword = catchAsync(async (req: Request, res: Response) => {
-    // Step 1: Validate input against Zod schema
-    const input = otpValidation.resetPasswordSchema.parse(req.body);
+  // Step 3: Verify the OTP code
+  const isValid = await otpService.verifyOtP(
+    user.id,
+    "password_reset",
+    input.otp_code,
+    {
+      ipAddress: req.ip,
+      userAgent: req.get("User-Agent"),
+    }
+  );
 
-    // Step 2: Process reset (placeholder implementation)
-    // Actual implementation would:
-    // 1. Validate the reset token
-    // 2. Update the user's password
-    // 3. Invalidate existing sessions
-
+  // Step 4: Return appropriate response
+  if (isValid) {
+    // In a real implementation, we would generate and return a reset token
+    // For now, returning a placeholder
     return ApiResponseHandler.success(
       res,
-      null,
-      "Password reset endpoint - implementation pending"
+      { resetToken: "valid-reset-token", email: input.email },
+      "Reset code verified successfully"
     );
-  });
+  } else {
+    return ApiResponseHandler.error(
+      res,
+      "invalid_otp",
+      "Invalid or expired OTP code",
+      400
+    );
+  }
+});
+
+/**
+ * POST /api/auth/reset-password
+ * Complete password reset process
+ *
+ * Request body:
+ *   - reset_token: string (from verify-reset-code response)
+ *   - new_password: string (must meet password requirements)
+ *
+ * Response:
+ *   - Success: Returns success message
+ *   - Error: Appropriate error response
+ */
+export const resetPassword = catchAsync(async (req: Request, res: Response) => {
+  // Step 1: Validate input against Zod schema
+  const input = otpValidation.resetPasswordSchema.parse(req.body);
+
+  // Step 2: In a real implementation, we would:
+  // 1. Validate the reset_token
+  // 2. Update the user's password
+  // 3. Invalidate the reset token
+
+  // For now, returning placeholder response
+  return ApiResponseHandler.success(
+    res,
+    null,
+    "Password reset endpoint - implementation pending"
+  );
+});

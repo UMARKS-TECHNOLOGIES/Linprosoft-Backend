@@ -19,7 +19,7 @@ export const createMyPortfolioItem = catchAsync(async (req: Request, res: Respon
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);
   }
 
-  const portfolioItem = await portfolioService.createForUser(userId, req.body);
+  const portfolioItem = await portfolioService.createForUser(Number(userId), req.body);
 
   return ApiResponseHandler.created(res, { portfolioItem }, "Portfolio item created successfully");
 });
@@ -33,7 +33,7 @@ export const updateMyPortfolioItem = catchAsync(async (req: Request, res: Respon
   }
 
   const portfolioItemId = Number(req.params.portfolioItemId);
-  const portfolioItem = await portfolioService.updateForUser(userId, portfolioItemId, req.body);
+  const portfolioItem = await portfolioService.updateForUser(Number(userId), portfolioItemId, req.body);
 
   return ApiResponseHandler.success(res, { portfolioItem }, "Portfolio item updated successfully");
 });
@@ -47,7 +47,7 @@ export const deleteMyPortfolioItem = catchAsync(async (req: Request, res: Respon
   }
 
   const portfolioItemId = Number(req.params.portfolioItemId);
-  await portfolioService.deleteForUser(userId, portfolioItemId);
+  await portfolioService.deleteForUser(Number(userId), portfolioItemId);
 
   return res.status(204).send();
 });

@@ -53,18 +53,38 @@ const environmentSchema = z.object({
     .default("info"),
 
   // OTP Configuration
-  OTP_LENGTH: z.number().default(6),
-  OTP_EXPIRES_SECONDS: z.number().default(600), // 10 minutes
-  OTP_MAX_ATTEMPTS: z.number().default(5),
-  OTP_RESEND_COOLDOWN_SECONDS: z.number().default(60), // 1 minute
+  OTP_LENGTH: z.coerce.number().default(6),
+  OTP_EXPIRES_SECONDS: z.coerce.number().default(600), // 10 minutes
+  OTP_MAX_ATTEMPTS: z.coerce.number().default(5),
+  OTP_RESEND_COOLDOWN_SECONDS: z.coerce.number().default(60), // 1 minute
 
   // Rate Limiting Configuration
-  RATE_LIMIT_WINDOW_MS: z.number().default(900000), // 15 minutes
-  RATE_LIMIT_MAX_REQUESTS: z.object({
-    login: z.number().default(5),
-    forgotPassword: z.number().default(3),
-    verifyOtp: z.number().default(10),
-  }).default({ login: 5, forgotPassword: 3, verifyOtp: 10 }),
+  RATE_LIMIT_WINDOW_MS: z.coerce.number().default(900000), // 15 minutes
+  RATE_LIMIT_MAX_REQUESTS: z
+    .string()
+    .transform((val) => {
+      try {
+        return JSON.parse(val);
+      } catch {
+        throw new Error("Invalid JSON for RATE_LIMIT_MAX_REQUESTS");
+      }
+    })
+    .pipe(
+      z.object({
+        login: z.number().default(5),
+        forgotPassword: z.number().default(3),
+        verifyOtp: z.number().default(10),
+      })
+    )
+    .default(() => ({ login: 5, forgotPassword: 3, verifyOtp: 10 })),
+
+  // Email Configuration
+  EMAIL_HOST: z.string().default("localhost"),
+  EMAIL_PORT: z.coerce.number().default(587),
+  EMAIL_USER: z.string().optional(),
+  EMAIL_PASS: z.string().optional(),
+  EMAIL_FROM: z.string().default("noreply@linkprosoft.com"),
+  EMAIL_SECURE: z.coerce.boolean().default(false),
 
   // Paystack Integration (Phase 4 MVP)
   PAYSTACK_PUBLIC_KEY: z

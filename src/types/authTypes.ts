@@ -1,4 +1,4 @@
-export type UserType = "client" | "professional";
+import { UserType } from "../types/userTypes";
 
 /**
  * Authentication-related types
