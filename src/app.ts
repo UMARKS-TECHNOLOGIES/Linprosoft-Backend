@@ -23,7 +23,7 @@ import reviewRoutes from "./modules/reviews/reviewsRoutes";
 import { env } from "./config/environment";
 import {
   generalLimiter,
-  authLimiter,
+  // authLimiter - Removed as rate limiting is now handled at route level in authRoutes.ts
   moderateLimiter,
   searchLimiter,
 } from "./middleware/rateLimitMiddleware";
@@ -73,8 +73,10 @@ app.use(
   })
 );
 
-// Alternative: For routes that don't need raw body, use standard JSON parsing
-// This is already done above with the verify callback
+/**
+ * Alternative: For routes that don't need raw body, use standard JSON parsing
+ * This is already done above with the verify callback
+ */
 
 // Parse cookies from headers
 app.use(cookieParser());
@@ -109,8 +111,8 @@ app.use(requestLogger);
 // ROUTES
 // ============================================
 
-// Auth routes - strict rate limiting (5 requests per 15 minutes)
-app.use("/api/auth", authLimiter, authRoutes);
+// Auth routes - rate limiting handled at route level in authRoutes.ts
+app.use("/api/auth", authRoutes);
 
 // Profile routes - moderate rate limiting (30 requests per 15 minutes)
 app.use("/api/profiles", moderateLimiter, profileRoutes);
@@ -132,6 +134,7 @@ app.use("/api/payments", paymentsRoutes);
 // Admin payment approval endpoints (router enforces admin role)
 app.use("/api/admin/payments", adminPaymentsRoutes);
 app.use("/api/reviews", reviewRoutes);
+
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {
   res.status(200).json({
@@ -146,6 +149,7 @@ app.use('/api/jobs', jobRoutes);
 
 //Assignment routes
 app.use('/api/assignments', assignmentsRoutes);
+
 // 404 handler - must come before error handler
 app.use("*", (_req: Request, res: Response) => {
   res.status(404).json({

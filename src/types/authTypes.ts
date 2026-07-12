@@ -1,17 +1,18 @@
+export type UserType = "client" | "professional";
+
 /**
  * Authentication-related types
  */
 
-import { UserType } from "./userTypes";
-
 /**
  * JWT Payload - Data encoded in JWT token
  * Used for token verification and user context
+ * Note: id fis stored as UUID string in database
  */
 export interface JwtPayload {
-  id: number; // User ID
+  id: string; // User ID as UUID string
   email: string; // User email
-  userType: UserType; // "professional" or "employer"
+  role: UserType; // "client" or "professional"
   iat?: number; // Issued at (unix timestamp)
   exp?: number; // Expiration (unix timestamp)
 }

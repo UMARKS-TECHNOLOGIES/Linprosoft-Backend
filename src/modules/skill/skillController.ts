@@ -36,7 +36,7 @@ export const getProfileSkills = catchAsync(async (req: Request, res: Response) =
 
 // Adds an existing catalog skill to the authenticated user's profile.
 export const addMyProfileSkill = catchAsync(async (req: Request, res: Response) => {
-  const userId = req.user?.id;
+  const userId = req.user?.id ? Number(req.user.id) : undefined;
 
   if (!userId) {
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);
@@ -49,7 +49,7 @@ export const addMyProfileSkill = catchAsync(async (req: Request, res: Response) 
 
 // Updates metadata for one of the authenticated user's linked profile skills.
 export const updateMyProfileSkill = catchAsync(async (req: Request, res: Response) => {
-  const userId = req.user?.id;
+  const userId = req.user?.id ? Number(req.user.id) : undefined;
 
   if (!userId) {
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);
@@ -63,7 +63,7 @@ export const updateMyProfileSkill = catchAsync(async (req: Request, res: Respons
 
 // Removes a skill association from the authenticated user's profile.
 export const removeMyProfileSkill = catchAsync(async (req: Request, res: Response) => {
-  const userId = req.user?.id;
+  const userId = req.user?.id ? Number(req.user.id) : undefined;
 
   if (!userId) {
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);

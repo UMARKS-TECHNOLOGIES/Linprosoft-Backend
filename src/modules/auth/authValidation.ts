@@ -14,6 +14,7 @@ const VALIDATION_CONSTRAINTS = {
   COMPANY_MAX: 100,
   PHONE_MAX: 20,
   LOCATION_MAX: 100,
+  FULL_NAME_MAX: 150,
 } as const;
 
 /**
@@ -45,24 +46,20 @@ const passwordSchema = nonEmptyString("Password")
   .regex(/[^a-zA-Z0-9]/, "Password must contain at least one special character");
 
 /**
- * First name validation
+ * Full name validation
  */
-const firstNameSchema = nonEmptyString("First name")
-  .max(VALIDATION_CONSTRAINTS.NAME_MAX, `First name must not exceed ${VALIDATION_CONSTRAINTS.NAME_MAX} characters`);
+const fullNameSchema = nonEmptyString("Full name")
+  .max(VALIDATION_CONSTRAINTS.FULL_NAME_MAX, `Full name must not exceed ${VALIDATION_CONSTRAINTS.FULL_NAME_MAX} characters`);
 
 /**
- * Last name validation
+ * Role validation
  */
-const lastNameSchema = nonEmptyString("Last name")
-  .max(VALIDATION_CONSTRAINTS.NAME_MAX, `Last name must not exceed ${VALIDATION_CONSTRAINTS.NAME_MAX} characters`);
+const roleSchema = z.enum(["client", "professional"], "Role must be 'client' or 'professional'");
 
 /**
- * Company name validation (required for employers)
+ * Professional type validation
  */
-const compNameSchema = trimmedString()
-  .min(VALIDATION_CONSTRAINTS.COMPANY_MIN, `Company name must be at least ${VALIDATION_CONSTRAINTS.COMPANY_MIN} characters`)
-  .max(VALIDATION_CONSTRAINTS.COMPANY_MAX, `Company name must not exceed ${VALIDATION_CONSTRAINTS.COMPANY_MAX} characters`)
-  .optional();
+const professionalTypeSchema = z.enum(["digital", "non_digital"] as const).optional();
 
 /**
  * Signup validation schema
@@ -70,13 +67,12 @@ const compNameSchema = trimmedString()
  */
 export const signupSchema = z
   .object({
-    firstName: firstNameSchema,
-    lastName: lastNameSchema,
+    full_name: fullNameSchema,
     email: emailSchema,
     password: passwordSchema,
     passwordConfirm: passwordSchema,
-    userType: z.enum(["professional", "employer"], "User type must be 'professional' or 'employer'"),
-    compName: compNameSchema,
+    role: roleSchema,
+    professional_type: professionalTypeSchema,
     phone: trimmedString().max(VALIDATION_CONSTRAINTS.PHONE_MAX, "Phone number is invalid").optional(),
     location: trimmedString().max(VALIDATION_CONSTRAINTS.LOCATION_MAX, "Location is invalid").optional(),
   })
@@ -85,10 +81,10 @@ export const signupSchema = z
     message: "Passwords don't match",
     path: ["passwordConfirm"],
   })
-  // Validate employer has company name
-  .refine((data) => data.userType !== "employer" || !!data.compName?.trim(), {
-    message: "Company name is required for employers",
-    path: ["compName"],
+  // Validate professional_type is required for professionals
+  .refine((data) => data.role !== "professional" || !!data.professional_type, {
+    message: "Professional type is required for professionals",
+    path: ["professional_type"],
   });
 
 /**
@@ -101,8 +97,66 @@ export const loginSchema = z.object({
 });
 
 /**
+ * Verify email validation schema
+ * Validates verify email request body
+ */
+export const verifyEmailSchema = z.object({
+  email: emailSchema,
+  otp_code: z.string().length(6, "OTP code must be 6 digits").regex(/^\d+$/, "OTP code must contain only digits"),
+});
+
+/**
+ * Resend OTP validation schema
+ * Validates resend OTP request body
+ */
+export const resendOtpSchema = z.object({
+  email: emailSchema,
+  purpose: z.enum(["email_verification", "password_reset"] as const, "Purpose must be 'email_verification' or 'password_reset'"),
+});
+
+/**
+ * Forgot password validation schema
+ * Validates forgot password request body
+ */
+export const forgotPasswordSchema = z.object({
+  email: emailSchema,
+});
+
+/**
+ * Verify reset code validation schema
+ * Validates verify reset code request body
+ */
+export const verifyResetCodeSchema = z.object({
+  email: emailSchema,
+  otp_code: z.string().length(6, "OTP code must be 6 digits").regex(/^\d+$/, "OTP code must contain only digits"),
+});
+
+/**
+ * Refresh token validation schema
+ * Validates refresh token request body
+ */
+export const refreshTokenSchema = z.object({
+  refreshToken: nonEmptyString("Refresh token")
+});
+
+/**
+ * Reset password validation schema
+ * Validates reset password request body
+ */
+export const resetPasswordSchema = z.object({
+  reset_token: nonEmptyString("Reset token"),
+  new_password: passwordSchema,
+});
+
+/**
  * Type exports for use in controllers/services
  * These are inferred from the schemas
  */
 export type SignupInput = z.infer<typeof signupSchema>;
 export type LoginInput = z.infer<typeof loginSchema>;
+export type VerifyEmailInput = z.infer<typeof verifyEmailSchema>;
+export type ResendOtpInput = z.infer<typeof resendOtpSchema>;
+export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>;
+export type VerifyResetCodeInput = z.infer<typeof verifyResetCodeSchema>;
+export type ResetPasswordInput = z.infer<typeof resetPasswordSchema>;
+export type RefreshTokenInput = z.infer<typeof refreshTokenSchema>;

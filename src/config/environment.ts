@@ -52,6 +52,20 @@ const environmentSchema = z.object({
     .trim()
     .default("info"),
 
+  // OTP Configuration
+  OTP_LENGTH: z.number().default(6),
+  OTP_EXPIRES_SECONDS: z.number().default(600), // 10 minutes
+  OTP_MAX_ATTEMPTS: z.number().default(5),
+  OTP_RESEND_COOLDOWN_SECONDS: z.number().default(60), // 1 minute
+
+  // Rate Limiting Configuration
+  RATE_LIMIT_WINDOW_MS: z.number().default(900000), // 15 minutes
+  RATE_LIMIT_MAX_REQUESTS: z.object({
+    login: z.number().default(5),
+    forgotPassword: z.number().default(3),
+    verifyOtp: z.number().default(10),
+  }).default({ login: 5, forgotPassword: 3, verifyOtp: 10 }),
+
   // Paystack Integration (Phase 4 MVP)
   PAYSTACK_PUBLIC_KEY: z
     .string()

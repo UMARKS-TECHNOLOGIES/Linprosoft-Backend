@@ -68,7 +68,7 @@ const ensureProfessionalUser = async (userId: number): Promise<void> => {
     throw new AppError("User not found", 404);
   }
 
-  if (user.user_type !== "professional") {
+  if (user.role !== "professional") {
     throw new AppError("Only professionals can create profiles", 403);
   }
 };

@@ -1,25 +1,64 @@
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { env } from "../config/environment";
+import { randomUUID } from "crypto";
 
 /**
  * JWT helper utilities
- * - createAccessToken: short-lived token used for API auth
- * - createRefreshToken: long-lived token used to obtain new access tokens
+ * - generateAccessToken: short-lived token used for API auth
+ * - generateRefreshToken: long-lived token used to obtain new access tokens
+ * - verifyToken: verifies a token (works for both access and refresh tokens)
  */
 
-export const createAccessToken = (payload: object) => {
+/**
+ * Generate access token (short-lived)
+ * @param payload - JWT payload
+ * @returns Signed JWT token
+ */
+export const generateAccessToken = (payload: object) => {
     return jwt.sign(payload, env.JWT_SECRET, { expiresIn: `${env.ACCESS_TOKEN_EXPIRES_SECONDS}s` });
 };
 
-export const createRefreshToken = (payload: object) => {
-    // express cookie expects maxAge in ms when setting cookies
-    return jwt.sign(payload, env.REFRESH_TOKEN_SECRET, { expiresIn: `${env.REFRESH_TOKEN_EXPIRES_DAYS}d` });
+/**
+ * Generate refresh token (long-lived)
+ * @param payload - JWT payload (typically { id, email, role })
+ * @returns Promise that resolves to signed JWT token
+ */
+export const generateRefreshToken = async (payload: object) => {
+    // Add JWT ID (jti) and issued at (iat) fields
+    const tokenId = randomUUID();
+    const now = Math.floor(Date.now() / 1000);
+
+    const tokenPayload = {
+        ...payload,
+        jti: tokenId,
+        iat: now
+    };
+
+    return new Promise<string>((resolve, reject) => {
+        jwt.sign(
+            tokenPayload,
+            env.REFRESH_TOKEN_SECRET,
+            { expiresIn: `${env.REFRESH_TOKEN_EXPIRES_DAYS}d` },
+            (err, token) => {
+                if (err) reject(err);
+                else resolve(token);
+            }
+        );
+    });
 };
 
-export const verifyAccessToken = (token: string) => {
-    return jwt.verify(token, env.JWT_SECRET);
+/**
+ * Verify token
+ * @param token - JWT token to verify
+ * @param secret - Secret to verify with (defaults to JWT_SECRET)
+ * @returns Decoded payload if valid
+ */
+export const verifyToken = (token: string, secret: string = env.JWT_SECRET): string | JwtPayload => {
+    return jwt.verify(token, secret);
 };
 
-export const verifyRefreshToken = (token: string) => {
-    return jwt.verify(token, env.REFRESH_TOKEN_SECRET);
-};
+// Keep the original functions for backward compatibility
+export const createAccessToken = generateAccessToken;
+export const createRefreshToken = generateRefreshToken;
+export const verifyAccessToken = (token: string) => verifyToken(token, env.JWT_SECRET);
+export const verifyRefreshToken = (token: string) => verifyToken(token, env.REFRESH_TOKEN_SECRET);

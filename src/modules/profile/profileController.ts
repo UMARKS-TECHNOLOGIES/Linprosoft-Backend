@@ -5,7 +5,7 @@ import * as profileService from "./profileService";
 
 // Creates the authenticated professional's profile from validated request body data.
 export const createProfile = catchAsync(async (req: Request, res: Response) => {
-  const userId = req.user?.id;
+  const userId = req.user?.id ? Number(req.user.id) : undefined;
 
   // `protect` should populate `req.user`, but we guard again so this controller is safe on its own.
   if (!userId) {
@@ -35,7 +35,7 @@ export const getDetailedProfile = catchAsync(async (req: Request, res: Response)
 
 // Returns the currently authenticated user's own professional profile.
 export const getMyProfile = catchAsync(async (req: Request, res: Response) => {
-  const userId = req.user?.id;
+  const userId = req.user?.id ? Number(req.user.id) : undefined;
 
   if (!userId) {
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);
@@ -48,7 +48,7 @@ export const getMyProfile = catchAsync(async (req: Request, res: Response) => {
 
 // Updates the authenticated user's profile with the validated fields provided in the request body.
 export const updateProfile = catchAsync(async (req: Request, res: Response) => {
-  const userId = req.user?.id;
+  const userId = req.user?.id ? Number(req.user.id) : undefined;
 
   if (!userId) {
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);
@@ -61,7 +61,7 @@ export const updateProfile = catchAsync(async (req: Request, res: Response) => {
 
 // Deletes the authenticated user's professional profile.
 export const deleteProfile = catchAsync(async (req: Request, res: Response) => {
-  const userId = req.user?.id;
+  const userId = req.user?.id ? Number(req.user.id) : undefined;
 
   if (!userId) {
     return ApiResponseHandler.error(res, "authentication_error", "Please login to access this resource", 401);

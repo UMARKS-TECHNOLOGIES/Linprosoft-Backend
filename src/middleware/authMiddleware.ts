@@ -91,8 +91,8 @@ export const authorize = (...roles: string[]) => {
       throw new AppError("Not authenticated", 401);
     }
 
-    // Check if user's type is in allowed roles
-    if (!roles.includes(req.user.userType)) {
+    // Check if user's role is in allowed roles
+    if (!roles.includes(req.user.role)) {
       throw new AppError(
         `Not authorized. Required role: ${roles.join(" or ")}`,
         403

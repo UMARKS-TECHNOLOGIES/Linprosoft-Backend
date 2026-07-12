@@ -1,4 +1,3 @@
-
 import winston from "winston";
 import fs from "fs";
 import path from "path";
@@ -52,5 +51,24 @@ const logger = winston.createLogger({
       : []),
   ],
 });
+
+/**
+ * Log authentication events to audit trail
+ * @param userId - User ID (can be null/undefined for events before user creation)
+ * @param eventType - Type of auth event (login_success, login_failed, otp_sent, etc.)
+ * @param metadata - Additional context (IP, user agent, attempt counts, etc.)
+ */
+export const logAuthEvent = (
+  userId: string | null | undefined,
+  eventType: string,
+  metadata: Record<string, any> = {}
+) => {
+  logger.info("AUDIT_EVENT", {
+    user_id: userId ?? null,
+    event_type: eventType,
+    timestamp: new Date().toISOString(),
+    ...metadata
+  });
+};
 
 export default logger;
