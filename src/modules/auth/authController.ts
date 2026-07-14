@@ -18,6 +18,35 @@ import {
   resetPasswordSchema as ResetPasswordInput
 } from "./authValidation";
 
+const normalizeIpAddress = (req: Request): string | undefined => {
+  const forwardedFor = req.headers["x-forwarded-for"];
+  if (typeof forwardedFor === "string") {
+    const firstIp = forwardedFor.split(",")[0]?.trim();
+    if (firstIp) {
+      return firstIp;
+    }
+  }
+
+  if (Array.isArray(forwardedFor) && forwardedFor.length > 0) {
+    const firstIp = forwardedFor[0]?.trim();
+    if (firstIp) {
+      return firstIp;
+    }
+  }
+
+  const realIp = req.headers["x-real-ip"];
+  if (typeof realIp === "string" && realIp.trim()) {
+    return realIp.trim();
+  }
+
+  const socketIp = req.socket.remoteAddress;
+  if (socketIp) {
+    return socketIp;
+  }
+
+  return undefined;
+};
+
 /**
  * POST /api/auth/signup
  * Register a new user account
@@ -85,10 +114,7 @@ export const signup = catchAsync(async (req: Request, res: Response) => {
 export const verifyEmail = catchAsync(async (req: Request, res: Response) => {
   // Extract audit information
   const auditInfo = {
-    ipAddress: req.headers["x-forwarded-for"] as string ||
-                req.socket.remoteAddress as string ||
-                (req.headers["x-real-ip"] as string) ||
-                undefined,
+    ipAddress: normalizeIpAddress(req),
     userAgent: req.get("User-Agent") || undefined
   };
 
@@ -143,10 +169,7 @@ export const verifyEmail = catchAsync(async (req: Request, res: Response) => {
 export const resendOtp = catchAsync(async (req: Request, res: Response) => {
   // Extract audit information
   const auditInfo = {
-    ipAddress: req.headers["x-forwarded-for"] as string ||
-                req.socket.remoteAddress as string ||
-                (req.headers["x-real-ip"] as string) ||
-                undefined,
+    ipAddress: normalizeIpAddress(req),
     userAgent: req.get("User-Agent") || undefined
   };
 
@@ -191,10 +214,7 @@ export const resendOtp = catchAsync(async (req: Request, res: Response) => {
 export const login = catchAsync(async (req: Request, res: Response) => {
   // Extract audit information
   const auditInfo = {
-    ipAddress: req.headers["x-forwarded-for"] as string ||
-                req.socket.remoteAddress as string ||
-                (req.headers["x-real-ip"] as string) ||
-                undefined,
+    ipAddress: normalizeIpAddress(req),
     userAgent: req.get("User-Agent") || undefined
   };
 
@@ -250,10 +270,7 @@ export const login = catchAsync(async (req: Request, res: Response) => {
 export const forgotPassword = catchAsync(async (req: Request, res: Response) => {
   // Extract audit information
   const auditInfo = {
-    ipAddress: req.headers["x-forwarded-for"] as string ||
-                req.socket.remoteAddress as string ||
-                (req.headers["x-real-ip"] as string) ||
-                undefined,
+    ipAddress: normalizeIpAddress(req),
     userAgent: req.get("User-Agent") || undefined
   };
 
@@ -289,10 +306,7 @@ export const forgotPassword = catchAsync(async (req: Request, res: Response) => 
 export const verifyResetCode = catchAsync(async (req: Request, res: Response) => {
   // Extract audit information
   const auditInfo = {
-    ipAddress: req.headers["x-forwarded-for"] as string ||
-                req.socket.remoteAddress as string ||
-                (req.headers["x-real-ip"] as string) ||
-                undefined,
+    ipAddress: normalizeIpAddress(req),
     userAgent: req.get("User-Agent") || undefined
   };
 
@@ -327,10 +341,7 @@ export const verifyResetCode = catchAsync(async (req: Request, res: Response) =>
 export const resetPassword = catchAsync(async (req: Request, res: Response) => {
   // Extract audit information
   const auditInfo = {
-    ipAddress: req.headers["x-forwarded-for"] as string ||
-                req.socket.remoteAddress as string ||
-                (req.headers["x-real-ip"] as string) ||
-                undefined,
+    ipAddress: normalizeIpAddress(req),
     userAgent: req.get("User-Agent") || undefined
   };
 
@@ -366,10 +377,7 @@ export const resetPassword = catchAsync(async (req: Request, res: Response) => {
 export const refreshToken = catchAsync(async (req: Request, res: Response) => {
   // Extract audit information
   const auditInfo = {
-    ipAddress: req.headers["x-forwarded-for"] as string ||
-                req.socket.remoteAddress as string ||
-                (req.headers["x-real-ip"] as string) ||
-                undefined,
+    ipAddress: normalizeIpAddress(req),
     userAgent: req.get("User-Agent") || undefined
   };
 
