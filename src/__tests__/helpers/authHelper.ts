@@ -32,18 +32,13 @@ export async function createAndLogin(userType: 'employer' | 'professional' = 'em
   );
   if (token) return token;
 
-  // Fallback: call authService.signup directly to get tokens (bypass cookies)
-  const result = await authService.signup({
+  // Fallback: call authService.login directly to get tokens (bypass cookies)
+  const result = await authService.login({
     email: user.email,
     password: user.password,
-    passwordConfirm: user.passwordConfirm,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    userType: user.userType,
-    compName: (user as any).compName,
   } as any);
 
-  if (result && result.accessToken) return result.accessToken;
+  if (result && (result as any).accessToken) return (result as any).accessToken;
   throw new Error('Failed to obtain auth token');
 }
 

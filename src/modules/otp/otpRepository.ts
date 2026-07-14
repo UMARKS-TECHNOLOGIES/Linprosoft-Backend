@@ -104,7 +104,7 @@ export const deleteOtpsByUserIdAndPurpose = async (
 export const findOtpById = async (otpId: string): Promise<OtpRow | null> => {
   try {
     const query = `
-      SELECT id, user_id, purpose, attempts, max_attempts, expires_at, consumed_at, created_at
+      SELECT id, user_id, purpose, code_hash, attempts, max_attempts, expires_at, consumed_at, created_at
       FROM otp_codes
       WHERE id = $1
     `;

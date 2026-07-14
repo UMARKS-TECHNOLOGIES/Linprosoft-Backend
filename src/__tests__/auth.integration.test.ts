@@ -33,17 +33,6 @@ describe('Auth Integration Tests', () => {
   const runId = `${Date.now()}-${Math.floor(Math.random() * 100000)}`;
   const makeEmail = (prefix: string, domain = "test.com") => `${prefix}.${runId}@${domain}`;
 
-  const extractTokenFromSetCookie = (setCookie: string[] | string | undefined) => {
-    if (!setCookie) return undefined;
-
-    const cookies = Array.isArray(setCookie) ? setCookie : [setCookie];
-    const tokenCookie = cookies.find(
-      (cookie) => cookie.startsWith('accessToken=') || cookie.startsWith('refreshToken=')
-    );
-
-    return tokenCookie?.split(';')[0].split('=')[1];
-  };
-
   /**
    * Setup: Create Express app with all middleware and routes
    */

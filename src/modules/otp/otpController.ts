@@ -220,18 +220,23 @@ export const verifyResetCode = catchAsync(async (req: Request, res: Response) =>
  *   - Error: Appropriate error response
  */
 export const resetPassword = catchAsync(async (req: Request, res: Response) => {
-  // Step 1: Validate input against Zod schema
   const input = otpValidation.resetPasswordSchema.parse(req.body);
 
-  // Step 2: In a real implementation, we would:
-  // 1. Validate the reset_token
-  // 2. Update the user's password
-  // 3. Invalidate the reset token
+  const resetToken = await otpService.validateResetToken(input.reset_token);
+  if (!resetToken) {
+    return ApiResponseHandler.error(
+      res,
+      "invalid_reset_token",
+      "Invalid or expired reset token",
+      400
+    );
+  }
 
-  // For now, returning placeholder response
+  await otpService.resetPassword(resetToken.userId, input.new_password);
+
   return ApiResponseHandler.success(
     res,
     null,
-    "Password reset endpoint - implementation pending"
+    "Password reset successfully"
   );
 });

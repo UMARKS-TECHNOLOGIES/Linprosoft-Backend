@@ -63,7 +63,7 @@ describe('Skill Integration Tests', () => {
    */
   const createToken = (userId: number, userType: string): string => {
     return jwt.sign(
-      { id: userId, userType } as JwtPayload,
+      { id: userId, userType } as unknown as JwtPayload,
       process.env.JWT_SECRET || 'test-secret',
       { expiresIn: '7d' }
     );

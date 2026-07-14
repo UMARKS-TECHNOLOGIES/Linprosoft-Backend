@@ -22,7 +22,7 @@ import authRoutes from '../../modules/auth/authRoutes';
 import { errorHandler } from '../../middleware/errorMiddleware';
 import { requestLogger } from '../../middleware/requestLogger';
 import jwt from 'jsonwebtoken';
-import { JwtPayload } from '../../types/authTypes';
+//import { JwtPayload } from '../../types/authTypes';
 
 describe('Search Integration Tests', () => {
   let app: Express;
@@ -54,7 +54,7 @@ describe('Search Integration Tests', () => {
    */
   const createToken = (userId: number, userType: string): string => {
     return jwt.sign(
-      { id: userId, userType } as JwtPayload,
+      { id: userId, userType },
       process.env.JWT_SECRET || 'test-secret',
       { expiresIn: '7d' }
     );

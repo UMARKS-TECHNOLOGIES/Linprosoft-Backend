@@ -10,10 +10,6 @@ import bcrypt from "bcryptjs";
 import { logAuthEvent } from "../../utils/logger";
 import { env } from "../../config/environment";
 import nodemailer from "nodemailer";
-import { verify } from "jsonwebtoken";
-import { updatePassword } from "../auth/authRepository";
-import { resendOtpByApi } from "./resendOtpImplementation";
-import { findByEmail } from "../auth/authRepository";
 
 /**
  * OTP service configuration
@@ -29,21 +25,7 @@ const otpConfig = {
 /**
  * Create nodemailer transporter
  */
-const createTransport = async () => {
-  if (env.EMAIL_USE_ETHEREAL) {
-    const testAccount = await nodemailer.createTestAccount();
-
-    return nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      secure: false,
-      auth: {
-        user: testAccount.user,
-        pass: testAccount.pass,
-      },
-    });
-  }
-
+const createTransport = () => {
   return nodemailer.createTransport({
     host: env.EMAIL_HOST,
     port: env.EMAIL_PORT,
@@ -61,17 +43,11 @@ const createTransport = async () => {
  * @returns Object containing plain OTP code and its hash
  */
 export const generateHashedOtP = () => {
-  const simulateInbox = process.env.SIMULATE_INBOX?.toLowerCase() === 'true';
-  const simulatedOtpCode = process.env.SIMULATED_OTP_CODE?.trim();
-
-  const plainCodeString = simulateInbox && simulatedOtpCode
-    ? simulatedOtpCode
-    : (() => {
-        const min = Math.pow(10, otpConfig.length - 1);
-        const max = Math.pow(10, otpConfig.length) - 1;
-        const plainCode = Math.floor(Math.random() * (max - min + 1)) + min;
-        return plainCode.toString().padStart(otpConfig.length, '0');
-      })();
+  // Generate random numeric code
+  const min = Math.pow(10, otpConfig.length - 1);
+  const max = Math.pow(10, otpConfig.length) - 1;
+  const plainCode = Math.floor(Math.random() * (max - min + 1)) + min;
+  const plainCodeString = plainCode.toString().padStart(otpConfig.length, '0');
 
   // Hash the OTP code using bcrypt (same as password hashing)
   const saltRounds = otpConfig.bcryptSaltRounds;
@@ -116,16 +92,7 @@ export const sendOtPEmail = async (
   purpose: OtpPurpose
 ): Promise<void> => {
   try {
-    if (process.env.SIMULATE_INBOX?.toLowerCase() === 'true') {
-      const purposeText = purpose === "email_verification"
-        ? "email verification"
-        : "password reset";
-
-      console.info(`[SIMULATE_INBOX] ${purposeText} OTP for ${email}: ${otpCode}`);
-      return;
-    }
-
-    const transport = await createTransport();
+    const transport = createTransport();
 
     const purposeText = purpose === "email_verification"
       ? "email verification"
@@ -151,14 +118,7 @@ export const sendOtPEmail = async (
       `,
     };
 
-    const info = await transport.sendMail(mailOptions);
-
-    if (env.EMAIL_USE_ETHEREAL) {
-      const previewUrl = nodemailer.getTestMessageUrl(info);
-      if (previewUrl) {
-        console.info(`Ethereal preview URL: ${previewUrl}`);
-      }
-    }
+    await transport.sendMail(mailOptions);
 
     // Close the transporter
     transport.close();
@@ -245,8 +205,8 @@ export const generateAndSendOtP = async (
  * Verify OTP code
  *
  * @param userId - User ID
- * @param purpose - OTP purpose
- * * @param otpCode - Plain OTP code to verify
+* @param purpose - OTP purpose
+ * @param otpCode - Plain OTP code to verify
  * @param auditInfo - Optional audit information (IP address, user agent)
  * @returns Boolean indicating if OTP is valid
  */
@@ -413,39 +373,9 @@ export const resendOtP = async (
   } = {}
 ): Promise<{ otpId: string }> => {
   try {
-    const useExternal = process.env.USE_EXTERNAL_OTP === 'true';
-    if (useExternal) {
-      // Use external OTP API (Resend) for resend
-      const result = await resendOtpByApi(userId, email, purpose);
-
-      // Log audit event for OTP sent (we need userId; try to fetch by email)
-      let resolvedUserId = userId;
-      if (!resolvedUserId) {
-        const user = await findByEmail(email);
-        if (user) {
-          resolvedUserId = user.id;
-        }
-      }
-      await logAuthEvent(
-        resolvedUserId,
-        "otp_sent",
-        {
-          purpose,
-          ipAddress: auditInfo.ipAddress,
-          user_agent: auditInfo.userAgent,
-          success: true,
-          // We cannot determine if it's a resend without checking cooldown; set false
-          isResend: false,
-        }
-      );
-
-      // Return the otpId from the external API
-      return { otpId: result.otpId };
-    } else {
-      // Default: use internal OTP generation and email sending
-      const result = await generateAndSendOtP(userId, email, purpose, auditInfo);
-      return { otpId: result.otpId };
-    }
+    // This will automatically handle cooldown checking via generateAndSendOtP
+    const result = await generateAndSendOtP(userId, email, purpose, auditInfo);
+    return { otpId: result.otpId };
   } catch (error) {
     console.error("Error in resendOtP:", error);
     throw error;
@@ -485,138 +415,19 @@ export const getResendCooldown = async (
 };
 
 /**
- * Validate a reset token (JWT) for password reset
- *
- * @param token - Reset token to validate
- * @returns Object containing userId if valid, null otherwise
- */
-export const validateResetToken = async (
-  token: string
-): Promise<{ userId: string } | null> => {
-  try {
-    // Verify the JWT token
-    // We use the JWT_SECRET from environment (same as access/refresh tokens)
-    // In production, consider using a separate secret for reset tokens
-    const decoded = await new Promise<any>((resolve, reject) => {
-      verify(token, env.JWT_SECRET, (err, decoded) => {
-        if (err) reject(err);
-        else resolve(decoded);
-      });
-    });
-
-    // Check if token is for password reset purpose
-    if (decoded.purpose !== 'password_reset') {
-      return null;
-    }
-
-    // Check if token has expired (verified by jwt.verify, but double-check)
-    if (decoded.exp && Date.now() >= decoded.exp * 1000) {
-      return null;
-    }
-
-    // In a production system, we would also check if this token has been used (replay attack protection)
-    // This would require storing used tokens or marking them as used in the database
-    // For simplicity in this implementation, we rely on the short expiration time (15m)
-    // TODO: Implement token usage tracking to prevent replay attacks
-
-    return { userId: decoded.userId };
-  } catch (error) {
-    // Token is invalid (expired, malformed, wrong signature, etc.)
-    return null;
-  }
-};
-
-/**
- * Reset password using a valid reset token
- *
- * @param token - Valid reset token
- * @param newPassword - New password to set
- * @returns Boolean indicating success
- */
-export const resetPassword = async (
-  token: string,
-  newPassword: string
-): Promise<boolean> => {
-  try {
-    // Validate the reset token to get userId
-    const tokenData = await validateResetToken(token);
-    if (!tokenData) {
-      throw new Error('Invalid or expired reset token');
-    }
-
-    const userId = tokenData.userId;
-
-    // Validate new password meets requirements (basic check)
-    if (newPassword.length < 8) {
-      throw new Error('Password must be at least 8 characters long');
-    }
-    // Additional password policy checks could go here
-
-    // Hash the new password using bcrypt (same cost as OTP hashing)
-    const saltRounds = 10; // Match the bcrypt salt rounds used elsewhere
-    const hashedPassword = await bcrypt.hash(newPassword, saltRounds);
-
-    // Update the user's password in the database
-    const success = await updatePassword(userId, hashedPassword);
-
-    if (!success) {
-      throw new Error('Failed to update password');
-    }
-
-    // In a production system, we would also:
-    // 1. Invalidate all existing refresh tokens for the user (force logout everywhere)
-    // 2. Mark the reset token as used to prevent replay attacks
-    // For simplicity in this implementation, we rely on token expiration
-    // TODO: Implement token revocation and used-token tracking
-
-    // Log audit event for successful password reset
-    await logAuthEvent(
-      userId,
-      "password_reset",
-      {
-        success: true
-      }
-    );
-
-    return true;
-  } catch (error) {
-    console.error("Error in resetPassword:", error);
-    // Log audit event for failed password reset attempt
-    // Note: we might not have userId here if token validation failed
-    // but we can try to decode the token without verification to get userId for logging
-    try {
-      const decoded = jwtDecode(token);
-      if (decoded && typeof decoded === 'object' && 'userId' in decoded) {
-        await logAuthEvent(
-          decoded.userId as string,
-          "password_reset",
-          {
-            success: false,
-            reason: error instanceof Error ? error.message : String(error)
-          }
-        );
-      }
-    } catch (e) {
-      // Ignore errors in logging
-    }
-
-    throw error;
-  }
-};
-
-/**
  * Get OTP configuration
  */
 export const getOtpConfig = (): typeof otpConfig => {
   return otpConfig;
 };
 
-// Helper function to decode JWT without verification (for logging purposes only)
-function jwtDecode(token: string): any {
-  try {
-    const payload = token.split('.')[1];
-    return JSON.parse(Buffer.from(payload, 'base64').toString('utf8'));
-  } catch (e) {
-    return null;
-  }
+export function validateResetToken(reset_token: string) {
+  throw new Error("Function not implemented.");
 }
+
+
+
+export function resetPassword(userId: any, new_password: string) {
+  throw new Error("Function not implemented.");
+}
+

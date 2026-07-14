@@ -85,6 +85,9 @@ const environmentSchema = z.object({
   EMAIL_PASS: z.string().optional(),
   EMAIL_FROM: z.string().default("noreply@linkprosoft.com"),
   EMAIL_SECURE: z.coerce.boolean().default(false),
+  EMAIL_USE_ETHEREAL: z.coerce.boolean().default(false),
+  RESEND_API_KEY: z.string().optional(),
+  USE_EXTERNAL_OTP: z.string().default("false"),
 
   // Paystack Integration (Phase 4 MVP)
   PAYSTACK_PUBLIC_KEY: z

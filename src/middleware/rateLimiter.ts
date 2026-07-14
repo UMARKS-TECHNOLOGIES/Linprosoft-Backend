@@ -50,7 +50,7 @@ const rateLimiter = (
   windowMs: number,
   useEmailStore: boolean = false
 ) => {
-  return (req: Request, res: Response, next: NextFunction) => {
+  return (req: Request, res: Response, next: NextFunction): Response | void => {
    const key = keyGenerator(req);
    const now = Date.now();
    // Choose the appropriate map based on useEmailStore flag
@@ -83,7 +83,7 @@ const rateLimiter = (
    res.setHeader("X-RateLimit-Remaining", Math.max(0, limit - record.count));
    res.setHeader("X-RateLimit-Reset", new Date(record.resetTime).toISOString());
 
-   next();
+   return next();
   };
 };
 

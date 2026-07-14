@@ -5,7 +5,12 @@
  */
 
 import pool from "../../config/db";
+import { createHash } from "crypto";
 import { UserRow, UserResponseDTO } from "../../types/userTypes";
+
+const hashToken = (token: string): string => {
+  return createHash("sha256").update(token).digest("hex");
+};
 
 /**
  * Find user by email
@@ -22,7 +27,7 @@ export const findByEmail = async (email: string): Promise<UserRow | null> => {
              role, professional_type, is_email_verified, is_active,
              onboarding_step, phone, location, created_at, updated_at
       FROM users
-      WHERE email = $1 AND deleted_at IS NULL
+      WHERE email = $1
     `;
     const result = await pool.query(query, [email.toLowerCase()]);
     return result.rows[0] || null;
@@ -121,7 +126,7 @@ export const findById = async (id: string): Promise<UserResponseDTO | null> => {
              professional_type, is_email_verified, is_active,
              onboarding_step, phone, location, created_at, updated_at
       FROM users
-      WHERE id = $1 AND deleted_at IS NULL
+      WHERE id = $1
     `;
     const result = await pool.query(query, [id]);
 
@@ -241,7 +246,7 @@ export const updateUserFields = async (
     const query = `
       UPDATE users
       SET ${setClauses.join(", ")}
-      WHERE id = $${index} AND deleted_at IS NULL
+      WHERE id = $${index}
       RETURNING id, email, full_name, auth_provider, role,
                 professional_type, is_email_verified, is_active,
                 onboarding_step, phone, location, created_at, updated_at
@@ -305,18 +310,21 @@ export const storeRefreshToken = async (
   } = {}
 ): Promise<void> => {
   try {
+    const tokenHash = hashToken(token);
+    const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
     const query = `
       INSERT INTO refresh_tokens (
-        user_id, token_hash, user_agent, ip_address
+        user_id, token_hash, user_agent, ip_address, expires_at
       )
-      VALUES ($1, $2, $3, $4)
+      VALUES ($1, $2, $3, $4, $5)
     `;
 
     await pool.query(query, [
       userId,
-      token,
+      tokenHash,
       metadata.userAgent || null,
-      metadata.ipAddress || null
+      metadata.ipAddress || null,
+      expiresAt
     ]);
   } catch (error) {
     console.error("Database error in storeRefreshToken:", error);
@@ -343,13 +351,14 @@ export const findRefreshTokenByToken = async (
   created_at: Date;
 } | null> => {
   try {
+    const tokenHash = hashToken(token);
     const query = `
       SELECT id, user_id, token_hash, user_agent, ip_address, expires_at, revoked_at, created_at
       FROM refresh_tokens
       WHERE token_hash = $1
     `;
 
-    const result = await pool.query(query, [token]);
+    const result = await pool.query(query, [tokenHash]);
 
     if (result.rows.length === 0) return null;
 
@@ -378,13 +387,14 @@ export const findRefreshTokenByToken = async (
  */
 export const revokeRefreshToken = async (token: string): Promise<void> => {
   try {
+    const tokenHash = hashToken(token);
     const query = `
       UPDATE refresh_tokens
       SET revoked_at = NOW()
       WHERE token_hash = $1
     `;
 
-    await pool.query(query, [token]);
+    await pool.query(query, [tokenHash]);
   } catch (error) {
     console.error("Database error in revokeRefreshToken:", error);
     throw error;
@@ -426,6 +436,7 @@ export const storePasswordResetToken = async (
   expiresAt: Date
 ): Promise<void> => {
   try {
+    const tokenHash = hashToken(token);
     const query = `
       INSERT INTO password_reset_tokens (
         user_id, token_hash, expires_at
@@ -433,7 +444,7 @@ export const storePasswordResetToken = async (
       VALUES ($1, $2, $3)
     `;
 
-    await pool.query(query, [userId, token, expiresAt]);
+    await pool.query(query, [userId, tokenHash, expiresAt]);
   } catch (error) {
     console.error("Database error in storePasswordResetToken:", error);
     throw error;
@@ -457,13 +468,14 @@ export const findPasswordResetTokenByToken = async (
   created_at: Date;
 } | null> => {
   try {
+    const tokenHash = hashToken(token);
     const query = `
       SELECT id, user_id, token_hash, expires_at, used_at, created_at
       FROM password_reset_tokens
       WHERE token_hash = $1 AND used_at IS NULL
     `;
 
-    const result = await pool.query(query, [token]);
+    const result = await pool.query(query, [tokenHash]);
 
     if (result.rows.length === 0) return null;
 
@@ -490,13 +502,14 @@ export const findPasswordResetTokenByToken = async (
  */
 export const markPasswordResetTokenAsUsed = async (token: string): Promise<void> => {
   try {
+    const tokenHash = hashToken(token);
     const query = `
       UPDATE password_reset_tokens
       SET used_at = NOW()
       WHERE token_hash = $1
     `;
 
-    await pool.query(query, [token]);
+    await pool.query(query, [tokenHash]);
   } catch (error) {
     console.error("Database error in markPasswordResetTokenAsUsed:", error);
     throw error;
@@ -518,7 +531,7 @@ export const updatePassword = async (
     const query = `
       UPDATE users
       SET password_hash = $1, updated_at = NOW()
-      WHERE id = $2 AND deleted_at IS NULL
+      WHERE id = $2
     `;
 
     const result = await pool.query(query, [hashedPassword, userId]);

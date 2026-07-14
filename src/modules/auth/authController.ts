@@ -7,8 +7,7 @@ import { Request, Response } from "express";
 import * as service from "./authService";
 import catchAsync from "../../utils/catchAsync";
 import { ApiResponseHandler } from "../../utils/response";
-import { logAuthEvent } from "../../utils/logger";
-import logger from "../../utils/logger"
+import logger, { logAuthEvent } from "../../utils/logger";
 import {
   signupSchema as SignupInput,
   loginSchema as LoginInput,
@@ -245,7 +244,7 @@ export const login = catchAsync(async (req: Request, res: Response) => {
  *   - email: string (valid email)
  *
  * Response:
- *   - Always returns: { message: "If the email exists in our system, a password reset OTP has been sent" }
+ *   - Always returns: { message: "If the email exists in our system, a password reset OPT has been sent" }
  *   - Rate limited
  */
 export const forgotPassword = catchAsync(async (req: Request, res: Response) => {
@@ -318,7 +317,7 @@ export const verifyResetCode = catchAsync(async (req: Request, res: Response) =>
  * POST /api/auth/reset-password
  * Complete password reset process
  *
- * Request body:
+* Request body:
  *   - resetToken: string (from verify-reset-code)
  *   - newPassword: string (min 8 chars)
  *

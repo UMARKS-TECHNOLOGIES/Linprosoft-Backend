@@ -6669,3 +6669,666 @@
 {"email":"gidsoala@gmail.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"email_not_verified","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-12 16:08:45","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"583772e9-e6a0-4d2a-bfd6-8511e40583e9"}
 {"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-12 16:08:45"}
 {"level":"warn","message":"POST /api/auth/login - 403 - 2043ms","service":"linkprosoft-backend","timestamp":"2026-07-12 16:08:45"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:49:48"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:49:48"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:49:56"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:49:56"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:49:59"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:49:59"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:01"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 24ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:01"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:12"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:12"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/portfolio","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-13 00:50:12"}
+{"level":"warn","message":"POST /api/profiles/me/portfolio - 401 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:12"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:15"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:15"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:17"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:17"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:27"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:27"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:36"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 8ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:36"}
+{"event_type":"otp_verification_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","purpose":"email_verification","reason":"otp_expired","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 00:50:48","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"583772e9-e6a0-4d2a-bfd6-8511e40583e9"}
+{"email":"gidsoala@gmail.com","event_type":"email_verification_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"invalid_otp","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 00:50:48","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"583772e9-e6a0-4d2a-bfd6-8511e40583e9"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:48"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 4170ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:48"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:48"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 20ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:48"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:56"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:56"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/certifications","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-13 00:50:56"}
+{"level":"warn","message":"POST /api/profiles/me/certifications - 401 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:56"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:50:58"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:50:58"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-13 00:51:20","userId":10}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 27ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:20"}
+{"level":"warn","message":"Client Error","method":"GET","path":"/api/admin/payments/pending-admin-approval","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-13 00:51:20","userId":1}
+{"level":"warn","message":"GET /api/admin/payments/pending-admin-approval - 403 - 19ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:20"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-13 00:51:20","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:20"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/reject-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-13 00:51:20","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/reject-payment - 403 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:20"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:51:24"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:24"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:51:30"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:30"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 00:51:54"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 31ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:54"}
+{"email":"employer.1783900314516.1728ea@example.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 00:51:55","user_id":null}
+{"email":"employer.1783900314516.1728ea@example.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-13 00:51:55"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 890ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:51:55"}
+{"email":"employer.1783900314516.1728ea@example.com","event_type":"login_failed","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 00:51:55","user_id":null}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: getaddrinfo ENOTFOUND gmail","event_type":"signup_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 00:53:01","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":null}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 00:53:01"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 00:53:01"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 7734ms","service":"linkprosoft-backend","timestamp":"2026-07-13 00:53:01"}
+{"email":"soalagideon@gmail.com","error":"duplicate key value violates unique constraint \"users_email_key\"","event_type":"signup_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 01:00:02","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":null}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:00:02"}
+{"error":{"code":"23505","constraint":"users_email_key","detail":"Key (email)=(soalagideon@gmail.com) already exists.","file":"nbtinsert.c","length":213,"line":"666","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","statusCode":500,"table":"users"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:00:02"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 5571ms","service":"linkprosoft-backend","timestamp":"2026-07-13 01:00:02"}
+{"email":"soalagideon@gmail.com","error":"duplicate key value violates unique constraint \"users_email_key\"","event_type":"signup_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 01:01:48","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":null}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:01:48"}
+{"error":{"code":"23505","constraint":"users_email_key","detail":"Key (email)=(soalagideon@gmail.com) already exists.","file":"nbtinsert.c","length":213,"line":"666","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","statusCode":500,"table":"users"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:01:48"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 4336ms","service":"linkprosoft-backend","timestamp":"2026-07-13 01:01:48"}
+{"email":"soalagideon@gmail.com","error":"duplicate key value violates unique constraint \"users_email_key\"","event_type":"signup_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 01:05:58","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":null}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:05:58"}
+{"error":{"code":"23505","constraint":"users_email_key","detail":"Key (email)=(soalagideon@gmail.com) already exists.","file":"nbtinsert.c","length":213,"line":"666","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","statusCode":500,"table":"users"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:05:58"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 2384ms","service":"linkprosoft-backend","timestamp":"2026-07-13 01:05:58"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: Connection timeout","event_type":"signup_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 01:09:13","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":null}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:09:13"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 01:09:13"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 143871ms","service":"linkprosoft-backend","timestamp":"2026-07-13 01:09:13"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: connect ETIMEDOUT 2a00:1450:4025:402::6c:587","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 01:33:22","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 144469ms","service":"linkprosoft-backend","timestamp":"2026-07-13 01:33:22"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: connect ETIMEDOUT 2a00:1450:4025:402::6c:587","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 01:39:02","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 145187ms","service":"linkprosoft-backend","timestamp":"2026-07-13 01:39:02"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: Connection timeout","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 02:03:56","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 122552ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:03:56"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 02:12:17"}
+{"error":{"code":"22001","file":"varchar.c","length":99,"line":"637","name":"error","routine":"varchar","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 02:12:17"}
+{"level":"error","message":"POST /api/auth/login - 500 - 3283ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:12:17"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 02:13:01"}
+{"error":{"code":"22001","file":"varchar.c","length":99,"line":"637","name":"error","routine":"varchar","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 02:13:01"}
+{"level":"error","message":"POST /api/auth/login - 500 - 2457ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:13:01"}
+{"email":"soalagideon@gmail.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"email_not_verified","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 02:14:25","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-13 02:14:25"}
+{"level":"warn","message":"POST /api/auth/login - 403 - 4997ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:14:25"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: transport.sendMail is not a function","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 02:15:32","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 1478ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:15:32"}
+{"event_type":"forgot_password_otp_sent","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 02:27:34","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /forgot-password - 200 - 8878ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:27:34"}
+{"event_type":"forgot_password_otp_sent","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 02:30:23","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /forgot-password - 200 - 9370ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:30:23"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 02:30:23"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 02:30:23"}
+{"level":"error","message":"POST /api/auth/verify-reset-code - 500 - 516ms","service":"linkprosoft-backend","timestamp":"2026-07-13 02:30:23"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: connect ETIMEDOUT 95.216.108.161:587","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 07:56:52","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 26808ms","service":"linkprosoft-backend","timestamp":"2026-07-13 07:56:52"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 07:57:05"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: connect ETIMEDOUT 95.216.108.161:587","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 07:57:48","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 24123ms","service":"linkprosoft-backend","timestamp":"2026-07-13 07:57:48"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: connect ETIMEDOUT 95.216.108.161:587","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 07:58:28","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 23506ms","service":"linkprosoft-backend","timestamp":"2026-07-13 07:58:28"}
+{"email":"soalagideon@gmail.com","error":"Failed to send OTP email: connect ETIMEDOUT 95.216.108.161:587","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 08:19:50","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 26749ms","service":"linkprosoft-backend","timestamp":"2026-07-13 08:19:50"}
+{"event_type":"forgot_password_otp_sent","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 08:32:24","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /forgot-password - 200 - 4676ms","service":"linkprosoft-backend","timestamp":"2026-07-13 08:32:24"}
+{"event_type":"otp_verified","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 08:32:25","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"email":"soalagideon@gmail.com","event_type":"reset_code_verified","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 08:32:25","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /verify-reset-code - 200 - 990ms","service":"linkprosoft-backend","timestamp":"2026-07-13 08:32:25"}
+{"event_type":"forgot_password_otp_sent","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 08:32:26","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /forgot-password - 200 - 829ms","service":"linkprosoft-backend","timestamp":"2026-07-13 08:32:26"}
+{"event_type":"otp_verification_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","reason":"no_valid_otp_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 08:32:27","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"email":"soalagideon@gmail.com","event_type":"verify_reset_code_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"invalid_otp","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 08:32:27","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 08:32:27"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 428ms","service":"linkprosoft-backend","timestamp":"2026-07-13 08:32:27"}
+{"level":"warn","message":"POST /forgot-password - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 08:32:27"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 09:32:48"}
+{"error":{"code":"22001","file":"varchar.c","length":99,"line":"637","name":"error","routine":"varchar","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 09:32:48"}
+{"level":"error","message":"POST /api/auth/login - 500 - 9122ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:32:48"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 35ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 25ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"Client Error Invalid email address, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:46"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"Client Error OTP code must contain only digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"email":"resend.test.1783932103710-88683@test.com","event_type":"resend_otp_email_verification","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 09:41:47","user_id":null}
+{"email":"resend.test.1783932103710-88683@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_email_verification_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 09:41:47","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:47"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 451ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:47"}
+{"email":"resend.test.1783932103710-88683@test.com","event_type":"resend_otp_password_reset","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 09:41:48","user_id":null}
+{"email":"resend.test.1783932103710-88683@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_password_reset_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 09:41:48","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 207ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 20ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"Client Error Purpose must be 'email_verification' or 'password_reset'","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /login - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:48"}
+{"email":"reset.test.1783932103710-88683@test.com","event_type":"forgot_password_attempt_for_non_existent_user","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 09:41:49","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 287ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 30ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Client Error Password must be at least 8 characters, Password must contain at least one special character","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 20ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /refresh-token - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:49"}
+{"level":"warn","message":"GET /api/users/me - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:50"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:50"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:41:50"}
+{"event_type":"forgot_password_otp_sent","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 09:47:56","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /forgot-password - 200 - 9150ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:47:56"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 09:48:21"}
+{"error":{"code":"23502","column":"expires_at","detail":"Failing row contains (97ce034e-1b22-4fa4-b1ea-cad59876d2f2, 38bf6121-0a94-499a-8a0f-7767e745a21a, af9496a1e515a3c798be995c0f62b851025c4b871500ec2099eb6c0a1b72301e, Thunder Client (https://www.thunderclient.com), ::ffff:127.0.0.1, null, null, 2026-07-13 08:48:22.019045+00).","file":"execMain.c","length":465,"line":"1981","name":"error","routine":"ExecConstraints","schema":"public","severity":"ERROR","statusCode":500,"table":"refresh_tokens"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-13 09:48:21"}
+{"level":"error","message":"POST /api/auth/login - 500 - 1635ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:48:21"}
+{"event_type":"forgot_password_otp_sent","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-13 09:48:30","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /forgot-password - 200 - 1468ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:48:30"}
+{"event_type":"otp_verification_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","reason":"no_valid_otp_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 09:48:31","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"email":"soalagideon@gmail.com","event_type":"verify_reset_code_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"invalid_otp","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-13 09:48:31","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-13 09:48:31"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 366ms","service":"linkprosoft-backend","timestamp":"2026-07-13 09:48:31"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 44ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"Client Error Invalid email address, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 25ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:47"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:48"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"Client Error OTP code must contain only digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"email":"resend.test.1784057504545-57879@test.com","event_type":"resend_otp_email_verification","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:31:49","user_id":null}
+{"email":"resend.test.1784057504545-57879@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_email_verification_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:31:49","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 367ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"email":"resend.test.1784057504545-57879@test.com","event_type":"resend_otp_password_reset","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:31:49","user_id":null}
+{"email":"resend.test.1784057504545-57879@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_password_reset_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:31:49","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 169ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 8ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 19ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"Client Error Purpose must be 'email_verification' or 'password_reset'","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:49"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"email":"reset.test.1784057504545-57879@test.com","event_type":"forgot_password_attempt_for_non_existent_user","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:31:50","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 192ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 22ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"Client Error Password must be at least 8 characters, Password must contain at least one special character","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:50"}
+{"level":"warn","message":"POST /refresh-token - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"GET /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:31:51"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:02"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 45ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:02"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:14"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:14"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:18"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 216ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:18"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 27ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 43ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"Client Error Invalid email address, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 39ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:19"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 19ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 23ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 22ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:20"}
+{"level":"warn","message":"Client Error OTP code must contain only digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:21"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 23ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:21"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:21"}
+{"email":"resend.test.1784057536748-38767@test.com","event_type":"resend_otp_email_verification","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:32:21","user_id":null}
+{"email":"resend.test.1784057536748-38767@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_email_verification_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:32:21","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:21"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 424ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:21"}
+{"email":"resend.test.1784057536748-38767@test.com","event_type":"resend_otp_password_reset","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:32:21","user_id":null}
+{"email":"resend.test.1784057536748-38767@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_password_reset_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:32:21","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:21"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 293ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:21"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"Client Error Purpose must be 'email_verification' or 'password_reset'","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"email":"reset.test.1784057536748-38767@test.com","event_type":"forgot_password_attempt_for_non_existent_user","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:32:22","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 185ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 29ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:22"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Client Error Password must be at least 8 characters, Password must contain at least one special character","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /refresh-token - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"GET /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:23"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:26"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:26"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:38"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 19ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:38"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:32:49"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:32:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:01"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:01"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:05"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:05"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:14"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 33ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:14"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:17"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:17"}
+{"email":"employer.1784057597671.6afxq7@example.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:33:18","user_id":null}
+{"email":"employer.1784057597671.6afxq7@example.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:33:18"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 975ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:18"}
+{"email":"employer.1784057597671.6afxq7@example.com","event_type":"login_failed","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:33:18","user_id":null}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:21"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:21"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:33:28","userId":10}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:28"}
+{"level":"warn","message":"Client Error","method":"GET","path":"/api/admin/payments/pending-admin-approval","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:33:28","userId":1}
+{"level":"warn","message":"GET /api/admin/payments/pending-admin-approval - 403 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:28"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:33:28","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:28"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/reject-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:33:28","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/reject-payment - 403 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:28"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:30"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:30"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:33"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 34ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:33"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/portfolio","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:33:34"}
+{"level":"warn","message":"POST /api/profiles/me/portfolio - 401 - 61ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:34"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:37"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:37"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:40"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 25ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:40"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:33:43"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 22ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:43"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/certifications","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:33:43"}
+{"level":"warn","message":"POST /api/profiles/me/certifications - 401 - 26ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:33:43"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:11"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:11"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:20"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:20"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:24"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 33ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:24"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:28"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:28"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:31"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:31"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:35"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 24ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:35"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:46"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 35ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:46"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/portfolio","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:34:46"}
+{"level":"warn","message":"POST /api/profiles/me/portfolio - 401 - 49ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:46"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:34:51","userId":10}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 43ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:51"}
+{"level":"warn","message":"Client Error","method":"GET","path":"/api/admin/payments/pending-admin-approval","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:34:51","userId":1}
+{"level":"warn","message":"GET /api/admin/payments/pending-admin-approval - 403 - 60ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:51"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:34:51","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 79ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:51"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/reject-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-14 20:34:52","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/reject-payment - 403 - 94ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:52"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:34:59"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:34:59"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:02"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:02"}
+{"email":"employer.1784057702722.p4yn76@example.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:35:02","user_id":null}
+{"email":"employer.1784057702722.p4yn76@example.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:35:03"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 260ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:03"}
+{"email":"employer.1784057702722.p4yn76@example.com","event_type":"login_failed","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:35:03","user_id":null}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:08"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 46ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:08"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/certifications","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:35:08"}
+{"level":"warn","message":"POST /api/profiles/me/certifications - 401 - 34ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:08"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:23"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 22ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:23"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:34"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 27ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:34"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:44"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:45"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 25ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"Client Error Invalid email address, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:57"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 25ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"Client Error OTP code must contain only digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"email":"resend.test.1784057755809-36726@test.com","event_type":"resend_otp_email_verification","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:35:58","user_id":null}
+{"email":"resend.test.1784057755809-36726@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_email_verification_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:35:58","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 251ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"email":"resend.test.1784057755809-36726@test.com","event_type":"resend_otp_password_reset","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:35:58","user_id":null}
+{"email":"resend.test.1784057755809-36726@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_password_reset_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:35:58","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 276ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:58"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"Client Error Purpose must be 'email_verification' or 'password_reset'","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"email":"reset.test.1784057755809-36726@test.com","event_type":"forgot_password_attempt_for_non_existent_user","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 20:35:59","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 213ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:35:59"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"Client Error Password must be at least 8 characters, Password must contain at least one special character","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"POST /refresh-token - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"GET /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:36:00"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 20:41:46"}
+{"error":{"code":"23502","column":"expires_at","detail":"Failing row contains (c8ca777e-48cf-4705-9ca8-0bf06211d699, 38bf6121-0a94-499a-8a0f-7767e745a21a, 7adf818566d422fcd206587cea3032cb402be56bf293c3b4c4613f6e3e512b5b, Thunder Client (https://www.thunderclient.com), ::ffff:127.0.0.1, null, null, 2026-07-14 19:41:46.469261+00).","file":"execMain.c","length":465,"line":"1981","name":"error","routine":"ExecConstraints","schema":"public","severity":"ERROR","statusCode":500,"table":"refresh_tokens"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 20:41:46"}
+{"level":"error","message":"POST /api/auth/login - 500 - 2658ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:41:46"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 20:58:07"}
+{"error":{"code":"42703","file":"analyze.c","length":133,"line":"2528","name":"error","position":"31","routine":"transformUpdateTargetList","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 20:58:07"}
+{"level":"error","message":"POST /api/auth/login - 500 - 3023ms","service":"linkprosoft-backend","timestamp":"2026-07-14 20:58:07"}
+{"email":"soalagideon@gmail.com","error":"getaddrinfo ENOTFOUND aws-1-eu-west-2.pooler.supabase.com","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:07:46","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 11219ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:07:46"}
+{"event_type":"otp_verification_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","reason":"no_valid_otp_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:07:54","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"email":"soalagideon@gmail.com","event_type":"verify_reset_code_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"invalid_otp","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:07:54","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:07:54"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 8223ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:07:54"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:09:23"}
+{"error":{"code":"42703","file":"analyze.c","length":133,"line":"2528","name":"error","position":"31","routine":"transformUpdateTargetList","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:09:23"}
+{"level":"error","message":"POST /api/auth/login - 500 - 2972ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:09:23"}
+{"email":"smoke.test.1784059830039@example.com","event_type":"signup","existing_user":false,"ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","role":"client","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-14 21:10:33","user_id":"1e7992c0-076a-46d9-86e0-efa3bd53898b"}
+{"level":"info","message":"POST /signup - 200 - 1386ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:10:33"}
+{"email":"smoke.test.1784059903687@example.com","event_type":"signup","existing_user":false,"ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","role":"client","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-14 21:11:47","user_id":"b0ac763a-aeb0-4acd-8464-84e93bd0c99c"}
+{"level":"info","message":"POST /signup - 200 - 1368ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:11:47"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:11:49"}
+{"error":{"code":"42703","file":"analyze.c","length":133,"line":"2528","name":"error","position":"31","routine":"transformUpdateTargetList","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:11:49"}
+{"level":"error","message":"POST /api/auth/login - 500 - 1547ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:11:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 36ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"Client Error Invalid email address, Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:53"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 82ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"Client Error OTP code must contain only digits","method":"POST","path":"/api/auth/verify-email","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /api/auth/verify-email - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:54"}
+{"email":"resend.test.1784060210825-540@test.com","event_type":"resend_otp_email_verification","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:16:55","user_id":null}
+{"email":"resend.test.1784060210825-540@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_email_verification_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:16:55","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 385ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:55"}
+{"email":"resend.test.1784060210825-540@test.com","event_type":"resend_otp_password_reset","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:16:55","user_id":null}
+{"email":"resend.test.1784060210825-540@test.com","error":"If the email exists in our system, a new OTP has been sent","event_type":"resend_otp_password_reset_error","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:16:55","user_id":null}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 296ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 45ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 56ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"Client Error Purpose must be 'email_verification' or 'password_reset'","method":"POST","path":"/api/auth/resend-otp","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"POST /api/auth/resend-otp - 400 - 26ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:55"}
+{"level":"warn","message":"POST /signup - 429 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /signup - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /login - 429 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /login - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /signup - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"email":"reset.test.1784060210825-540@test.com","event_type":"forgot_password_attempt_for_non_existent_user","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-14 21:16:56","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 307ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/forgot-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /api/auth/forgot-password - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 28ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"Client Error Invalid email address","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:56"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"Client Error OTP code must be 6 digits","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 20ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 19ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"Client Error Password must be at least 8 characters, Password must contain at least one special character","method":"POST","path":"/api/auth/reset-password","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"POST /api/auth/reset-password - 400 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"POST /refresh-token - 429 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/logout","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"POST /api/auth/logout - 401 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/auth/verify","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"GET /api/auth/verify - 401 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"GET /api/users/me - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"warn","message":"PATCH /api/users/me - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:16:57"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:20:28"}
+{"error":{"code":"42703","file":"analyze.c","length":133,"line":"2528","name":"error","position":"31","routine":"transformUpdateTargetList","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:20:28"}
+{"level":"error","message":"POST /api/auth/login - 500 - 1733ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:20:28"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:21:50"}
+{"error":{"code":"42703","file":"analyze.c","length":133,"line":"2528","name":"error","position":"31","routine":"transformUpdateTargetList","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-14 21:21:50"}
+{"level":"error","message":"POST /api/auth/login - 500 - 6050ms","service":"linkprosoft-backend","timestamp":"2026-07-14 21:21:50"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 00:16:15"}
+{"error":{"code":"42703","file":"analyze.c","length":133,"line":"2528","name":"error","position":"31","routine":"transformUpdateTargetList","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 00:16:15"}
+{"level":"error","message":"POST /api/auth/login - 500 - 9188ms","service":"linkprosoft-backend","timestamp":"2026-07-15 00:16:15"}
+{"email":"soalagideon@gmail.com","error":"read ECONNRESET","event_type":"forgot_password_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"system_error","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-15 00:18:04","user_agent":"axios/1.18.1","user_id":null}
+{"level":"info","message":"POST /forgot-password - 200 - 31624ms","service":"linkprosoft-backend","timestamp":"2026-07-15 00:18:04"}
+{"event_type":"forgot_password_otp_sent","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-15 00:19:08","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"info","message":"POST /forgot-password - 200 - 4448ms","service":"linkprosoft-backend","timestamp":"2026-07-15 00:19:08"}
+{"event_type":"otp_verification_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","purpose":"password_reset","reason":"no_valid_otp_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-15 00:19:08","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"email":"soalagideon@gmail.com","event_type":"verify_reset_code_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"invalid_otp","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-15 00:19:08","user_agent":"axios/1.18.1","user_id":"500b56fe-dfc3-4edf-83de-ee254286bee5"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/verify-reset-code","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-15 00:19:08"}
+{"level":"warn","message":"POST /api/auth/verify-reset-code - 400 - 343ms","service":"linkprosoft-backend","timestamp":"2026-07-15 00:19:08"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-15 00:22:19","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 4733ms","service":"linkprosoft-backend","timestamp":"2026-07-15 00:22:19"}
