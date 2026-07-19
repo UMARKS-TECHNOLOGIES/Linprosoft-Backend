@@ -44,8 +44,8 @@ export const findByEmail = async (email: string): Promise<UserRow | null> => {
  * @param email - User email
  * @param password - Hashed password
  * @param fullName - User full name
- * @param userType - "professional" or "client"
- * @param professionalType - Professional type (digital/non_digital, null for clients)
+ * @param userType - "professional" or "employer"
+ * @param professionalType - Professional type (digital/non_digital, null for employers)
  * @param isEmailVerified - Email verification status
  * @param phone - User phone number
  * @param location - User location
@@ -55,7 +55,7 @@ export const createUser = async (
   email: string,
   password: string,
   fullName: string,
-  userType: "professional" | "client",
+  userType: "professional" | "employer",
   professionalType: "digital" | "non_digital" | null,
   isEmailVerified: boolean = false,
   phone: string | null = null,
@@ -173,7 +173,7 @@ export const updateUserFields = async (
     last_login_at: Date;
     full_name: string;
     auth_provider: "email" | "google" | "apple";
-    role: "client" | "professional";
+    role: "employer" | "professional";
     professional_type: "digital" | "non_digital" | null;
     phone: string;
     location: string;

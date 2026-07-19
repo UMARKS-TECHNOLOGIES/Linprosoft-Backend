@@ -54,7 +54,7 @@ const fullNameSchema = nonEmptyString("Full name")
 /**
  * Role validation
  */
-const roleSchema = z.enum(["client", "professional"], "Role must be 'client' or 'professional'");
+const roleSchema = z.enum(["employer", "professional"], "Role must be 'employer' or 'professional'");
 
 /**
  * Professional type validation

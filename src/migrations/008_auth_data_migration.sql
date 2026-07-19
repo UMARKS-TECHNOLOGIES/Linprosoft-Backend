@@ -43,9 +43,9 @@ UPDATE users SET
 -- Map user_type to role
 UPDATE users SET
   role = CASE
-    WHEN user_type = 'employer' THEN 'client'::user_role
+    WHEN user_type = 'employer' THEN 'employer'::user_role
     WHEN user_type = 'professional' THEN 'professional'::user_role
-    ELSE 'client'::user_role -- default fallback
+    ELSE 'employer'::user_role -- default fallback
   END
 WHERE user_type IS NOT NULL;
 

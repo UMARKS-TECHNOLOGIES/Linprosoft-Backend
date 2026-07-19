@@ -12,7 +12,7 @@ import { UserType } from "../types/userTypes";
 export interface JwtPayload {
   id: string; // User ID as UUID string
   email: string; // User email
-  role: UserType; // "client" or "professional"
+  role: UserType; // "employer" or "professional"
   iat?: number; // Issued at (unix timestamp)
   exp?: number; // Expiration (unix timestamp)
 }

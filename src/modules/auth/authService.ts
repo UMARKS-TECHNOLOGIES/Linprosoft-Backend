@@ -30,7 +30,7 @@ export const signup = async (
     email: string;
     password: string;
     full_name: string;
-    role: "client" | "professional";
+    role: "employer" | "professional";
     professional_type?: "digital" | "non_digital" | null;
     phone?: string;
     location?: string;

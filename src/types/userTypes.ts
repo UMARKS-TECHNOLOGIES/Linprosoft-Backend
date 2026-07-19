@@ -4,14 +4,14 @@
 
 /**
  * User type discriminator
- * Values: client (service seeker), professional (service provider)
+ * Values: employer (service seeker), professional (service provider)
  */
-export type UserType = "client" | "professional";
+export type UserType = "employer" | "professional";
 
 /**
  * Professional type discriminator
  * Values: digital (tech/online services), non_digital (offline/physical services)
- * Null for client users
+ * Null for employer users
  */
 export type ProfessionalType = "digital" | "non_digital" | null;
 

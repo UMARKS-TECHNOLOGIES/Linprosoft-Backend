@@ -23,7 +23,7 @@ export interface SignupRequest {
   email: string;
   password: string;
   passwordConfirm: string;
-  userType: "professional" | "employer";
+  userType: "employer" | "professional";
   compName?: string;
   phone?: string;
   location?: string;

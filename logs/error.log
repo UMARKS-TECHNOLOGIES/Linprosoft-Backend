@@ -463,3 +463,12 @@
 {"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 00:16:15"}
 {"error":{"code":"42703","file":"analyze.c","length":133,"line":"2528","name":"error","position":"31","routine":"transformUpdateTargetList","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 00:16:15"}
 {"level":"error","message":"POST /api/auth/login - 500 - 9188ms","service":"linkprosoft-backend","timestamp":"2026-07-15 00:16:15"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:00:52"}
+{"error":{"code":"23505","constraint":"users_email_key","detail":"Key (email)=(soalagideon@gmail.com) already exists.","file":"nbtinsert.c","length":213,"line":"666","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","statusCode":500,"table":"users"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:00:52"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 6010ms","service":"linkprosoft-backend","timestamp":"2026-07-15 01:00:52"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:01:38"}
+{"error":{"statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:01:38"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 27857ms","service":"linkprosoft-backend","timestamp":"2026-07-15 01:01:38"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:09:50"}
+{"error":{"code":"ECONNRESET","errno":-4077,"statusCode":500,"syscall":"read"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:09:50"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 38885ms","service":"linkprosoft-backend","timestamp":"2026-07-15 01:09:50"}

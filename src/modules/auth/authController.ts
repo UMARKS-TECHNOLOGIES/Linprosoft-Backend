@@ -55,7 +55,7 @@ const normalizeIpAddress = (req: Request): string | undefined => {
  *   - full_name: string (max 150 chars)
  *   - email: string (valid email)
  *   - password: string (min 8 chars)
- *   - role: "client" | "professional"
+ *   - role: "employer" | "professional"
  *   - professional_type?: "digital" | "non_digital" (required if role is professional)
  *   - phone?: string (max 20 chars)
  *   - location?: string (max 100 chars)

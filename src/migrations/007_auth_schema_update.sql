@@ -10,7 +10,7 @@ DROP TYPE IF EXISTS auth_provider;
 DROP TYPE IF EXISTS otp_purpose;
 
 -- Create new ENUM types as per spec
-CREATE TYPE user_role AS ENUM ('client', 'professional');
+CREATE TYPE user_role AS ENUM ('employer', 'professional');
 CREATE TYPE professional_type AS ENUM ('digital', 'non_digital');
 CREATE TYPE auth_provider AS ENUM ('email', 'google', 'apple');
 CREATE TYPE otp_purpose AS ENUM ('email_verification', 'password_reset');
