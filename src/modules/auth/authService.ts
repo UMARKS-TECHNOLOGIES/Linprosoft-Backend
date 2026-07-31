@@ -10,10 +10,11 @@ import * as otpService from "../otp/otpService";
 import { generateAccessToken, generateRefreshToken, verifyToken } from "../../utils/jwt";
 import { OtpPurpose } from "../otp/otpTypes";
 import { logAuthEvent } from "../../utils/logger";
-import { UserResponseDTO } from "../../types/userTypes";
+import { UserResponseDTO, UserType, toUserResponseDTO } from "../../types/userTypes";
 import { AppError } from "../../utils/appError";
 import bcrypt from "bcryptjs";
 import crypto from "crypto";
+import axios from 'axios';
 
 /**
  * Register a new user account
@@ -1203,6 +1204,218 @@ export const updateMe = async (
     return { user: updatedUser };
   } catch (error) {
     console.error("Error in updateMe:", error);
+    throw error;
+  }
+};
+
+
+
+
+/**
+ * GOOGLE AUTHENTICATION (Phase 4 MVP)
+ * 
+ * This section handles Google OAuth 2.0 authentication for users.
+ * It includes functions to initiate the OAuth flow, handle the callback,
+ * and manage user accounts based on Google profile information.
+ */
+
+export const exchangeCodeForTokens = async (code: string, clientId: string, clientSecret: string, redirectUri: string) => {
+  try {
+    const response = await axios.post('https://oauth2.googleapis.com/token',
+      new URLSearchParams({
+        code: code,
+        client_id: clientId,
+        client_secret: clientSecret,
+        redirect_uri: redirectUri,
+        grant_type: 'authorization_code'
+      }),
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.error("Error exchanging code for tokens:", error);
+    throw new AppError("Failed to exchange code for tokens", 500);
+  }
+};
+
+export const getGoogleUserInfo = async (accessToken: string) => {
+  try {
+    const response = await axios.get('https://www.googleapis.com/oauth2/v3/userinfo', {
+      headers: {
+        Authorization: `Bearer ${accessToken}`
+      }
+      
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("Error getting Google user info:", error);
+    throw new AppError("Failed to get user info from Google", 500);
+  }
+};
+
+/**
+ * Find or create user from Google profile
+ * @param googleUserInfo - User info from Google
+ * @param auditInfo - Audit information (IP, user agent)
+ * @returns User data and tokens
+ */
+export const findOrCreateGoogleUser = async (
+  googleUserInfo: {
+    sub: string; // Google user ID
+    email: string;
+    email_verified: boolean;
+    name: string;
+    picture?: string;
+    given_name?: string;
+    family_name?: string;
+  },
+  auditInfo: {
+    ipAddress?: string;
+    userAgent?: string;
+  } = {}
+): Promise<{ user: UserResponseDTO; accessToken: string; refreshToken: string }> => {
+  try {
+    // Check if user already exists with this Google ID or email
+    // First, try to find by Google ID if we had a function, but we don't yet.
+    // We'll check by email and then update the Google ID.
+    let existingUser = await repo.findByEmail(googleUserInfo.email);
+
+    if (existingUser) {
+      // User exists, update auth_provider to google if it's not already
+      // and update Google-specific fields
+      const updates: any = {
+        auth_provider: 'google'
+      };
+
+      // Only update google_id if it's not already set or if it's different
+      if (!existingUser.google_id || existingUser.google_id !== googleUserInfo.sub) {
+        updates.google_id = googleUserInfo.sub;
+      }
+
+      await repo.updateUserFields(existingUser.id, updates);
+
+      // Update last login
+      await repo.updateUserLastLogin(existingUser.id);
+
+      // Get fresh user data
+      const user = await repo.findById(existingUser.id);
+      if (!user) {
+        throw new AppError("User not found", 404);
+      }
+
+      // Generate tokens
+      const accessToken = generateAccessToken({
+        id: user.id,
+        email: user.email,
+        role: user.role
+      });
+
+      const refreshToken = await generateRefreshToken({
+        id: user.id,
+        email: user.email,
+        role: user.role
+      });
+
+      // Store refresh token
+      await repo.storeRefreshToken(
+        user.id,
+        refreshToken,
+        {
+          userAgent: auditInfo.userAgent,
+          ipAddress: auditInfo.ipAddress
+        }
+      );
+
+      // Log audit event
+      await logAuthEvent(
+        user.id,
+        "google_login_success",
+        {
+          email: user.email,
+          ipAddress: auditInfo.ipAddress,
+          user_agent: auditInfo.userAgent,
+          success: true
+        }
+      );
+
+      return {
+        user: toUserResponseDTO(user),
+        accessToken,
+        refreshToken
+      };
+    } else {
+      // User doesn't exist, create new user
+      // For now, we'll assign a default role - in a real app, this might come from frontend choice
+      const defaultRole: UserType = "employer"; // Default to employer, could be made configurable
+
+      // Create new user with Google ID
+      const newUser = await repo.createUser(
+        googleUserInfo.email,
+        "", // Empty password for Google users
+        googleUserInfo.name,
+        defaultRole,
+        null, // professional_type - will be set during onboarding
+        true, // isEmailVerified - Google emails are pre-verified
+        null, // phone
+        null, // location
+        googleUserInfo.sub // google_id
+      );
+
+      // Update auth_provider to google (already set in createUser? we set auth_provider to "email" by default in createUser)
+      // So we need to update it to google.
+      await repo.updateUserFields(newUser.id, {
+        auth_provider: 'google'
+      });
+
+      // Generate tokens
+      const accessToken = generateAccessToken({
+        id: newUser.id,
+        email: newUser.email,
+        role: newUser.role
+      });
+
+      const refreshToken = await generateRefreshToken({
+        id: newUser.id,
+        email: newUser.email,
+        role: newUser.role
+      });
+
+      // Store refresh token
+      await repo.storeRefreshToken(
+        newUser.id,
+        refreshToken,
+        {
+          userAgent: auditInfo.userAgent,
+          ipAddress: auditInfo.ipAddress
+        }
+      );
+
+      // Log audit event
+      await logAuthEvent(
+        newUser.id,
+        "google_signup_success",
+        {
+          email: newUser.email,
+          ipAddress: auditInfo.ipAddress,
+          user_agent: auditInfo.userAgent,
+          success: true
+        }
+      );
+
+      return {
+        user: newUser,
+        accessToken,
+        refreshToken
+      };
+    }
+  } catch (error) {
+    console.error("Error in findOrCreateGoogleUser:", error);
     throw error;
   }
 };

@@ -104,6 +104,29 @@ const environmentSchema = z.object({
     .string()
     .trim()
     .min(1, "PAYSTACK_WEBHOOK_SECRET is required for webhook signature verification"),
+
+  // Google OAuth Configuration (Phase 4 MVP)
+  GOOGLE_CLIENT_ID: z
+    .string()
+    .trim()
+    .min(1, "GOOGLE_CLIENT_ID is required for Google OAuth"),
+
+  GOOGLE_CLIENT_SECRET: z
+    .string()
+    .trim()
+    .min(1, "GOOGLE_CLIENT_SECRET is required for Google OAuth"),
+
+  GOOGLE_REDIRECT_URI: z
+    .string()
+    .trim()
+    .url()
+    .min(1, "GOOGLE_REDIRECT_URI is required for Google OAuth"),
+
+  GOOGLE_REDIRECT_URI_DEV: z
+    .string()
+    .trim()
+    .url()
+    .optional(),
 });
 
 const parsed = environmentSchema.safeParse(process.env);

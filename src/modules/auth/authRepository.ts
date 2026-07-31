@@ -25,7 +25,7 @@ export const findByEmail = async (email: string): Promise<UserRow | null> => {
     const query = `
       SELECT id, email, password_hash, full_name, auth_provider,
              role, professional_type, is_email_verified, is_active,
-             onboarding_step, phone, location, created_at, updated_at
+             onboarding_step, phone, location, created_at, updated_at, google_id
       FROM users
       WHERE email = $1
     `;
@@ -59,19 +59,20 @@ export const createUser = async (
   professionalType: "digital" | "non_digital" | null,
   isEmailVerified: boolean = false,
   phone: string | null = null,
-  location: string | null = null
+  location: string | null = null,
+  googleId: string | null = null
 ): Promise<UserResponseDTO> => {
   try {
     const query = `
       INSERT INTO users (
         email, password_hash, full_name, auth_provider, role,
         professional_type, is_email_verified, is_active, onboarding_step,
-        phone, location
+        phone, location, google_id
       )
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
       RETURNING id, email, full_name, auth_provider, role,
                 professional_type, is_email_verified, is_active, onboarding_step,
-                phone, location, created_at, updated_at
+                phone, location, created_at, updated_at, google_id
     `;
 
     const result = await pool.query(query, [
@@ -85,7 +86,8 @@ export const createUser = async (
       true, // is_active - default to true for new users
       0,    // onboarding_step - start at 0
       phone,
-      location
+      location,
+      googleId
     ]);
 
     const user: any = result.rows[0];
@@ -104,7 +106,8 @@ export const createUser = async (
       phone: user.phone,
       location: user.location,
       created_at: user.created_at,
-      updated_at: user.updated_at
+      updated_at: user.updated_at,
+      google_id: user.google_id
     };
   } catch (error) {
     console.error("Database error in createUser:", error);
@@ -124,7 +127,7 @@ export const findById = async (id: string): Promise<UserResponseDTO | null> => {
     const query = `
       SELECT id, email, full_name, auth_provider, role,
              professional_type, is_email_verified, is_active,
-             onboarding_step, phone, location, created_at, updated_at
+             onboarding_step, phone, location, created_at, updated_at, google_id
       FROM users
       WHERE id = $1
     `;
@@ -148,7 +151,8 @@ export const findById = async (id: string): Promise<UserResponseDTO | null> => {
       phone: user.phone,
       location: user.location,
       created_at: user.created_at,
-      updated_at: user.updated_at
+      updated_at: user.updated_at,
+      google_id: user.google_id
     };
   } catch (error) {
     console.error("Database error in findById:", error);
@@ -177,6 +181,7 @@ export const updateUserFields = async (
     professional_type: "digital" | "non_digital" | null;
     phone: string;
     location: string;
+    google_id: string | null;
   }>
 ): Promise<UserResponseDTO | null> => {
   try {
@@ -235,6 +240,11 @@ export const updateUserFields = async (
       values.push(updates.location);
     }
 
+    if (updates.google_id !== undefined) {
+      setClauses.push(`google_id = $${index++}`);
+      values.push(updates.google_id);
+    }
+
     if (setClauses.length === 0) {
       // No updates to make
       return await findById(id);
@@ -249,7 +259,7 @@ export const updateUserFields = async (
       WHERE id = $${index}
       RETURNING id, email, full_name, auth_provider, role,
                 professional_type, is_email_verified, is_active,
-                onboarding_step, phone, location, created_at, updated_at
+                onboarding_step, phone, location, created_at, updated_at, google_id
     `;
 
     const result = await pool.query(query, values);
@@ -272,7 +282,8 @@ export const updateUserFields = async (
       phone: user.phone,
       location: user.location,
       created_at: user.created_at,
-      updated_at: user.updated_at
+      updated_at: user.updated_at,
+      google_id: user.google_id
     };
   } catch (error) {
     console.error("Database error in updateUserFields:", error);

@@ -7344,3 +7344,809 @@
 {"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:09:50"}
 {"error":{"code":"ECONNRESET","errno":-4077,"statusCode":500,"syscall":"read"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-15 01:09:50"}
 {"level":"error","message":"POST /api/auth/signup - 500 - 38885ms","service":"linkprosoft-backend","timestamp":"2026-07-15 01:09:50"}
+{"email":"gideonsoala@gmail.com","event_type":"login_success","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-29 07:48:02","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"POST /login - 200 - 2931ms","service":"linkprosoft-backend","timestamp":"2026-07-29 07:48:03"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:49:49"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 80ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:49:49"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:05"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 28ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:05"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:08"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 25ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:08"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:12"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 44ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:12"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:24"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:24"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/portfolio","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-30 18:50:24"}
+{"level":"warn","message":"POST /api/profiles/me/portfolio - 401 - 60ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:24"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:27"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 32ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:27"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:31"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 36ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:31"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:40"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 41ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:40"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:50:51"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 54ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:50:51"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:51:05"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 24ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:05"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:51:16"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 26ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:16"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/profiles/me/certifications","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-30 18:51:16"}
+{"level":"warn","message":"POST /api/profiles/me/certifications - 401 - 31ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:16"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:51:19"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 30ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:19"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-30 18:51:53","userId":10}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 20ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:53"}
+{"level":"warn","message":"Client Error","method":"GET","path":"/api/admin/payments/pending-admin-approval","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-30 18:51:53","userId":1}
+{"level":"warn","message":"GET /api/admin/payments/pending-admin-approval - 403 - 25ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:53"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/approve-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-30 18:51:53","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/approve-payment - 403 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:53"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/admin/payments/1/reject-payment","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-07-30 18:51:53","userId":1}
+{"level":"warn","message":"POST /api/admin/payments/1/reject-payment - 403 - 16ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:53"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:51:57"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 67ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:51:57"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:52:09"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 15ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:52:09"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'client' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 18:52:41"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 38ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:52:41"}
+{"email":"employer.1785433961448.zdunko@example.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-30 18:52:43","user_id":null}
+{"email":"employer.1785433961448.zdunko@example.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-30 18:52:43"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 1539ms","service":"linkprosoft-backend","timestamp":"2026-07-30 18:52:43"}
+{"email":"employer.1785433961448.zdunko@example.com","event_type":"login_failed","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-30 18:52:43","user_id":null}
+{"email":"xeldhubz@gmail.com","event_type":"google_signup_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:02:53","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"info","message":"GET /google/callback - 200 - 3153ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:02:53"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:02:53"}
+{"level":"error","message":"GET /google/callback - 500 - 719ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:03:00"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:03:42","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"info","message":"GET /google/callback - 200 - 5799ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:03:42"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:08:05","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"info","message":"GET /google/callback - 200 - 6166ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:08:05"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:09:21","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"info","message":"GET /google/callback - 200 - 3787ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:09:21"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:29:50","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:31:54","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:42:00"}
+{"error":{"code":"ENOTFOUND","errno":-3008,"hostname":"aws-1-eu-west-2.pooler.supabase.com","statusCode":500,"syscall":"getaddrinfo"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:42:00"}
+{"level":"error","message":"POST /api/auth/login - 500 - 11171ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:42:00"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:44:14"}
+{"error":{"code":"ENOTFOUND","errno":-3008,"hostname":"aws-1-eu-west-2.pooler.supabase.com","statusCode":500,"syscall":"getaddrinfo"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:44:14"}
+{"level":"error","message":"POST /api/auth/login - 500 - 8ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:44:14"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:48:19","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 1708ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 23:48:19","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-30 23:48:19","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:48:19","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:48:19","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 183ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:19"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:48:20","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-30 23:48:20","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 778ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:48:20"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:48:40","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"error","message":"GET /google/callback - 500 - 21118ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:49:28"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-30 23:50:29","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"info","message":"GET /google/callback - 200 - 3503ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:50:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-30 23:50:29"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:07:30","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"GET / - 404 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:07:30"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:08:09","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:15:46","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET /api/jobs - 401 - 33ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET /api/jobs - 401 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:15:48"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:16:04","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:16:05"}
+{"level":"warn","message":"GET /api/jobs - 401 - 8ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:05"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET /api/jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:16:06"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:17:18","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"info","message":"GET /google/callback - 200 - 4286ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:19"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/auth/google/callback","query":{"authuser":"2","code":"4/0AXEQxIBqZk9CW856O8dwJhaI09rvcepx-zagruNLNqI7I1-3oWTtHaWrlB4kpT0Y8DwZbQ","iss":"https://accounts.google.com","prompt":"consent","scope":"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid","state":"0005bcb9203dba741daaf7d0cd754bc7"},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:17:19"}
+{"error":{"code":"ERR_HTTP_HEADERS_SENT","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/auth/google/callback","query":{"authuser":"2","code":"4/0AXEQxIBqZk9CW856O8dwJhaI09rvcepx-zagruNLNqI7I1-3oWTtHaWrlB4kpT0Y8DwZbQ","iss":"https://accounts.google.com","prompt":"consent","scope":"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid","state":"0005bcb9203dba741daaf7d0cd754bc7"},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:17:19"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET /api/jobs - 401 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET /api/jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:17:21"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:18:48","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET /api/jobs - 401 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET /api/jobs - 401 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:18:50"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:28:13","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET /api/jobs - 401 - 20ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 8ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET /api/jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:15"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:28:36","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 2009ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:28:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:28:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:28:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:28:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 170ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:36"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:28:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:28:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 747ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:28:37"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:30:59","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:30:59","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 8ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:30:59"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:31:01","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:31:01","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 2323ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:31:01"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:31:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:31:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 871ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:31:02"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:32:54","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:33:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 5ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:33:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"warn","message":"GET / - 404 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:33:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:33:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 187ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:02"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:33:03","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:33:03","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 759ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:33:03"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:34:09","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:34:12","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:34:12","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:12","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:12","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 156ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:12"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:13","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:13","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 719ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:13"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:34:34","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:34:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:34:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 175ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:36"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:34:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 1266ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:37"}
+{"level":"warn","message":"POST / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:34:45"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:34:57","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:35:18","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"email":"gideonsoala@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:36:37","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"POST /login - 200 - 1827ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:36:37"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:36:38","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:36:38"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:36:38","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:36:38","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 168ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:36:38"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:49:18","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"GET / - 404 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:49:20","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:49:20","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:49:20","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:49:20","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 169ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:20"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:49:21","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:49:21","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 984ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:49:21"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:52:43","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:52:46","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 07:52:46","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:52:46","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:52:46","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 231ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:46"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:52:47","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 07:52:47","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 988ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:47"}
+{"level":"warn","message":"POST / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:52:49"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:54:32","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:56:30","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:56:33"}
+{"level":"warn","message":"GET /api/jobs - 401 - 146ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:33"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:33"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 71ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"GET /api/jobs - 401 - 220ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 07:56:34"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 101ms","service":"linkprosoft-backend","timestamp":"2026-07-31 07:56:34"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 07:57:42","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 08:00:09","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 08:00:52","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"GET /api/jobs - 401 - 5ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"GET /api/jobs - 401 - 12ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:00"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:01:01"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 08:08:39","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET /api/jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET /api/jobs - 401 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:08:46"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 08:12:47","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET /api/jobs - 401 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET / - 404 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET /api/jobs - 401 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:54"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:55"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:55"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:55"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 08:12:55"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 09:50:13","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /google/callback - 200 - 6728ms","service":"linkprosoft-backend","timestamp":"2026-07-31 09:50:13"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 09:58:03","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /google/callback - 200 - 4179ms","service":"linkprosoft-backend","timestamp":"2026-07-31 09:58:03"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 09:58:13"}
+{"level":"error","message":"GET /google/callback - 500 - 829ms","service":"linkprosoft-backend","timestamp":"2026-07-31 09:58:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 09:58:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 09:58:36"}
+{"level":"error","message":"GET /google/callback - 500 - 797ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:00:05"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:00:05"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:00:05"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:01:05","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET /api/jobs - 401 - 10ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET /api/jobs - 401 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 5ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:01:09"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:01:21","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:03:25","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:03:25"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:03:25"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:03:25"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:04:22","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET /api/jobs - 401 - 17ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET /api/jobs - 401 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:04:24"}
+{"email":"xeldhubz@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:05:35","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:08:32","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET /api/jobs - 401 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET /api/jobs - 401 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:08:36"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:10:17","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /google/callback - 200 - 4193ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:10:17"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:10:17"}
+{"level":"error","message":"GET /google/callback - 500 - 820ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:11:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:11:07"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:26:33","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /google/callback - 200 - 6279ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:26:33"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:26:33"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:33:16","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /google/callback - 200 - 4712ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:33:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:33:23"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 10:59:12","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET /api/jobs - 401 - 21ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET /api/jobs - 401 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 7ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 10:59:14"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 11:09:27","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"GET /api/jobs - 401 - 5ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"GET / - 404 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:33"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"GET /api/jobs - 401 - 186ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 5ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:09:34"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 11:48:35","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:48:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 11:48:36"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:08:03","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:08:05"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:08:05"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:11:08","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:11:11","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 232ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:11:11"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:11:11","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 158ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:11:11"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:11:40","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:11:41","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 254ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:11:41"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:11:42","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 157ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:11:42"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:11:59","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:12:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 193ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:12:00"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:12:01","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 190ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:12:01"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:13:41","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:13:44","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 176ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:13:44"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:13:44","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 191ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:13:44"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:14:15","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:14:18","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 152ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:14:18"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:14:18","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 154ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:14:18"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:15:58","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:15:59","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 168ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:15:59"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:15:59","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 170ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:15:59"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:17:23","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:17:27","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 152ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:17:27"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:17:27","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 161ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:17:27"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:18:00","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:18:03","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 168ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:18:03"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:18:03","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 159ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:18:03"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:18:50","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:18:52","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 159ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:18:52"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:18:53","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 154ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:18:53"}
+{"email":"gideonsoala@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 12:19:25","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"POST /login - 200 - 1506ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 12:19:25","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 2ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 12:19:25","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 8ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 13ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 12:19:25","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 12:19:25","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 233ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:25"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 12:19:26","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 12:19:26","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 795ms","service":"linkprosoft-backend","timestamp":"2026-07-31 12:19:26"}
+{"level":"error","message":"GET /google/callback - 500 - 13368ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:05:37"}
+{"level":"warn","message":"GET / - 404 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:05:37"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:05:53"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:06:40","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:06:44","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 620ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:06:44"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:06:44","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 149ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:06:44"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:11:55","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:12:06","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 2035ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:12:06"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:12:06","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 184ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:12:06"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:16:01","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:16:03","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 147ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:16:03"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:16:03","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 136ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:16:03"}
+{"email":"gideonsoala@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:17:24","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"POST /login - 200 - 1590ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 17:17:24","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 17:17:24","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 17:17:24","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 17:17:24","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 152ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:24"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 17:17:25","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 17:17:25","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 683ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:25"}
+{"level":"warn","message":"POST / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:17:50"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:50:03","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:50:05","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 260ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:50:05"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:50:05","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 152ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:50:05"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:52:43","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:52:47","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 168ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:52:47"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:52:47","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 155ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:52:47"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:53:18","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:53:20","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 166ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:53:20"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:53:21","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 166ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:53:21"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:54:34","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:54:36","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 157ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:54:36"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:54:36","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 162ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:54:36"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:55:21","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:55:23","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 156ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:55:23"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:55:23","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 149ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:55:23"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:56:25","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:56:27","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 534ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:56:27"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:56:27","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 158ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:56:27"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:58:43","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:58:45","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 207ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:58:45"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 17:58:45","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 209ms","service":"linkprosoft-backend","timestamp":"2026-07-31 17:58:45"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:00:26","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:00:28","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 144ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:00:28"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:00:28","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 151ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:00:28"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:01:00","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:01:01","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 153ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:01:01"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:01:01","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 155ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:01:01"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:01:50","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:01:52","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 175ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:01:52"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:01:52","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 149ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:01:52"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:02:45","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:02:47","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 152ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:02:47"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:02:47","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 154ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:02:47"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:04:45","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:05:16","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 984ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:05:16"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:05:17","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 189ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:05:17"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:06:02","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:06:03","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 257ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:06:03"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:06:03","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 198ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:06:03"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:19:17","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:19:22","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 167ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:19:22"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:19:22","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"7b4b6f45-4033-4427-ab40-07cd9e4dd6b9"}
+{"level":"info","message":"GET /me - 200 - 167ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:19:22"}
+{"email":"soalagideon@gmail.com","event_type":"login_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"invalid_password","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-31 18:21:42","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":null}
+{"email":"soalagideon@gmail.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 18:21:42"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 3968ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:21:42"}
+{"email":"nexaxchange@gmail.com","event_type":"google_signup_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:22:16","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"aa3cab87-5767-49eb-ac23-f55ed0d480df"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:22:17","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"aa3cab87-5767-49eb-ac23-f55ed0d480df"}
+{"level":"info","message":"GET /me - 200 - 208ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:22:17"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:22:18","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"aa3cab87-5767-49eb-ac23-f55ed0d480df"}
+{"level":"info","message":"GET /me - 200 - 230ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:22:18"}
+{"email":"soalagideon@gmail.com","event_type":"google_signup_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:26:30","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:26:33","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"level":"info","message":"GET /me - 200 - 156ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:26:33"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:26:33","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"level":"info","message":"GET /me - 200 - 152ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:26:33"}
+{"email":"soalagideon@gmail.com","event_type":"login_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"invalid_password","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-31 18:28:20","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":null}
+{"email":"soalagideon@gmail.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 18:28:20"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 3424ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:28:20"}
+{"email":"soalagideon@gmail.com","event_type":"login_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"invalid_password","service":"linkprosoft-backend","success":false,"timestamp":"2026-07-31 18:28:41","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":null}
+{"email":"soalagideon@gmail.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-07-31 18:28:41"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 1048ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:28:41"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:28:56","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:29:00","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"level":"info","message":"GET /me - 200 - 161ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:00"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:29:00","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"level":"info","message":"GET /me - 200 - 147ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:00"}
+{"email":"gideonsoala@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:29:44","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"POST /login - 200 - 2226ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:44"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 18:29:45","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 18:29:45","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:29:45","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:29:45","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 165ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:45"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:29:46","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:29:46","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 1226ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:29:46"}
+{"event_type":"profile_accessed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:31:06","user_agent":"Thunder Client (https://www.thunderclient.com)","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"GET /me - 200 - 1022ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:31:06"}
+{"email":"soalagideon@gmail.com","event_type":"google_login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:34:54","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:34:58","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"level":"info","message":"GET /me - 200 - 266ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:34:58"}
+{"event_type":"profile_accessed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-07-31 18:34:58","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"f21b35bf-1456-47e7-8c4c-981c2946b82b"}
+{"level":"info","message":"GET /me - 200 - 215ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:34:58"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 18:35:00","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 3ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-07-31 18:35:00","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 6ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:35:00","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:35:00","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 267ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:00"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:35:01","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-07-31 18:35:01","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 1006ms","service":"linkprosoft-backend","timestamp":"2026-07-31 18:35:01"}

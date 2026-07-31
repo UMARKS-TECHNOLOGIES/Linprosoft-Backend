@@ -40,6 +40,7 @@ export interface User {
   location: string;
   created_at: Date;
   updated_at: Date;
+  google_id: string | null; // Google user ID for OAuth login
 }
 
 /**
@@ -60,6 +61,7 @@ export interface UserRow {
   location: string;
   created_at: Date;
   updated_at: Date;
+  google_id: string | null; // Google user ID for OAuth login
 }
 
 /**
@@ -80,6 +82,7 @@ export const toUser = (row: UserRow): User => ({
   location: row.location,
   created_at: row.created_at,
   updated_at: row.updated_at,
+  google_id: row.google_id,
 });
 
 /**
@@ -100,6 +103,7 @@ export const toUserRow = (user: User): UserRow => ({
   location: user.location,
   created_at: user.created_at,
   updated_at: user.updated_at,
+  google_id: user.google_id
 });
 
 /**
@@ -120,6 +124,7 @@ export interface UserResponseDTO {
   location: string;
   created_at: Date;
   updated_at: Date;
+  google_id: string | null; // Google user ID for OAuth login
 }
 
 /**
@@ -140,6 +145,7 @@ export const toUserResponseDTO = (user: User): UserResponseDTO => ({
   location: user.location,
   created_at: user.created_at,
   updated_at: user.updated_at,
+  google_id: user.google_id
 });
 
 /**

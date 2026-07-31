@@ -3,11 +3,12 @@
  * HTTP request handlers for authentication operations
  */
 
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import * as service from "./authService";
 import catchAsync from "../../utils/catchAsync";
 import { ApiResponseHandler } from "../../utils/response";
 import logger, { logAuthEvent } from "../../utils/logger";
+import crypto from "crypto";
 import {
   signupSchema as SignupInput,
   loginSchema as LoginInput,
@@ -46,6 +47,124 @@ const normalizeIpAddress = (req: Request): string | undefined => {
 
   return undefined;
 };
+
+/**
+ * GOOGLE OAUTH FLOW
+ * 1. User clicks "Login with Google" on frontend
+ * 2. Frontend redirects to Google OAuth consent screen
+ * 3. User authenticates with Google and grants permissions
+ * 4. Google redirects back to our backend with an authorization code
+ * 5. Backend exchanges code for access token and ID token from Google
+ * 6. Backend verifies ID token, extracts user info, and creates/updates user in DB
+ * 7. Backend generates our own JWT access and refresh tokens for the user
+ * 8. Backend sets HTTP-only cookies and redirects to frontend callback
+ * 9. Frontend receives cookies automatically and can make authenticated requests
+ * 10. Frontend can call /api/auth/me to get user role and redirect to appropriate dashboard
+ * 11. Refresh token can be used to obtain new access tokens when expired
+ */
+
+const getRedirectUri = (): string => {
+  if (process.env.GOOGLE_REDIRECT_URI_DEV && process.env.NODE_ENV === "development") {
+    return process.env.GOOGLE_REDIRECT_URI_DEV;
+  }
+  return process.env.GOOGLE_REDIRECT_URI as string;
+};
+
+export const startGoogleOAuth = catchAsync(async (_req: Request, res: Response) => {
+  // Generate a random state parameter for CSRF protection
+  const state = crypto.randomBytes(16).toString('hex');
+
+  // In a production app, you would store this state in the session or Redis
+  // For MVP, we'll pass it through and validate it in the callback
+  // For simplicity in this MVP, we're not implementing state storage,
+  // but in a real app you should implement proper state validation
+
+  const redirectUri = getRedirectUri();
+  const params = new URLSearchParams({
+    client_id: process.env.GOOGLE_CLIENT_ID as string,
+    redirect_uri: redirectUri,
+    response_type: "code",
+    scope: "openid email profile",
+    state: state,
+    access_type: "offline", // Request refresh token
+    prompt: "consent" // Force consent screen to get refresh token
+  });
+
+  const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
+  res.redirect(googleAuthUrl);
+});
+
+export const handleGoogleOAuthCallback = catchAsync(async (req: Request, res: Response) => {
+  const code = req.query.code as string;
+
+  if (!code) {
+    return ApiResponseHandler.error(
+      res,
+      "invalid_request",
+      "Authorization code is missing",
+      400
+    );
+  }
+
+  // TODO: Validate state parameter to prevent CSRF attacks
+  // For now, we'll skip state validation in MVP but note it should be implemented
+
+  try {
+    // Exchange code for tokens
+    const redirectUri = getRedirectUri();
+
+    const tokenResponse = await service.exchangeCodeForTokens(
+      code,
+      process.env.GOOGLE_CLIENT_ID as string,
+      process.env.GOOGLE_CLIENT_SECRET as string,
+      redirectUri
+    );
+
+    // Get user info from Google
+    const googleUserInfo = await service.getGoogleUserInfo(tokenResponse.access_token);
+
+    // Find or create user
+    const result = await service.findOrCreateGoogleUser(googleUserInfo, {
+      ipAddress: req.headers["x-forwarded-for"] as string ||
+                 req.socket.remoteAddress as string ||
+                 (req.headers["x-real-ip"] as string) ||
+                 undefined,
+      userAgent: req.get("User-Agent") || undefined
+    });
+
+    // Set HTTP-only cookies (security layer)
+    res.cookie("accessToken", result.accessToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 15 * 60 * 1000 // 15 minutes
+    });
+
+    res.cookie("refreshToken", result.refreshToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
+    });
+
+    // Redirect to frontend callback page
+    // Frontend will:
+    // - Receive cookies automatically on this redirect
+    // - Make request to /api/auth/me to get user role (via cookie validation)
+    // - Use role to determine dashboard via getDashboardRoute()
+    // - Redirect to appropriate dashboard
+    const frontendUrl = process.env.FRONTEND_URL || "http://localhost:3000";
+    return res.redirect(`${frontendUrl}/auth/google/callback`);
+  } catch (error) {
+    console.error("Error in Google OAuth callback:", error);
+    return ApiResponseHandler.error(
+      res,
+      "google_oauth_failed",
+      "Google authentication failed",
+      500
+    );
+  }
+});
 
 /**
  * POST /api/auth/signup
@@ -188,7 +307,7 @@ export const resendOtp = catchAsync(async (req: Request, res: Response) => {
   purpose: parsedBody.purpose,
   otpId: result?.otpId ?? "unknown", // OTP ID from service response
   ip: auditInfo.ipAddress,
-});
+  });
 
   // Always return generic message to prevent email enumeration
   return ApiResponseHandler.success(
@@ -297,7 +416,7 @@ export const forgotPassword = catchAsync(async (req: Request, res: Response) => 
  *
  * Request body:
  *   - email: string (valid email)
- *   - otp_code: string (6-digit OTP)
+*   - otp_code: string (6-digit OTP)
  *
  * Response:
  *   - Success: { resetToken }
@@ -331,7 +450,7 @@ export const verifyResetCode = catchAsync(async (req: Request, res: Response) =>
  * POST /api/auth/reset-password
  * Complete password reset process
  *
-* Request body:
+ * Request body:
  *   - resetToken: string (from verify-reset-code)
  *   - newPassword: string (min 8 chars)
  *
@@ -571,6 +690,16 @@ export const getMe = catchAsync(async (req: Request, res: Response) => {
     result.user,
     "User profile retrieved successfully"
   );
+});
+
+/**
+ * Get authenticated user
+ * 
+ */
+// src/modules/auth/authController.ts  (add near the other exports)
+export const me = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
+  // Re‑use the existing getMe logic – it already pulls req.user from auth middleware
+  return getMe(req, res, next);
 });
 
 /**

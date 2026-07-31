@@ -40,6 +40,14 @@ const otpLimiter = rateLimiter(
 
 const router = Router();
 
+
+/**
+ * Google OAuth Routes
+ * Handles Google OAuth login and callback
+ */
+router.get("/google", controller.startGoogleOAuth);
+router.get("/google/callback", controller.handleGoogleOAuthCallback);
+
 /**
  * Public Routes
  * No authentication required
