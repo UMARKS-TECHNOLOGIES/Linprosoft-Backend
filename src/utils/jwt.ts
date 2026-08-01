@@ -15,7 +15,8 @@ import { randomUUID } from "crypto";
  * @returns Signed JWT token
  */
 export const generateAccessToken = (payload: object) => {
-    return jwt.sign(payload, env.JWT_SECRET, { expiresIn: `${env.ACCESS_TOKEN_EXPIRES_SECONDS}s` });
+    const expires = Number.isFinite(env.ACCESS_TOKEN_EXPIRES_SECONDS) && env.ACCESS_TOKEN_EXPIRES_SECONDS > 0 ? env.ACCESS_TOKEN_EXPIRES_SECONDS : 1800;
+    return jwt.sign(payload, env.JWT_SECRET, { expiresIn: `${expires}s` });
 };
 
 /**
@@ -34,11 +35,13 @@ export const generateRefreshToken = async (payload: object) => {
         iat: now
     };
 
+    const days = Number.isFinite(env.REFRESH_TOKEN_EXPIRES_DAYS) && env.REFRESH_TOKEN_EXPIRES_DAYS > 0 ? env.REFRESH_TOKEN_EXPIRES_DAYS : 7;
+
     return new Promise<string>((resolve, reject) => {
         jwt.sign(
             tokenPayload,
             env.REFRESH_TOKEN_SECRET,
-            { expiresIn: `${env.REFRESH_TOKEN_EXPIRES_DAYS}d` },
+            { expiresIn: `${days}d` },
             (err, token) => {
                 if (err) reject(err);
                 else resolve(token!);

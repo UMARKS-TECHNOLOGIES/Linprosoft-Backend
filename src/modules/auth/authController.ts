@@ -7,7 +7,10 @@ import { NextFunction, Request, Response } from "express";
 import * as service from "./authService";
 import catchAsync from "../../utils/catchAsync";
 import { ApiResponseHandler } from "../../utils/response";
+import { env } from "../../config/environment";
 import logger, { logAuthEvent } from "../../utils/logger";
+const accessTokenMaxAge = (Number.isFinite(env.ACCESS_TOKEN_EXPIRES_SECONDS) && env.ACCESS_TOKEN_EXPIRES_SECONDS > 0 ? env.ACCESS_TOKEN_EXPIRES_SECONDS : 1800) * 1000;
+const refreshTokenMaxAge = (Number.isFinite(env.REFRESH_TOKEN_EXPIRES_DAYS) && env.REFRESH_TOKEN_EXPIRES_DAYS > 0 ? env.REFRESH_TOKEN_EXPIRES_DAYS : 7) * 24 * 60 * 60 * 1000;
 import crypto from "crypto";
 import {
   signupSchema as SignupInput,
@@ -136,15 +139,15 @@ export const handleGoogleOAuthCallback = catchAsync(async (req: Request, res: Re
     res.cookie("accessToken", result.accessToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
-      maxAge: 15 * 60 * 1000 // 15 minutes
+      sameSite: "lax",
+      maxAge: accessTokenMaxAge
     });
 
     res.cookie("refreshToken", result.refreshToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
-      maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
+      sameSite: "lax",
+      maxAge: refreshTokenMaxAge
     });
 
     // Redirect to frontend callback page
@@ -251,15 +254,15 @@ export const verifyEmail = catchAsync(async (req: Request, res: Response) => {
   res.cookie("accessToken", result.accessToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 15 * 60 * 1000 // 15 minutes
+    sameSite: "lax",
+    maxAge: accessTokenMaxAge
   });
 
   res.cookie("refreshToken", result.refreshToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
+    sameSite: "lax",
+    maxAge: refreshTokenMaxAge
   });
 
   return ApiResponseHandler.success(
@@ -353,15 +356,15 @@ export const login = catchAsync(async (req: Request, res: Response) => {
   res.cookie("accessToken", result.accessToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 15 * 60 * 1000 // 15 minutes
+    sameSite: "lax",
+    maxAge: accessTokenMaxAge
   });
 
   res.cookie("refreshToken", result.refreshToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
+    sameSite: "lax",
+    maxAge: refreshTokenMaxAge
   });
 
   return ApiResponseHandler.success(
@@ -522,16 +525,16 @@ export const refreshToken = catchAsync(async (req: Request, res: Response) => {
   res.cookie("accessToken", result.accessToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 15 * 60 * 1000 // 15 minutes
+    sameSite: "lax",
+    maxAge: accessTokenMaxAge
   });
 
   // Set new refreshToken cookie (rotation)
   res.cookie("refreshToken", result.refreshToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 30 * 24 * 60 * 60 * 1000 // 30 days
+    sameSite: "lax",
+    maxAge: refreshTokenMaxAge
   });
 
   return ApiResponseHandler.success(
