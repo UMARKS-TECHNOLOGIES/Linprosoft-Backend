@@ -719,3 +719,4 @@
 {"level":"error","message":"Server Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 18:00:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
 {"error":{"code":"42703","file":"parse_target.c","length":138,"line":"1065","name":"error","position":"92","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 18:00:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
 {"level":"error","message":"POST /api/jobs - 500 - 1418ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:00:02"}
+{"level":"error","message":"GET /google/callback - 500 - 1046ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:28:17"}

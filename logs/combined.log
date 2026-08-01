@@ -9275,3 +9275,30 @@
 {"level":"info","message":"GET /me - 200 - 297ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:23:12"}
 {"level":"info","message":"GET /me - 200 - 379ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:23:14"}
 {"level":"info","message":"GET /me - 200 - 317ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:23:14"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/me","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 18:25:22"}
+{"level":"warn","message":"GET /api/jobs/me - 401 - 6ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:22"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/me","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 18:25:22"}
+{"level":"warn","message":"GET /api/jobs/me - 401 - 14ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:22"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 18:25:42","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 2571ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:42"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:25:43","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 3ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:25:43","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 3ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"info","message":"GET / - 200 - 305ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"info","message":"GET / - 200 - 289ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:43"}
+{"level":"info","message":"GET /me - 200 - 997ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:56"}
+{"level":"info","message":"GET /me - 200 - 303ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:25:56"}
+{"level":"info","message":"GET /me - 200 - 411ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:26:06"}
+{"level":"error","message":"GET /google/callback - 500 - 1046ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:28:17"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:28:17"}
