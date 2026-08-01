@@ -128,10 +128,7 @@ export const handleGoogleOAuthCallback = catchAsync(async (req: Request, res: Re
 
     // Find or create user
     const result = await service.findOrCreateGoogleUser(googleUserInfo, {
-      ipAddress: req.headers["x-forwarded-for"] as string ||
-                 req.socket.remoteAddress as string ||
-                 (req.headers["x-real-ip"] as string) ||
-                 undefined,
+      ipAddress: normalizeIpAddress(req),
       userAgent: req.get("User-Agent") || undefined
     });
 
