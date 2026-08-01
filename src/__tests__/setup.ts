@@ -4,6 +4,7 @@
  */
 
 import type { QueryResultRow } from "pg";
+import { afterAll, beforeAll, jest } from '@jest/globals';
 import pool from "../config/db";
 
 // Increase timeout for database operations

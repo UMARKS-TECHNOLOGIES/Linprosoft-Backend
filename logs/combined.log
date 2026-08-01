@@ -8997,3 +8997,281 @@
 {"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 13:17:00","userId":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
 {"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 13:17:00","userId":"f82ec44a-9bc0-4d8b-b2a2-ad79f57e53b8"}
 {"level":"error","message":"GET /api/jobs - 500 - 799ms","service":"linkprosoft-backend","timestamp":"2026-08-01 13:17:00"}
+{"email":"gidsoala@gmail.com","error":"duplicate key value violates unique constraint \"users_email_key\"","event_type":"signup_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-08-01 14:04:13","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":null}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:04:13"}
+{"error":{"code":"23505","constraint":"users_email_key","detail":"Key (email)=(gidsoala@gmail.com) already exists.","file":"nbtinsert.c","length":210,"line":"666","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","statusCode":500,"table":"users"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:04:13"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 4518ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:04:13"}
+{"email":"gidsoala@gmail.com","error":"duplicate key value violates unique constraint \"users_email_key\"","event_type":"signup_error","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":false,"timestamp":"2026-08-01 14:04:22","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":null}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:04:22"}
+{"error":{"code":"23505","constraint":"users_email_key","detail":"Key (email)=(gidsoala@gmail.com) already exists.","file":"nbtinsert.c","length":210,"line":"666","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","statusCode":500,"table":"users"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:04:22"}
+{"level":"error","message":"POST /api/auth/signup - 500 - 1530ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:04:22"}
+{"email":"gidsoala@gmail.com","event_type":"signup","existing_user":false,"ipAddress":"::1","level":"info","message":"AUDIT_EVENT","role":"professional","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 14:09:39","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"01b697c2-d48b-456a-96bd-c7b8d0b7343e"}
+{"level":"info","message":"POST /signup - 200 - 18124ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:09:39"}
+{"email":"gidsoala@gmail.com","event_type":"login_failed","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","reason":"email_not_verified","service":"linkprosoft-backend","success":false,"timestamp":"2026-08-01 14:14:37","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"01b697c2-d48b-456a-96bd-c7b8d0b7343e"}
+{"level":"warn","message":"Client Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":403,"timestamp":"2026-08-01 14:14:37"}
+{"level":"warn","message":"POST /api/auth/login - 403 - 1767ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:14:37"}
+{"email":"gideonsoala@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 14:19:16","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"POST /login - 200 - 1747ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 14:19:16","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 5ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 14:19:16","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 7ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:19:16","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:19:16","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 160ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:16"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:19:17","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:19:17","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 846ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:19:17"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:30:57"}
+{"error":{"code":"ENOTFOUND","errno":-3008,"hostname":"aws-1-eu-west-2.pooler.supabase.com","statusCode":500,"syscall":"getaddrinfo"},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:30:57"}
+{"level":"error","message":"POST /api/auth/login - 500 - 11072ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:30:57"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 14:31:36","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 3464ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 14:31:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 14:31:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 2ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:36"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:31:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:31:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 140ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:37"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:31:38","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:31:38","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 1877ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:31:38"}
+{"email":"gideonsoala@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 14:57:47","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"info","message":"POST /login - 200 - 2484ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:47"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 14:57:49","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 372ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:57:49","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:57:49","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 513ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 14:57:49","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 45ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:49"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:57:51","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 14:57:51","userId":"e9159cd1-d626-4cff-8a8f-661c83a5388d"}
+{"level":"error","message":"GET /api/jobs - 500 - 1380ms","service":"linkprosoft-backend","timestamp":"2026-08-01 14:57:51"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET /api/jobs - 401 - 65ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 18ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET /api/jobs - 401 - 16ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:11"}
+{"level":"warn","message":"Authentication Error","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 15:48:12"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 401 - 9ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:12"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:12"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:48:12"}
+{"level":"error","message":"GET /google/callback - 500 - 14420ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:25"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:25"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 15:53:29","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 2114ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 15:53:29","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 5ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 15:53:29","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 5ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 15:53:29","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 15:53:29","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 141ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:29"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 15:53:30","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 15:53:30","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 1118ms","service":"linkprosoft-backend","timestamp":"2026-08-01 15:53:30"}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'employer' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:17:33"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 95ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:17:33"}
+{"email":"employer.1785601052347.lwzhlx@example.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-08-01 17:17:34","user_id":null}
+{"email":"employer.1785601052347.lwzhlx@example.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 17:17:34"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 284ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:17:34"}
+{"email":"employer.1785601052347.lwzhlx@example.com","event_type":"login_failed","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-08-01 17:17:34","user_id":null}
+{"level":"warn","message":"Client Error Invalid input: expected string, received undefined, Role must be 'employer' or 'professional'","method":"POST","path":"/api/auth/signup","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:17:34"}
+{"level":"warn","message":"POST /api/auth/signup - 400 - 14ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:17:34"}
+{"email":"employer.1785601054686.2yxwr8@example.com","event_type":"login_failed","ipAddress":"::ffff:127.0.0.1","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-08-01 17:17:34","user_id":null}
+{"email":"employer.1785601054686.2yxwr8@example.com","level":"warn","message":"Authentication Error","method":"POST","path":"/api/auth/login","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 17:17:34"}
+{"level":"warn","message":"POST /api/auth/login - 401 - 209ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:17:34"}
+{"email":"employer.1785601054686.2yxwr8@example.com","event_type":"login_failed","level":"info","message":"AUDIT_EVENT","reason":"user_not_found","service":"linkprosoft-backend","success":false,"timestamp":"2026-08-01 17:17:35","user_id":null}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 17:20:39"}
+{"level":"warn","message":"POST /api/jobs - 401 - 20ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:20:39"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 17:21:18","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 1631ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:21:18","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 18ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:21:18","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 8ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:18"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:19"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:19"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:19"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:21:19","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:21:19","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 165ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:19"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:21:20","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:21:20","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 1020ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:21:20"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:30:28","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:30:28","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 9ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:28"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:30:29","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:30:29","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 1058ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:29"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:30:30","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:30:30","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 1032ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:30:30"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:31:56","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_target.c","length":136,"line":"1065","name":"error","position":"27","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:31:56","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"POST /api/jobs - 500 - 1801ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:31:56"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:38:15","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_target.c","length":136,"line":"1065","name":"error","position":"27","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:38:15","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"POST /api/jobs - 500 - 1131ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:38:15"}
+{"level":"warn","message":"Authentication Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":401,"timestamp":"2026-08-01 17:52:56"}
+{"level":"warn","message":"POST /api/jobs - 401 - 7ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:52:56"}
+{"email":"keanureeves@gmail.com","event_type":"login_success","ipAddress":"::1","level":"info","message":"AUDIT_EVENT","service":"linkprosoft-backend","success":true,"timestamp":"2026-08-01 17:53:36","user_agent":"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Mobile Safari/537.36","user_id":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"info","message":"POST /login - 200 - 2435ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:53:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 8ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 17:53:36","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 6ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:36"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:53:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:53:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 199ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:37"}
+{"level":"error","message":"Server Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:53:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3716","name":"error","position":"34","routine":"errorMissingColumn","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"GET","path":"/api/jobs","query":{"limit":20,"page":1},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:53:37","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"GET /api/jobs - 500 - 712ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:53:37"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:54:30","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_target.c","length":133,"line":"1065","name":"error","position":"82","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 17:54:30","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"POST /api/jobs - 500 - 1265ms","service":"linkprosoft-backend","timestamp":"2026-08-01 17:54:30"}
+{"level":"error","message":"Server Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 18:00:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"error":{"code":"42703","file":"parse_target.c","length":138,"line":"1065","name":"error","position":"92","routine":"checkInsertTargets","severity":"ERROR","statusCode":500},"level":"error","message":"Unhandled Error","method":"POST","path":"/api/jobs","query":{},"service":"linkprosoft-backend","statusCode":500,"timestamp":"2026-08-01 18:00:02","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"error","message":"POST /api/jobs - 500 - 1418ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:00:02"}
+{"level":"warn","message":"GET / - 404 - 3ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:33"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:33"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:33"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:06:33","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 10ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:33"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:33"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:33"}
+{"level":"warn","message":"GET / - 404 - 14ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:33"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:34"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:06:34","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 5ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:34"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:34"}
+{"level":"info","message":"GET / - 200 - 1876ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:35"}
+{"level":"info","message":"GET / - 200 - 441ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:06:36"}
+{"level":"info","message":"POST / - 201 - 1402ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:07:10"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:16:14","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 5ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:16:14","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 4ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:14"}
+{"level":"info","message":"GET / - 200 - 2503ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:16"}
+{"level":"info","message":"GET / - 200 - 449ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:16:17"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:21:06","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 6ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:06"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:06"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:06"}
+{"level":"warn","message":"Client Error Invalid input: expected number, received NaN","method":"GET","path":"/api/jobs/my-jobs","query":{},"service":"linkprosoft-backend","statusCode":400,"timestamp":"2026-08-01 18:21:07","userId":"38bf6121-0a94-499a-8a0f-7767e745a21a"}
+{"level":"warn","message":"GET /api/jobs/my-jobs - 400 - 11ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:07"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:07"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:07"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:07"}
+{"level":"warn","message":"GET / - 404 - 0ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:07"}
+{"level":"warn","message":"GET / - 404 - 1ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:07"}
+{"level":"info","message":"GET / - 200 - 1733ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:08"}
+{"level":"info","message":"GET / - 200 - 680ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:09"}
+{"level":"info","message":"GET /me - 200 - 465ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:12"}
+{"level":"info","message":"GET /me - 200 - 421ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:13"}
+{"level":"info","message":"GET /me - 200 - 1129ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:57"}
+{"level":"info","message":"GET /me - 200 - 317ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:21:57"}
+{"level":"info","message":"GET /me - 200 - 330ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:22:02"}
+{"level":"info","message":"GET /me - 200 - 277ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:22:03"}
+{"level":"info","message":"GET /me - 200 - 1458ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:22:15"}
+{"level":"info","message":"GET /me - 200 - 308ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:22:15"}
+{"level":"info","message":"GET /me - 200 - 864ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:22:42"}
+{"level":"info","message":"GET /me - 200 - 1020ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:23:11"}
+{"level":"info","message":"GET /me - 200 - 297ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:23:12"}
+{"level":"info","message":"GET /me - 200 - 379ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:23:14"}
+{"level":"info","message":"GET /me - 200 - 317ms","service":"linkprosoft-backend","timestamp":"2026-08-01 18:23:14"}

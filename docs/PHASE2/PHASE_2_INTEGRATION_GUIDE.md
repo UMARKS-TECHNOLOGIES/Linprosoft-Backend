@@ -8,7 +8,7 @@ All endpoints are prefixed with `/api` and use JSON for request/response bodies.
 ## Base URL
 
 ```
-https://linprosoft-backend.onrender.com   // or http://localhost:5000 in development
+https://linprosoft-backend.onrender.com   // or http://localhost:5020 in development
 ```
 
 All routes listed below are relative to this base URL.

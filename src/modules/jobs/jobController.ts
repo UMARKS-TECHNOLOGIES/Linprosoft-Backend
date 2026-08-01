@@ -23,6 +23,20 @@ export const listJobs = catchAsync(async (req: Request, res: Response) => {
     return ApiResponseHandler.success(res, jobs, 'Jobs retrieved');
 });
 
+export const listMyJobs = catchAsync(async (req: Request, res: Response) => {
+    const employerId = (req as any).user.id;
+    const filters = {
+        skillId: req.query.skillId ? parseInt(req.query.skillId as string) : undefined,
+        location: req.query.location as string,
+        status: req.query.status as string,
+        page: req.query.page ? parseInt(req.query.page as string) : undefined,
+        limit: req.query.limit ? parseInt(req.query.limit as string) : undefined
+    };
+
+    const jobs = await service.listEmployerJobsService(employerId, filters);
+    return ApiResponseHandler.success(res, jobs, 'Employer jobs retrieved');
+});
+
 //Get job detail's details by id
 export const getJobs = catchAsync(async (req: Request, res: Response) => {
     const id = (req as any).user.id;

@@ -6,6 +6,7 @@ import { createJobSchema, jobIdParamSchema, listJobsQuerySchema, updateJobSchema
 const router = express.Router();
 
 router.post('/', protect, validate(createJobSchema), controller.createJob); //Create a job posting
+router.get('/me', protect, validate(listJobsQuerySchema, {source: "query"}), controller.listMyJobs); //List jobs created by the logged-in employer
 router.get('/', protect,validate(listJobsQuerySchema, {source: "query"}),  controller.listJobs); //List jobs 
 router.get('/:id', protect, validate(jobIdParamSchema, { source: "params" }), controller.getJob); //Get job details
 router.put('/:id', protect, validate(jobIdParamSchema, { source: "params" }), validate(updateJobSchema), controller.updateJob);//Update job posting(employer only)

@@ -43,6 +43,14 @@ export const listJobsService = async (filters: { skillId?: number; location?: st
   };
 };
 
+export const listEmployerJobsService = async (employerId: number, filters: { skillId?: number; location?: string; status?: string; page?: number; limit?: number } = {}) => {
+  const res = await repo.findJobsByEmployer(employerId, filters as any);
+  return {
+    items: res.items.map((r: JobRow) => mapJobRowToDTO(r)),
+    pagination: res.pagination
+  };
+};
+
 
 // soft-delete job with ownership check
 export const deleteJobService = async (employerId: number, id: number) => {

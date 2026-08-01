@@ -132,3 +132,42 @@ export const getJob = async (id: number) => {
     return await findJobById(id);
 };
 
+export const findJobsByEmployer = async (employerId: number, filters: { skillId?: number; location?: string; status?: string; page?: number; limit?: number } = {}) => {
+    const where: string[] = ['deleted_at IS NULL', `employer_id = $${1}`];
+    const values: any[] = [employerId];
+    let idx = 2;
+
+    if (filters.skillId !== undefined) {
+        where.push(`skill_id = $${idx++}`);
+        values.push(filters.skillId);
+    }
+    if (filters.location) {
+        where.push(`location ILIKE $${idx++}`);
+        values.push(`%${filters.location}%`);
+    }
+    if (filters.status) {
+        where.push(`status = $${idx++}`);
+        values.push(filters.status);
+    }
+
+    const limit = filters.limit && filters.limit > 0 ? filters.limit : 20;
+    const page = filters.page && filters.page > 0 ? filters.page : 1;
+    const offset = (page - 1) * limit;
+
+    const whereClause = where.length ? `WHERE ${where.join(' AND ')}` : '';
+
+    const q = `SELECT * FROM job_postings ${whereClause} ORDER BY created_at DESC LIMIT $${idx++} OFFSET $${idx++}`;
+    values.push(limit, offset);
+
+    const res = await pool.query(q, values);
+
+    const countQ = `SELECT COUNT(*)::int AS total FROM job_postings ${whereClause}`;
+    const countRes = await pool.query(countQ, values.slice(0, values.length - 2));
+    const total = countRes.rows[0]?.total ?? 0;
+
+    return {
+        items: res.rows as JobRow[],
+        pagination: { page, limit, total, pages: Math.ceil(total / limit) }
+    };
+};
+
