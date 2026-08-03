@@ -9,11 +9,9 @@ import { OtpPurpose } from "./otpTypes";
 import bcrypt from "bcryptjs";
 import { logAuthEvent } from "../../utils/logger";
 import { env } from "../../config/environment";
-import nodemailer from "nodemailer";
 import { verify } from "jsonwebtoken";
 import { updatePassword } from "../auth/authRepository";
-import { resendOtpByApi } from "./resendOtpImplementation";
-import { findByEmail } from "../auth/authRepository";
+import { Resend } from "resend";
 
 /**
  * OTP service configuration
@@ -26,34 +24,6 @@ const otpConfig = {
   bcryptSaltRounds: 10 // For hashing OTP codes (same as password hashing strength)
 };
 
-/**
- * Create nodemailer transporter
- */
-const createTransport = async () => {
-  if (env.EMAIL_USE_ETHEREAL) {
-    const testAccount = await nodemailer.createTestAccount();
-
-    return nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      secure: false,
-      auth: {
-        user: testAccount.user,
-        pass: testAccount.pass,
-      },
-    });
-  }
-
-  return nodemailer.createTransport({
-    host: env.EMAIL_HOST,
-    port: env.EMAIL_PORT,
-    secure: env.EMAIL_SECURE, // true for 465, false for other ports
-    auth: {
-      user: env.EMAIL_USER,
-      pass: env.EMAIL_PASS,
-    },
-  });
-};
 
 /**
  * Generate and hash a new OTP code
@@ -125,20 +95,20 @@ export const sendOtPEmail = async (
       return;
     }
 
-    const transport = await createTransport();
+    const resend = new Resend(env.RESEND_API_KEY);
 
     const purposeText = purpose === "email_verification"
       ? "email verification"
       : "password reset";
 
-    const mailOptions = {
+    await resend.emails.send({
       from: env.EMAIL_FROM,
       to: email,
       subject: `Your ${purposeText} code`,
       text: `Your ${purposeText} code is: ${otpCode}\n\nThis code will expire in ${otpConfig.expiresInSeconds / 60} minutes.`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2>${purposeText === "email verification" ? "Verify Your Email" : "Password Reset"}</h2>
+          <h2>${purpose === "email_verification" ? "Verify Your Email" : "Password Reset"}</h2>
           <p>Your ${purposeText} code is:</p>
           <div style="background-color: #f4f4f4; border: 1px solid #ddd; padding: 15px; text-align: center; font-size: 24px; letter-spacing: 5px; margin: 20px 0;">
             <strong>${otpCode}</strong>
@@ -149,19 +119,7 @@ export const sendOtPEmail = async (
           <p style="font-size: 12px; color: #777;">This is an automated message, please do not reply.</p>
         </div>
       `,
-    };
-
-    const info = await transport.sendMail(mailOptions);
-
-    if (env.EMAIL_USE_ETHEREAL) {
-      const previewUrl = nodemailer.getTestMessageUrl(info);
-      if (previewUrl) {
-        console.info(`Ethereal preview URL: ${previewUrl}`);
-      }
-    }
-
-    // Close the transporter
-    transport.close();
+    });
   } catch (error) {
     console.error("Error sending OTP email:", error);
     throw new Error(`Failed to send OTP email: ${error instanceof Error ? error.message : String(error)}`);
@@ -413,39 +371,8 @@ export const resendOtP = async (
   } = {}
 ): Promise<{ otpId: string }> => {
   try {
-    const useExternal = process.env.USE_EXTERNAL_OTP === 'true';
-    if (useExternal) {
-      // Use external OTP API (Resend) for resend
-      const result = await resendOtpByApi(userId, email, purpose);
-
-      // Log audit event for OTP sent (we need userId; try to fetch by email)
-      let resolvedUserId = userId;
-      if (!resolvedUserId) {
-        const user = await findByEmail(email);
-        if (user) {
-          resolvedUserId = user.id;
-        }
-      }
-      await logAuthEvent(
-        resolvedUserId,
-        "otp_sent",
-        {
-          purpose,
-          ipAddress: auditInfo.ipAddress,
-          user_agent: auditInfo.userAgent,
-          success: true,
-          // We cannot determine if it's a resend without checking cooldown; set false
-          isResend: false,
-        }
-      );
-
-      // Return the otpId from the external API
-      return { otpId: result.otpId };
-    } else {
-      // Default: use internal OTP generation and email sending
-      const result = await generateAndSendOtP(userId, email, purpose, auditInfo);
-      return { otpId: result.otpId };
-    }
+    const result = await generateAndSendOtP(userId, email, purpose, auditInfo);
+    return { otpId: result.otpId };
   } catch (error) {
     console.error("Error in resendOtP:", error);
     throw error;

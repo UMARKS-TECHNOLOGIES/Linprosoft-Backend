@@ -8,61 +8,65 @@
  * For real email testing with Ethereal, see the commented alternative approach below.
  */
 
-// Mock nodemailer to capture sent emails instead of actually sending
-jest.mock('nodemailer');
+// Mock Resend to capture sent emails instead of actually sending
+jest.mock('resend');
 // Mock logger to avoid actual logging during tests
 jest.mock("../../../utils/logger");
 
 import * as otpService from '../otpService';
 import * as otpRepository from '../otpRepository';
-import nodemailer from 'nodemailer';
 import { OtpPurpose } from '../otpTypes';
 
-// Mock nodemailer to capture sent emails instead of actually sending
-jest.mock('nodemailer');
-// Mock logger to avoid actual logging during tests
-jest.mock("../../../utils/logger");
+// Mock user repository functions that the OTP service might depend on
+// (In a real test, you might mock these or use a test database)
+const mockFindOtpByUserIdAndPurpose = jest.fn();
+const mockCreateOtp = jest.fn();
+const mockFindLatestUnconsumedOtp = jest.fn();
+const mockFindOtpById = jest.fn();
+const mockConsumeOtp = jest.fn();
+const mockIncrementOtpAttempts = jest.fn();
+
+// Reference to the mock send function for tests to access
+let mockSend: jest.Mock;
+
+beforeEach(() => {
+  jest.clearAllMocks();
+
+  // Set up Resend mock
+  mockSend = jest.fn();
+  // Mock the Resend class constructor to return an object with emails.send
+  // We need to access the mock module; since we mocked 'resend', we can require it
+  // and mock its Resend export.
+  const resendModule = require('resend');
+  resendModule.Resend.mockImplementation(() => ({
+    emails: {
+      send: mockSend
+    }
+  }));
+
+  // Mock the repository functions
+  // In a real implementation, you would inject these dependencies
+  // For this test, we're using jest.spyOn to mock module functions
+  jest.spyOn(otpRepository, 'findOtpByUserIdAndPurpose').mockImplementation(() => mockFindOtpByUserIdAndPurpose());
+  jest.spyOn(otpRepository, 'createOtp').mockImplementation(() => mockCreateOtp());
+  jest.spyOn(otpRepository, 'findLatestUnconsumedOtp').mockImplementation(() => mockFindLatestUnconsumedOtp());
+  jest.spyOn(otpRepository, 'findOtpById').mockImplementation(() => mockFindOtpById());
+  jest.spyOn(otpRepository, 'consumeOtp').mockImplementation(() => mockConsumeOtp());
+  jest.spyOn(otpRepository, 'incrementOtpAttempts').mockImplementation(() => mockIncrementOtpAttempts());
+});
 
 describe('OTP Service - Email Flow', () => {
   const TEST_EMAIL = 'soalagideon@gmail.com';
   const TEST_USER_ID = 'test-user-id-123';
   const TEST_PURPOSE: OtpPurpose = 'email_verification';
 
-  // Mock user repository functions that the OTP service might depend on
-  // (In a real test, you might mock these or use a test database)
-  const mockFindOtpByUserIdAndPurpose = jest.fn();
-  const mockCreateOtp = jest.fn();
-  const mockFindLatestUnconsumedOtp = jest.fn();
-  const mockFindOtpById = jest.fn();
-  const mockConsumeOtp = jest.fn();
-  const mockIncrementOtpAttempts = jest.fn();
-
-  beforeEach(() => {
-    jest.clearAllMocks();
-
-    // Set up nodemailer mock
-    const mockSendMail = jest.fn();
-    const mockTransport = { sendMail: mockSendMail, close: jest.fn() };
-    (nodemailer.createTransport as jest.Mock).mockReturnValue(mockTransport);
-
-    // Mock the repository functions
-    // In a real implementation, you would inject these dependencies
-    // For this test, we're using jest.spyOn to mock module functions
-    jest.spyOn(otpRepository, 'findOtpByUserIdAndPurpose').mockImplementation(() => mockFindOtpByUserIdAndPurpose());
-    jest.spyOn(otpRepository, 'createOtp').mockImplementation(() => mockCreateOtp());
-    jest.spyOn(otpRepository, 'findLatestUnconsumedOtp').mockImplementation(() => mockFindLatestUnconsumedOtp());
-    jest.spyOn(otpRepository, 'findOtpById').mockImplementation(() => mockFindOtpById());
-    jest.spyOn(otpRepository, 'consumeOtp').mockImplementation(() => mockConsumeOtp());
-    jest.spyOn(otpRepository, 'incrementOtpAttempts').mockImplementation(() => mockIncrementOtpAttempts());
-  });
-
   /**
    * Test Case 1: Successful OTP verification
    * Steps:
-   * 1. Trigger OTP generation and sending
-   * 2. Capture the OTP code from the mocked email
-   * 3. Verify the OTP code is valid
-   * 4. Assert verification succeeds
+   *   1. Trigger OTP generation and sending
+   *   2. Capture the OTP code from the mocked email
+   *   3. Verify the OTP code is valid
+   *   4. Assert verification succeeds
    */
   test('should successfully verify a valid OTP sent via email', async () => {
     // Arrange: Setup mocks for the OTP flow
@@ -73,7 +77,7 @@ describe('OTP Service - Email Flow', () => {
     const mockOtpId = 'test-otp-id-456';
     mockCreateOtp.mockResolvedValue({ id: mockOtpId } as any);
 
-    // Act: Generate and send OTP (this will use our mocked nodemailer)
+    // Act: Generate and send OTP (this will use our mocked Resend)
     const result = await otpService.generateAndSendOtP(
       TEST_USER_ID,
       TEST_EMAIL,
@@ -85,19 +89,10 @@ describe('OTP Service - Email Flow', () => {
     expect(result).toHaveProperty('otpId', mockOtpId);
     expect(result.isResend).toBe(false);
 
-    // Extract the OTP code from the mocked nodemailer call
-    // Get the mock transport instance that was created
-    const mockCreateTransport = nodemailer.createTransport as jest.Mock;
-    const mockTransportInstance = mockCreateTransport.mock.results[0].value;
-
-    // Get the sendMail mock from the transport instance
-    const mockSendMail = mockTransportInstance.sendMail as jest.Mock;
-
-    // Verify sendMail was called
-    expect(mockSendMail).toHaveBeenCalledTimes(1);
-
-    // Extract the OTP code from the email content
-    const mailOptions = mockSendMail.mock.calls[0][0];
+    // Extract the OTP code from the mocked Resend call
+    // Get the mock send function that was created in beforeEach
+    expect(mockSend).toHaveBeenCalledTimes(1);
+    const mailOptions = mockSend.mock.calls[0][0];
     const otpCode = extractOtpFromEmail(mailOptions.text);
 
     // Assert: We successfully extracted an OTP code
@@ -135,10 +130,10 @@ describe('OTP Service - Email Flow', () => {
   /**
    * Test Case 2: Failed OTP verification (invalid code)
    * Steps:
-   * 1. Trigger OTP generation and sending
-   * 2. Capture the OTP code from the mocked email
-   * 3. Verify with an intentionally incorrect OTP code
-   * 4. Assert verification fails
+   *   1. Trigger OTP generation and sending
+   *   2. Capture the OTP code from the mocked email
+   *   3. Verify with an intentionally incorrect OTP code
+   *   4. Assert verification fails
    */
   test('should fail verification with an invalid OTP', async () => {
     // Arrange: Setup similar to first test
@@ -154,10 +149,8 @@ describe('OTP Service - Email Flow', () => {
     );
 
     // Extract OTP from email (same as before)
-    const mockCreateTransport = nodemailer.createTransport as jest.Mock;
-    const mockTransportInstance = mockCreateTransport.mock.results[0].value;
-    const mockSendMail = mockTransportInstance.sendMail as jest.Mock;
-    const mailOptions = mockSendMail.mock.calls[0][0];
+    expect(mockSend).toHaveBeenCalledTimes(1);
+    const mailOptions = mockSend.mock.calls[0][0];
     const correctOtp = extractOtpFromEmail(mailOptions.text);
 
     // Arrange for verification: Mock repository to return our OTP
@@ -191,14 +184,14 @@ describe('OTP Service - Email Flow', () => {
   });
 
   /**
-   * Test Case 3: Failed OTP verification (expired OPT)
+   * Test Case 3: Failed OTP verification (expired OTP)
    * Steps:
-   * 1. Setup an OPT that is already expired
-   * 2. Attempt verification
-   * 3. Assert verification fails due to expiration
+   *   1. Setup an OTP that is already expired
+   *   2. Attempt verification
+   *   3. Assert verification fails due to expiration
    */
   test('should fail verification with an expired OTP', async () => {
-    // Arrange: Setup expired OPT
+    // Arrange: Setup expired OTP
     const expiredOtpId = 'expired-otp-id';
     mockFindLatestUnconsumedOtp.mockResolvedValue({ id: expiredOtpId } as any);
     mockFindOtpById.mockResolvedValue({
@@ -243,38 +236,3 @@ function extractOtpFromEmail(emailText: string): string {
   }
   return match[0];
 }
-
-/**
- * ALTERNATIVE APPROACH FOR REAL ETHEREAL EMAIL TESTING
- *
- * If you want to test with actual Ethereal emails (slower but more realistic):
- *
- * 1. Install ethereal-email: npm install ethereal-email
- * 2. Create a transporter using Ethereal credentials
- * 3. Send the email via nodemailer
- * 4. Fetch the email from Ethereal's API to get the OTP
- *
- * Example setup:
- *
- * const { getTestMessageUrl } = require('nodemailer');
- *
- * // After sending email:
- * const testMessageUrl = await getTestMessageUrl(info);
- * // Then fetch from testMessageUrl to get email content
- *
- * Note: This requires network access and is slower, but tests the actual delivery.
- *
- * UNCOMMENT AND ADAPT THE FOLLOWING IF YOU PREFER REAL ETHEREAL TESTING:
- */
-// import { getTestMessageUrl } from 'nodemailer';
-// import fetch from 'node-fetch'; // or use built-in fetch in Node 18+
-//
-// describe('OTP Service - Real Ethereal Email', () => {
-//   // ... similar setup but without nodemailer mock
-//
-//   test('should verify OTP from real Ethereal email', async () => {
-//     // ... generate and send OTP (using real nodemailer with Ethereal)
-//     // ... fetch email from getTestMessageUrl(info)
-//     // ... extract OTP and verify
-//   });
-// });
