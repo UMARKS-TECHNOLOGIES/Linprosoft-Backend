@@ -29,7 +29,7 @@ const environmentSchema = z.object({
     .trim()
     .min(1, "REFRESH_TOKEN_SECRET is required"),
 
-  eFRONTEND_URL: z
+  FRONTEND_URL: z
     .string()
     .trim()
     .url()
