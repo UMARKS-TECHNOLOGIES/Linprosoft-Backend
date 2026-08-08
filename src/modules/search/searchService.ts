@@ -56,6 +56,7 @@ export const searchProfessionals = async (filters: SearchFilters): Promise<Searc
     userId: row.user_id,
     hourlyRate: row.hourly_rate === null ? null : Number(row.hourly_rate),
     bio: row.bio,
+    profession: row.profession,
     availabilityStatus: row.availability_status,
     responseTimeHours: row.response_time_hours,
     totalHoursWorked: row.total_hours_worked,
@@ -65,8 +66,8 @@ export const searchProfessionals = async (filters: SearchFilters): Promise<Searc
     updatedAt: row.updated_at,
     user: {
       id: row.user_id,
-      firstName: row.first_name,
-      lastName: row.last_name,
+      firstName: row.full_name?.split(" ")[0] ?? "",
+      lastName: row.full_name?.split(" ").slice(1).join(" ") ?? "",
       location: row.location,
     },
     skills: normalizeSkills(row.skills_json),

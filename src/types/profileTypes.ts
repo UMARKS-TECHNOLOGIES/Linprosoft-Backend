@@ -5,6 +5,7 @@ export interface ProfessionalProfileRow {
   user_id: number;
   hourly_rate: string | null;
   bio: string | null;
+  profession: string | null;
   availability_status: AvailabilityStatus | null;
   response_time_hours: number | null;
   total_hours_worked: number | null;
@@ -19,6 +20,7 @@ export interface ProfessionalProfileDTO {
   userId: number;
   hourlyRate: number | null;
   bio: string | null;
+  profession: string | null;
   availabilityStatus: AvailabilityStatus | null;
   responseTimeHours: number | null;
   totalHoursWorked: number | null;
@@ -31,6 +33,7 @@ export interface ProfessionalProfileDTO {
 export interface CreateProfileInput {
   hourlyRate?: number;
   bio?: string;
+  profession?: string;
   availabilityStatus?: AvailabilityStatus;
   responseTimeHours?: number;
 }
@@ -38,6 +41,7 @@ export interface CreateProfileInput {
 export interface UpdateProfileInput {
   hourlyRate?: number;
   bio?: string;
+  profession?: string;
   availabilityStatus?: AvailabilityStatus;
   responseTimeHours?: number;
 }

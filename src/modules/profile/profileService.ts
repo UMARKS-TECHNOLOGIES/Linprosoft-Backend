@@ -29,6 +29,7 @@ const toProfileDTO = (row: {
   user_id: number;
   hourly_rate: string | null;
   bio: string | null;
+  profession: string | null;
   availability_status: "available" | "unavailable" | "away" | null;
   response_time_hours: number | null;
   total_hours_worked: number | null;
@@ -41,6 +42,7 @@ const toProfileDTO = (row: {
   userId: row.user_id,
   hourlyRate: row.hourly_rate === null ? null : Number(row.hourly_rate),
   bio: row.bio,
+  profession: row.profession,
   availabilityStatus: row.availability_status,
   responseTimeHours: row.response_time_hours,
   totalHoursWorked: row.total_hours_worked,
@@ -120,6 +122,7 @@ export const createProfile = async (
   const created = await profileRepository.createProfile(userId, {
     hourly_rate: input.hourlyRate,
     bio: input.bio,
+    profession: input.profession,
     availability_status: input.availabilityStatus,
     response_time_hours: input.responseTimeHours,
   });
@@ -140,6 +143,7 @@ export const updateProfile = async (
   const updated = await profileRepository.updateByUserId(userId, {
     hourly_rate: input.hourlyRate,
     bio: input.bio,
+    profession: input.profession,
     availability_status: input.availabilityStatus,
     response_time_hours: input.responseTimeHours,
   });

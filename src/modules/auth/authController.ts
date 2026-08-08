@@ -9,9 +9,10 @@ import catchAsync from "../../utils/catchAsync";
 import { ApiResponseHandler } from "../../utils/response";
 import { env } from "../../config/environment";
 import logger, { logAuthEvent } from "../../utils/logger";
+import { ProfessionalType, UserType } from "../../types/userTypes";
+import crypto from "crypto";
 const accessTokenMaxAge = (Number.isFinite(env.ACCESS_TOKEN_EXPIRES_SECONDS) && env.ACCESS_TOKEN_EXPIRES_SECONDS > 0 ? env.ACCESS_TOKEN_EXPIRES_SECONDS : 1800) * 1000;
 const refreshTokenMaxAge = (Number.isFinite(env.REFRESH_TOKEN_EXPIRES_DAYS) && env.REFRESH_TOKEN_EXPIRES_DAYS > 0 ? env.REFRESH_TOKEN_EXPIRES_DAYS : 7) * 24 * 60 * 60 * 1000;
-import crypto from "crypto";
 import {
   signupSchema as SignupInput,
   loginSchema as LoginInput,
@@ -21,6 +22,93 @@ import {
   verifyResetCodeSchema as VerifyResetCodeInput,
   resetPasswordSchema as ResetPasswordInput
 } from "./authValidation";
+
+// One-time OAuth state storage. Use a shared, expiring store such as Redis when
+// the application runs in more than one process.
+const oauthStateStore = new Map<string, {
+  expiresAt: number;
+}>();
+
+type GoogleOAuthState = {
+  nonce: string;
+  role: UserType;
+  professionalType?: ProfessionalType;
+};
+
+const OAUTH_STATE_TTL_MS = 10 * 60 * 1000;
+const OAUTH_NONCE_COOKIE = "google_oauth_nonce";
+
+const oauthNonceCookieOptions = {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax" as const,
+  path: "/api/auth/google"
+};
+
+const nonceMatches = (expectedNonce: string, actualNonce: unknown): boolean => {
+  if (typeof actualNonce !== "string") return false;
+
+  const expected = Buffer.from(expectedNonce, "utf-8");
+  const actual = Buffer.from(actualNonce, "utf-8");
+  return expected.length === actual.length && crypto.timingSafeEqual(expected, actual);
+};
+
+const removeExpiredOAuthStates = (): void => {
+  const now = Date.now();
+  for (const [nonce, state] of oauthStateStore) {
+    if (state.expiresAt <= now) {
+      oauthStateStore.delete(nonce);
+    }
+  }
+};
+
+const isValidGoogleOAuthState = (value: unknown): value is GoogleOAuthState => {
+  if (!value || typeof value !== "object") return false;
+
+  const { nonce, role, professionalType } = value as Record<string, unknown>;
+  const normalizedProfessionalType = professionalType === "none-digital"
+    ? "non_digital"
+    : professionalType;
+
+  return typeof nonce === "string" && nonce.length > 0 &&
+    (role === "employer" || role === "professional") &&
+    (normalizedProfessionalType === undefined || normalizedProfessionalType === "digital" || normalizedProfessionalType === "non_digital");
+};
+
+const parseGoogleOAuthState = (state: string): GoogleOAuthState => {
+  const parsedState = JSON.parse(decodeBase64UrlState(state)) as Record<string, unknown>;
+  if (!isValidGoogleOAuthState(parsedState)) {
+    throw new Error("Malformed Google OAuth state");
+  }
+
+  const rawProfessionalType = parsedState.professionalType as unknown;
+  return {
+    nonce: parsedState.nonce as string,
+    role: parsedState.role as UserType,
+    professionalType: (rawProfessionalType === "none-digital"
+      ? "non_digital"
+      : rawProfessionalType) as ProfessionalType | undefined
+  };
+};
+
+const encodeGoogleOAuthState = (state: GoogleOAuthState): string =>
+  Buffer.from(JSON.stringify(state), "utf-8")
+    .toString("base64")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+
+// Helper function to decode base64url string
+function decodeBase64UrlState(state: string): string {
+  // Replace - with + and _ with /
+  let decoded = state.replace(/-/g, '+').replace(/_/g, '/');
+  // Add padding until length is a multiple of 4
+  const pad = decoded.length % 4;
+  if (pad) {
+    decoded += '='.repeat(4 - pad);
+  }
+  return Buffer.from(decoded, 'base64').toString('utf-8');
+}
 
 const normalizeIpAddress = (req: Request): string | undefined => {
   const forwardedFor = req.headers["x-forwarded-for"];
@@ -73,14 +161,37 @@ const getRedirectUri = (): string => {
   return process.env.GOOGLE_REDIRECT_URI as string;
 };
 
-export const startGoogleOAuth = catchAsync(async (_req: Request, res: Response) => {
-  // Generate a random state parameter for CSRF protection
-  const state = crypto.randomBytes(16).toString('hex');
+export const startGoogleOAuth = catchAsync(async (req: Request, res: Response) => {
+  const suppliedState = req.query.state;
+  if (typeof suppliedState !== "string") {
+    return ApiResponseHandler.error(res, "invalid_state", "OAuth state is required", 400);
+  }
 
-  // In a production app, you would store this state in the session or Redis
-  // For MVP, we'll pass it through and validate it in the callback
-  // For simplicity in this MVP, we're not implementing state storage,
-  // but in a real app you should implement proper state validation
+  let frontendState: GoogleOAuthState;
+  try {
+    frontendState = parseGoogleOAuthState(suppliedState);
+  } catch (error) {
+    logger.warn("Failed to decode Google OAuth state", {
+      error: error instanceof Error ? error.message : "Unknown error"
+    });
+    return ApiResponseHandler.error(res, "invalid_state", "OAuth state is invalid", 400);
+  }
+
+  removeExpiredOAuthStates();
+  oauthStateStore.set(frontendState.nonce, { expiresAt: Date.now() + OAUTH_STATE_TTL_MS });
+  res.cookie(OAUTH_NONCE_COOKIE, frontendState.nonce, {
+    ...oauthNonceCookieOptions,
+    maxAge: OAUTH_STATE_TTL_MS
+  });
+
+  // Re-encode canonical data so the callback can decode the role and type after
+  // Google returns the state unchanged.
+  const googleState = encodeGoogleOAuthState(frontendState);
+  logger.info("Stored Google OAuth nonce", {
+    nonce: "[REDACTED]",
+    role: frontendState.role,
+    professionalType: frontendState.professionalType
+  });
 
   const redirectUri = getRedirectUri();
   const params = new URLSearchParams({
@@ -88,17 +199,18 @@ export const startGoogleOAuth = catchAsync(async (_req: Request, res: Response) 
     redirect_uri: redirectUri,
     response_type: "code",
     scope: "openid email profile",
-    state: state,
+    state: googleState,
     access_type: "offline", // Request refresh token
     prompt: "consent" // Force consent screen to get refresh token
   });
 
   const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
-  res.redirect(googleAuthUrl);
+  return res.redirect(googleAuthUrl);
 });
 
 export const handleGoogleOAuthCallback = catchAsync(async (req: Request, res: Response) => {
   const code = req.query.code as string;
+  const stateParam = req.query.state as string | undefined;
 
   if (!code) {
     return ApiResponseHandler.error(
@@ -109,8 +221,49 @@ export const handleGoogleOAuthCallback = catchAsync(async (req: Request, res: Re
     );
   }
 
-  // TODO: Validate state parameter to prevent CSRF attacks
-  // For now, we'll skip state validation in MVP but note it should be implemented
+  if (!stateParam) {
+    return ApiResponseHandler.error(res, "invalid_state", "OAuth state is required", 400);
+  }
+
+  let state: GoogleOAuthState;
+  try {
+    state = parseGoogleOAuthState(stateParam);
+  } catch {
+    return ApiResponseHandler.error(res, "invalid_state", "OAuth state is invalid", 400);
+  }
+
+  const storedState = oauthStateStore.get(state.nonce);
+  const cookieNonceMatches = nonceMatches(state.nonce, req.cookies?.[OAUTH_NONCE_COOKIE]);
+  // Consume the nonce before exchanging the authorization code, preventing replay.
+  oauthStateStore.delete(state.nonce);
+  res.clearCookie(OAUTH_NONCE_COOKIE, oauthNonceCookieOptions);
+
+  if (!storedState && !cookieNonceMatches) {
+    logger.warn("Google OAuth state validation failed", {
+      nonce: "[REDACTED]",
+      hasStoredState: false,
+      hasMatchingNonceCookie: false
+    });
+    return ApiResponseHandler.error(res, "invalid_state", "OAuth state is invalid or already used", 400);
+  }
+  if (storedState && storedState.expiresAt <= Date.now()) {
+    return ApiResponseHandler.error(res, "expired_state", "OAuth state has expired", 401);
+  }
+
+  if (!storedState) {
+    logger.info("Google OAuth nonce validated using the HTTP-only cookie after in-memory state was unavailable", {
+      nonce: "[REDACTED]"
+    });
+  }
+
+  const roleFromState = state.role;
+  const professionalTypeFromState = roleFromState === "employer" ? null : state.professionalType;
+
+  logger.info("Google OAuth state decoded and nonce validated", {
+    nonce: "[REDACTED]",
+    role: roleFromState,
+    professionalType: professionalTypeFromState
+  });
 
   try {
     // Exchange code for tokens
@@ -126,19 +279,25 @@ export const handleGoogleOAuthCallback = catchAsync(async (req: Request, res: Re
     // Get user info from Google
     const googleUserInfo = await service.getGoogleUserInfo(tokenResponse.access_token);
 
-    // Read optional role and professional_type from redirect query params (frontend may append these)
-    const roleParam = req.query.role as string | undefined;
-    const professionalTypeParam = req.query.professional_type as string | undefined;
+    const auditInfo = {
+      ipAddress: normalizeIpAddress(req),
+      userAgent: req.get("User-Agent") || undefined
+    };
 
-    // Find or create user, passing selected role/professional type if provided
+    logger.info("Google OAuth callback received", {
+      email: googleUserInfo.email,
+      role: roleFromState,
+      professional_type: professionalTypeFromState,
+      ipAddress: auditInfo.ipAddress,
+      userAgent: auditInfo.userAgent
+    });
+
+    // Find or create user with the role and professional type decoded from state.
     const result = await service.findOrCreateGoogleUser(
       googleUserInfo,
-      {
-        ipAddress: normalizeIpAddress(req),
-        userAgent: req.get("User-Agent") || undefined
-      },
-      roleParam as any,
-      professionalTypeParam as any
+      auditInfo,
+      roleFromState,
+      professionalTypeFromState
     );
 
     // Set HTTP-only cookies (security layer)

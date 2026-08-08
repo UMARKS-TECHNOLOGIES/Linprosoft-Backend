@@ -1279,7 +1279,8 @@ export const findOrCreateGoogleUser = async (
     ipAddress?: string;
     userAgent?: string;
   } = {},
-  // Optional role and professional type coming from frontend (e.g., via redirect query params)
+  // Required only when Google creates a new account. Existing users already
+  // have their role and professional type persisted in the database.
   selectedRole?: UserType,
   selectedProfessionalType?: "digital" | "non_digital" | null
 ): Promise<{ user: UserResponseDTO; accessToken: string; refreshToken: string }> => {
@@ -1353,16 +1354,19 @@ export const findOrCreateGoogleUser = async (
         refreshToken
       };
     } else {
-      // User doesn't exist, create new user
-      // Use role/professional type provided by frontend if available, otherwise fall back to employer
-      const defaultRole: UserType = selectedRole ?? "employer"; // Default to employer
+      // Create new user with Google ID using role and professional type from frontend
+      if (!selectedRole) {
+        throw new AppError("Selected role is required for Google signup", 400);
+      }
+      if (selectedRole === "professional" && !selectedProfessionalType) {
+        throw new AppError("professional_type is required when role is 'professional'", 400);
+      }
 
-      // Create new user with Google ID
       const newUser = await repo.createUser(
         googleUserInfo.email,
         "", // Empty password for Google users
         googleUserInfo.name,
-        defaultRole,
+        selectedRole,
         selectedProfessionalType ?? null, // professional_type - may be provided from frontend
         true, // isEmailVerified - Google emails are pre-verified
         null, // phone

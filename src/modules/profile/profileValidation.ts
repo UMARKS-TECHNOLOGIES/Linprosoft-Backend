@@ -7,6 +7,7 @@ export const availabilityStatusSchema = z.enum(["available", "unavailable", "awa
 export const createProfileSchema = z.object({
   hourlyRate: z.number().positive().max(1000000).optional(),
   bio: z.string().trim().max(2000).optional(),
+  profession: z.string().trim().max(100).optional(),
   availabilityStatus: availabilityStatusSchema.optional(),
   responseTimeHours: z.number().int().min(1).max(720).optional(),
 });

@@ -5,11 +5,11 @@ import { SearchFilters, SearchSortBy } from "../../types/searchTypes";
 interface SearchRow {
   profile_id: number;
   user_id: number;
-  first_name: string;
-  last_name: string;
+  full_name: string | null;
   location: string | null;
   hourly_rate: string | null;
   bio: string | null;
+  profession: string | null;
   availability_status: "available" | "unavailable" | "away" | null;
   response_time_hours: number | null;
   total_hours_worked: number | null;
@@ -97,11 +97,11 @@ export const searchProfessionals = async (filters: SearchFilters): Promise<Searc
     SELECT
       pp.id AS profile_id,
       pp.user_id,
-      u.first_name,
-      u.last_name,
+      u.full_name,
       u.location,
       pp.hourly_rate,
       pp.bio,
+      pp.profession,
       pp.availability_status,
       pp.response_time_hours,
       pp.total_hours_worked,

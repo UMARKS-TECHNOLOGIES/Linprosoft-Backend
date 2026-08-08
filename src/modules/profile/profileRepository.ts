@@ -5,6 +5,7 @@ import { ProfessionalProfileRow } from "../../types/profileTypes";
 interface UpdateProfileRowInput {
   hourly_rate?: number;
   bio?: string;
+  profession?: string;
   availability_status?: "available" | "unavailable" | "away";
   response_time_hours?: number;
 }
@@ -16,8 +17,8 @@ export const createProfile = async (
 ): Promise<ProfessionalProfileRow> => {
   const query = `
     INSERT INTO professional_profiles (
-      user_id, hourly_rate, bio, availability_status, response_time_hours
-    ) VALUES ($1, $2, $3, $4, $5)
+      user_id, hourly_rate, bio, profession, availability_status, response_time_hours
+    ) VALUES ($1, $2, $3, $4, $5, $6)
     RETURNING *
   `;
 
@@ -25,6 +26,7 @@ export const createProfile = async (
     userId,
     input.hourly_rate ?? null,
     input.bio ?? null,
+    input.profession ?? null,
     input.availability_status ?? "available",
     input.response_time_hours ?? null,
   ];
@@ -77,6 +79,11 @@ export const updateByUserId = async (
   if (input.bio !== undefined) {
     values.push(input.bio);
     fields.push(`bio = $${values.length}`);
+  }
+
+  if (input.profession !== undefined) {
+    values.push(input.profession);
+    fields.push(`profession = $${values.length}`);
   }
 
   if (input.availability_status !== undefined) {
