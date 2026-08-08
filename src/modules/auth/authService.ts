@@ -411,8 +411,7 @@ export const resendOtP = async (
     const user = await repo.findByEmail(email);
 
     if (!user) {
-      // For security, don't reveal if user exists
-      // But still log the attempt for monitoring
+      // For security, don't reveal whether the user exists. Log the attempt silently and return generic success.
       await logAuthEvent(
         null, // No user ID
         `resend_otp_${purpose}`,
@@ -420,12 +419,13 @@ export const resendOtP = async (
           email,
           ipAddress: auditInfo.ipAddress,
           user_agent: auditInfo.userAgent,
-          success: false,
-          reason: "user_not_found"
+          success: true,
+          note: "user_not_found_silent"
         }
       );
 
-      throw new AppError("If the email exists in our system, a new OTP has been sent", 400);
+      // Return empty otpId so controller can reply with a generic success message
+      return { otpId: "" };
     }
 
     // Generate and send OTP (this will handle cooldown checking)
@@ -445,7 +445,7 @@ export const resendOtP = async (
         ipAddress: auditInfo.ipAddress,
         user_agent: auditInfo.userAgent,
         success: true,
-        isResend: true
+        isResend: result?.isResend === true
       }
     );
 
@@ -1278,7 +1278,10 @@ export const findOrCreateGoogleUser = async (
   auditInfo: {
     ipAddress?: string;
     userAgent?: string;
-  } = {}
+  } = {},
+  // Optional role and professional type coming from frontend (e.g., via redirect query params)
+  selectedRole?: UserType,
+  selectedProfessionalType?: "digital" | "non_digital" | null
 ): Promise<{ user: UserResponseDTO; accessToken: string; refreshToken: string }> => {
   try {
     // Check if user already exists with this Google ID or email
@@ -1351,8 +1354,8 @@ export const findOrCreateGoogleUser = async (
       };
     } else {
       // User doesn't exist, create new user
-      // For now, we'll assign a default role - in a real app, this might come from frontend choice
-      const defaultRole: UserType = "employer"; // Default to employer, could be made configurable
+      // Use role/professional type provided by frontend if available, otherwise fall back to employer
+      const defaultRole: UserType = selectedRole ?? "employer"; // Default to employer
 
       // Create new user with Google ID
       const newUser = await repo.createUser(
@@ -1360,7 +1363,7 @@ export const findOrCreateGoogleUser = async (
         "", // Empty password for Google users
         googleUserInfo.name,
         defaultRole,
-        null, // professional_type - will be set during onboarding
+        selectedProfessionalType ?? null, // professional_type - may be provided from frontend
         true, // isEmailVerified - Google emails are pre-verified
         null, // phone
         null, // location

@@ -16,6 +16,7 @@ jest.mock("../../../utils/logger");
 import * as otpService from '../otpService';
 import * as otpRepository from '../otpRepository';
 import { OtpPurpose } from '../otpTypes';
+import bcrypt from 'bcryptjs';
 
 // Mock user repository functions that the OTP service might depend on
 // (In a real test, you might mock these or use a test database)
@@ -47,12 +48,12 @@ beforeEach(() => {
   // Mock the repository functions
   // In a real implementation, you would inject these dependencies
   // For this test, we're using jest.spyOn to mock module functions
-  jest.spyOn(otpRepository, 'findOtpByUserIdAndPurpose').mockImplementation(() => mockFindOtpByUserIdAndPurpose());
-  jest.spyOn(otpRepository, 'createOtp').mockImplementation(() => mockCreateOtp());
-  jest.spyOn(otpRepository, 'findLatestUnconsumedOtp').mockImplementation(() => mockFindLatestUnconsumedOtp());
-  jest.spyOn(otpRepository, 'findOtpById').mockImplementation(() => mockFindOtpById());
-  jest.spyOn(otpRepository, 'consumeOtp').mockImplementation(() => mockConsumeOtp());
-  jest.spyOn(otpRepository, 'incrementOtpAttempts').mockImplementation(() => mockIncrementOtpAttempts());
+  jest.spyOn(otpRepository, 'findOtpByUserIdAndPurpose').mockImplementation((...args: any[]) => mockFindOtpByUserIdAndPurpose(...args));
+  jest.spyOn(otpRepository, 'createOtp').mockImplementation((...args: any[]) => mockCreateOtp(...args));
+  jest.spyOn(otpRepository, 'findLatestUnconsumedOtp').mockImplementation((...args: any[]) => mockFindLatestUnconsumedOtp(...args));
+  jest.spyOn(otpRepository, 'findOtpById').mockImplementation((...args: any[]) => mockFindOtpById(...args));
+  jest.spyOn(otpRepository, 'consumeOtp').mockImplementation((...args: any[]) => mockConsumeOtp(...args));
+  jest.spyOn(otpRepository, 'incrementOtpAttempts').mockImplementation((...args: any[]) => mockIncrementOtpAttempts(...args));
 });
 
 describe('OTP Service - Email Flow', () => {
@@ -104,7 +105,8 @@ describe('OTP Service - Email Flow', () => {
       id: mockOtpId,
       user_id: TEST_USER_ID,
       purpose: TEST_PURPOSE,
-      code_hash: otpService.generateHashedOtP().codeHash, // Get actual hash
+      // Use bcrypt to hash the OTP code extracted from the mocked email so verification matches
+      code_hash: bcrypt.hashSync(otpCode, 10),
       attempts: 0,
       max_attempts: 5,
       expires_at: new Date(Date.now() + 10 * 60 * 1000), // 10 minutes from now
@@ -159,7 +161,7 @@ describe('OTP Service - Email Flow', () => {
       id: 'test-otp-id-789',
       user_id: TEST_USER_ID,
       purpose: TEST_PURPOSE,
-      code_hash: otpService.generateHashedOtP().codeHash,
+      code_hash: bcrypt.hashSync(correctOtp, 10),
       attempts: 0,
       max_attempts: 5,
       expires_at: new Date(Date.now() + 10 * 60 * 1000),

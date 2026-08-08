@@ -26,8 +26,8 @@ const otpService = require('./dist/modules/otp/otpService');
 (async () => {
   try {
     // Use a test userId - must exist in the users table
-    const userId = '01b697c2-d48b-456a-96bd-c7b8d0b7343e';
-    const email = 'soalagideon@gmail.com'; // target email as requested
+    const userId = '8aa6829e-66de-44e9-be46-8cbe73239a36';
+    const email = 'gidsoala@gmail.com'; // target email as requested
     const purpose = 'email_verification';
 
     console.log('Generating and sending OTP...');

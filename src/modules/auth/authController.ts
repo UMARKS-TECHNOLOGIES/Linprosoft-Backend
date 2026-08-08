@@ -126,11 +126,20 @@ export const handleGoogleOAuthCallback = catchAsync(async (req: Request, res: Re
     // Get user info from Google
     const googleUserInfo = await service.getGoogleUserInfo(tokenResponse.access_token);
 
-    // Find or create user
-    const result = await service.findOrCreateGoogleUser(googleUserInfo, {
-      ipAddress: normalizeIpAddress(req),
-      userAgent: req.get("User-Agent") || undefined
-    });
+    // Read optional role and professional_type from redirect query params (frontend may append these)
+    const roleParam = req.query.role as string | undefined;
+    const professionalTypeParam = req.query.professional_type as string | undefined;
+
+    // Find or create user, passing selected role/professional type if provided
+    const result = await service.findOrCreateGoogleUser(
+      googleUserInfo,
+      {
+        ipAddress: normalizeIpAddress(req),
+        userAgent: req.get("User-Agent") || undefined
+      },
+      roleParam as any,
+      professionalTypeParam as any
+    );
 
     // Set HTTP-only cookies (security layer)
     res.cookie("accessToken", result.accessToken, {
