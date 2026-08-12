@@ -23,13 +23,13 @@ interface SearchRow {
 // Helper payload used by the WHERE-clause builder.
 interface QueryBuildResult {
   whereClause: string;
-  values: Array<number | number[] | string>;
+  values: Array<number | number[] | string | string[]>;
 }
 
 // Builds reusable filter conditions so the list query and count query stay perfectly in sync.
 const buildWhereClause = (filters: SearchFilters): QueryBuildResult => {
   const conditions: string[] = ["u.deleted_at IS NULL"];
-  const values: Array<number | number[] | string> = [];
+  const values: Array<number | number[] | string | string[]> = [];
 
   if (filters.skills && filters.skills.length > 0) {
     values.push(filters.skills);
@@ -65,6 +65,28 @@ const buildWhereClause = (filters: SearchFilters): QueryBuildResult => {
   if (filters.availabilityStatus) {
     values.push(filters.availabilityStatus);
     conditions.push(`pp.availability_status = $${values.length}`);
+  }
+
+  if (filters.inferredProfession) {
+    values.push(filters.inferredProfession);
+    conditions.push(`LOWER(COALESCE(pp.profession, '')) = LOWER($${values.length})`);
+  }
+  if (filters.location) {
+    values.push(filters.location);
+    conditions.push(`LOWER(COALESCE(u.location, '')) = LOWER($${values.length})`);
+  }
+  if (filters.budgetMin !== undefined) {
+    values.push(filters.budgetMin);
+    conditions.push(`COALESCE(pp.hourly_rate, 0) >= $${values.length}`);
+  }
+  if (filters.budgetMax !== undefined) {
+    values.push(filters.budgetMax);
+    conditions.push(`COALESCE(pp.hourly_rate, 0) <= $${values.length}`);
+  }
+  if (filters.inferredSkill || (filters.inferredKeywords && filters.inferredKeywords.length > 0)) {
+    const terms = [filters.inferredSkill, ...(filters.inferredKeywords ?? [])].filter((term): term is string => Boolean(term));
+    values.push(terms);
+    conditions.push(`EXISTS (SELECT 1 FROM professional_skills pss JOIN skills ss ON ss.id = pss.skill_id WHERE pss.professional_id = pp.id AND LOWER(ss.name) = ANY(SELECT LOWER(unnest($${values.length}::text[]))))`);
   }
 
   return {

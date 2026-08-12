@@ -13,6 +13,12 @@ export interface SearchFilters {
   sortBy: SearchSortBy;
   page: number;
   limit: number;
+  inferredProfession?: string;
+  inferredSkill?: string;
+  inferredKeywords?: string[];
+  location?: string;
+  budgetMin?: number;
+  budgetMax?: number;
 }
 
 export interface SearchProfessionalDTO extends ProfessionalProfileDetailDTO {

@@ -20,6 +20,7 @@ import assignmentsRoutes from './modules/assignments/assignmentRoutes';
 import paymentsRoutes from "./modules/payments/paymentsRoutes";
 import adminPaymentsRoutes from "./modules/payments/adminPaymentsRoutes";
 import reviewRoutes from "./modules/reviews/reviewsRoutes";
+import waitlistRoutes from "./modules/waitlist/waitlistRoutes";
 import { env } from "./config/environment";
 import {
   generalLimiter,
@@ -135,6 +136,7 @@ app.use("/api/payments", paymentsRoutes);
 // Admin payment approval endpoints (router enforces admin role)
 app.use("/api/admin/payments", adminPaymentsRoutes);
 app.use("/api/reviews", reviewRoutes);
+app.use("/api/waitlist", waitlistRoutes);
 
 // Health check endpoint
 app.get("/health", (_req: Request, res: Response) => {

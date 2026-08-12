@@ -19,6 +19,11 @@ const environmentSchema = z.object({
     .trim()
     .min(1, "DATABASE_URL is required"),
 
+  REDIS_URL: z
+    .string()
+    .trim()
+    .default("redis://localhost:6379"),
+
   JWT_SECRET: z
     .string()
     .trim()
