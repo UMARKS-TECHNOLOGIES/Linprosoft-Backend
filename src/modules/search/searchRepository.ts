@@ -31,6 +31,11 @@ const buildWhereClause = (filters: SearchFilters): QueryBuildResult => {
   const conditions: string[] = ["u.deleted_at IS NULL"];
   const values: Array<number | number[] | string | string[]> = [];
 
+  if (filters.profession) {
+    values.push(`%${filters.profession.trim()}%`);
+    conditions.push(`LOWER(COALESCE(pp.profession, '')) ILIKE LOWER($${values.length})`);
+  }
+
   if (filters.skills && filters.skills.length > 0) {
     values.push(filters.skills);
     // `EXISTS` keeps the parent profile rows unique while still filtering by linked skills.

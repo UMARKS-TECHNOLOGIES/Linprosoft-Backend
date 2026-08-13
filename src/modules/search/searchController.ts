@@ -5,11 +5,26 @@ import logger from "../../utils/logger";
 import { ApiResponseHandler } from "../../utils/response";
 import * as searchService from "./searchService";
 import { parseQuery } from "./searchParserService";
-import { SearchFilters } from "../../types/searchTypes";
+import { SearchFilters, SearchSortBy } from "../../types/searchTypes";
 
 // Runs the professional discovery query using the already-validated query-string filters.
 export const searchProfessionals = catchAsync(async (req: Request, res: Response) => {
-  const result = await searchService.searchProfessionals(req.query as never);
+  const query = req.query as Record<string, unknown>;
+
+  const filters: SearchFilters = {
+    ...(query.profession ? { profession: String(query.profession).trim() } : {}),
+    ...(query.skills ? { skills: Array.isArray(query.skills) ? query.skills.map(Number) : [Number(query.skills)] } : {}),
+    ...(query.minRating !== undefined ? { minRating: Number(query.minRating) } : {}),
+    ...(query.maxRating !== undefined ? { maxRating: Number(query.maxRating) } : {}),
+    ...(query.minRate !== undefined ? { minRate: Number(query.minRate) } : {}),
+    ...(query.maxRate !== undefined ? { maxRate: Number(query.maxRate) } : {}),
+    ...(query.availabilityStatus ? { availabilityStatus: query.availabilityStatus as any } : {}),
+    ...(query.sortBy ? { sortBy: query.sortBy as SearchSortBy } : { sortBy: "rating_desc" }),
+    page: Number(query.page ?? 1),
+    limit: Number(query.limit ?? 20),
+  };
+
+  const result = await searchService.searchProfessionals(filters);
 
   return ApiResponseHandler.success(
     res,

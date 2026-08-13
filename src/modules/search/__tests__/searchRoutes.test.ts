@@ -1,3 +1,4 @@
+import { describe, expect, it, jest } from "@jest/globals";
 import express from "express";
 import request from "supertest";
 import router from "../searchRoutes";
@@ -8,10 +9,13 @@ import { errorHandler } from "../../../middleware/errorMiddleware";
 jest.mock("../searchParserService");
 jest.mock("../searchService");
 
+const mockParseQuery = parser.parseQuery as jest.MockedFunction<typeof parser.parseQuery>;
+const mockSearchProfessionals = searchService.searchProfessionals as jest.MockedFunction<typeof searchService.searchProfessionals>;
+
 describe("POST /api/search/professionals", () => {
   it("returns professionals, pagination metadata, and parsed query", async () => {
-    (parser.parseQuery as jest.Mock).mockResolvedValue({ intent: "search_professional", primaryProfession: "plumber", primarySkill: "plumbing repair", keywords: ["sink"], locationHint: "Lagos", priceIntent: null, confidence: 0.9, parserSource: "rule", rawQuery: "fix sink", normalizedQuery: "fix sink", filters: { location: "Lagos" } });
-    (searchService.searchProfessionals as jest.Mock).mockResolvedValue({ professionals: [{ id: 1 }], total: 1, page: 1, limit: 20, pages: 1 });
+    mockParseQuery.mockResolvedValue({ intent: "search_professional", primaryProfession: "plumber", primarySkill: "plumbing repair", keywords: ["sink"], locationHint: "Lagos", priceIntent: null, confidence: 0.9, parserSource: "rule", rawQuery: "fix sink", normalizedQuery: "fix sink", filters: { location: "Lagos" } });
+    mockSearchProfessionals.mockResolvedValue({ professionals: [{ id: 1 }] as any, total: 1, page: 1, limit: 20, pages: 1 });
     const app = express(); app.use(express.json()); app.use("/api/search", router); app.use(errorHandler);
     const response = await request(app).post("/api/search/professionals").send({ query: "fix sink", location: "Lagos" });
     expect(response.status).toBe(200);
@@ -25,5 +29,30 @@ describe("POST /api/search/professionals", () => {
     const app = express(); app.use(express.json()); app.use("/api/search", router); app.use(errorHandler);
     const response = await request(app).post("/api/search/professionals").send({ query: "" });
     expect(response.status).toBe(400);
+  });
+});
+
+describe("GET /api/search/professionals - Search by profession name", () => {
+  it("passes profession filter down to search service", async () => {
+    mockSearchProfessionals.mockResolvedValue({
+      professionals: [{ id: 1, profession: "Carpenter" }] as any,
+      total: 1,
+      page: 1,
+      limit: 20,
+      pages: 1,
+    });
+    const app = express();
+    app.use(express.json());
+    app.use("/api/search", router);
+    app.use(errorHandler);
+
+    const response = await request(app)
+      .get("/api/search/professionals")
+      .query({ profession: "Carpenter", page: 1, limit: 20 });
+
+    expect(response.status).toBe(200);
+    expect(searchService.searchProfessionals).toHaveBeenCalledWith(
+      expect.objectContaining({ profession: "Carpenter" })
+    );
   });
 });

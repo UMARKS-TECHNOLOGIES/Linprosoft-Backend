@@ -23,6 +23,7 @@ const skillsParser = z.preprocess((value) => {
 // Validation for the main professional search endpoint.
 export const searchQuerySchema = z
   .object({
+    profession: z.string().trim().max(100).optional(),
     skills: skillsParser,
     minRating: z.coerce.number().min(0).max(5).optional(),
     maxRating: z.coerce.number().min(0).max(5).optional(),

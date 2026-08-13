@@ -4,6 +4,7 @@ import { SkillDTO } from "./skillTypes";
 export type SearchSortBy = "rating_desc" | "rate_asc" | "recent_desc";
 
 export interface SearchFilters {
+  profession?: string;
   skills?: number[];
   minRating?: number;
   maxRating?: number;

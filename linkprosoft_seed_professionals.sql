@@ -103,132 +103,132 @@ ON CONFLICT (name) DO NOTHING;
 -- ============================================================================
 
 -- Plumbers (5)
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 5000, 'Expert plumber with 10+ years of experience in residential and commercial plumbing services.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 5000, 'Expert plumber with 10+ years of experience in residential and commercial plumbing services.', 'plumber', 'available', 2
 FROM users WHERE email = 'plumber1@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 4500, 'Experienced plumber specializing in pipe installation, repairs and maintenance.', 'available', 3
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 4500, 'Experienced plumber specializing in pipe installation, repairs and maintenance.', 'plumber', 'available', 3
 FROM users WHERE email = 'plumber2@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 5500, 'Licensed plumber offering same-day service for urgent plumbing emergencies.', 'available', 1
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 5500, 'Licensed plumber offering same-day service for urgent plumbing emergencies.', 'plumber', 'available', 1
 FROM users WHERE email = 'plumber3@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 4800, 'Professional plumber with expertise in modern plumbing systems and fixtures.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 4800, 'Professional plumber with expertise in modern plumbing systems and fixtures.', 'plumber', 'available', 2
 FROM users WHERE email = 'plumber4@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 5200, 'Certified plumber providing comprehensive plumbing solutions for homes and offices.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 5200, 'Certified plumber providing comprehensive plumbing solutions for homes and offices.', 'plumber', 'available', 2
 FROM users WHERE email = 'plumber5@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
 -- Carpenters (5)
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 6000, 'Master carpenter specializing in custom furniture and wood finishing.', 'available', 3
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 6000, 'Master carpenter specializing in custom furniture and wood finishing.', 'carpenter', 'available', 3
 FROM users WHERE email = 'carpenter1@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 5500, 'Experienced carpenter with expertise in wardrobe installations and kitchen cabinetry.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 5500, 'Experienced carpenter with expertise in wardrobe installations and kitchen cabinetry.', 'carpenter', 'available', 2
 FROM users WHERE email = 'carpenter2@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 5800, 'Professional carpenter offering quality craftsmanship and attention to detail.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 5800, 'Professional carpenter offering quality craftsmanship and attention to detail.', 'carpenter', 'available', 2
 FROM users WHERE email = 'carpenter3@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 6200, 'Skilled carpenter specializing in contemporary furniture design and installation.', 'available', 3
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 6200, 'Skilled carpenter specializing in contemporary furniture design and installation.', 'carpenter', 'available', 3
 FROM users WHERE email = 'carpenter4@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 5600, 'Experienced carpenter with track record of delivering high-quality bespoke pieces.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 5600, 'Experienced carpenter with track record of delivering high-quality bespoke pieces.', 'carpenter', 'available', 2
 FROM users WHERE email = 'carpenter5@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
 -- Web Developers/Designers (5) - Digital
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 20000, 'Full-stack developer with 8+ years building responsive web applications.', 'available', 4
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 20000, 'Full-stack developer with 8+ years building responsive web applications.', 'web developer', 'available', 4
 FROM users WHERE email = 'webdev1@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 18000, 'Web designer and developer creating modern, user-friendly digital experiences.', 'available', 4
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 18000, 'Web designer and developer creating modern, user-friendly digital experiences.', 'web developer', 'available', 4
 FROM users WHERE email = 'webdev2@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 22000, 'Senior developer specializing in e-commerce and business websites.', 'available', 5
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 22000, 'Senior developer specializing in e-commerce and business websites.', 'web developer', 'available', 5
 FROM users WHERE email = 'webdev3@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 17000, 'Frontend developer creating beautiful and performant web interfaces.', 'available', 4
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 17000, 'Frontend developer creating beautiful and performant web interfaces.', 'web developer', 'available', 4
 FROM users WHERE email = 'webdev4@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 19000, 'Web development specialist with focus on mobile-responsive design and SEO.', 'available', 4
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 19000, 'Web development specialist with focus on mobile-responsive design and SEO.', 'web developer', 'available', 4
 FROM users WHERE email = 'webdev5@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
 -- Electricians (5)
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 6500, 'Licensed electrician with expertise in domestic and commercial electrical work.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 6500, 'Licensed electrician with expertise in domestic and commercial electrical work.', 'electrician', 'available', 2
 FROM users WHERE email = 'electrician1@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 6000, 'Professional electrician specializing in wiring, diagnostics and fault finding.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 6000, 'Professional electrician specializing in wiring, diagnostics and fault finding.', 'electrician', 'available', 2
 FROM users WHERE email = 'electrician2@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 6800, 'Certified electrician offering emergency electrical services and installations.', 'available', 1
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 6800, 'Certified electrician offering emergency electrical services and installations.', 'electrician', 'available', 1
 FROM users WHERE email = 'electrician3@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 6200, 'Experienced electrician with knowledge of modern electrical systems and safety standards.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 6200, 'Experienced electrician with knowledge of modern electrical systems and safety standards.', 'electrician', 'available', 2
 FROM users WHERE email = 'electrician4@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 6400, 'Professional electrician providing reliable and efficient electrical solutions.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 6400, 'Professional electrician providing reliable and efficient electrical solutions.', 'electrician', 'available', 2
 FROM users WHERE email = 'electrician5@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
 -- Painters (5)
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 4500, 'Professional painter with 12+ years experience in interior and exterior painting.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 4500, 'Professional painter with 12+ years experience in interior and exterior painting.', 'painter', 'available', 2
 FROM users WHERE email = 'painter1@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 4200, 'Experienced painter specializing in residential painting and decorative finishes.', 'available', 3
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 4200, 'Experienced painter specializing in residential painting and decorative finishes.', 'painter', 'available', 3
 FROM users WHERE email = 'painter2@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 4700, 'Quality painter offering premium paint application and surface preparation.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 4700, 'Quality painter offering premium paint application and surface preparation.', 'painter', 'available', 2
 FROM users WHERE email = 'painter3@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 4300, 'Professional painter with expertise in color consultation and modern painting techniques.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 4300, 'Professional painter with expertise in color consultation and modern painting techniques.', 'painter', 'available', 2
 FROM users WHERE email = 'painter4@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO professional_profiles (user_id, hourly_rate, bio, availability_status, response_time_hours)
-SELECT id, 4600, 'Skilled painter delivering exceptional results for all residential painting projects.', 'available', 2
+INSERT INTO professional_profiles (user_id, hourly_rate, bio, profession, availability_status, response_time_hours)
+SELECT id, 4600, 'Skilled painter delivering exceptional results for all residential painting projects.', 'painter', 'available', 2
 FROM users WHERE email = 'painter5@test.linkprosoft.com'
 ON CONFLICT (user_id) DO NOTHING;
 
